@@ -1,0 +1,177 @@
+# Chapter 10 — Motor Control: From Thought to Action
+
+Right now, you are performing one of the most computationally complex tasks in the known universe: sitting upright while reading. Your brain is commanding hundreds of muscles to contract in precise sequences, maintaining balance against gravity, making tiny eye movements to scan these words, perhaps shifting your weight, breathing automatically, and preparing to turn the page. Every movement—from threading a needle to hitting a tennis serve—requires transforming abstract intentions into coordinated patterns of muscle activation across hundreds of degrees of freedom. This is motor control, the neuroscience of how thoughts become actions. Today we'll trace the motor hierarchy from its foundation in spinal reflexes through ascending levels of control in brainstem and cortex, discovering how the brain solves the staggering computational problem of moving a body through space with grace, speed, and adaptability.
+
+Today's journey: From the basic motor unit to cortical command centers, uncovering how the nervous system transforms will into movement through layers of hierarchical control, feedback, and prediction.
+
+## Opening: The Degrees of Freedom Problem
+
+Russian neurophysiologist Nikolai Bernstein posed what became known as the degrees of freedom problem: the human body has over 600 muscles and 200 bones connected by multiple joints, each with multiple degrees of freedom. To reach for a coffee cup, your nervous system must specify the activation levels of dozens of muscles spanning shoulder, elbow, wrist, and hand joints. Yet there are infinite combinations of joint angles that could place your hand at the cup's location—infinite solutions to the same movement problem. How does your brain choose one solution from infinite possibilities, and how does it do so in milliseconds?
+
+The answer involves hierarchical control. High-level areas specify abstract goals ("grasp the cup"). Intermediate areas translate goals into trajectories and postures. Lower areas translate postures into muscle activations. The spinal cord executes basic reflexes and rhythmic patterns. Each level solves part of the computational problem, reducing complexity through layered abstraction. The motor system is not a single controller but a distributed hierarchy where each level handles appropriate timescales and abstractions—from millisecond reflexes to second-scale voluntary movements to minute-scale learning and adaptation.
+
+## Motor Units: The Quantum of Movement
+
+### Alpha Motor Neurons and Muscle Innervation
+
+A motor unit is the fundamental element of motor control: one alpha motor neuron and all the muscle fibers it innervates. When an alpha motor neuron fires an action potential, all its muscle fibers contract synchronously. You cannot activate muscle fibers individually—the motor unit is the smallest controllable element. Different muscles have different innervation ratios. In muscles requiring fine control—extraocular muscles moving your eyes, intrinsic hand muscles for manipulation—one motor neuron might innervate only 3-10 muscle fibers. In large postural muscles like gastrocnemius (calf)—a single motor neuron might innervate 1,000-2,000 fibers. Small innervation ratios provide fine control; large ratios provide powerful but coarse control.
+
+Motor units come in three types, classified by their contractile and metabolic properties. Slow (Type I, S) motor units have small motor neurons, innervate slow-twitch oxidative muscle fibers, produce low force, resist fatigue, and are recruited first. Fast fatigue-resistant (Type IIa, FR) motor units are intermediate in size, force, and fatigability. Fast fatigable (Type IIb, FF) motor units have large motor neurons, innervate fast-twitch glycolytic fibers, produce high force, fatigue rapidly, and are recruited last. This organization follows the size principle, discovered by Elwood Henneman: motor neurons are recruited in order of size, from smallest to largest, as force demands increase.
+
+### Why does size determine recruitment order?
+
+Smaller neurons have higher input resistance—the same synaptic current produces larger voltage changes, reaching threshold first. This simple biophysical property implements an elegant computational strategy: weak contractions (standing, holding light objects) use efficient, fatigue-resistant slow units. As force demands increase (climbing stairs, lifting heavy objects), fast units are progressively recruited. Maximum effort activates all motor units. You can't voluntarily recruit fast units without first recruiting slow units—the size principle constrains the control space, solving part of the degrees of freedom problem.
+
+### Muscle Receptors: Proprioception and Feedback
+
+Muscle spindles are stretch receptors embedded in parallel with muscle fibers, detecting muscle length and velocity of stretch. Each spindle contains specialized intrafusal fibers (inside the spindle capsule), distinct from the force-generating extrafusal fibers that make up the bulk of the muscle. Sensory afferents wrap around the central region of intrafusal fibers: Group Ia afferents (large, fast) signal both length and velocity; Group II afferents (smaller, slower) signal mainly length. When a muscle is stretched, spindle afferents fire, providing the CNS with real-time information about muscle state.
+
+Here's the clever part: intrafusal fibers have contractile ends innervated by gamma motor neurons. When gamma motor neurons fire, they contract the spindle's ends, stretching its central region and increasing spindle sensitivity. This gamma motor system adjusts the "gain" of the proprioceptive sensors. During voluntary movements, alpha and gamma motor neurons are co-activated—as the muscle contracts (shortening extrafusal fibers), gamma neurons contract spindle ends, preventing spindles from going slack. This maintains spindle sensitivity across the full range of muscle lengths. Without gamma co-activation, spindles would fall silent during muscle contraction, leaving the CNS blind to muscle state during movement.
+
+Golgi tendon organs (GTOs) are tension receptors located at muscle-tendon junctions, arranged in series with muscle fibers. They're innervated by Group Ib afferents that fire in proportion to muscle tension (force). Unlike spindles (which can't distinguish between passive stretch and active contraction), GTOs specifically signal active muscle force. Spindles and GTOs provide complementary information: spindles report length and velocity; GTOs report tension. Together they enable proprioception—your sense of body position and movement—even with eyes closed. Proprioceptive feedback is essential for motor control, providing error signals for online corrections and learning.
+
+## Spinal Reflexes: Hardwired Sensorimotor Loops
+
+### The Stretch Reflex: Monosynaptic Feedback
+
+The stretch reflex (myotatic reflex) is the simplest reflex in the nervous system: a monosynaptic arc from muscle spindle to alpha motor neuron back to the same muscle. When a muscle is stretched (e.g., tapping the patellar tendon), spindle Ia afferents fire, exciting alpha motor neurons, causing the muscle to contract, opposing the stretch. This happens in 30-50 milliseconds—too fast for conscious control. The stretch reflex automatically resists length changes, providing stiffness to stabilize joints and maintain posture. When you stand, continuous low-level stretch reflexes in anti-gravity muscles (soleus, quadriceps, paraspinals) counteract gravitational forces trying to collapse your body.
+
+The reflex has adjustable gain. Descending pathways from brainstem and cortex modulate the excitability of alpha motor neurons and the sensitivity of spindles (via gamma motor neurons), adjusting how strongly the reflex responds to stretch. During voluntary movement, the CNS often reduces stretch reflex gain to prevent reflexes from opposing intended movements. During postural maintenance, gain is increased to maximize stability. This adjustability transforms a simple reflex into a controllable component of the motor hierarchy.
+
+### Reciprocal Inhibition: Coordinating Antagonists
+
+Muscles are organized in antagonistic pairs: flexors and extensors, pronators and supinators. To flex your elbow, you must contract the biceps (flexor) while relaxing the triceps (extensor)—otherwise they'd fight each other. Reciprocal inhibition automatically coordinates antagonists: Ia afferents from muscle spindles excite motor neurons of the stretched muscle while simultaneously (via Ia inhibitory interneurons) inhibiting motor neurons of the antagonist. When your biceps is stretched, its motor neurons are excited while triceps motor neurons are inhibited. This ensures that reflexive contraction of one muscle is accompanied by relaxation of its antagonist. The same circuitry operates during voluntary movements—descending commands exploit reciprocal inhibition circuits to coordinate multi-joint movements.
+
+### Flexion-Withdrawal Reflex: Protective Responses
+
+Step on a tack and your foot withdraws before you consciously register pain. This is the flexion-withdrawal reflex—a polysynaptic protective response to noxious stimuli. Pain afferents activate spinal interneurons that excite flexor motor neurons and inhibit extensor motor neurons in the stimulated limb (withdrawing from danger) while simultaneously exciting extensors and inhibiting flexors in the opposite limb (maintaining balance). This is a crossed extensor reflex—coordinated across limbs via commissural interneurons. These reflexes demonstrate that the spinal cord is not just a relay but a sophisticated computational device implementing protective and postural strategies without requiring cortical involvement.
+
+### Central Pattern Generators: Spinal Automaticity
+
+Central pattern generators (CPGs) are spinal networks that produce rhythmic motor patterns—walking, running, swimming, scratching—without requiring rhythmic input from the brain. Even isolated spinal cord preparations (decerebrate cats, spinal cord in vitro) can generate coordinated locomotor patterns when chemically or electrically stimulated. CPGs implement the basic rhythm and coordination; descending pathways initiate, terminate, and modulate the pattern (adjusting speed, amplitude, adapting to terrain). This hierarchical division of labor—spinal cord handles stereotyped patterns, higher centers provide context-dependent modulation—is a recurring theme in motor control.
+
+## Descending Motor Pathways: Brain to Muscle
+
+### The Corticospinal Tract: Direct Cortical Control
+
+The corticospinal tract (CST) is the primary pathway for voluntary movement, especially skilled movements of the distal extremities. CST axons originate from pyramidal neurons in motor cortex (about 40% from primary motor cortex, 60% from premotor and parietal areas), descend through the internal capsule, form the pyramids on the ventral medulla (hence "pyramidal tract"), and at the pyramidal decussation most fibers (85-90%) cross to the contralateral side, descending in the lateral corticospinal tract. The remaining 10-15% descend ipsilaterally as the anterior corticospinal tract, crossing at segmental levels.
+
+This anatomical crossing explains contralateral motor control: left motor cortex controls right body, right motor cortex controls left body. A stroke damaging left motor cortex produces right-sided weakness (hemiparesis). The crossing probably evolved to match sensory systems—visual and somatosensory pathways also cross, so sensorimotor transformations occur in the same hemisphere (right visual field → left visual cortex → left motor cortex → right body). This keeps sensorimotor loops ipsilateral within the brain, minimizing communication delays.
+
+The CST targets multiple spinal levels. Some CST axons synapse directly onto alpha motor neurons—these are monosynaptic corticomotoneuronal connections, present mainly in primates and especially humans. They enable independent control of individual fingers, essential for tool use and manipulation. Most CST axons terminate on spinal interneurons, influencing motor neurons indirectly. These interneurons integrate descending commands with sensory feedback and local reflex circuits, allowing cortical input to modulate rather than override spinal processing.
+
+### Brainstem Pathways: Posture and Proximal Control
+
+Several descending pathways originate in brainstem nuclei, handling posture, balance, and proximal/axial movements. The reticulospinal tract (from reticular formation) controls posture and gross movements, facilitates or suppresses spinal reflexes and CPGs. The vestibulospinal tract (from vestibular nuclei) uses vestibular input to stabilize head and body during movement, activating extensors to maintain upright posture. The rubrospinal tract (from red nucleus) controls flexor muscles, especially in the arms—this pathway is prominent in cats but relatively minor in humans, where the CST dominates.
+
+These brainstem pathways generally terminate bilaterally in medial spinal regions, controlling axial and proximal muscles. The CST terminates laterally, controlling distal muscles. This medial-lateral organization reflects functional specialization: brainstem handles posture and whole-body coordination; cortex handles skilled, fractionated distal movements. Both are necessary—damage to brainstem pathways impairs balance and posture even if CST is intact; CST damage impairs fine motor control even if brainstem pathways work.
+
+### Upper vs. Lower Motor Neuron Lesions
+
+Clinically, distinguishing upper motor neuron (UMN) and lower motor neuron (LMN) lesions is crucial for diagnosis. Lower motor neurons are alpha motor neurons—their cell bodies in spinal ventral horn or brainstem motor nuclei, their axons in peripheral nerves. LMN lesions (e.g., polio, ALS affecting spinal motor neurons, peripheral nerve injury) cause flaccid paralysis, muscle atrophy, absent reflexes, and fasciculations (visible muscle twitching from denervated fibers). Upper motor neurons are descending pathways from cortex and brainstem. UMN lesions (e.g., stroke, spinal cord injury) cause spastic paralysis, hyperreflexia (exaggerated reflexes), clonus (rhythmic muscle contractions), and Babinski sign (extension of big toe when sole is stroked—a sign of CST damage releasing primitive spinal reflexes from cortical suppression).
+
+The spasticity and hyperreflexia following UMN lesions occur because descending pathways normally suppress spinal reflexes and regulate muscle tone. When these pathways are damaged, reflexes become hyperactive and muscle tone increases. The initial period after UMN lesion shows flaccid paralysis (spinal shock), but weeks to months later, spasticity emerges as spinal circuits adapt to the loss of descending input. Understanding this distinction guides rehabilitation—LMN damage requires strengthening remaining motor units; UMN damage requires managing spasticity and retraining movement patterns.
+
+## Motor Cortex: Maps, Populations, and Plans
+
+### Primary Motor Cortex (M1): The Final Common Output
+
+Primary motor cortex (M1, Brodmann area 4) occupies the precentral gyrus, anterior to the central sulcus. In the 1930s, neurosurgeon Wilder Penfield electrically stimulated M1 during surgery (the brain has no pain receptors, so patients were awake), causing movements of specific body parts. By systematically mapping responses, Penfield created the famous motor homunculus—a distorted body representation where cortical area is proportional to motor control precision, not body part size. Hands and face receive disproportionate representation (enabling fine finger movements and facial expressions), while trunk and legs have smaller representations (adequate for their coarser control demands).
+
+The somatotopic map is functional but not absolute. Neighboring M1 neurons control functionally related movements rather than precisely adjacent muscles. The map is plastic—experience and training modify cortical representations. Musicians who practice extensively show expanded representations of finger muscles. Amputees show reorganization where deafferented regions are invaded by neighboring representations. This plasticity reflects Hebbian learning at cortical synapses—neurons that fire together wire together, linking movements that frequently occur together into cortical ensembles.
+
+### Population Coding and Directional Tuning
+
+Apostolos Georgopoulos discovered that individual M1 neurons are broadly tuned for movement direction. Each neuron has a preferred direction (where it fires most) but responds to a wide range of directions. Movement direction is not coded by single neurons but by populations—the pattern of activity across many neurons, each contributing a directional vote weighted by its firing rate. By computing a population vector (summing each neuron's preferred direction weighted by its activity), you can decode intended movement direction from neural activity with remarkable accuracy. This population code is what enables brain-computer interfaces—recording from a few hundred M1 neurons, algorithms decode intended movements and control robotic arms, computer cursors, or paralyzed limbs via functional electrical stimulation.
+
+But what does M1 actually control—muscles, forces, movements, or something more abstract? Decades of debate suggest M1 is a distributed interface between abstract movement goals and concrete muscle commands. Different M1 neurons encode different movement parameters: some correlate with force, some with direction, some with position, some with velocity. M1 is not simply a "muscle map" but a dynamic population that transforms high-level motor plans into patterns of descending commands. The transformation from intention to action is distributed across cortical populations rather than localized to single neurons.
+
+### Premotor Cortex: Sensory-Guided Actions
+
+Premotor cortex (PMC, area 6 lateral) lies anterior to M1, receiving extensive input from parietal cortex (sensory information about the environment) and projecting to M1 and directly to spinal cord. PMC is active during motor preparation—before movement begins—and is especially important for sensory-guided movements (reaching to visual targets, grasping objects whose shape you see). PMC neurons are tuned not just for movements but for movement goals in external space. Some PMC neurons fire when you reach to a particular location regardless of which arm you use or which trajectory you take—they encode spatial goals, not specific motor commands.
+
+Subregions of PMC have specialized functions. Ventral PMC (PMv) contains mirror neurons—neurons that fire both when you perform an action and when you observe someone else performing it. Mirror neurons may support action understanding, imitation learning, and social cognition. Dorsal PMC (PMd) is involved in arbitrary sensorimotor associations—learning to respond with specific movements to arbitrary cues. PMC is where sensory information specifying "what and where" gets translated into motor plans specifying "how to move."
+
+### Supplementary Motor Area: Internally Generated Sequences
+
+Supplementary motor area (SMA, area 6 medial) is critical for internally generated, self-initiated movements and motor sequences. SMA is active during mental rehearsal (imagining movements without executing them) and when planning complex sequences. Damage to SMA impairs sequence execution and self-initiated movements while leaving externally triggered movements relatively intact. Patients may lose the ability to spontaneously initiate movements (akinesia) but can perform the same movements when cued by external stimuli.
+
+The pre-SMA (rostral SMA) is involved in higher-order aspects—task switching, response selection, error monitoring. The SMA proper (caudal SMA) is more directly motor, with strong connections to M1. Together, SMA transforms abstract task representations into concrete motor sequences. The division of labor is clear: SMA generates internally driven sequences and plans; PMC handles externally triggered, sensory-guided actions; M1 provides the final motor output integrating both sources.
+
+## Motor Planning and Forward Models
+
+### Posterior Parietal Cortex: From Perception to Action
+
+Posterior parietal cortex (PPC), especially the intraparietal sulcus, transforms sensory representations into motor plans. PPC receives visual, somatosensory, and auditory input and projects to premotor cortex. PPC neurons encode potential actions—they're active when you're preparing to reach to a particular location or grasp a particular object. Lesions to PPC cause deficits in goal-directed movements even when motor cortex and muscles work fine. This is apraxia—inability to perform learned purposeful movements despite intact strength and coordination.
+
+PPC implements sensorimotor transformations: converting sensory representations (object location in retinal coordinates) into motor commands (joint angles and muscle activations). Different PPC regions specialize: one area for reaches, another for grasps, another for eye movements. These areas form the dorsal stream of visual processing—the "how" pathway transforming visual information into action, contrasting with the ventral "what" pathway for object recognition. PPC provides the spatial framework for action, defining goals and targets in external coordinates.
+
+### Prefrontal Cortex: Abstract Action Plans and Goals
+
+Dorsolateral prefrontal cortex (dlPFC) represents abstract goals and task rules. While motor and premotor cortex represent specific movements, dlPFC represents why you're moving—the behavioral context and task demands. dlPFC maintains goal representations during delays, selects among competing action plans, monitors outcomes, and adjusts behavior based on errors. In motor control, dlPFC provides the top level of the hierarchy—specifying what needs to be achieved, leaving lower areas to determine how.
+
+### Forward Models: Predicting Sensory Consequences
+
+Here's a critical insight: sensory feedback is slow. It takes 30-50 milliseconds for proprioceptive information to reach cortex, during which your arm has already moved. Relying only on feedback would produce unstable control—by the time errors are detected, you've moved too far to correct smoothly. The solution is forward models (also called internal models or efference copy): neural circuits that predict the sensory consequences of motor commands before feedback arrives. When you issue a motor command, a copy (corollary discharge) is sent to forward models that simulate the movement's expected sensory outcome. This predicted feedback is compared with actual feedback; discrepancies signal errors requiring correction.
+
+Forward models enable smooth, rapid movements despite feedback delays. They explain why you can't tickle yourself—the forward model predicts the sensory consequences of your own movements, canceling the tickling sensation. When someone else tickles you, no forward model predicts it, so the sensation is surprising and intense. Forward models are learned through experience, which is why infants' movements are jerky and uncoordinated—their forward models are still under construction, refined through practice until predictions match outcomes.
+
+### Preview: Learning Systems
+
+Where are forward models implemented? This brings us to structures we'll explore in detail when we discuss learning: the cerebellum and basal ganglia. The cerebellum is a master of forward models, implementing precise predictions of sensory consequences and correcting motor commands online. Cerebellar damage causes ataxia—uncoordinated movements, intention tremor, dysmetria (overshooting or undershooting targets)—all symptoms of failed prediction. The basal ganglia select and initiate actions, learn action values through reinforcement, and modulate movement vigor. Basal ganglia dysfunction causes movement disorders: Parkinson's disease (difficulty initiating movements, bradykinesia, rigidity) and Huntington's disease (uncontrollable movements, chorea).
+
+We'll defer detailed coverage until we study learning systems, but appreciate that motor control is inseparable from motor learning. Every movement you make refines internal models, adjusts connection weights, and improves future performance. The motor system is not fixed hardware but an adaptive learning system continuously updating its parameters to meet behavioral demands.
+
+## Synthesis: Hierarchy, Feedback, and Prediction
+
+We've traced motor control from its foundation in motor units through spinal reflexes, descending pathways, and cortical planning centers. The architecture is hierarchical: each level operates at different timescales and levels of abstraction. Spinal reflexes handle millisecond-scale responses to perturbations. Brainstem pathways maintain posture and coordinate basic patterns. Motor cortex translates plans into commands. Premotor areas specify goals and strategies. Parietal cortex transforms sensory information into spatial targets. Prefrontal cortex defines abstract goals and task context. This hierarchy distributes the computational burden—no single level solves the entire motor control problem; each contributes its specialized processing.
+
+Three computational principles unite all levels. First, feedback control: sensory information (proprioception, vision) provides error signals for correction. Reflexes implement simple feedback loops; cortical areas implement sophisticated closed-loop control comparing intended and actual outcomes. Second, feedforward control: forward models predict sensory consequences, enabling fast, smooth movements despite feedback delays. Third, population coding: movement parameters are represented by patterns of activity across neural populations rather than single neurons, providing robustness and flexibility.
+
+Motor control is also fundamentally predictive. You don't react to the world as it is but as you predict it will be by the time your movement completes. When you catch a ball, you're not moving your hand to where the ball currently is but where you predict it will be when your hand arrives. This prediction requires integrating sensory information (ball's current position and velocity), internal models (dynamics of your arm), and motor plans (how to time and scale the reach). The entire motor hierarchy participates in this predictive computation.
+
+Finally, motor control is inseparable from learning. Every movement provides training data—errors between predicted and actual outcomes update internal models, refine connection weights, adjust populations codes. Practice doesn't just strengthen muscles; it reconfigures neural circuits, building skills that become automatic, freeing higher levels to focus on goals rather than execution details. When you first learned to write, it demanded enormous attention. Now you write automatically while thinking about meaning, not letter shapes. This is the power of the motor learning systems we'll explore in future lectures.
+
+Your voluntary movements emerge from this exquisite hierarchy: intentions originating in prefrontal cortex flow through premotor planning, motor cortex execution, descending pathways, spinal circuits, motor units, and finally muscle fibers. At each level, computations transform abstract goals into concrete actions. Feedback loops and forward models stabilize the system. Population codes distribute representations. And throughout, learning continuously refines the machinery. You've now seen the infrastructure—the scaffolding on which all voluntary behavior rests. In future lectures, we'll explore how this infrastructure learns, adapts, and sometimes breaks down, revealing the neural basis of skill, habit, and movement disorders.
+
+## Thought Questions for Discussion
+
+Three questions to spark discussion before your next class:
+
+### The Size Principle and Neural Control
+
+The size principle dictates that motor units are recruited in fixed order from small to large, determined by the biophysical property of neuron size. This constrains voluntary control—you cannot selectively recruit fast units without first recruiting slow units. Is this constraint a limitation or an elegant solution? Consider the computational benefits of reducing the motor control space versus the flexibility costs of fixed recruitment order. Can you think of situations where voluntary control over recruitment order would be advantageous?
+
+### Hierarchical Control and Consciousness
+
+Motor control is distributed across a hierarchy from spinal reflexes (unconscious) to cortical planning (conscious). When you perform a skilled action—playing piano, typing, catching a ball—how much is consciously controlled versus automatic? At what hierarchical level does conscious control operate? As skills become automatic through practice, does conscious access shift to higher levels of abstraction (goals rather than movements)? What does this tell us about the relationship between consciousness and motor control?
+
+### Forward Models and the Self
+
+Forward models predict the sensory consequences of your own actions, which is why you can't tickle yourself—your brain predicts and cancels the sensation. But this raises a profound question: how does your brain distinguish self-generated sensations from externally caused sensations? Patients with schizophrenia sometimes experience their own thoughts or movements as externally imposed. Could this reflect a dysfunction in forward models—a failure to tag self-generated actions with predicted consequences? What does the distinction between self and other require at the neural level?
+
+### Practice Questions:
+
+• A motor unit consists of one _______ motor neuron and all the _______ it innervates; muscles requiring fine control have _______ innervation ratios.
+
+• According to Henneman's size principle, motor units are recruited in order of neuron size from _______ to _______, ensuring efficient use of fatigue-resistant units first.
+
+• Muscle spindles detect muscle _______ and _______; they are innervated by _______ motor neurons that adjust spindle sensitivity during movement.
+
+• Golgi tendon organs detect muscle _______ and are located at the _______ junction, arranged in _______ with muscle fibers.
+
+• The stretch reflex is a _______ synaptic arc from muscle spindle _______ afferents to _______ motor neurons, providing automatic resistance to stretch.
+
+• Reciprocal inhibition ensures that activation of one muscle is accompanied by _______ of its _______ muscle through Ia inhibitory interneurons.
+
+• The corticospinal tract crosses at the _______ _______ in the medulla, resulting in _______ motor control (left cortex controls right body).
+
+• Upper motor neuron lesions cause _______ paralysis with _______ reflexes, while lower motor neuron lesions cause _______ paralysis with _______ reflexes.
+
+• Primary motor cortex is organized _______-topically as the motor _______, with disproportionate representation of body parts requiring fine motor control like the _______ and _______.
+
+• Georgopoulos demonstrated that movement direction is encoded by _______ coding across M1 neurons, each broadly _______ for direction, enabling brain-computer interfaces.
+
+• Premotor cortex handles _______-guided actions; supplementary motor area handles _______-generated sequences; both project to _______ motor cortex.
+
+• Forward models predict the _______ consequences of motor commands before _______ arrives, enabling smooth control despite sensory delays.

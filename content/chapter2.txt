@@ -1,0 +1,207 @@
+# Chapter 2 — Electric Flesh and Fire: The Biophysics of Thought
+
+Your thoughts move at 120 meters per second—the speed of a Formula 1 car—yet this biological lightning is a million times slower than electricity in copper wire. Today we decode the most elegant hack in evolutionary history: how life transforms a 70-millivolt battery smaller than a virus into the computational foundation of consciousness. We'll discover why your brain burns 20% of your calories just maintaining electrical readiness, how two equations—the Nernst and Goldman—predict the voltage of every neuron on Earth, and how Hodgkin and Huxley's squid experiments revealed the molecular machinery underlying every thought. From the resting potential that sets the stage to the action potential that carries the signal, we'll trace the complete electrical journey within a single neuron—saving the chemical synapse for next time.
+
+Today's journey: From the ion gradients that create the resting potential, through the voltage-gated channels that generate action potentials, to the cable properties that propagate signals along axons. We stop at the axon terminal—next class, we'll see what happens when electricity meets chemistry.
+
+## The Resting Membrane Potential: A Battery Waiting to Fire
+
+The resting membrane potential is the voltage difference across the neuronal membrane when the cell is not actively signaling—typically around −70 mV (inside negative relative to outside). This isn't just a baseline; it's a loaded battery, an energetic reservoir that enables rapid electrical signaling. Understanding where this voltage comes from requires understanding ion distributions and the forces that create them.
+
+### Ion Distributions: The Unequal Players
+
+The intracellular and extracellular fluids have dramatically different ion compositions. Potassium (K⁺) is concentrated inside cells (~140 millimolar (mM) intracellular vs. ~5 mM extracellular—a 28:1 ratio). Sodium (Na⁺) shows the opposite pattern (~15 mM inside vs. ~145 mM outside—approximately a 1:10 ratio). Chloride (Cl⁻) is concentrated outside (~120 mM extracellular vs. ~10 mM intracellular—a 12:1 ratio). These concentration gradients represent stored electrochemical potential energy—like a charged battery waiting to discharge.
+
+The gradients don't exist by accident—they're actively maintained by the Na⁺/K⁺-ATPase pump, a molecular machine that burns one ATP molecule to export 3 Na⁺ ions and import 2 K⁺ ions (note the asymmetry: 3:2 stoichiometry, not 1:1). This electrogenic pump actually contributes a few millivolts directly to the resting potential because of the unequal exchange, but its primary role is maintaining the ion gradients. The pump consumes roughly 25% of all ATP produced by neurons—and up to 70% in heavily active neurons—representing the energetic price of electrical readiness.
+
+### The Nernst Equation: Predicting Equilibrium Potentials
+
+If a membrane were permeable only to potassium, what voltage would result? Walther Nernst answered this in 1889 with his equation:
+
+E_{\text{ion}} = \frac{RT}{zF} \ln\left(\frac{[\text{ion}]_{\text{out}}}{[\text{ion}]_{\text{in}}}\right)
+
+where:
+
+- \(E_{\text{ion}}\) = equilibrium potential for the ion (in volts)
+- \(R\) = universal gas constant (8.314 J/(mol·K))
+- \(T\) = absolute temperature (in Kelvin; 310 K = 37°C for body temperature)
+- \(z\) = valence of the ion (charge: +1 for K⁺ and Na⁺, −1 for Cl⁻, +2 for Ca²⁺)
+- \(F\) = Faraday's constant (96,485 C/mol, the charge of one mole of electrons)
+- ln = natural logarithm (base e)
+- \([\text{ion}]_{\text{out}}\) and \([\text{ion}]_{\text{in}}\) = ion concentrations outside and inside the cell (in mM or M)
+
+This equation emerges from thermodynamics: at equilibrium, the electrical potential energy (\(zFE\)) must exactly balance the chemical potential energy from the concentration gradient (\(RT \ln([\text{out}]/[\text{in}])\)). The \(RT/zF\) term is essentially a conversion factor between the world of chemistry (concentrations) and the world of electricity (voltage).
+
+At body temperature (37°C = 310 K), we can simplify by plugging in the constants and converting to base-10 logarithms:
+
+E_{\text{ion}} = \frac{61.5}{z} \log_{10}\left(\frac{[\text{ion}]_{\text{out}}}{[\text{ion}]_{\text{in}}}\right) \text{ mV}
+
+The constant 61.5 mV comes from \((RT/F) \times \ln(10)\) at 310 K—a convenient shortcut that eliminates the need to remember multiple physical constants. Notice that this equation tells us something profound: a 10-fold concentration difference produces approximately 61.5 mV of potential difference (for a monovalent ion), while a 100-fold difference produces 123 mV. The relationship is logarithmic, not linear—doubling the concentration gradient doesn't double the voltage.
+
+### Calculating equilibrium potentials for real neurons:
+
+For potassium, with its 28:1 inside-to-outside ratio: \(E_K = 61.5 \times \log(5/140) = -89\text{ mV}\). For sodium: \(E_{\text{Na}} = 61.5 \times \log(145/15) = +60\text{ mV}\). These equilibrium potentials represent the voltage at which the electrical force on an ion exactly balances its concentration gradient—no net flow occurs.
+
+The Nernst equation reveals a profound truth: the voltage across a membrane is determined by ion concentrations and membrane permeability. Change either, and you change the voltage. Neurons exploit this principle continuously—they don't create new ions during signaling; they simply open and close channels that change permeability, allowing the pre-existing gradients to drive voltage changes. This is why action potentials are so fast: channels change conformation in microseconds, and ions flow down pre-existing gradients. The slow part—rebuilding the gradients—happens continuously in the background via the ATP-consuming pump.
+
+### The Goldman-Hodgkin-Katz Equation: Competing Ions
+
+Real membranes are permeable to multiple ions simultaneously. The Goldman-Hodgkin-Katz (GHK) equation accounts for this by weighting each ion's contribution by its relative permeability:
+
+V_m = 61.5 \times \log_{10}\left[\frac{P_K[\text{K}^+]_{\text{out}} + P_{\text{Na}}[\text{Na}^+]_{\text{out}} + P_{\text{Cl}}[\text{Cl}^-]_{\text{in}}}{P_K[\text{K}^+]_{\text{in}} + P_{\text{Na}}[\text{Na}^+]_{\text{in}} + P_{\text{Cl}}[\text{Cl}^-]_{\text{out}}}\right]
+
+where:
+
+- \(V_m\) = membrane potential (in mV)
+- \(P_K\), \(P_{\text{Na}}\), \(P_{\text{Cl}}\) = relative permeabilities of the membrane to K⁺, Na⁺, and Cl⁻
+- \([\text{K}^+]_{\text{out}}\), \([\text{Na}^+]_{\text{out}}\), etc. = ion concentrations (in mM)
+
+### Why is chloride's concentration flipped?
+
+Notice that chloride concentrations appear "backwards" (inside/outside reversed) compared to the cations. This is because Cl⁻ is negatively charged—the equation accounts for this by reversing the concentration ratio, which is mathematically equivalent to changing the sign of the valence \(z\) in the derivation from the Nernst equation.
+
+### Interpreting the equation
+
+The GHK equation is essentially a weighted average of the individual Nernst potentials, where each ion's influence is proportional to how easily it can cross the membrane. If potassium permeability were infinitely larger than all others, the equation would reduce to the Nernst equation for potassium alone, and \(V_m = E_K\). If all permeabilities were equal, sodium would dominate because of its steep concentration gradient.
+
+At rest, \(P_K: P_{\text{Na}}: P_{\text{Cl}} \approx 1: 0.04: 0.45\). Because potassium permeability dominates (25 times more permeable than sodium), the resting potential (−70 mV) sits much closer to \(E_K\) (−89 mV) than to \(E_{\text{Na}}\) (+60 mV). The small sodium permeability is why neurons rest at −70 mV rather than at the potassium equilibrium potential—sodium's inward leak slightly depolarizes the membrane from where pure potassium selectivity would place it.
+
+This framework explains why the resting potential isn't fixed but can be modulated. Changing extracellular potassium concentration shifts \(E_K\) and therefore \(V_m\)—this is why hyperkalemia (high blood potassium) can cause cardiac arrhythmias and why dialysis patients must carefully manage potassium intake. Similarly, drugs that alter sodium permeability shift the resting potential toward \(E_{\text{Na}}\), bringing neurons closer to threshold.
+
+## The Action Potential: Ionic Mechanisms
+
+In 1952, Alan Hodgkin and Andrew Huxley published five papers that explained how action potentials work at the ionic level. They shared the 1963 Nobel Prize for this work—experiments done before anyone knew what an ion channel protein looked like.
+
+Hodgkin and Huxley used the squid giant axon (up to 1 mm diameter—visible to the naked eye) and the voltage clamp technique to isolate how membrane conductance changed with voltage. By "clamping" the membrane at a fixed voltage, they could measure the ionic currents flowing across the membrane without the complication of voltage changes. Their key insight: during an action potential, sodium conductance (\(g_{\text{Na}}\), measured in siemens (S) or mS/cm², the inverse of resistance) increases first and transiently, then potassium conductance (\(g_K\)) increases more slowly and persistently. Conductance directly reflects how many ion channels are open—more open channels means higher conductance and greater ionic current flow.
+
+### The Rising Phase: Sodium Channel Activation
+
+When membrane potential reaches threshold (approximately −55 mV), voltage-gated sodium channels undergo a conformational change: their S4 voltage-sensing segments move outward in response to depolarization, opening the channel pore. Sodium rushes in, driven by both its concentration gradient and the electrical gradient—the membrane is negative inside, attracting positive Na⁺. This influx further depolarizes the membrane, opening more sodium channels in a positive feedback loop (the Hodgkin cycle). Within a fraction of a millisecond, the membrane potential swings from −70 mV toward +40 mV—approaching \(E_{\text{Na}}\) (+60 mV) but never quite reaching it.
+
+### The Falling Phase: Inactivation and Potassium Channels
+
+Two mechanisms terminate the sodium influx. First, sodium channels inactivate: an intracellular "ball-and-chain" structure swings into the pore, blocking further sodium entry even though the activation gates remain open. This inactivation is distinct from closing—the channel is open but blocked. Second, voltage-gated potassium channels open more slowly (delayed rectifiers). Potassium rushes out, driven by both its concentration gradient (high K⁺ inside) and the now-positive membrane potential. This potassium efflux repolarizes the membrane back toward \(E_K\).
+
+The potassium channels close slowly, causing a brief afterhyperpolarization where the membrane potential dips below the resting level (to approximately −80 mV) before returning to −70 mV as potassium permeability returns to baseline. Meanwhile, the Na⁺/K⁺-ATPase works continuously in the background, restoring the ion gradients slightly depleted by each action potential.
+
+### Refractory Periods: Why Signals Travel One Way
+
+The absolute refractory period (approximately 1 ms) occurs while sodium channels are inactivated—no stimulus, however strong, can trigger another action potential. The relative refractory period (several ms) follows, when some sodium channels have recovered but potassium channels remain open; a stronger-than-normal stimulus is required. These refractory periods serve crucial functions: they limit maximum firing frequency (typically 500-1000 Hz), ensure all-or-nothing amplitude by allowing full channel recovery, and enforce unidirectional propagation—the membrane behind an advancing action potential is refractory and cannot be re-excited.
+
+## Propagation of the Action Potential
+
+An action potential at one point on an axon must somehow trigger action potentials further along. This propagation occurs through local circuit currents: the depolarized region becomes a current source, and positive charges flow intracellularly toward adjacent resting membrane, depolarizing it to threshold. The action potential doesn't "travel"—it regenerates sequentially along the axon, like a line of dominoes falling.
+
+### Cable Properties: Length and Time Constants
+
+The passive electrical properties of axons determine how effectively local currents spread. The cable equation describes this spread using two key parameters:
+
+### Length constant (\(\lambda\)):
+
+\lambda = \sqrt{\frac{r_m}{r_i}}
+
+where:
+
+- \(\lambda\) = length constant (in mm or μm), the characteristic distance for passive current spread
+- \(r_m\) = specific membrane resistance (in Ω·cm²), measuring how "leaky" the membrane is to ions
+- \(r_i\) = internal (axoplasmic) resistance per unit length (in Ω/cm), measuring resistance to current flow inside the axon
+
+The length constant measures how far current spreads along the axon before decaying to 37% (1/e) of its original value—typically 0.1-1 mm in unmyelinated axons. Think of \(\lambda\) as the "reach" of electrical influence: a larger \(\lambda\) means current spreads further. Larger diameter axons have lower \(r_i\) (more cross-sectional area for current flow, like a wider pipe) and therefore larger \(\lambda\), which is why the squid giant axon (500 μm diameter) conducts faster than your thin unmyelinated C-fibers (1 μm diameter). The square root relationship means you need to quadruple the diameter to double the length constant.
+
+### Time constant (\(\tau\)):
+
+\tau = r_m \times c_m
+
+where:
+
+- \(\tau\) = membrane time constant (in milliseconds), the characteristic time for voltage changes
+- \(r_m\) = specific membrane resistance (in Ω·cm²)
+- \(c_m\) = specific membrane capacitance (in F/cm² or μF/cm²), measuring the membrane's ability to store charge
+
+The time constant measures how quickly the membrane potential responds to current injection—typically 1-20 ms. Specifically, \(\tau\) is the time required for the voltage to reach 63% (1 − 1/e) of its final steady-state value after a step current injection. A membrane acts like an RC circuit: the resistance controls how much current flows, while the capacitance stores charge and slows voltage changes. Longer time constants mean slower responses but better temporal integration of synaptic inputs—the membrane acts as a low-pass filter, smoothing rapid fluctuations. Shorter time constants allow faster signaling but less integration.
+
+### Continuous vs. Saltatory Conduction
+
+In unmyelinated axons, action potentials propagate continuously—each micrometer of membrane must depolarize and fire. Conduction velocity depends on axon diameter following a square-root relationship: \(\text{velocity} \propto \sqrt{\text{diameter}}\). This arises because larger diameter decreases internal resistance (helping current spread), but also increases membrane area (increasing capacitance, which slows charging). The net effect is the square-root dependence. Velocity ranges from about 0.5-1 m/s for thin 1 μm C-fibers (slow pain and temperature) to 25 m/s for the massive 500 μm squid giant axon (escape response).
+
+Myelination revolutionizes propagation. Oligodendrocytes (in the CNS) and Schwann cells (in the PNS) wrap axons in multiple layers (up to 150 wraps) of lipid-rich membrane, creating an insulating sheath. This increases membrane resistance (\(r_m\)) by ~5000-fold (less ion leakage through the thick myelin) and decreases membrane capacitance (\(c_m\)) by ~50-fold (greater separation between the conducting solutions). Recall that \(\lambda = \sqrt{r_m/r_i}\) and \(\tau = r_m \times c_m\)—the increased \(r_m\) dramatically increases the length constant (current spreads much further), while the decreased \(c_m\) partially compensates to keep the time constant reasonable.
+
+Action potentials occur only at nodes of Ranvier, unmyelinated gaps (~1 μm wide, spaced 1-2 mm apart) where voltage-gated sodium channels cluster at extraordinary density (1000-2000 channels/μm², compared to 10-100/μm² in unmyelinated membrane). Current "jumps" from node to node—saltatory conduction (from Latin saltare, "to jump")—achieving velocities up to 120 m/s in 20 μm myelinated fibers while using 100× less energy than continuous conduction would require (fewer channels open, less ATP needed to restore gradients).
+
+Evolution faced a tradeoff: increase axon diameter (metabolically expensive, takes up space) or evolve myelination (complex developmental program, vulnerable to autoimmune attack). Vertebrates chose myelination, enabling complex brains in compact skulls. Invertebrates chose large axons, which is why the squid giant axon—used for escape responses—reaches 1 mm diameter.
+
+## Channel Diversity and Clinical Relevance
+
+### Channelopathies: When Channels Fail
+
+Channelopathies are diseases caused by ion channel mutations. In 2006, Cambridge researchers discovered a Pakistani family where some members felt no pain whatsoever—mutations in SCN9A eliminated functional Nav1.7 sodium channels, specifically expressed in pain-sensing neurons. These individuals could feel touch, temperature, and pressure, but never experienced pain. Tragically, without pain's protective warnings, they suffered repeated injuries. The opposite mutation—Nav1.7 hyperactivity—causes erythromelalgia, where patients experience burning pain from mild warmth.
+
+### Multiple Sclerosis and Demyelination
+
+Multiple sclerosis is an autoimmune disease where immune cells attack myelin. As myelin degrades, the length constant shrinks—current no longer reaches the next node, and conduction fails. Patients experience progressive paralysis, sensory loss, and cognitive decline as white matter highways dissolve. The temperature sensitivity of MS symptoms (worsening with heat) reflects how membrane capacitance and channel kinetics change with temperature, further degrading already-marginal conduction.
+
+### Epilepsy: Electrical Storms
+
+Epilepsy represents network-level electrical failure. Dravet syndrome, caused by SCN1A mutations, illustrates the exquisite balance required: the mutation affects inhibitory interneurons more than excitatory neurons, shifting the network toward hyperexcitability. During seizures, millions of neurons fire synchronously—the opposite of normal desynchronized activity. Antiepileptic drugs typically work by enhancing inhibition (benzodiazepines enhance GABA receptors) or reducing sodium channel activity (phenytoin, carbamazepine).
+
+### Channel Pharmacology
+
+Ion channels are major drug targets. Local anesthetics (lidocaine, novocaine) block voltage-gated sodium channels, preventing action potentials in pain fibers. Tetrodotoxin (from pufferfish) and saxitoxin (from dinoflagellates) are exquisitely potent sodium channel blockers—nanomolar concentrations cause paralysis and death. TEA (tetraethylammonium) and 4-aminopyridine block potassium channels, prolonging action potentials—4-AP is used therapeutically in multiple sclerosis to enhance conduction through demyelinated segments.
+
+## Evolutionary Origins: The Ancient Voltage of Life
+
+Electrical signaling is ancient. Gürol Süel's lab discovered that Bacillus subtilis bacteria generate action potentials using potassium channels structurally similar to yours. When nutrients run low in a biofilm's center, bacteria fire electrical signals that propagate outward, coordinating colony behavior. These bacterial channels follow Hodgkin-Huxley dynamics—the same equations govern bacterial and human electrical signaling. The molecular machinery for bioelectricity evolved once, billions of years ago, and has been conserved ever since.
+
+### The Thermodynamic Cost of Thought
+
+David Attwell and Simon Laughlin calculated that approximately 50% of the brain's energy budget goes to reversing ion movements from action potentials and synaptic transmission. Your brain consumes roughly 20 watts of power—enough to power a dim light bulb—with 86 billion neurons, each firing action potentials at rates from 0.1 to 100 Hz. A single action potential costs relatively little energy per se (perhaps ~10⁸ ATP molecules to restore gradients after one spike), but multiply this by billions of neurons firing continuously, and the costs add up dramatically. This is why your brain, despite being just 2% of body weight, uses 20% of your oxygen consumption and 25% of your glucose. The price of consciousness is fundamentally thermodynamic—every thought increases universal entropy as orderly chemical energy (ATP) dissipates into heat and disorder.
+
+## Thought Questions for Discussion
+
+Three questions to spark discussion before your next class:
+
+### The Nernst vs. Reality Puzzle
+
+The Nernst equation predicts \(E_K = -89\text{ mV}\) for potassium, yet neurons rest at −70 mV. Why the 19 mV difference? Consider what happens if you experimentally block all sodium channels—does the resting potential shift toward \(E_K\)? What does this tell you about the molecular basis of the resting potential, and how might pharmacological manipulation of sodium leak channels affect neuronal excitability?
+
+### The Speed-Size Tradeoff
+
+Evolution produced two solutions for fast conduction: giant axons (squid) and myelinated axons (vertebrates). The squid giant axon is 500 μm diameter and conducts at 25 m/s. Your myelinated motor neurons are 20 μm diameter and conduct at 120 m/s. Calculate how large an unmyelinated axon would need to be to conduct at 120 m/s. (Hint: velocity scales with \(\sqrt{\text{diameter}}\) for unmyelinated axons.) Why was this solution not viable for vertebrate nervous systems?
+
+### The Vulnerability Question
+
+Myelination increases conduction velocity 100-fold and appeared 425 million years ago, enabling complex vertebrate nervous systems. Yet myelin is uniquely vulnerable—multiple sclerosis, Guillain-Barré syndrome, and leukodystrophies all attack it. Why didn't evolution produce a more robust insulation? What does myelin's vulnerability reveal about biological tradeoffs between performance and resilience?
+
+## Practice Questions
+
+### Fill in the Blank
+
+• The resting membrane potential of a typical neuron is approximately _______ mV, maintained by the _______ pump.
+
+• The Nernst equation calculates the _______ potential for a single ion, while the _______ equation accounts for multiple permeable ions.
+
+• During the action potential rising phase, voltage-gated _______ channels open first, driving the membrane toward \(E_{\text{Na}}\) = _______ mV.
+
+• Sodium channel _______ (not closing) terminates Na⁺ influx and is responsible for the _______ refractory period.
+
+• The length constant \(\lambda = \sqrt{r_m/r_i}\) measures how far _______ spreads before decaying to _______% of its original value.
+
+• Myelination increases the _______ constant and decreases the _______ constant, enabling saltatory conduction.
+
+• In myelinated axons, action potentials regenerate only at _______ of Ranvier, where sodium channels cluster at densities of _______/μm².
+
+• Congenital insensitivity to pain is caused by mutations in _______, the gene encoding _______ sodium channels.
+
+### Short Answer Questions
+
+• Explain why the resting membrane potential (−70 mV) is closer to \(E_K\) (−89 mV) than to \(E_{\text{Na}}\) (+60 mV).
+
+• Describe the sequence of ion channel events during the action potential, from threshold to afterhyperpolarization.
+
+• Why do refractory periods ensure unidirectional action potential propagation?
+
+• Compare continuous conduction in unmyelinated axons with saltatory conduction in myelinated axons. What are the advantages and vulnerabilities of each?
+
+• How does local anesthetic work at the molecular level, and why does it block pain before motor function?
+
+• Explain how a mutation that slightly shifts sodium channel activation voltage could cause either painlessness or chronic pain.

@@ -1,0 +1,1758 @@
+{
+  "id": "chapter12",
+  "source": "chapter12.html",
+  "chapter": "12",
+  "chapter_number": "11",
+  "title": "Executive Function: The Brain's CEO",
+  "page_title": "Chapter 12 — Executive Function: The Brain's CEO",
+  "description": "Planning, decision-making, and cognitive control in the frontal lobes; computational algorithms of thought regulation; which functions require consciousness?",
+  "brand": "Brains, Minds, and Machines — Chapter 12",
+  "subtitle": null,
+  "lead": {
+    "text": "Today we complete our tour of the brain by exploring its highest levels—the association areas where sensation becomes perception, perception becomes thought, and thought becomes action. John Hughlings Jackson, the 19th-century British neurologist, proposed that the brain is organized hierarchically: simple reflexes at the bottom (spinal cord), more complex patterns in the middle (subcortical), and the most flexible, context-dependent processing at the top (cortex). But even cortex has hierarchies: primary sensory areas receive raw input, unimodal association areas extract features, and multimodal association areas integrate across senses to create unified percepts and plans. The prefrontal cortex—our focus today—sits at the top of this hierarchy, receiving inputs from virtually every other brain region and sending commands that regulate attention, inhibit impulses, plan sequences, and monitor performance. We'll examine what happens when different levels of this hierarchy fail, revealing the computational architecture of human intelligence through dramatic clinical cases. And we'll ask the question that bridges to our next topic: if all these functions can be implemented as algorithms, which of them actually require consciousness?",
+    "links": [
+      {
+        "text": "John Hughlings Jackson",
+        "href": "https://en.wikipedia.org/wiki/John_Hughlings_Jackson",
+        "kind": "wikipedia"
+      }
+    ]
+  },
+  "opening": [
+    {
+      "type": "stage",
+      "text": "Today's arc: From the hierarchical organization that Jackson proposed 150 years ago, through posterior association failures (agnosia, neglect), to frontal executive algorithms (inhibition, planning, decision-making), ending with split brains and the consciousness question."
+    }
+  ],
+  "table_of_contents": [
+    {
+      "number": "I",
+      "title": "Hierarchical Organization: Building Intelligence in Layers",
+      "duration": "8 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Primary → Unimodal → Multimodal association areas"
+        },
+        {
+          "text": "Three multimodal regions: Posterior, Limbic, Anterior"
+        },
+        {
+          "text": "John Hughlings Jackson's hierarchical principles"
+        }
+      ]
+    },
+    {
+      "number": "II",
+      "title": "Posterior Association Area: When Perception Breaks",
+      "duration": "10 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Agnosias: knowing without recognizing"
+        },
+        {
+          "text": "DEEP DIVE: Prosopagnosia—losing faces"
+        },
+        {
+          "text": "Associative vs apperceptive agnosia"
+        }
+      ]
+    },
+    {
+      "number": "III",
+      "title": "Contralateral Neglect: The Most Dramatic Attention Failure",
+      "duration": "12 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Right parietal damage → left world disappears"
+        },
+        {
+          "text": "DEEP DIVE: Piazza del Duomo—neglect in imagination"
+        },
+        {
+          "text": "Balint's syndrome and simultaneous agnosia"
+        }
+      ]
+    },
+    {
+      "number": "IV",
+      "title": "Frontal Lobes: The Executive Suite",
+      "duration": "12 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "DEEP DIVE: Phineas Gage—losing your future"
+        },
+        {
+          "text": "Prefrontal subdivisions and their algorithms"
+        },
+        {
+          "text": "Evolutionary expansion in humans"
+        }
+      ]
+    },
+    {
+      "number": "V",
+      "title": "Core Executive Algorithms",
+      "duration": "15 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Inhibitory control and cognitive flexibility"
+        },
+        {
+          "text": "DEEP DIVE: Planning as hierarchical decomposition"
+        },
+        {
+          "text": "Error monitoring and prediction errors"
+        }
+      ]
+    },
+    {
+      "number": "VI",
+      "title": "Decision Making Under Uncertainty",
+      "duration": "10 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "DEEP DIVE: Somatic marker hypothesis"
+        },
+        {
+          "text": "Explore-exploit tradeoffs"
+        }
+      ]
+    },
+    {
+      "number": "VII",
+      "title": "Hemispheric Lateralization: Two Executives in One Brain",
+      "duration": "8 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Split-brain patient studies"
+        },
+        {
+          "text": "Left: language & sequence; Right: space & holistics"
+        }
+      ]
+    },
+    {
+      "number": "VIII",
+      "title": "The Consciousness Question",
+      "duration": "5 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Which functions need awareness?"
+        },
+        {
+          "text": "Zombie agents and conscious oversight"
+        }
+      ]
+    }
+  ],
+  "summary_image": {
+    "src": "GeminiSummaryCh12.png",
+    "alt": "Executive Function Visual Summary",
+    "viewer": "image-viewer.html?image=GeminiSummaryCh12.png",
+    "role": "summary"
+  },
+  "resources": {
+    "textbook": "./textbook/",
+    "slides_html": "./slides/Chapter12/ExecutiveFunctionTheBrainsCEOSlides.html",
+    "slides_pdf": null,
+    "course_home": "./index.html",
+    "answer_key": "./AnswerKeys.html#chapter12",
+    "related_chapters": [],
+    "next_chapter": {
+      "href": "./chapter13.html",
+      "title": "Sleep and Consciousness",
+      "note": "Next: Sleep and Consciousness — the neural basis of awareness, the hard problem revisited, and why losing consciousness every night might be essential for maintaining it during the day."
+    },
+    "header_links": [
+      {
+        "text": "📖 Textbook",
+        "href": "./textbook/",
+        "kind": "internal"
+      },
+      {
+        "text": "📊 Slides HTML",
+        "href": "./slides/Chapter12/ExecutiveFunctionTheBrainsCEOSlides.html",
+        "kind": "internal"
+      },
+      {
+        "text": "Course Home",
+        "href": "./index.html",
+        "kind": "internal"
+      }
+    ],
+    "interactives": null
+  },
+  "sections": [
+    {
+      "id": "hierarchical-organization-the-brains-multi-level-architecture",
+      "title": "Hierarchical Organization: The Brain's Multi-Level Architecture",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Primary, Unimodal, and Multimodal Processing"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Hierarchical organization showing primary sensory areas, unimodal association areas, and multimodal integration regions",
+          "url": "https://www.google.com/search?q=cortical+hierarchy+primary+unimodal+multimodal+association+areas&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sensory information doesn't arrive at the cortex fully formed—it's progressively refined through multiple processing stages. Primary sensory cortex (V1 for vision, A1 for audition, S1 for somatosensation) receives relatively raw input—edges, frequencies, pressure. Unimodal association areas surrounding each primary area extract higher-order features within that modality—V2, V3, V4 compute color, motion, and object features from visual edges. Finally, multimodal association areas integrate information across senses to create unified representations. There are three major multimodal regions: (1) Posterior association area at the junction of occipital, temporal, and parietal lobes—integrates sensory information for perception and language; (2) Limbic association area in medial temporal lobe—links emotion with memory; (3) Anterior association area in prefrontal cortex—integrates everything for planning and executive control. This hierarchical organization means that damage at different levels produces qualitatively different deficits: destroy V1 and you're blind; damage posterior association areas and you can see but not recognize; damage prefrontal areas and you can recognize but not plan or control behavior appropriately.",
+          "links": [
+            {
+              "text": "Primary sensory cortex",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The computational insight is that hierarchy enables abstraction and efficiency. Early stages extract local features (edges, colors), middle stages combine features into objects (faces, words), and late stages operate on abstract categories and relationships (this person is trustworthy, this word contradicts that word). Deep learning networks use the same principle—early layers detect edges, middle layers detect object parts, late layers classify objects. The brain discovered this architecture hundreds of millions of years before computer scientists did, solving the problem of how to build flexible intelligence from fixed neural hardware: you need multiple processing stages, each transforming representations to support increasingly abstract and flexible computations. Today we'll tour this hierarchy by examining what happens when each level fails, working from posterior to anterior—from perception to action.",
+          "links": [
+            {
+              "text": "Deep learning networks use the same principle",
+              "href": "https://www.nature.com/articles/nrn3475",
+              "kind": "external"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "posterior-association-area-when-perception-fails",
+      "title": "Posterior Association Area: When Perception Fails",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Agnosia: Knowing Without Recognizing"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Different types of agnosia showing dissociation between perception and recognition",
+          "url": "https://www.google.com/search?q=agnosia+types+visual+auditory+tactile+neuropsychology&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Agnosia (Greek: \"not knowing\") is a family of disorders where patients can perceive sensory information but cannot recognize what it means—they see but don't understand what they're seeing, hear but can't recognize sounds, feel but can't identify objects by touch. This demonstrates that recognition is a distinct computational process from perception, implemented in association areas beyond primary sensory cortex. Damage to posterior multimodal association cortex (posterior parietal and temporal regions) produces various agnosias depending on which pathways are affected. The key insight: these patients have intact sensory systems—they're not blind or deaf—but they've lost the ability to link perceptions to stored knowledge about what those perceptions mean. Vision without recognition, hearing without understanding, touch without identification—revealing that the brain implements \"perception\" and \"recognition\" as separable algorithms.",
+          "links": [
+            {
+              "text": "Agnosia",
+              "href": "https://en.wikipedia.org/wiki/Agnosia",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Damage to posterior multimodal association cortex",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "DEEP DIVE: Prosopagnosia—The Face-Blind"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Prosopagnosia and the fusiform face area showing bilateral lesions",
+          "url": "https://www.google.com/search?q=prosopagnosia+face+blindness+fusiform+face+area&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Prosopagnosia—face blindness—is one of the most striking agnosias and reveals that the brain has specialized circuitry for face recognition. Patients with prosopagnosia can identify a face as a face, describe its features (male/female, young/old, happy/sad), and even identify specific facial features—yet they cannot recognize whose face it is. They don't recognize their spouse, their children, their parents, or even their own face in a mirror. Author Oliver Sacks had prosopagnosia and described apologizing to a \"rude stranger\" who wouldn't move out of his way, only to realize he was apologizing to his own reflection. Prosopagnosic patients identify people by voice, gait, clothing, context—any cue except the face itself. Lesions causing prosopagnosia are always bilateral, affecting the inferior surface of occipital lobes extending into medial temporal lobes, specifically damaging the fusiform face area bilaterally—a region that responds preferentially to faces in neuroimaging studies of healthy individuals.",
+          "links": [
+            {
+              "text": "Prosopagnosia",
+              "href": "https://en.wikipedia.org/wiki/Prosopagnosia",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Author Oliver Sacks had prosopagnosia",
+              "href": "https://www.newyorker.com/magazine/2010/08/30/face-blind",
+              "kind": "external"
+            },
+            {
+              "text": "fusiform face area",
+              "href": "https://en.wikipedia.org/wiki/Fusiform_face_area",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "What's computationally interesting about prosopagnosia is the extreme specificity: face recognition fails while other object recognition remains intact (they can identify cars, animals, tools), and conversely, some patients show selective object agnosias while face recognition is preserved. This double dissociation suggests that the brain implements different recognition algorithms for different object categories—likely because faces are so important for social species that evolution dedicated specialized circuitry to the problem. Faces are \"special\" not mystically but computationally: they require fine-grained discrimination among very similar exemplars (all faces have the same parts in the same configuration), they convey rich social information (emotion, trustworthiness, attention), and rapid face recognition has obvious evolutionary advantages. The fusiform face area might implement a specialized algorithm optimized for holistic face processing—encoding the spatial relationships among features rather than features independently. When this region is damaged, patients revert to feature-by-feature analysis, which works for other objects but fails for faces because faces are distinguished by subtle configurations rather than discrete parts. Some people have developmental prosopagnosia without any brain damage—they've never been able to recognize faces—suggesting genetic variation in the development of face-processing circuitry.",
+          "links": [
+            {
+              "text": "Faces are \"special\"",
+              "href": "https://www.pnas.org/doi/10.1073/pnas.0602974103",
+              "kind": "external"
+            },
+            {
+              "text": "Some people have developmental prosopagnosia",
+              "href": "https://www.theguardian.com/society/2016/jul/02/face-blindness-prosopagnosia-identity",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Associative vs Apperceptive Agnosia: Two Kinds of Recognition Failure"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Patients with associative vs apperceptive agnosia attempting to copy and name drawings",
+          "url": "https://www.google.com/search?q=associative+apperceptive+agnosia+copy+drawing+test&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction between associative and apperceptive agnosia reveals two stages of recognition. Patients with associative agnosia can perceive and even draw objects accurately but cannot name them visually—they've lost the link between visual representations and semantic knowledge. Show them a picture of a hammer and they'll say \"I don't know what that is,\" yet they can copy the drawing perfectly, demonstrating intact visual perception. Remarkably, if you let them touch the hammer without seeing it, they immediately say \"That's a hammer!\"—their semantic knowledge is intact, but the visual-to-semantic pathway is broken. In contrast, patients with apperceptive agnosia cannot draw or copy objects—their visual perception is degraded—yet they can often name objects correctly, apparently recognizing them from partial or fragmented visual information. The dissociation is dramatic: associative agnosics draw well but can't name; apperceptive agnosics name correctly but can't draw. This suggests a processing hierarchy: early stages construct visual representations (impaired in apperceptive agnosia), later stages link representations to meaning (impaired in associative agnosia). Building a humanoid with vision would require both stages: pattern recognition to extract structured representations, and learned associations to link representations to actions and knowledge.",
+          "links": [
+            {
+              "text": "The distinction between associative and apperceptive agnosia",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contralateral-neglect-the-most-dramatic-attention-failure",
+      "title": "Contralateral Neglect: The Most Dramatic Attention Failure",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Half a World Disappears"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Patient drawings showing left-sided neglect—clocks with numbers only on right, flowers with petals only on right",
+          "url": "https://www.google.com/search?q=hemispatial+neglect+right+parietal+damage+drawings+clock&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Contralateral neglect syndrome (also called hemispatial neglect or unilateral spatial agnosia) is one of the most bizarre and revealing neurological conditions. Following damage to right posterior parietal cortex—usually from stroke—patients behave as if the left side of the world has ceased to exist. They don't look left, don't respond to sounds or touches on the left, don't eat food from the left side of their plate. When asked to draw a clock, they draw all the numbers crammed onto the right side. When asked to draw a house, they draw only the right half. Some patients show \"personal neglect\"—they won't wash or dress the left side of their body, and some deny ownership of their left arm, saying things like \"Who put this arm in my bed?\" Critically, this is not blindness or sensory loss—if you ask them to turn their head far enough left, they can see and identify objects. The problem is that the left side doesn't spontaneously capture attention; it's as if it doesn't exist in their subjective experience unless explicitly prompted to look there.",
+          "links": [
+            {
+              "text": "Contralateral neglect syndrome",
+              "href": "https://en.wikipedia.org/wiki/Hemispatial_neglect",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Some patients show \"personal neglect\"",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "What makes neglect computationally fascinating is that it's not a simple sensory deficit. As the UTHealth chapter notes, these patients don't see \"just the right half of each petal\" on a flower—they neglect entire objects on the left while perceiving objects on the right completely. This infinite regress problem reveals that neglect operates on internal representations of space rather than raw sensory input. The right parietal cortex seems to implement an attention algorithm that constructs a spatial reference frame centered on the body and allocates processing resources to objects within that frame. Damage to this system doesn't eliminate left visual input (the left hemisphere receives right visual field normally) but prevents that information from entering the spatial attention system that guides behavior and awareness. Patients are often unaware of their deficit—they don't feel like they're missing anything—suggesting that conscious awareness depends on the attention system, not just on sensory input. You can't miss what you don't attend to; from the inside, the neglect patient's experience feels complete.",
+          "links": [
+            {
+              "text": "As the UTHealth chapter notes",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3015883/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "DEEP DIVE: The Piazza del Duomo Study—Neglect in Imagination"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Piazza del Duomo in Milan showing the cathedral and surrounding buildings",
+          "url": "https://www.google.com/search?q=Piazza+del+Duomo+Milan+cathedral+square&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Here's where neglect becomes truly mind-bending: Italian researchers Bisiach and Luzzatti in 1978 asked neglect patients in Milan to imagine standing in the famous Piazza del Duomo—a square they'd known their entire lives—and describe the buildings around the square. First, patients were told to imagine facing the cathedral. They described only the buildings on their (imagined) right—completely omitting buildings on the left. Then patients were told to imagine turning 180 degrees, now standing on the cathedral steps facing the opposite direction. Now they described all the buildings they'd previously omitted (which were now on their imagined right) while failing to describe the buildings they'd described before (now on their imagined left). This is all happening in imagination—in their mental representation of a familiar place—demonstrating that neglect affects internal spatial representations stored in memory, not just perception of the current visual scene. The right parietal cortex implements an attention mechanism that operates over spatial representations whether those representations come from current sensory input or from memory. When you imagine a scene, you're activating the same spatial representation systems used during perception, and damage to the attention system affects both equally.",
+          "links": [
+            {
+              "text": "Italian researchers Bisiach and Luzzatti in 1978",
+              "href": "https://www.science.org/doi/10.1126/science.3282892",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The computational implications are profound: attention is not just a sensory filter but an architectural feature of how the brain represents space. The neglect patient has complete memory of the Piazza—they didn't forget half the buildings—but access to that memory depends on an intact spatial attention system that's been damaged. This suggests that memory retrieval requires actively constructing spatial reference frames and \"attending\" to locations within those frames. Modern theories propose that the right hemisphere specializes in spatial attention across both external (perception) and internal (imagination, memory) representations, while the left hemisphere has more limited spatial attention capacity. This asymmetry explains why right hemisphere damage produces dramatic left neglect, while left hemisphere damage rarely produces severe right neglect—the intact right hemisphere can compensate for left hemisphere damage, but not vice versa. For building artificial intelligence, this reveals that attention mechanisms must operate not just on current sensory input but on internally generated representations during imagination, planning, and memory retrieval—attention is a general-purpose gating mechanism for any spatial representation, whether externally or internally generated.",
+          "links": [
+            {
+              "text": "Modern theories propose that the right hemisphere specializes in spatial attention",
+              "href": "https://www.frontiersin.org/articles/10.3389/fnhum.2011.00039/full",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Balint's Syndrome: Bilateral Neglect Creates \"One Thing at a Time\""
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Balint's syndrome showing bilateral parietal damage and simultaneous agnosia",
+          "url": "https://www.google.com/search?q=Balint+syndrome+simultaneous+agnosia+bilateral+parietal&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Balint's syndrome results from bilateral parietal damage and produces something even stranger than unilateral neglect: simultaneous agnosia—the ability to perceive only one object at a time. You might expect bilateral neglect to result in seeing nothing (neglecting both sides), but instead patients report that objects appear one at a time, automatically and unpredictably, each replacing the previous one. They can describe the currently attended object in detail but are completely unaware of other objects in the scene, even if those objects are large and obvious. Patients with Balint's syndrome have severe difficulties with activities of daily living—they get lost, cannot reach for objects accurately (optic ataxia), and cannot shift gaze voluntarily to new locations (oculomotor apraxia). They can, however, touch parts of their own body, suggesting that body-centered and world-centered spatial representations are implemented separately. Simultaneous agnosia reveals that normally we perceive multiple objects simultaneously by rapidly shifting attention among them, maintaining them in a spatial scene representation. When bilateral parietal damage destroys this spatial attention system, the binding mechanism that normally holds multiple objects in awareness breaks down, and perception becomes a serial stream of isolated objects rather than an integrated scene.",
+          "links": [
+            {
+              "text": "Balint's syndrome",
+              "href": "https://en.wikipedia.org/wiki/Balint%27s_syndrome",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Patients with Balint's syndrome have severe difficulties with activities of daily living",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frontal-lobes-the-executive-suite",
+      "title": "Frontal Lobes: The Executive Suite",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Phineas Gage: The Man Who Lost His Future"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Phineas Gage's skull showing the trajectory of the tamping iron through his frontal lobes",
+          "url": "https://www.google.com/search?q=Phineas+Gage+skull+tamping+iron+trajectory+reconstruction&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "On September 13, 1848, a 25-year-old railroad foreman named Phineas Gage was using a tamping iron to pack explosive powder into a rock when a spark ignited the charge, sending the 43-inch iron rod through his left cheek, behind his left eye, through the frontal lobes of his brain, and out the top of his skull. Miraculously, Gage walked away from the accident, spoke coherently, and seemed physically intact—he didn't lose his ability to move, speak, perceive, or remember. But something profound had changed in ways that his physician, Dr. John Martyn Harlow, struggled to articulate in his 1868 report. Before the accident, Gage was described as a responsible, well-balanced man with good business capacity; afterward, he became \"fitful, irreverent, indulging at times in the grossest profanity... impatient of restraint or advice when it conflicts with his desires.\" Modern reconstructions by Hanna and Antonio Damasio using Gage's preserved skull suggest the tamping iron destroyed his ventromedial prefrontal cortex bilaterally—the region we now know is crucial for decision-making, social behavior, and personality. Gage retained all his memories, knowledge, and skills, but lost the capacity to use them wisely—he could no longer plan for the future, learn from mistakes, or regulate his behavior according to social norms.",
+          "links": [
+            {
+              "text": "On September 13, 1848, a 25-year-old railroad foreman named Phineas Gage",
+              "href": "https://en.wikipedia.org/wiki/Phineas_Gage",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Dr. John Martyn Harlow",
+              "href": "https://en.wikipedia.org/wiki/John_Martyn_Harlow",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Modern reconstructions by Hanna and Antonio Damasio",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1114479/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "What makes Gage's case so important is what it reveals about the prefrontal cortex's unique role in human cognition. Unlike damage to sensory or motor areas that produces clear deficits in perception or movement, frontal lobe damage often leaves basic cognitive abilities intact while disrupting the organization and regulation of behavior. Patients like Gage can pass standard intelligence tests, recall facts, perceive their environment clearly, and execute motor commands—yet they make terrible decisions, fail to plan ahead, act impulsively, and cannot adjust their behavior when circumstances change. This pattern suggested to early neurologists that the frontal lobes housed something like a \"central executive\"—a supervisory system that coordinates and controls other cognitive processes without being directly involved in sensation, movement, or memory storage. Recent scholarship by Malcolm Macmillan has corrected many myths about Gage (he didn't become completely uninhibited, and he eventually recovered enough function to hold a job driving stagecoaches), but the core insight remains: the frontal lobes are essential for regulating behavior, planning for the future, and behaving as an integrated, purposeful agent rather than a collection of reflexes and habits. Gage could think, but he lost the ability to think about thinking—to monitor his own behavior, evaluate consequences, and adjust his actions accordingly.",
+          "links": [
+            {
+              "text": "Recent scholarship by Malcolm Macmillan",
+              "href": "https://www.scientificamerican.com/article/phineas-gage-neuroscience-case/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Evolutionary Expansion of Frontal Cortex"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Comparative brain anatomy showing prefrontal cortex proportion in mice, cats, monkeys, and humans",
+          "url": "https://www.google.com/search?q=prefrontal+cortex+evolution+human+vs+other+primates+comparative+neuroanatomy&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The human prefrontal cortex represents one of evolution's most dramatic expansions—comprising about 30% of total cortical volume compared to roughly 17% in other great apes, 11.5% in gibbons, 8.5% in macaques, and progressively less in non-primate mammals. This expansion happened relatively recently in evolutionary terms, accelerating dramatically in the hominin lineage over the past 2-3 million years—the same period that saw the emergence of tool use, language, and complex social structures. But here's what's fascinating from a computational perspective: the human prefrontal cortex doesn't have fundamentally new cell types or circuits compared to other primates—it's largely a scaling up of the same basic architecture. This suggests that executive function might be an emergent property of having enough computational resources to maintain multiple representations simultaneously, simulate multiple future scenarios, and select actions based on long-term consequences rather than immediate stimulus-response associations. The algorithms themselves may be ancient; what's new is having enough working memory capacity and sustained attention to run those algorithms over complex, abstract, temporally extended problems.",
+          "links": [
+            {
+              "text": "The human prefrontal cortex represents one of evolution's most dramatic expansions",
+              "href": "https://www.nature.com/articles/nn.3284",
+              "kind": "external"
+            },
+            {
+              "text": "the human prefrontal cortex doesn't have fundamentally new cell types or circuits compared to other primates",
+              "href": "https://www.pnas.org/doi/full/10.1073/pnas.1201895109",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "search",
+          "text": "\"prefrontal cortex subdivisions functions 2024\" - show students recent research on frontal lobe organization",
+          "url": "https://www.google.com/search?q=prefrontal+cortex+subdivisions+dorsolateral+ventromedial+orbitofrontal+functions+2024"
+        },
+        {
+          "type": "paragraph",
+          "text": "The prefrontal cortex is not a single unified system but comprises multiple subdivisions with distinct (though overlapping) functions. Dorsolateral prefrontal cortex (dlPFC) is crucial for working memory, planning, and cognitive control—maintaining goals, resisting distraction, and flexibly switching between tasks. Ventromedial prefrontal cortex (vmPFC)—the region destroyed in Phineas Gage—integrates emotion with decision-making, encoding value and supporting learning from reward and punishment. Orbitofrontal cortex (OFC) updates value representations based on current motivational states (whether food is valuable depends on whether you're hungry) and is essential for flexible, context-dependent behavior. Anterior cingulate cortex (ACC)—technically not prefrontal but intimately connected—monitors for conflicts and errors, detecting when automatic responses won't work and cognitive control is needed. These regions work together as a network, with dense reciprocal connections allowing information to flow between them, but they can also be selectively damaged, producing dissociable patterns of executive dysfunction.",
+          "links": [
+            {
+              "text": "Dorsolateral prefrontal cortex (dlPFC)",
+              "href": "https://en.wikipedia.org/wiki/Dorsolateral_prefrontal_cortex",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Ventromedial prefrontal cortex (vmPFC)",
+              "href": "https://en.wikipedia.org/wiki/Ventromedial_prefrontal_cortex",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Orbitofrontal cortex (OFC)",
+              "href": "https://en.wikipedia.org/wiki/Orbitofrontal_cortex",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Anterior cingulate cortex (ACC)",
+              "href": "https://en.wikipedia.org/wiki/Anterior_cingulate_cortex",
+              "kind": "wikipedia"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the-core-executive-functions-as-algorithms",
+      "title": "The Core Executive Functions as Algorithms",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Inhibitory Control: The Veto Algorithm"
+        },
+        {
+          "type": "note",
+          "kind": "draw",
+          "text": "Stroop task showing \"RED\" written in blue ink, with competing response pathways"
+        },
+        {
+          "type": "paragraph",
+          "text": "Imagine reading the word \"RED\" printed in blue ink and being asked to name the color, not read the word. You'll be slower and make more errors than if the word and color match—this is the Stroop effect, discovered in 1935 by John Ridley Stroop, and it reveals one of the prefrontal cortex's most important algorithms: inhibitory control. Reading is automatic and fast for literate adults—you can't help but process the word \"RED\" when you see it—but the task requires you to ignore this automatic response and instead attend to the ink color. This requires active inhibition: the prefrontal cortex must send top-down signals that suppress the prepotent (automatic, dominant) response and facilitate the task-relevant response. Brain imaging studies show that Stroop tasks activate dorsolateral prefrontal cortex and anterior cingulate cortex—the ACC detects the conflict between competing responses (word reading vs color naming), and the dlPFC implements cognitive control by biasing processing toward the task-relevant dimension. This is not just suppressing behavior after it's initiated; it's preventing the wrong response from being selected in the first place through anticipatory biasing of neural populations.",
+          "links": [
+            {
+              "text": "Stroop effect",
+              "href": "https://en.wikipedia.org/wiki/Stroop_effect",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Brain imaging studies show that Stroop tasks activate dorsolateral prefrontal cortex and anterior cingulate cortex",
+              "href": "https://www.nature.com/articles/nrn755",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Computationally, inhibitory control can be understood as an attention-weighted competition between response options. Multiple responses are prepared in parallel—read the word, name the color—and each accumulates evidence toward a threshold for execution. The prefrontal cortex modulates the competition by adjusting the \"weights\" or \"gains\" on different response pathways based on task goals. In the Stroop task, the goal \"name the color\" is maintained in working memory (dlPFC), and this representation sends top-down signals that increase the gain on color-processing pathways while decreasing gain on word-reading pathways. This is similar to the attention mechanisms in modern transformer neural networks (remember Chapter 0?)—learned weights determine which inputs contribute most to outputs. Patients with frontal lobe damage show increased Stroop interference because they cannot maintain the task goal strongly enough to bias the competition—the automatic response wins by default. Critically, this inhibitory control can be depleted through use—the phenomenon of \"ego depletion\" where sustained self-control in one domain reduces subsequent self-control in others, suggesting a limited cognitive resource that must be allocated strategically.",
+          "links": [
+            {
+              "text": "Critically, this inhibitory control can be depleted through use",
+              "href": "https://www.sciencedirect.com/science/article/pii/S1364661308002782",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Cognitive Flexibility: The Task Switching Algorithm"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Wisconsin Card Sorting Test showing cards that can be sorted by color, shape, or number",
+          "url": "https://www.google.com/search?q=Wisconsin+Card+Sorting+Test+cognitive+flexibility+frontal+lobe&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Wisconsin Card Sorting Test (WCST) has been a standard neuropsychological assessment since the 1940s, revealing another core executive function: cognitive flexibility. Participants are given cards that vary in color, shape, and number, and asked to sort them according to a rule—but the rule isn't stated explicitly. Instead, they receive feedback (\"correct\" or \"incorrect\") and must infer the rule from their sorting attempts. Once they've figured out the rule (say, sort by color), it suddenly changes without warning (now sort by shape), and they must detect the change and flexibly adjust their strategy. Patients with frontal lobe damage show perseveration—they continue sorting by the old rule even after receiving negative feedback, unable to shift their mental set to accommodate the new contingencies. This isn't due to memory failure (they remember the rule) or inability to perceive the feedback; it's a failure to flexibly update task representations and inhibit previously successful strategies that are no longer appropriate.",
+          "links": [
+            {
+              "text": "The Wisconsin Card Sorting Test (WCST)",
+              "href": "https://en.wikipedia.org/wiki/Wisconsin_Card_Sorting_Test",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Patients with frontal lobe damage show perseveration",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3578434/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "From an algorithmic perspective, task switching requires several computational steps: (1) detect that the current strategy is no longer working (error monitoring), (2) disengage from the current task set (inhibition of active representations), (3) retrieve or construct a new task set (working memory manipulation), and (4) configure perceptual and motor systems according to the new rule (attention and response mapping). Each step incurs a \"switch cost\"—reaction times are slower and error rates higher on trials immediately after a switch compared to trials where the same rule repeats. This cost reflects the time needed to reconfigure the cognitive system, updating attention filters, response mappings, and working memory contents. The prefrontal cortex orchestrates this reconfiguration through connections to posterior sensory areas (changing what features are attended) and motor areas (changing stimulus-response mappings). Artificial intelligence systems face similar challenges: neural networks trained on one task often show \"catastrophic forgetting\" when trained on a new task, losing their ability to perform the first task—they lack the frontal lobe's ability to maintain multiple task sets and flexibly switch between them without overwriting previous learning.",
+          "links": [
+            {
+              "text": "Each step incurs a \"switch cost\"",
+              "href": "https://www.annualreviews.org/doi/10.1146/annurev.psych.55.090902.141555",
+              "kind": "external"
+            },
+            {
+              "text": "neural networks trained on one task often show \"catastrophic forgetting\"",
+              "href": "https://www.pnas.org/doi/10.1073/pnas.1611835114",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Planning: Hierarchical Goal Decomposition"
+        },
+        {
+          "type": "note",
+          "kind": "draw",
+          "text": "Tower of Hanoi puzzle with goal state and subgoal hierarchy tree"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Tower of Hanoi puzzle—moving disks of different sizes between three pegs, with the constraint that larger disks cannot be placed on smaller ones—requires planning: you must think several moves ahead because the immediate move that seems to bring you closer to the goal might actually trap you in an unsolvable state. Frontal lobe patients can understand the rules and execute legal moves, but they cannot plan the sequence of moves required to solve the puzzle, often getting stuck in loops where they undo their progress or reach dead ends. This reveals another executive function: prospective planning through hierarchical goal decomposition. To solve Tower of Hanoi, you must break the main goal into subgoals (to move the largest disk to the target peg, first move all smaller disks to the spare peg), hold these multiple levels of the goal hierarchy in mind simultaneously, and execute the plan while monitoring progress at each level. This requires working memory to maintain the goal hierarchy, inhibitory control to resist immediate moves that violate the long-term plan, and cognitive flexibility to revise the plan when obstacles arise.",
+          "links": [
+            {
+              "text": "The Tower of Hanoi puzzle",
+              "href": "https://en.wikipedia.org/wiki/Tower_of_Hanoi",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "To solve Tower of Hanoi, you must break the main goal into subgoals",
+              "href": "https://www.cell.com/neuron/fulltext/S0896-6273(09)00385-5",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "search",
+          "text": "\"hierarchical reinforcement learning goal decomposition 2024\" - show students how AI systems solve similar planning problems",
+          "url": "https://www.google.com/search?q=hierarchical+reinforcement+learning+options+framework+goal+decomposition+2024"
+        },
+        {
+          "type": "paragraph",
+          "text": "Computationally, planning can be understood as tree search through a state space: each possible action leads to a new state, and the goal is to find a sequence of actions that reaches the desired end state. Exhaustive search is computationally intractable for most real-world problems (the number of possible move sequences explodes exponentially), so intelligent systems use heuristics—rules of thumb that prune the search space by evaluating which branches are most promising. Hierarchical decomposition is one such heuristic: instead of planning every detailed action, you plan at multiple levels of abstraction (first decide to go to the store, then decide which route to take, then decide when to turn left or right). The prefrontal cortex appears to represent goals at multiple hierarchical levels, with rostral (anterior) prefrontal areas representing abstract, high-level goals (\"achieve career success\") and caudal (posterior) areas representing concrete, immediate actions (\"write this email\"). This mirrors hierarchical reinforcement learning in AI, where high-level policies select subgoals and low-level policies execute actions to achieve them—a computational architecture that DeepMind researchers call \"feudal reinforcement learning,\" named after medieval hierarchies where lords gave orders to vassals who in turn commanded their subordinates, with each level operating semi-autonomously within constraints from above.",
+          "links": [
+            {
+              "text": "The prefrontal cortex appears to represent goals at multiple hierarchical levels",
+              "href": "https://www.nature.com/articles/nn1560",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Error Monitoring: Prediction Error and Conflict Detection"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Error-related negativity (ERN) EEG waveform showing sharp negative deflection after incorrect responses",
+          "url": "https://www.google.com/search?q=error+related+negativity+ERN+anterior+cingulate+cortex+EEG&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Within 100 milliseconds of making a mistake—even before receiving external feedback—your brain generates a distinctive electrical signal called the error-related negativity (ERN), a sharp negative deflection in EEG recordings over frontal-central electrodes. This signal originates in the anterior cingulate cortex and reflects automatic error detection: your brain knows you've made a mistake before you consciously realize it, and often before the mistake produces any observable consequence. Even more remarkably, a related signal called the feedback-related negativity (FRN) appears when you receive feedback indicating unexpected negative outcomes—your ACC is comparing expected and actual outcomes and flagging discrepancies. This is prediction error computation—the same signal we discussed in Chapter 11 for dopamine neurons and reinforcement learning, but now implemented in cortical circuits that monitor ongoing behavior and signal when cognitive control needs to be recruited to adjust performance.",
+          "links": [
+            {
+              "text": "Within 100 milliseconds of making a mistake—even before receiving external feedback—your brain generates a distinctive electrical signal called the error-related negativity (ERN)",
+              "href": "https://en.wikipedia.org/wiki/Error-related_negativity",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "This is prediction error computation—the same signal we discussed in Chapter 11 for dopamine neurons and reinforcement learning",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2430590/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The ACC acts as a conflict monitor, detecting situations where multiple incompatible responses are simultaneously active (as in the Stroop task) or where automatic responses are likely to be incorrect. When conflict or error is detected, the ACC sends a signal to dorsolateral prefrontal cortex: \"Increase cognitive control—automatic processing isn't working.\" This triggers a cascade of adjustments: slowing down on subsequent trials, increasing attention to task-relevant information, and strengthening inhibition of task-irrelevant responses. This is a metacognitive loop—the brain monitoring and regulating its own processing—and it can be understood algorithmically as adaptive gain control. When errors are frequent or conflict is high, the system increases \"gain\" (the responsiveness of control systems to input), making behavior more deliberate and less automatic. When performance is smooth and errors are rare, gain decreases, allowing faster, more automatic processing. This mirrors adaptive learning rates in machine learning: when prediction errors are large, learning rates increase to enable rapid adaptation; when errors are small, learning rates decrease to prevent overfitting to noise.",
+          "links": [
+            {
+              "text": "The ACC acts as a conflict monitor",
+              "href": "https://www.nature.com/articles/35000563",
+              "kind": "external"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decision-making-algorithms-for-choice",
+      "title": "Decision Making: Algorithms for Choice",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "DEEP DIVE: The Somatic Marker Hypothesis—Emotion as Computation"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Iowa Gambling Task setup with four card decks labeled A, B, C, D",
+          "url": "https://www.google.com/search?q=Iowa+Gambling+Task+four+decks+cards+ventromedial+prefrontal&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Antonio Damasio's somatic marker hypothesis proposes something radical: emotion isn't a disruption to rational decision-making but an essential computational component of it. Patients with ventromedial prefrontal damage (like Phineas Gage) can reason logically about hypothetical decisions but make disastrous real-world choices. The Iowa Gambling Task demonstrates this: participants choose from four decks—some give high immediate rewards but larger delayed punishments (net negative), others give modest rewards with smaller punishments (net positive). Healthy participants quickly favor advantageous decks even before consciously knowing which are better—their skin conductance shows anticipatory anxiety before choosing from bad decks. VmPFC patients continue choosing disadvantageous decks despite understanding they're losing—they don't generate the \"gut feeling\" that marks bad options as dangerous.",
+          "links": [
+            {
+              "text": "Antonio Damasio's somatic marker hypothesis",
+              "href": "https://en.wikipedia.org/wiki/Somatic_marker_hypothesis",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "The Iowa Gambling Task demonstrates this",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3032808/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The computational insight: decision-making requires rapidly evaluating options based on vast stored experience, but explicit reasoning is too slow. Emotional responses—somatic markers—are compressed summaries: this option made me feel good/bad, approach/avoid. The vmPFC stores situation-outcome associations; when considering a decision, it reactivates emotional associations as \"gut feelings\" that bias choice. This is \"model-free\" reinforcement learning—storing action values from experience without building explicit world models. The vmPFC implements model-free learning (intuition), while dlPFC implements model-based learning (deliberate reasoning). Optimal decisions require both: fast intuition for familiar situations, slow deliberation for novel ones. Frontal damage disrupts this balance—either impulsive (poor model-based control) or paralyzed by indecision (poor model-free intuition).",
+          "links": [
+            {
+              "text": "This is \"model-free\" reinforcement learning",
+              "href": "https://www.nature.com/articles/s41562-019-0654-z",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Exploration vs Exploitation: Managing Uncertainty"
+        },
+        {
+          "type": "paragraph",
+          "text": "Every decision involves a tradeoff: exploit what you know works or explore new options that might be better? The multi-armed bandit problem—choosing which slot machine to play when payout rates are unknown—captures this dilemma. Optimal solutions explore more when uncertainty is high, exploit when confident. The brain implements this via neuromodulators: norepinephrine (released during uncertainty) promotes exploration; dopamine (released during reward) promotes exploitation. Rostrolateral prefrontal cortex (BA 10) activates during exploratory decisions. Implications: boredom might signal \"time to explore\", anxiety favors safe exploitation. Depression shows reduced exploration (anhedonia), mania shows excessive exploration. Decision-making as uncertainty management explains both normal behavior and psychiatric dysfunction. [Further reading on neural mechanisms]",
+          "links": [
+            {
+              "text": "The multi-armed bandit problem",
+              "href": "https://en.wikipedia.org/wiki/Multi-armed_bandit",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Optimal solutions explore more when uncertainty is high",
+              "href": "https://www.nature.com/articles/nn.2842",
+              "kind": "external"
+            },
+            {
+              "text": "Implications: boredom might signal \"time to explore\"",
+              "href": "https://www.psychologytoday.com/us/blog/the-athletes-way/202004/boredom-can-motivate-the-pursuit-novel-experiences",
+              "kind": "external"
+            },
+            {
+              "text": "Further reading on neural mechanisms",
+              "href": "https://www.google.com/search?q=explore+exploit+tradeoff+dopamine+norepinephrine+prefrontal+2024",
+              "kind": "image_search"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Homunculus Problem: Who Controls the Controller?"
+        },
+        {
+          "type": "note",
+          "kind": "draw",
+          "text": "Cartoon of infinite regress—little person inside head, with even smaller person inside that head, ad infinitum"
+        },
+        {
+          "type": "paragraph",
+          "text": "Here's the paradox: if the prefrontal cortex is the \"CEO\" controlling other brain systems, what controls the prefrontal cortex? This is the homunculus problem—infinite regress. The solution: executive control is not a single system but a distributed network of interacting processes (inhibition, switching, planning, monitoring) that influence each other. There is no CEO, just many control processes that collectively produce flexible behavior. Libet's experiments showed brain activity predicting decisions up to 10 seconds before conscious awareness—suggesting consciousness is a reporter monitoring processes rather than a controller initiating them. The \"biased competition\" model explains attention without a homunculus: prefrontal cortex maintains goals in working memory, which bias ongoing competitions among sensory representations by increasing gain on task-relevant features. No central observer needed—just distributed competitions shaped by goal representations. [Further reading on distributed control architectures]",
+          "links": [
+            {
+              "text": "homunculus problem",
+              "href": "https://en.wikipedia.org/wiki/Homunculus_argument",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Libet's experiments",
+              "href": "https://www.nature.com/articles/nn.2112",
+              "kind": "external"
+            },
+            {
+              "text": "The \"biased competition\" model",
+              "href": "https://www.nature.com/articles/nrn755",
+              "kind": "external"
+            },
+            {
+              "text": "Further reading on distributed control architectures",
+              "href": "https://www.google.com/search?q=homunculus+problem+distributed+control+neuroscience+2024",
+              "kind": "image_search"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "when-executive-function-fails-clinical-insights",
+      "title": "When Executive Function Fails: Clinical Insights",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Dysexecutive Syndrome: Life Without Frontal Control"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Neuropsychological test profiles showing dysexecutive syndrome patterns",
+          "url": "https://www.google.com/search?q=dysexecutive+syndrome+frontal+lobe+damage+case+studies&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dysexecutive syndrome—the constellation of deficits following frontal lobe damage—provides a natural experiment revealing what executive function does by showing what happens when it's gone. Patients with this syndrome show a characteristic pattern: intact basic cognitive abilities (memory, perception, language, motor skills) combined with profound impairments in real-world functioning. They show perseveration (repeating the same action or idea despite it being inappropriate), distractibility (attention captured by irrelevant stimuli), impulsivity (acting on immediate impulses without considering consequences), poor planning (unable to organize sequences of actions toward goals), and apathy (lack of initiative or motivation to pursue goals). Neuropsychologist Paul Broca described one patient who, despite being a skilled craftsman before his injury, spent his days sitting passively unless given specific instructions, and even then would execute each instruction literally without considering the broader goal. When asked to make tea, he would put tea leaves in a cup, add water, and stop—never thinking to heat the water first or add milk and sugar, because these steps weren't explicitly instructed. He had all the component abilities—he could move, perceive, remember the steps—but lost the higher-order organization that integrates them into coherent, goal-directed sequences.",
+          "links": [
+            {
+              "text": "Dysexecutive syndrome",
+              "href": "https://en.wikipedia.org/wiki/Dysexecutive_syndrome",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "What's striking is how domain-general these deficits are—they affect virtually every aspect of life that requires self-regulation, planning, or flexible adaptation. Employment, relationships, financial management, health behaviors—all require executive function, and all deteriorate after frontal lobe damage even though specific skills (how to do a job task, how to have a conversation, how to balance a checkbook) remain intact. This suggests that executive function is a set of domain-general control processes that operate across different content domains, rather than domain-specific knowledge or skills. It's the difference between knowing how to play chess (declarative knowledge stored in temporal cortex) and being able to plan several moves ahead, consider your opponent's strategy, and inhibit impulsive moves (executive processes in frontal cortex). An algorithm for inhibitory control works whether you're inhibiting reaching for a cookie, saying something rude, or clicking on a distracting email—the content changes but the control operation is the same. This suggests that building executive function into AI might not require separate solutions for each domain but rather general-purpose control mechanisms that can operate over different representations.",
+          "links": [
+            {
+              "text": "Employment, relationships, financial management, health behaviors—all require executive function",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7188834/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "ADHD: Executive Function Disorder in Development"
+        },
+        {
+          "type": "paragraph",
+          "text": "ADHD can be understood as a developmental disorder of executive function—deficits in inhibitory control, working memory, and sustained attention. Brain imaging reveals reduced activation in prefrontal and parietal control networks, plus altered connectivity to reward regions. One model proposes steeper delay discounting—future rewards are discounted more heavily, making it hard to choose delayed over immediate rewards. This creates a vicious cycle: tasks requiring sustained effort for delayed payoff are undervalued, leading to poor performance and further undermining motivation. Stimulant medications that increase dopamine and norepinephrine in prefrontal cortex are highly effective, computationally working by increasing gain on control signals. Cognitive training and behavioral interventions can also help by providing external structure to compensate for weak internal control. Key insight: executive deficits are computational limitations in control systems, not \"bad behavior\"—effective interventions must address underlying mechanisms. [Further reading on ADHD mechanisms and treatments]",
+          "links": [
+            {
+              "text": "ADHD",
+              "href": "https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Brain imaging reveals reduced activation in prefrontal and parietal control networks",
+              "href": "https://www.nature.com/articles/nrn3085",
+              "kind": "external"
+            },
+            {
+              "text": "Stimulant medications",
+              "href": "https://www.additudemag.com/medication-treatment-for-adhd/",
+              "kind": "external"
+            },
+            {
+              "text": "Cognitive training and behavioral interventions",
+              "href": "https://psycnet.apa.org/record/2012-07563-001",
+              "kind": "external"
+            },
+            {
+              "text": "Further reading on ADHD mechanisms and treatments",
+              "href": "https://www.google.com/search?q=ADHD+executive+function+treatment+mechanisms+2024",
+              "kind": "image_search"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Addiction: Hijacking Control Systems"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Brain changes in addiction—reduced prefrontal control, enhanced striatal responses to drug cues",
+          "url": "https://www.google.com/search?q=addiction+brain+changes+prefrontal+cortex+striatum+dopamine&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Nora Volkow describes addiction as \"hijacking\" reward and control systems. Drugs cause massive dopamine release in striatum—far larger than natural rewards—creating powerful learning that stamps in drug-seeking. Simultaneously, chronic use weakens prefrontal control: reduced gray matter, decreased activity. Result: enhanced automatic drug-seeking plus weakened inhibitory control. Addicted individuals show impaired executive function—they know drugs are harmful and want to quit, yet cannot maintain this goal against automatic impulses. Computationally, reinforcement learning assumes reward signals track organism welfare. Drugs exploit this by providing supernormal rewards that don't correspond to benefits, causing overlearning of harmful behaviors. Models show addiction emerges from imbalance: model-free habits become hyperactive while model-based knowledge weakens. Recovery requires reducing habit strength (extinction, cue avoidance) while strengthening prefrontal control (training, mindfulness, medication). This framing reduces stigma: addiction isn't \"bad choices\" but neuroadaptations that make drug-seeking automatic and difficult to inhibit. [Further reading on computational models of addiction]",
+          "links": [
+            {
+              "text": "Nora Volkow",
+              "href": "https://www.nytimes.com/2018/10/15/upshot/opioid-crisis-nora-volkow.html",
+              "kind": "external"
+            },
+            {
+              "text": "Addicted individuals show impaired executive function",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3120118/",
+              "kind": "external"
+            },
+            {
+              "text": "Models show addiction emerges from imbalance",
+              "href": "https://www.sciencedirect.com/science/article/pii/S0165027016302333",
+              "kind": "external"
+            },
+            {
+              "text": "Further reading on computational models of addiction",
+              "href": "https://www.google.com/search?q=addiction+computational+models+treatment+2024",
+              "kind": "image_search"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hemispheric-lateralization-two-executives-in-one-brain",
+      "title": "Hemispheric Lateralization: Two Executives in One Brain?",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Split-Brain Patients Reveal Divided Minds"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Split-brain experimental setup showing stimuli presented separately to left and right hemispheres",
+          "url": "https://www.google.com/search?q=split+brain+patients+corpus+callosum+Sperry+experiments&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Split-brain patients—individuals who had their corpus callosum surgically severed to treat intractable epilepsy—have provided some of the most striking evidence about hemispheric specialization and the nature of consciousness. Nobel laureate Roger Sperry's experiments in the 1960s-70s revealed that the two hemispheres have complementary cognitive abilities that become apparent when they can no longer communicate. Using tachistoscopic presentation—flashing stimuli briefly to one visual field so information goes to only one hemisphere—researchers found that each hemisphere has its own knowledge, perceptions, and even goals that the other hemisphere doesn't share. When an object is flashed to the left visual field (right hemisphere), patients say they see nothing—because the right hemisphere cannot speak. But ask them to reach with their left hand (controlled by right hemisphere) and they correctly select the object, proving the right hemisphere recognized it even though it couldn't verbally report it. More dramatically, if you flash conflicting instructions to each hemisphere (\"walk\" to left hemisphere, \"stand\" to right), the patient might stand up then sit back down, as the two hemispheres literally compete for motor control.",
+          "links": [
+            {
+              "text": "Split-brain patients",
+              "href": "https://en.wikipedia.org/wiki/Split-brain",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Nobel laureate Roger Sperry's experiments",
+              "href": "https://www.nobelprize.org/prizes/medicine/1981/sperry/biographical/",
+              "kind": "external"
+            },
+            {
+              "text": "Using tachistoscopic presentation",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Left Hemisphere: Language, Mathematics, and Sequential Processing"
+        },
+        {
+          "type": "paragraph",
+          "text": "The left hemisphere in most people (>95% of right-handers, ~70% of left-handers) is dominant for language production and comprehension. Split-brain studies show the left hemisphere is also dominant for mathematics, logical reasoning, and sequential processing—breaking complex tasks into step-by-step procedures. When split-brain patients are asked to explain actions initiated by their mute right hemisphere, the left hemisphere confabulates plausible-sounding explanations, revealing what Michael Gazzaniga called \"the interpreter\"—a left-hemisphere process that generates verbal narratives to explain behavior even when it doesn't have access to the actual causes. This suggests that the verbal, narrative, \"executive\" self we experience might be a left-hemisphere construction—a story the left hemisphere tells about why we do things, which may or may not accurately reflect the actual (often unconscious, distributed) processes that generate behavior.",
+          "links": [
+            {
+              "text": "Split-brain studies show the left hemisphere is also dominant for mathematics",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3101485/",
+              "kind": "external"
+            },
+            {
+              "text": "\"the interpreter\"",
+              "href": "https://www.scientificamerican.com/article/the-split-brain-a-tale-of-two-halves/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Right Hemisphere: Spatial, Holistic, and Emotional Processing"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Summary diagrams showing left vs right hemisphere functional specializations",
+          "url": "https://www.google.com/search?q=hemispheric+specialization+lateralization+spatial+language+face+recognition&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The right hemisphere is dominant for spatial processing—even right-handed split-brain patients draw better with their left hand (right hemisphere control) than their right hand, because the right hemisphere is superior at spatial relationships. The right hemisphere is also better at face recognition (prosopagnosia is worse with right hemisphere damage), music perception, and holistic/gestalt processing—seeing the forest rather than the trees. While the left hemisphere analyzes features sequentially, the right hemisphere processes patterns holistically and simultaneously. This complementary specialization suggests that complex cognition requires both analytic/sequential and holistic/spatial processing, implemented as parallel algorithms in the two hemispheres. For building AI, this raises interesting questions: should we implement different processing styles in separate modules (like the brain), or try to build unified systems? Current AI tends toward the latter, but the brain's solution—parallel systems with different processing biases—might offer advantages for certain problems.",
+          "links": [
+            {
+              "text": "The right hemisphere is dominant for spatial processing",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the-consciousness-question-which-functions-need-awareness",
+      "title": "The Consciousness Question: Which Functions Need Awareness?",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Zombie Agents Running the Show"
+        },
+        {
+          "type": "note",
+          "kind": "search",
+          "text": "\"global workspace theory consciousness neural correlates 2024\" - show students current theories",
+          "url": "https://www.google.com/search?q=global+workspace+theory+consciousness+neural+correlates+2024"
+        },
+        {
+          "type": "paragraph",
+          "text": "We've now surveyed the full hierarchy from posterior perception to frontal control, and here's the unsettling conclusion: almost all of these processes can operate unconsciously. Recognition, attention, inhibition, task-switching, error monitoring, even decision-making show evidence of unconscious operation in various conditions. Kahneman's System 1 vs System 2 distinction captures this: most cognitive processing is fast, automatic, and unconscious (System 1), while only some deliberate, effortful processing feels conscious (System 2). But even System 2 might be unconscious processes that we merely witness—Libet's experiments showed brain activity predicting decisions up to 10 seconds before conscious awareness, and split-brain patients confabulate explanations for actions they don't understand. Perhaps consciousness is not a controller but a narrator—a system that monitors and describes ongoing processes without causing them. Global Workspace Theory proposes that consciousness is a \"broadcast\"—when information reaches certain highly interconnected networks (prefrontal-parietal), it becomes globally available and we experience awareness. Integrated Information Theory proposes consciousness is intrinsic integration—a system is conscious to the degree its parts influence each other rather than operating independently. Both theories suggest executive functions could exist without consciousness (as zombie algorithms), but in humans they happen to run on architectures that generate consciousness as an emergent property. Next lecture we'll tackle consciousness head-on: what is it, why does it exist, and does it actually do anything?",
+          "links": [
+            {
+              "text": "Kahneman's System 1 vs System 2",
+              "href": "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Libet's experiments",
+              "href": "https://www.nature.com/articles/nn.2112",
+              "kind": "external"
+            },
+            {
+              "text": "Global Workspace Theory proposes that consciousness is a \"broadcast\"",
+              "href": "https://www.pnas.org/doi/full/10.1073/pnas.1605337113",
+              "kind": "external"
+            },
+            {
+              "text": "Integrated Information Theory proposes consciousness is intrinsic integration",
+              "href": "https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00625/full",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "stage",
+          "text": "We've now toured the full hierarchy of association cortex—from posterior areas that fail at recognition (agnosia) and attention (neglect), through frontal areas that fail at control (dysexecutive syndrome, ADHD, addiction), to the split-brain evidence that these functions are distributed across hemispheres. Each level can be understood algorithmically: recognition as linking representations to stored knowledge, attention as biased competition over spatial reference frames, inhibition as gain control on prepotent responses, planning as hierarchical goal decomposition. Yet these algorithms produce subjective experiences—the feeling of recognizing a face, the effort of resisting temptation, the unified sense of self even though our brain has two largely independent hemispheres. This brings us to the threshold of the deepest question in neuroscience: what is consciousness, why does it exist, and how does it emerge from algorithms that could (in principle) run unconsciously? That's where we're headed next."
+        }
+      ]
+    },
+    {
+      "id": "thought-questions",
+      "title": "Thought Questions for Discussion",
+      "level": 2,
+      "kind": "thought_questions",
+      "blocks": [
+        {
+          "type": "stage",
+          "text": "Four questions that connect perception, attention, control, and consciousness:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Contralateral neglect patients in Milan could recall all buildings in the famous Piazza del Duomo from memory, but only those on their imagined right—and which buildings those were depended on which direction they imagined facing. They had complete memories; the deficit was in attending to the left side of their mental representation. This raises profound questions: If attention operates over internal representations (imagination, memory) the same way it operates over perceptions, what does this tell us about the nature of consciousness? When you imagine a scene, are you \"perceiving\" an internal display, and if so, who's the internal observer? Does the neglect patient have two streams of consciousness—one that attends only rightward, and another (inaccessible to report) that contains the neglected left? Or is consciousness inherently asymmetric, constructed only from what attention delivers?",
+          "lead_title": "The Piazza del Duomo Paradox—Attention in Imagination"
+        },
+        {
+          "type": "paragraph",
+          "text": "Split-brain patients have two hemispheres that cannot communicate, each with different knowledge and abilities. The left hemisphere can speak and confabulates explanations for actions initiated by the mute right hemisphere. This raises the question: Do split-brain patients have two consciousnesses, or one? When the right hemisphere sees an object it cannot name, is it consciously experiencing that perception, or is consciousness uniquely associated with the linguistic left hemisphere? The fact that the left hemisphere confabulates suggests it's narrating a story based on incomplete information—does this mean normal consciousness is also a narrative construction, a story the interpreter tells about processes it doesn't fully access? Which version of \"you\" is real: the verbal narrator or the non-verbal actor?",
+          "lead_title": "Split Brains, Split Minds?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Prosopagnosic patients can see faces perfectly—they describe features, identify emotions—but cannot recognize whose face it is, even their own in a mirror. This demonstrates that \"seeing\" and \"recognizing\" are separable processes. But here's the puzzle: what is it like to see a face you don't recognize? Do prosopagnosic patients have the same visual experience as normal observers but lack the ability to link it to identity, or is their visual experience itself different—perhaps lacking the holistic \"gestalt\" quality that makes faces special? This connects to the hard problem of consciousness: can we ever know whether two people have the same subjective experience when looking at the same thing, or are qualia fundamentally private and incomparable?",
+          "lead_title": "Prosopagnosia and the Problem of Qualia"
+        },
+        {
+          "type": "paragraph",
+          "text": "We've now seen that executive functions (inhibition, planning, decision-making), attention (biased competition, spatial reference frames), and even recognition (linking percepts to meaning) can all be described algorithmically. Suppose we build an AI with all these algorithms: attention mechanisms that operate over internal representations, executive control that inhibits responses and plans hierarchically, decision-making that balances exploration and exploitation, and even the ability to \"neglect\" parts of its internal models when damaged. It passes every behavioral test, even passing the mirror test and reporting experiences when asked. Is this system conscious? What (if anything) would be missing? Can consciousness emerge from algorithms alone, or does it require specific biological implementations? And here's the kicker: could such a system have \"neglect\"—parts of its processing that affect behavior but never enter its reportable awareness—making it a partial zombie?",
+          "lead_title": "The Algorithmic Consciousness Gambit—Revisited"
+        },
+        {
+          "type": "subheading",
+          "text": "Practice Questions:"
+        },
+        {
+          "type": "paragraph",
+          "text": "• _______ proposed the hierarchical organization of cortex in the 1870s: primary sensory areas → _______ association areas → multimodal association areas."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The three major multimodal association areas are: _______ association area (temporal-parietal-occipital junction for perception), _______ association area (medial temporal lobe for emotion and memory), and _______ association area (prefrontal cortex for executive control)."
+        },
+        {
+          "type": "paragraph",
+          "text": "• _______ is the inability to recognize objects despite intact perception—a Greek word meaning \"not knowing.\""
+        },
+        {
+          "type": "paragraph",
+          "text": "• _______ is the inability to recognize faces despite being able to identify them as faces and describe features; it results from bilateral damage to the _______ face area."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Patients with _______ agnosia can draw objects but cannot name them, while patients with _______ agnosia cannot draw but can name objects."
+        },
+        {
+          "type": "paragraph",
+          "text": "• _______ neglect syndrome results from right _______ parietal damage, causing patients to ignore the left side of space, including their own body."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The Piazza del Duomo study showed that neglect affects _______ representations in memory, not just current perception—patients neglected buildings on the imagined _______ regardless of which buildings those were."
+        },
+        {
+          "type": "paragraph",
+          "text": "• _______ syndrome from bilateral parietal damage produces simultaneous _______—patients can perceive only _______ object at a time."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Patient _______ suffered frontal lobe damage from a tamping iron in 1848, demonstrating that frontal lobes are crucial for personality and _______ while basic cognitive abilities remained intact."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The prefrontal cortex comprises approximately _______% of human cortex, compared to _______% in other great apes."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The three main PFC subdivisions are: _______ (working memory/planning), _______ (emotion/decision-making), and _______ (flexible value representations)."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The _______ effect demonstrates inhibitory control—naming ink color when it conflicts with the word requires inhibiting the automatic _______ response."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The _______ is an EEG signal appearing within 100ms of errors, originating in _______ cingulate cortex, before conscious awareness."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The Iowa Gambling Task revealed that patients with _______ prefrontal damage cannot learn to avoid bad decks, supporting the _______ marker hypothesis."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The explore-exploit tradeoff is modulated by _______ (promoting exploration during uncertainty) and _______ (promoting exploitation of rewards)."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The _______ problem (infinite regress) is resolved by understanding control as _______ across many interacting processes rather than centralized."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Split-brain patients have had their _______ callosum severed; the left hemisphere is dominant for _______ and _______, while the right is dominant for _______ and face recognition."
+        },
+        {
+          "type": "paragraph",
+          "text": "• _______ theory proposes consciousness is a broadcast mechanism enabling flexible information integration; _______ Information Theory proposes consciousness emerges from systems with high integration and differentiation."
+        }
+      ]
+    }
+  ],
+  "thought_questions": [
+    {
+      "type": "question",
+      "title": "The Piazza del Duomo Paradox—Attention in Imagination",
+      "text": "Contralateral neglect patients in Milan could recall all buildings in the famous Piazza del Duomo from memory, but only those on their imagined right—and which buildings those were depended on which direction they imagined facing. They had complete memories; the deficit was in attending to the left side of their mental representation. This raises profound questions: If attention operates over internal representations (imagination, memory) the same way it operates over perceptions, what does this tell us about the nature of consciousness? When you imagine a scene, are you \"perceiving\" an internal display, and if so, who's the internal observer? Does the neglect patient have two streams of consciousness—one that attends only rightward, and another (inaccessible to report) that contains the neglected left? Or is consciousness inherently asymmetric, constructed only from what attention delivers?"
+    },
+    {
+      "type": "question",
+      "title": "Split Brains, Split Minds?",
+      "text": "Split-brain patients have two hemispheres that cannot communicate, each with different knowledge and abilities. The left hemisphere can speak and confabulates explanations for actions initiated by the mute right hemisphere. This raises the question: Do split-brain patients have two consciousnesses, or one? When the right hemisphere sees an object it cannot name, is it consciously experiencing that perception, or is consciousness uniquely associated with the linguistic left hemisphere? The fact that the left hemisphere confabulates suggests it's narrating a story based on incomplete information—does this mean normal consciousness is also a narrative construction, a story the interpreter tells about processes it doesn't fully access? Which version of \"you\" is real: the verbal narrator or the non-verbal actor?"
+    },
+    {
+      "type": "question",
+      "title": "Prosopagnosia and the Problem of Qualia",
+      "text": "Prosopagnosic patients can see faces perfectly—they describe features, identify emotions—but cannot recognize whose face it is, even their own in a mirror. This demonstrates that \"seeing\" and \"recognizing\" are separable processes. But here's the puzzle: what is it like to see a face you don't recognize? Do prosopagnosic patients have the same visual experience as normal observers but lack the ability to link it to identity, or is their visual experience itself different—perhaps lacking the holistic \"gestalt\" quality that makes faces special? This connects to the hard problem of consciousness: can we ever know whether two people have the same subjective experience when looking at the same thing, or are qualia fundamentally private and incomparable?"
+    },
+    {
+      "type": "question",
+      "title": "The Algorithmic Consciousness Gambit—Revisited",
+      "text": "We've now seen that executive functions (inhibition, planning, decision-making), attention (biased competition, spatial reference frames), and even recognition (linking percepts to meaning) can all be described algorithmically. Suppose we build an AI with all these algorithms: attention mechanisms that operate over internal representations, executive control that inhibits responses and plans hierarchically, decision-making that balances exploration and exploitation, and even the ability to \"neglect\" parts of its internal models when damaged. It passes every behavioral test, even passing the mirror test and reporting experiences when asked. Is this system conscious? What (if anything) would be missing? Can consciousness emerge from algorithms alone, or does it require specific biological implementations? And here's the kicker: could such a system have \"neglect\"—parts of its processing that affect behavior but never enter its reportable awareness—making it a partial zombie?"
+    }
+  ],
+  "practice_questions": {
+    "fill_in_the_blanks": [
+      "_______ proposed the hierarchical organization of cortex in the 1870s: primary sensory areas → _______ association areas → multimodal association areas.",
+      "The three major multimodal association areas are: _______ association area (temporal-parietal-occipital junction for perception), _______ association area (medial temporal lobe for emotion and memory), and _______ association area (prefrontal cortex for executive control).",
+      "_______ is the inability to recognize objects despite intact perception—a Greek word meaning \"not knowing.\"",
+      "_______ is the inability to recognize faces despite being able to identify them as faces and describe features; it results from bilateral damage to the _______ face area.",
+      "Patients with _______ agnosia can draw objects but cannot name them, while patients with _______ agnosia cannot draw but can name objects.",
+      "_______ neglect syndrome results from right _______ parietal damage, causing patients to ignore the left side of space, including their own body.",
+      "The Piazza del Duomo study showed that neglect affects _______ representations in memory, not just current perception—patients neglected buildings on the imagined _______ regardless of which buildings those were.",
+      "_______ syndrome from bilateral parietal damage produces simultaneous _______—patients can perceive only _______ object at a time.",
+      "Patient _______ suffered frontal lobe damage from a tamping iron in 1848, demonstrating that frontal lobes are crucial for personality and _______ while basic cognitive abilities remained intact.",
+      "The prefrontal cortex comprises approximately _______% of human cortex, compared to _______% in other great apes.",
+      "The three main PFC subdivisions are: _______ (working memory/planning), _______ (emotion/decision-making), and _______ (flexible value representations).",
+      "The _______ effect demonstrates inhibitory control—naming ink color when it conflicts with the word requires inhibiting the automatic _______ response.",
+      "The _______ is an EEG signal appearing within 100ms of errors, originating in _______ cingulate cortex, before conscious awareness.",
+      "The Iowa Gambling Task revealed that patients with _______ prefrontal damage cannot learn to avoid bad decks, supporting the _______ marker hypothesis.",
+      "The explore-exploit tradeoff is modulated by _______ (promoting exploration during uncertainty) and _______ (promoting exploitation of rewards).",
+      "The _______ problem (infinite regress) is resolved by understanding control as _______ across many interacting processes rather than centralized.",
+      "Split-brain patients have had their _______ callosum severed; the left hemisphere is dominant for _______ and _______, while the right is dominant for _______ and face recognition.",
+      "_______ theory proposes consciousness is a broadcast mechanism enabling flexible information integration; _______ Information Theory proposes consciousness emerges from systems with high integration and differentiation."
+    ]
+  },
+  "closing": [
+    {
+      "type": "note",
+      "kind": "preview",
+      "text": "Neural correlates of consciousness and competing theories",
+      "url": "https://www.google.com/search?q=consciousness+neural+correlates+theories+2024"
+    }
+  ],
+  "links": [
+    {
+      "text": "John Hughlings Jackson",
+      "href": "https://en.wikipedia.org/wiki/John_Hughlings_Jackson",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Neural correlates of consciousness and competing theories",
+      "href": "https://www.google.com/search?q=consciousness+neural+correlates+theories+2024",
+      "kind": "image_search"
+    },
+    {
+      "text": "Hierarchical organization showing primary sensory areas, unimodal association areas, and multimodal integration regions",
+      "href": "https://www.google.com/search?q=cortical+hierarchy+primary+unimodal+multimodal+association+areas&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Primary sensory cortex",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "Deep learning networks use the same principle",
+      "href": "https://www.nature.com/articles/nrn3475",
+      "kind": "external"
+    },
+    {
+      "text": "Different types of agnosia showing dissociation between perception and recognition",
+      "href": "https://www.google.com/search?q=agnosia+types+visual+auditory+tactile+neuropsychology&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Agnosia",
+      "href": "https://en.wikipedia.org/wiki/Agnosia",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Damage to posterior multimodal association cortex",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "Prosopagnosia and the fusiform face area showing bilateral lesions",
+      "href": "https://www.google.com/search?q=prosopagnosia+face+blindness+fusiform+face+area&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Prosopagnosia",
+      "href": "https://en.wikipedia.org/wiki/Prosopagnosia",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Author Oliver Sacks had prosopagnosia",
+      "href": "https://www.newyorker.com/magazine/2010/08/30/face-blind",
+      "kind": "external"
+    },
+    {
+      "text": "fusiform face area",
+      "href": "https://en.wikipedia.org/wiki/Fusiform_face_area",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Faces are \"special\"",
+      "href": "https://www.pnas.org/doi/10.1073/pnas.0602974103",
+      "kind": "external"
+    },
+    {
+      "text": "Some people have developmental prosopagnosia",
+      "href": "https://www.theguardian.com/society/2016/jul/02/face-blindness-prosopagnosia-identity",
+      "kind": "external"
+    },
+    {
+      "text": "Patients with associative vs apperceptive agnosia attempting to copy and name drawings",
+      "href": "https://www.google.com/search?q=associative+apperceptive+agnosia+copy+drawing+test&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "The distinction between associative and apperceptive agnosia",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "Patient drawings showing left-sided neglect—clocks with numbers only on right, flowers with petals only on right",
+      "href": "https://www.google.com/search?q=hemispatial+neglect+right+parietal+damage+drawings+clock&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Contralateral neglect syndrome",
+      "href": "https://en.wikipedia.org/wiki/Hemispatial_neglect",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Some patients show \"personal neglect\"",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "As the UTHealth chapter notes",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3015883/",
+      "kind": "external"
+    },
+    {
+      "text": "Piazza del Duomo in Milan showing the cathedral and surrounding buildings",
+      "href": "https://www.google.com/search?q=Piazza+del+Duomo+Milan+cathedral+square&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Italian researchers Bisiach and Luzzatti in 1978",
+      "href": "https://www.science.org/doi/10.1126/science.3282892",
+      "kind": "external"
+    },
+    {
+      "text": "Modern theories propose that the right hemisphere specializes in spatial attention",
+      "href": "https://www.frontiersin.org/articles/10.3389/fnhum.2011.00039/full",
+      "kind": "external"
+    },
+    {
+      "text": "Balint's syndrome showing bilateral parietal damage and simultaneous agnosia",
+      "href": "https://www.google.com/search?q=Balint+syndrome+simultaneous+agnosia+bilateral+parietal&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Balint's syndrome",
+      "href": "https://en.wikipedia.org/wiki/Balint%27s_syndrome",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Patients with Balint's syndrome have severe difficulties with activities of daily living",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "Phineas Gage's skull showing the trajectory of the tamping iron through his frontal lobes",
+      "href": "https://www.google.com/search?q=Phineas+Gage+skull+tamping+iron+trajectory+reconstruction&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "On September 13, 1848, a 25-year-old railroad foreman named Phineas Gage",
+      "href": "https://en.wikipedia.org/wiki/Phineas_Gage",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Dr. John Martyn Harlow",
+      "href": "https://en.wikipedia.org/wiki/John_Martyn_Harlow",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Modern reconstructions by Hanna and Antonio Damasio",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1114479/",
+      "kind": "external"
+    },
+    {
+      "text": "Recent scholarship by Malcolm Macmillan",
+      "href": "https://www.scientificamerican.com/article/phineas-gage-neuroscience-case/",
+      "kind": "external"
+    },
+    {
+      "text": "Comparative brain anatomy showing prefrontal cortex proportion in mice, cats, monkeys, and humans",
+      "href": "https://www.google.com/search?q=prefrontal+cortex+evolution+human+vs+other+primates+comparative+neuroanatomy&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "The human prefrontal cortex represents one of evolution's most dramatic expansions",
+      "href": "https://www.nature.com/articles/nn.3284",
+      "kind": "external"
+    },
+    {
+      "text": "the human prefrontal cortex doesn't have fundamentally new cell types or circuits compared to other primates",
+      "href": "https://www.pnas.org/doi/full/10.1073/pnas.1201895109",
+      "kind": "external"
+    },
+    {
+      "text": "\"prefrontal cortex subdivisions functions 2024\" - show students recent research on frontal lobe organization",
+      "href": "https://www.google.com/search?q=prefrontal+cortex+subdivisions+dorsolateral+ventromedial+orbitofrontal+functions+2024",
+      "kind": "image_search"
+    },
+    {
+      "text": "Dorsolateral prefrontal cortex (dlPFC)",
+      "href": "https://en.wikipedia.org/wiki/Dorsolateral_prefrontal_cortex",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Ventromedial prefrontal cortex (vmPFC)",
+      "href": "https://en.wikipedia.org/wiki/Ventromedial_prefrontal_cortex",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Orbitofrontal cortex (OFC)",
+      "href": "https://en.wikipedia.org/wiki/Orbitofrontal_cortex",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Anterior cingulate cortex (ACC)",
+      "href": "https://en.wikipedia.org/wiki/Anterior_cingulate_cortex",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Stroop effect",
+      "href": "https://en.wikipedia.org/wiki/Stroop_effect",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Brain imaging studies show that Stroop tasks activate dorsolateral prefrontal cortex and anterior cingulate cortex",
+      "href": "https://www.nature.com/articles/nrn755",
+      "kind": "external"
+    },
+    {
+      "text": "Critically, this inhibitory control can be depleted through use",
+      "href": "https://www.sciencedirect.com/science/article/pii/S1364661308002782",
+      "kind": "external"
+    },
+    {
+      "text": "Wisconsin Card Sorting Test showing cards that can be sorted by color, shape, or number",
+      "href": "https://www.google.com/search?q=Wisconsin+Card+Sorting+Test+cognitive+flexibility+frontal+lobe&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "The Wisconsin Card Sorting Test (WCST)",
+      "href": "https://en.wikipedia.org/wiki/Wisconsin_Card_Sorting_Test",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Patients with frontal lobe damage show perseveration",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3578434/",
+      "kind": "external"
+    },
+    {
+      "text": "Each step incurs a \"switch cost\"",
+      "href": "https://www.annualreviews.org/doi/10.1146/annurev.psych.55.090902.141555",
+      "kind": "external"
+    },
+    {
+      "text": "neural networks trained on one task often show \"catastrophic forgetting\"",
+      "href": "https://www.pnas.org/doi/10.1073/pnas.1611835114",
+      "kind": "external"
+    },
+    {
+      "text": "The Tower of Hanoi puzzle",
+      "href": "https://en.wikipedia.org/wiki/Tower_of_Hanoi",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "To solve Tower of Hanoi, you must break the main goal into subgoals",
+      "href": "https://www.cell.com/neuron/fulltext/S0896-6273(09)00385-5",
+      "kind": "external"
+    },
+    {
+      "text": "\"hierarchical reinforcement learning goal decomposition 2024\" - show students how AI systems solve similar planning problems",
+      "href": "https://www.google.com/search?q=hierarchical+reinforcement+learning+options+framework+goal+decomposition+2024",
+      "kind": "image_search"
+    },
+    {
+      "text": "The prefrontal cortex appears to represent goals at multiple hierarchical levels",
+      "href": "https://www.nature.com/articles/nn1560",
+      "kind": "external"
+    },
+    {
+      "text": "Error-related negativity (ERN) EEG waveform showing sharp negative deflection after incorrect responses",
+      "href": "https://www.google.com/search?q=error+related+negativity+ERN+anterior+cingulate+cortex+EEG&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Within 100 milliseconds of making a mistake—even before receiving external feedback—your brain generates a distinctive electrical signal called the error-related negativity (ERN)",
+      "href": "https://en.wikipedia.org/wiki/Error-related_negativity",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "This is prediction error computation—the same signal we discussed in Chapter 11 for dopamine neurons and reinforcement learning",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2430590/",
+      "kind": "external"
+    },
+    {
+      "text": "The ACC acts as a conflict monitor",
+      "href": "https://www.nature.com/articles/35000563",
+      "kind": "external"
+    },
+    {
+      "text": "Iowa Gambling Task setup with four card decks labeled A, B, C, D",
+      "href": "https://www.google.com/search?q=Iowa+Gambling+Task+four+decks+cards+ventromedial+prefrontal&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Antonio Damasio's somatic marker hypothesis",
+      "href": "https://en.wikipedia.org/wiki/Somatic_marker_hypothesis",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "The Iowa Gambling Task demonstrates this",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3032808/",
+      "kind": "external"
+    },
+    {
+      "text": "This is \"model-free\" reinforcement learning",
+      "href": "https://www.nature.com/articles/s41562-019-0654-z",
+      "kind": "external"
+    },
+    {
+      "text": "The multi-armed bandit problem",
+      "href": "https://en.wikipedia.org/wiki/Multi-armed_bandit",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Optimal solutions explore more when uncertainty is high",
+      "href": "https://www.nature.com/articles/nn.2842",
+      "kind": "external"
+    },
+    {
+      "text": "Implications: boredom might signal \"time to explore\"",
+      "href": "https://www.psychologytoday.com/us/blog/the-athletes-way/202004/boredom-can-motivate-the-pursuit-novel-experiences",
+      "kind": "external"
+    },
+    {
+      "text": "Further reading on neural mechanisms",
+      "href": "https://www.google.com/search?q=explore+exploit+tradeoff+dopamine+norepinephrine+prefrontal+2024",
+      "kind": "image_search"
+    },
+    {
+      "text": "homunculus problem",
+      "href": "https://en.wikipedia.org/wiki/Homunculus_argument",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Libet's experiments",
+      "href": "https://www.nature.com/articles/nn.2112",
+      "kind": "external"
+    },
+    {
+      "text": "The \"biased competition\" model",
+      "href": "https://www.nature.com/articles/nrn755",
+      "kind": "external"
+    },
+    {
+      "text": "Further reading on distributed control architectures",
+      "href": "https://www.google.com/search?q=homunculus+problem+distributed+control+neuroscience+2024",
+      "kind": "image_search"
+    },
+    {
+      "text": "Neuropsychological test profiles showing dysexecutive syndrome patterns",
+      "href": "https://www.google.com/search?q=dysexecutive+syndrome+frontal+lobe+damage+case+studies&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Dysexecutive syndrome",
+      "href": "https://en.wikipedia.org/wiki/Dysexecutive_syndrome",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Employment, relationships, financial management, health behaviors—all require executive function",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7188834/",
+      "kind": "external"
+    },
+    {
+      "text": "ADHD",
+      "href": "https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Brain imaging reveals reduced activation in prefrontal and parietal control networks",
+      "href": "https://www.nature.com/articles/nrn3085",
+      "kind": "external"
+    },
+    {
+      "text": "Stimulant medications",
+      "href": "https://www.additudemag.com/medication-treatment-for-adhd/",
+      "kind": "external"
+    },
+    {
+      "text": "Cognitive training and behavioral interventions",
+      "href": "https://psycnet.apa.org/record/2012-07563-001",
+      "kind": "external"
+    },
+    {
+      "text": "Further reading on ADHD mechanisms and treatments",
+      "href": "https://www.google.com/search?q=ADHD+executive+function+treatment+mechanisms+2024",
+      "kind": "image_search"
+    },
+    {
+      "text": "Brain changes in addiction—reduced prefrontal control, enhanced striatal responses to drug cues",
+      "href": "https://www.google.com/search?q=addiction+brain+changes+prefrontal+cortex+striatum+dopamine&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Nora Volkow",
+      "href": "https://www.nytimes.com/2018/10/15/upshot/opioid-crisis-nora-volkow.html",
+      "kind": "external"
+    },
+    {
+      "text": "Addicted individuals show impaired executive function",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3120118/",
+      "kind": "external"
+    },
+    {
+      "text": "Models show addiction emerges from imbalance",
+      "href": "https://www.sciencedirect.com/science/article/pii/S0165027016302333",
+      "kind": "external"
+    },
+    {
+      "text": "Further reading on computational models of addiction",
+      "href": "https://www.google.com/search?q=addiction+computational+models+treatment+2024",
+      "kind": "image_search"
+    },
+    {
+      "text": "Split-brain experimental setup showing stimuli presented separately to left and right hemispheres",
+      "href": "https://www.google.com/search?q=split+brain+patients+corpus+callosum+Sperry+experiments&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Split-brain patients",
+      "href": "https://en.wikipedia.org/wiki/Split-brain",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Nobel laureate Roger Sperry's experiments",
+      "href": "https://www.nobelprize.org/prizes/medicine/1981/sperry/biographical/",
+      "kind": "external"
+    },
+    {
+      "text": "Using tachistoscopic presentation",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "Split-brain studies show the left hemisphere is also dominant for mathematics",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3101485/",
+      "kind": "external"
+    },
+    {
+      "text": "\"the interpreter\"",
+      "href": "https://www.scientificamerican.com/article/the-split-brain-a-tale-of-two-halves/",
+      "kind": "external"
+    },
+    {
+      "text": "Summary diagrams showing left vs right hemisphere functional specializations",
+      "href": "https://www.google.com/search?q=hemispheric+specialization+lateralization+spatial+language+face+recognition&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "The right hemisphere is dominant for spatial processing",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter09.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "\"global workspace theory consciousness neural correlates 2024\" - show students current theories",
+      "href": "https://www.google.com/search?q=global+workspace+theory+consciousness+neural+correlates+2024",
+      "kind": "image_search"
+    },
+    {
+      "text": "Kahneman's System 1 vs System 2",
+      "href": "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Global Workspace Theory proposes that consciousness is a \"broadcast\"",
+      "href": "https://www.pnas.org/doi/full/10.1073/pnas.1605337113",
+      "kind": "external"
+    },
+    {
+      "text": "Integrated Information Theory proposes consciousness is intrinsic integration",
+      "href": "https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00625/full",
+      "kind": "external"
+    }
+  ],
+  "images": [
+    {
+      "src": "GeminiSummaryCh12.png",
+      "alt": "Executive Function Visual Summary",
+      "viewer": "image-viewer.html?image=GeminiSummaryCh12.png",
+      "role": "summary"
+    }
+  ],
+  "image_searches": [
+    {
+      "caption": "Hierarchical organization showing primary sensory areas, unimodal association areas, and multimodal integration regions",
+      "url": "https://www.google.com/search?q=cortical+hierarchy+primary+unimodal+multimodal+association+areas&tbm=isch"
+    },
+    {
+      "caption": "Different types of agnosia showing dissociation between perception and recognition",
+      "url": "https://www.google.com/search?q=agnosia+types+visual+auditory+tactile+neuropsychology&tbm=isch"
+    },
+    {
+      "caption": "Prosopagnosia and the fusiform face area showing bilateral lesions",
+      "url": "https://www.google.com/search?q=prosopagnosia+face+blindness+fusiform+face+area&tbm=isch"
+    },
+    {
+      "caption": "Patients with associative vs apperceptive agnosia attempting to copy and name drawings",
+      "url": "https://www.google.com/search?q=associative+apperceptive+agnosia+copy+drawing+test&tbm=isch"
+    },
+    {
+      "caption": "Patient drawings showing left-sided neglect—clocks with numbers only on right, flowers with petals only on right",
+      "url": "https://www.google.com/search?q=hemispatial+neglect+right+parietal+damage+drawings+clock&tbm=isch"
+    },
+    {
+      "caption": "Piazza del Duomo in Milan showing the cathedral and surrounding buildings",
+      "url": "https://www.google.com/search?q=Piazza+del+Duomo+Milan+cathedral+square&tbm=isch"
+    },
+    {
+      "caption": "Balint's syndrome showing bilateral parietal damage and simultaneous agnosia",
+      "url": "https://www.google.com/search?q=Balint+syndrome+simultaneous+agnosia+bilateral+parietal&tbm=isch"
+    },
+    {
+      "caption": "Phineas Gage's skull showing the trajectory of the tamping iron through his frontal lobes",
+      "url": "https://www.google.com/search?q=Phineas+Gage+skull+tamping+iron+trajectory+reconstruction&tbm=isch"
+    },
+    {
+      "caption": "Comparative brain anatomy showing prefrontal cortex proportion in mice, cats, monkeys, and humans",
+      "url": "https://www.google.com/search?q=prefrontal+cortex+evolution+human+vs+other+primates+comparative+neuroanatomy&tbm=isch"
+    },
+    {
+      "caption": "Wisconsin Card Sorting Test showing cards that can be sorted by color, shape, or number",
+      "url": "https://www.google.com/search?q=Wisconsin+Card+Sorting+Test+cognitive+flexibility+frontal+lobe&tbm=isch"
+    },
+    {
+      "caption": "Error-related negativity (ERN) EEG waveform showing sharp negative deflection after incorrect responses",
+      "url": "https://www.google.com/search?q=error+related+negativity+ERN+anterior+cingulate+cortex+EEG&tbm=isch"
+    },
+    {
+      "caption": "Iowa Gambling Task setup with four card decks labeled A, B, C, D",
+      "url": "https://www.google.com/search?q=Iowa+Gambling+Task+four+decks+cards+ventromedial+prefrontal&tbm=isch"
+    },
+    {
+      "caption": "Neuropsychological test profiles showing dysexecutive syndrome patterns",
+      "url": "https://www.google.com/search?q=dysexecutive+syndrome+frontal+lobe+damage+case+studies&tbm=isch"
+    },
+    {
+      "caption": "Brain changes in addiction—reduced prefrontal control, enhanced striatal responses to drug cues",
+      "url": "https://www.google.com/search?q=addiction+brain+changes+prefrontal+cortex+striatum+dopamine&tbm=isch"
+    },
+    {
+      "caption": "Split-brain experimental setup showing stimuli presented separately to left and right hemispheres",
+      "url": "https://www.google.com/search?q=split+brain+patients+corpus+callosum+Sperry+experiments&tbm=isch"
+    },
+    {
+      "caption": "Summary diagrams showing left vs right hemisphere functional specializations",
+      "url": "https://www.google.com/search?q=hemispheric+specialization+lateralization+spatial+language+face+recognition&tbm=isch"
+    }
+  ]
+}

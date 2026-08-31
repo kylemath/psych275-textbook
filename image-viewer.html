@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Viewer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: #000;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      }
+      
+      .viewer-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        cursor: grab;
+      }
+      
+      .viewer-container.dragging {
+        cursor: grabbing;
+      }
+      
+      .viewer-image {
+        position: absolute;
+        max-width: none;
+        transform-origin: center center;
+        transition: transform 0.1s ease-out;
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+      
+      .controls {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        gap: 10px;
+        z-index: 1000;
+      }
+      
+      .btn {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        backdrop-filter: blur(10px);
+        transition: all 0.2s;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+      
+      .btn:hover {
+        background: rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-1px);
+      }
+      
+      .btn:active {
+        transform: translateY(0);
+      }
+      
+      .zoom-indicator {
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        backdrop-filter: blur(10px);
+        pointer-events: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+      
+      .instructions {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        font-size: 13px;
+        backdrop-filter: blur(10px);
+        max-width: 280px;
+        line-height: 1.6;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+      
+      .instructions div {
+        margin-bottom: 6px;
+      }
+      
+      .instructions div:last-child {
+        margin-bottom: 0;
+      }
+      
+      .loading {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+      }
+      
+      .spinner {
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid #fff;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 15px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      @media (max-width: 768px) {
+        .controls {
+          top: 10px;
+          right: 10px;
+          flex-direction: column;
+          gap: 8px;
+        }
+        
+        .btn {
+          padding: 10px 14px;
+          font-size: 13px;
+        }
+        
+        .instructions {
+          top: auto;
+          bottom: 80px;
+          left: 10px;
+          right: 10px;
+          max-width: none;
+          font-size: 12px;
+          padding: 12px 14px;
+        }
+        
+        .zoom-indicator {
+          bottom: 20px;
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <div>Loading image...</div>
+    </div>
+    
+    <div class="instructions">
+      <div>🖱️ <strong>Scroll</strong> to zoom in/out</div>
+      <div>🖐️ <strong>Click & drag</strong> to pan</div>
+      <div>⌨️ <strong>ESC</strong> to close tab</div>
+      <div>📐 <strong>Double-click</strong> to reset</div>
+    </div>
+    
+    <div class="controls">
+      <button class="btn zoom-in-btn">Zoom In (+)</button>
+      <button class="btn zoom-out-btn">Zoom Out (−)</button>
+      <button class="btn reset-btn">Fit Screen</button>
+      <button class="btn close-btn">Close Tab</button>
+    </div>
+    
+    <div class="viewer-container" id="container">
+      <img class="viewer-image" id="image" src="" alt="Zoomable image">
+    </div>
+    
+    <div class="zoom-indicator" id="zoom-indicator">100%</div>
+
+    <script>
+      class ImageViewer {
+        constructor() {
+          this.scale = 1;
+          this.posX = 0;
+          this.posY = 0;
+          this.isDragging = false;
+          this.startX = 0;
+          this.startY = 0;
+          this.minScale = 0.3;
+          this.maxScale = 8;
+          
+          this.container = document.getElementById('container');
+          this.image = document.getElementById('image');
+          this.zoomIndicator = document.getElementById('zoom-indicator');
+          this.loading = document.getElementById('loading');
+          
+          this.init();
+        }
+        
+        init() {
+          // Get image from URL parameter
+          const urlParams = new URLSearchParams(window.location.search);
+          const imageSrc = urlParams.get('image');
+          
+          if (!imageSrc) {
+            this.loading.innerHTML = '<div>Error: No image specified</div>';
+            return;
+          }
+          
+          this.image.src = imageSrc;
+          
+          this.image.onload = () => {
+            this.loading.style.display = 'none';
+            this.fitToScreen();
+            this.attachEventListeners();
+          };
+          
+          this.image.onerror = () => {
+            this.loading.innerHTML = '<div>Error loading image</div>';
+          };
+        }
+        
+        attachEventListeners() {
+          // Zoom buttons
+          document.querySelector('.zoom-in-btn').addEventListener('click', () => this.zoom(0.3));
+          document.querySelector('.zoom-out-btn').addEventListener('click', () => this.zoom(-0.3));
+          document.querySelector('.reset-btn').addEventListener('click', () => this.fitToScreen());
+          
+          // Close button
+          document.querySelector('.close-btn').addEventListener('click', () => window.close());
+          
+          // ESC key to close
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              window.close();
+            }
+          });
+          
+          // Mouse wheel zoom
+          this.container.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY > 0 ? -0.15 : 0.15;
+            this.zoom(delta, e.clientX, e.clientY);
+          }, { passive: false });
+          
+          // Double-click to reset
+          this.container.addEventListener('dblclick', () => {
+            this.fitToScreen();
+          });
+          
+          // Mouse dragging
+          this.container.addEventListener('mousedown', (e) => this.startDrag(e));
+          this.container.addEventListener('mousemove', (e) => this.drag(e));
+          this.container.addEventListener('mouseup', () => this.endDrag());
+          this.container.addEventListener('mouseleave', () => this.endDrag());
+          
+          // Touch support
+          this.container.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 1) {
+              this.startDrag(e.touches[0]);
+            }
+          });
+          
+          this.container.addEventListener('touchmove', (e) => {
+            if (e.touches.length === 1) {
+              e.preventDefault();
+              this.drag(e.touches[0]);
+            }
+          }, { passive: false });
+          
+          this.container.addEventListener('touchend', () => this.endDrag());
+        }
+        
+        fitToScreen() {
+          const containerWidth = this.container.clientWidth;
+          const containerHeight = this.container.clientHeight;
+          const imageWidth = this.image.naturalWidth;
+          const imageHeight = this.image.naturalHeight;
+          
+          // Calculate scale to fit image in viewport with some padding
+          const scaleX = (containerWidth * 0.95) / imageWidth;
+          const scaleY = (containerHeight * 0.95) / imageHeight;
+          this.scale = Math.min(scaleX, scaleY, 1);
+          
+          // Center the image
+          this.posX = (containerWidth - imageWidth * this.scale) / 2;
+          this.posY = (containerHeight - imageHeight * this.scale) / 2;
+          
+          this.updateTransform();
+        }
+        
+        zoom(delta, clientX, clientY) {
+          const oldScale = this.scale;
+          this.scale = Math.max(this.minScale, Math.min(this.maxScale, this.scale + delta));
+          
+          // Zoom towards cursor position if provided
+          if (clientX !== undefined && clientY !== undefined) {
+            const rect = this.container.getBoundingClientRect();
+            const mouseX = clientX - rect.left;
+            const mouseY = clientY - rect.top;
+            
+            const scaleChange = this.scale / oldScale;
+            this.posX = mouseX - (mouseX - this.posX) * scaleChange;
+            this.posY = mouseY - (mouseY - this.posY) * scaleChange;
+          }
+          
+          this.updateTransform();
+        }
+        
+        startDrag(e) {
+          this.isDragging = true;
+          this.startX = e.clientX - this.posX;
+          this.startY = e.clientY - this.posY;
+          this.container.classList.add('dragging');
+        }
+        
+        drag(e) {
+          if (!this.isDragging) return;
+          e.preventDefault();
+          this.posX = e.clientX - this.startX;
+          this.posY = e.clientY - this.startY;
+          this.updateTransform();
+        }
+        
+        endDrag() {
+          this.isDragging = false;
+          this.container.classList.remove('dragging');
+        }
+        
+        updateTransform() {
+          this.image.style.transform = `translate(${this.posX}px, ${this.posY}px) scale(${this.scale})`;
+          this.zoomIndicator.textContent = `${Math.round(this.scale * 100)}%`;
+        }
+      }
+      
+      // Initialize viewer when DOM is ready
+      new ImageViewer();
+    </script>
+  </body>
+</html>
+

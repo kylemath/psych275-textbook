@@ -1,0 +1,1798 @@
+{
+  "id": "chapter5",
+  "source": "chapter5.html",
+  "chapter": "5",
+  "chapter_number": "5",
+  "title": "Macroscopic Organization of the Nervous System",
+  "page_title": "Chapter 5 — Macroscopic Organization of the Nervous System",
+  "description": "From brainstem to cortex; hierarchical control; CNS/PNS divisions; functional anatomy. The grand architecture of thought.",
+  "brand": "Brains, Minds, and Machines — Chapter 5",
+  "subtitle": null,
+  "lead": {
+    "text": "Your nervous system contains 86 billion neurons stretching across 600,000 kilometers of wiring, yet it follows an organizational plan so elegant it can be sketched on a napkin. Today we journey from the protected citadel of your brain to the furthest outposts of sensation in your toes, discovering how evolution built a control system that manages everything from your heartbeat to your philosophy. You'll learn why a railroad spike through Phineas Gage's frontal lobe changed neuroscience forever, how your spinal cord can walk without your brain's permission, and why a paper cut hurts more than it should. We'll explore the triple-wrapped fortress of the meninges, the hidden fourth ventricle where your brain manufactures its own cushioning fluid, and the autonomic nervous system that keeps you alive while you sleep. From the ancient brainstem that shares blueprints with a lamprey to the recently-evolved prefrontal cortex that makes you question your own existence, we'll map the geography of consciousness itself."
+  },
+  "opening": [
+    {
+      "type": "stage",
+      "text": "Today's journey: From a Vermont railroad accident in 1848 to modern brain-computer interfaces. We'll discover how damage taught us about organization, and how organization teaches us about consciousness."
+    }
+  ],
+  "table_of_contents": [
+    {
+      "number": "I",
+      "title": "Opening: Phineas Gage's Revelation",
+      "duration": "12 min",
+      "anchor": "opening",
+      "items": [
+        {
+          "text": "The tamping iron that revealed functional localization"
+        },
+        {
+          "text": "From phrenology to modern brain mapping"
+        },
+        {
+          "text": "Why organization matters for function"
+        }
+      ]
+    },
+    {
+      "number": "II",
+      "title": "The Grand Division: Central vs Peripheral",
+      "duration": "15 min",
+      "anchor": "grand-division",
+      "items": [
+        {
+          "text": "CNS: The protected processor"
+        },
+        {
+          "text": "PNS: The body's internet"
+        },
+        {
+          "text": "Blood-brain barrier as firewall"
+        }
+      ]
+    },
+    {
+      "number": "III",
+      "title": "Ascending the Neuraxis: From Spine to Cortex",
+      "duration": "20 min",
+      "anchor": "neuraxis",
+      "items": [
+        {
+          "text": "Spinal cord: The first computer",
+          "anchor": "spinal-cord"
+        },
+        {
+          "text": "Brainstem: Life support systems",
+          "anchor": "brainstem"
+        },
+        {
+          "text": "Diencephalon: The relay station",
+          "anchor": "diencephalon"
+        },
+        {
+          "text": "Cerebrum: The executive suite",
+          "anchor": "cerebrum"
+        }
+      ]
+    },
+    {
+      "number": "IV",
+      "title": "The Meninges and Ventricular System",
+      "duration": "10 min",
+      "anchor": "protective-fortress",
+      "items": [
+        {
+          "text": "Three membranes, one mission"
+        },
+        {
+          "text": "CSF: The brain's cushion and sewer"
+        },
+        {
+          "text": "When protection fails: meningitis"
+        }
+      ]
+    },
+    {
+      "number": "V",
+      "title": "Functional Systems and Networks",
+      "duration": "15 min",
+      "anchor": "functional-systems",
+      "items": [
+        {
+          "text": "Sensory highways and motor expressways",
+          "anchor": "sensory-motor"
+        },
+        {
+          "text": "The autonomic underground",
+          "anchor": "autonomic"
+        },
+        {
+          "text": "Default mode network: The brain at rest",
+          "anchor": "default-mode-network"
+        }
+      ]
+    },
+    {
+      "number": "VI",
+      "title": "Clinical Correlations and Future",
+      "duration": "8 min",
+      "anchor": "clinical-correlations",
+      "items": [
+        {
+          "text": "Reading the signs: localization in diagnosis"
+        },
+        {
+          "text": "Brain-computer interfaces and the future"
+        }
+      ]
+    }
+  ],
+  "summary_image": {
+    "src": "GeminiSummaryCh5.png",
+    "alt": "Macroscopic Organization of the Nervous System Visual Summary",
+    "viewer": "image-viewer.html?image=GeminiSummaryCh5.png",
+    "role": "summary"
+  },
+  "resources": {
+    "textbook": "./textbook/",
+    "slides_html": "./slides/Chapter5Slides.html",
+    "slides_pdf": "./slides/Chapter5Slides.pdf",
+    "course_home": "./index.html",
+    "answer_key": "./AnswerKeys.html#chapter5",
+    "related_chapters": [],
+    "next_chapter": {
+      "href": "./chapter6.html",
+      "title": "Chapter 6 — Neuroanatomy Deep Dive",
+      "note": "Next: Chapter 6 — Neuroanatomy Deep Dive — Detailed exploration of ventricular system, blood supply, spinal cord organization, brainstem nuclei, and cortical architecture. After that: Chapter 7 — Sensation and Perception.",
+      "also": [
+        {
+          "text": "Chapter 7 — Sensation and Perception",
+          "href": "./chapter7.html",
+          "kind": "chapter"
+        }
+      ]
+    },
+    "header_links": [
+      {
+        "text": "📖 Textbook",
+        "href": "./textbook/",
+        "kind": "internal"
+      },
+      {
+        "text": "📊 Slides HTML",
+        "href": "./slides/Chapter5Slides.html",
+        "kind": "internal"
+      },
+      {
+        "text": "📄 Slides PDF",
+        "href": "./slides/Chapter5Slides.pdf",
+        "kind": "internal"
+      },
+      {
+        "text": "Course Home",
+        "href": "./index.html",
+        "kind": "internal"
+      }
+    ],
+    "interactives": null
+  },
+  "sections": [
+    {
+      "id": "opening",
+      "title": "Opening: The Spike That Changed Neuroscience",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Phineas Gage's skull and the trajectory of the tamping iron through his frontal lobe",
+          "url": "https://www.google.com/search?q=Phineas+Gage+skull+tamping+iron+trajectory+frontal+lobe&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "September 13, 1848, 4:30 PM, Cavendish, Vermont. Phineas Gage, a 25-year-old railroad foreman, was tamping explosive powder into a hole drilled in rock when a spark ignited the charge prematurely. The tamping iron—three feet seven inches long, 1.25 inches in diameter, weighing 13.25 pounds—shot through his face like a javelin. It entered below his left cheekbone, passed behind his left eye, tore through his frontal lobe, and exited through the top of his skull, landing 80 feet away, \"smeared with blood and brain.\" Phineas Gage not only survived but was conscious and talking within minutes. Modern reconstructions using computed tomography and 3D modeling have precisely mapped the trajectory of the tamping iron through his brain.",
+          "links": [
+            {
+              "text": "Phineas Gage not only survived but was conscious and talking within minutes.",
+              "href": "https://en.wikipedia.org/wiki/Phineas_Gage",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "computed tomography and 3D modeling",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1122493/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The miracle wasn't just his survival—it was what his survival revealed. Before the accident, Gage was described as \"the most efficient and capable foreman,\" possessing \"a well-balanced mind\" and \"shrewd business sense.\" After recovering physically, his intellectual abilities seemed intact—he could speak, reason, remember. Yet something fundamental had changed. His physician, Dr. John Harlow, wrote that Gage had become \"fitful, irreverent, indulging at times in the grossest profanity, manifesting but little deference for his fellows, impatient of restraint or advice when it conflicts with his desires.\""
+        },
+        {
+          "type": "paragraph",
+          "text": "The spike had done something impossible according to the science of the time. It had changed Gage's personality while leaving his intelligence untouched. It had separated who he was from what he knew. This single case shattered the prevailing view that the brain was a homogeneous mass, that mental faculties were distributed evenly throughout like butter in bread. The brain, Gage's injury revealed, was organized. Different regions did different things. Damage to specific areas produced specific deficits. The frontal lobe, we learned from Gage's tragedy, wasn't just brain tissue—it was the seat of executive function, social behavior, and what we might call the self."
+        },
+        {
+          "type": "paragraph",
+          "text": "This revelation launched a century of mapping. Scientists began cataloging which regions controlled speech (Broca's area), which processed language comprehension (Wernicke's area), which generated movement (motor cortex), which received touch (somatosensory cortex). The brain wasn't just organized—it was exquisitely organized, with a functional architecture as specific as the floor plan of a building. Modern techniques like high-resolution fMRI and connectome mapping continue this tradition, revealing ever-finer details of brain organization. Today we're going to explore that architecture, from the basement of the brainstem to the penthouse of the prefrontal cortex.",
+          "links": [
+            {
+              "text": "Broca's area",
+              "href": "https://en.wikipedia.org/wiki/Broca%27s_area",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Wernicke's area",
+              "href": "https://en.wikipedia.org/wiki/Wernicke%27s_area",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "high-resolution fMRI and connectome mapping",
+              "href": "https://www.nature.com/articles/s41586-024-07221-0",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "But remember this: while Gage taught us about localization, modern neuroscience has taught us something equally important. The brain is not just a collection of independent modules—it's a network of networks, where damage to one node ripples through the entire system. Gage lost not just frontal lobe tissue but the connections that integrated his personality with his actions. Organization matters not just for what each part does, but for how the parts work together to create the emergent property we call mind."
+        }
+      ]
+    },
+    {
+      "id": "grand-division",
+      "title": "The Grand Division: Two Nervous Systems, One Purpose",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "The Central Nervous System: The Protected Processor"
+        },
+        {
+          "type": "paragraph",
+          "text": "Imagine you're designing the control system for the most complex machine ever built—the human body. You'd want your most critical components protected, centralized, and isolated from potential damage. That's exactly what evolution designed with the central nervous system. The CNS consists of just two structures: the brain and spinal cord. These structures are so precious that they're the only organs in your body with triple protection: bone (skull and vertebrae), membranes (meninges), and fluid (cerebrospinal fluid). They're also the only organs with their own selective barrier—the blood-brain barrier—that acts like a molecular bouncer, deciding which substances can enter from the bloodstream. Recent research shows this barrier is formed by specialized tight junctions between endothelial cells and is actively regulated by astrocytes and pericytes.",
+          "links": [
+            {
+              "text": "the blood-brain barrier",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK542179/",
+              "kind": "external"
+            },
+            {
+              "text": "specialized tight junctions between endothelial cells",
+              "href": "https://www.nature.com/articles/s41467-024-45124-z",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "CNS protection layers showing skull, meninges, and CSF cushioning",
+          "url": "https://www.google.com/search?q=central+nervous+system+brain+spinal+cord+protection+layers&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The brain weighs about 1.4 kilograms—roughly the weight of a small laptop—but consumes 20% of your body's oxygen and 25% of its glucose. This metabolic hunger makes sense when you consider what it's doing: processing every sensation, controlling every voluntary movement, generating every thought, storing every memory. Recent studies show that brain energy consumption varies dramatically between different cognitive states and across development. The spinal cord, by contrast, weighs only 35 grams—about as much as a slice of bread—but without it, your brain would be like a computer with no keyboard, mouse, or internet connection. The spinal cord is your body's information superhighway, carrying 31 pairs of spinal nerves that connect your brain to everything below your head.",
+          "links": [
+            {
+              "text": "metabolic hunger",
+              "href": "https://www.nature.com/articles/s41583-018-0077-1",
+              "kind": "external"
+            },
+            {
+              "text": "brain energy consumption varies dramatically",
+              "href": "https://www.science.org/doi/10.1126/science.abo7639",
+              "kind": "external"
+            },
+            {
+              "text": "31 pairs of spinal nerves",
+              "href": "https://en.wikipedia.org/wiki/Spinal_nerve",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Peripheral Nervous System: The Body's Internet"
+        },
+        {
+          "type": "paragraph",
+          "text": "If the CNS is the protected processor, the peripheral nervous system is the vast network of cables connecting that processor to every sensor and actuator in your body. The PNS includes all neural tissue outside the brain and spinal cord—12 pairs of cranial nerves that emerge directly from the brain, 31 pairs of spinal nerves that branch from the spinal cord, and the countless ganglia (clusters of neuron cell bodies) scattered throughout your body. Unlike the CNS, the PNS has minimal protection—just a thin sheath of connective tissue called epineurium. This vulnerability is why peripheral nerve injuries are common while brain injuries require significant trauma. Recent advances in peripheral nerve regeneration research are exploring how to enhance natural repair mechanisms.",
+          "links": [
+            {
+              "text": "12 pairs of cranial nerves",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK538333/",
+              "kind": "external"
+            },
+            {
+              "text": "peripheral nerve regeneration research",
+              "href": "https://www.nature.com/articles/s41591-024-02885-4",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "PNS overview showing cranial and spinal nerve distributions throughout the body",
+          "url": "https://www.google.com/search?q=peripheral+nervous+system+cranial+nerves+spinal+nerves+diagram&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The PNS is further divided into the somatic nervous system—which controls voluntary movement and processes sensory information—and the autonomic nervous system, which manages all the functions you don't consciously control. Your somatic system is why you can decide to raise your hand; your autonomic system is why your heart keeps beating while you're deciding. This division of labor is elegant: consciousness handles the novel and complex, while automatic systems handle the routine and vital. You can choose to hold your breath, but you can't choose to stop your heart—evolution built failsafes into the system."
+        },
+        {
+          "type": "paragraph",
+          "text": "Here's the profound truth about this division: the CNS and PNS aren't separate systems that happen to work together. They're two aspects of a single system that processes information in loops. Sensory information flows from PNS to CNS (afferent pathways), gets processed, and motor commands flow from CNS to PNS (efferent pathways). You see a snake, the image travels via optic nerve (PNS) to visual cortex (CNS), gets identified as danger in temporal lobe (CNS), triggers a motor plan in frontal lobe (CNS), which sends signals through spinal cord (CNS) to peripheral nerves (PNS) that make your muscles jump back. The division exists not because the systems are independent, but because they have different security requirements—one needs maximum protection, the other needs maximum distribution."
+        }
+      ]
+    },
+    {
+      "id": "neuraxis",
+      "title": "Ascending the Neuraxis: The Hierarchy of Control",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "The Spinal Cord: The First Computer"
+        },
+        {
+          "type": "paragraph",
+          "text": "Your spinal cord is not just a cable—it's a computer in its own right, capable of complex processing without your brain's involvement. Extending from the foramen magnum at the base of your skull to the L1-L2 vertebrae, the spinal cord is organized into 31 segments, each managing a specific body region. The organization is breathtakingly logical: cervical segments (C1-C8) control your arms, thoracic segments (T1-T12) manage your trunk, lumbar segments (L1-L5) operate your legs, and sacral segments (S1-S5) handle your pelvis and feet. This segmental organization is why doctors can pinpoint injury location by testing which functions are lost—lose sensation below the nipples, and the damage is around T4.",
+          "links": [
+            {
+              "text": "computer in its own right",
+              "href": "https://www.nature.com/articles/s41593-021-00825-4",
+              "kind": "external"
+            },
+            {
+              "text": "foramen magnum",
+              "href": "https://en.wikipedia.org/wiki/Foramen_magnum",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "cervical segments (C1-C8)",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK545287/",
+              "kind": "external"
+            },
+            {
+              "text": "segmental organization",
+              "href": "https://en.wikipedia.org/wiki/Dermatome_(anatomy)",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Spinal cord cross-section showing gray and white matter organization",
+          "url": "https://www.google.com/search?q=spinal+cord+cross+section+gray+matter+white+matter+organization&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "In cross-section, the spinal cord reveals an elegant design: gray matter (neuron cell bodies) forms a butterfly shape in the center, surrounded by white matter (myelinated axons). The gray matter is organized functionally—the dorsal horn processes sensory information, the ventral horn contains motor neurons, and the intermediate zone handles integration. The white matter is organized like a highway system: ascending tracts carry sensory information to the brain, descending tracts bring motor commands down, and propriospinal tracts connect different spinal levels. The names tell you everything: the lateral corticospinal tract carries motor commands from cortex down the lateral white matter to spinal motor neurons.",
+          "links": [
+            {
+              "text": "gray matter",
+              "href": "https://en.wikipedia.org/wiki/Grey_matter",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "white matter",
+              "href": "https://en.wikipedia.org/wiki/White_matter",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "dorsal horn",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK542179/",
+              "kind": "external"
+            },
+            {
+              "text": "ascending tracts",
+              "href": "https://www.nature.com/articles/s41467-023-36874-4",
+              "kind": "external"
+            },
+            {
+              "text": "lateral corticospinal tract",
+              "href": "https://en.wikipedia.org/wiki/Corticospinal_tract",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The spinal cord's computing power becomes obvious in reflexes. Step on a sharp object, and your foot withdraws before your brain even knows there's pain. This withdrawal reflex involves a complete sensory-motor loop handled entirely in the spinal cord: pain receptors activate, sensory neurons synapse in the dorsal horn, interneurons coordinate the response, motor neurons fire, and muscles contract—all in about 50 milliseconds. Your brain is informed after the fact. Even more remarkably, patients with complete spinal cord transection can still show stepping movements if their legs are moved on a treadmill—the spinal cord contains entire walking programs that just need sensory input to activate.",
+          "links": [
+            {
+              "text": "withdrawal reflex",
+              "href": "https://en.wikipedia.org/wiki/Withdrawal_reflex",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "pain receptors",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK279306/",
+              "kind": "external"
+            },
+            {
+              "text": "stepping movements",
+              "href": "https://www.nature.com/articles/s41467-024-45362-1",
+              "kind": "external"
+            },
+            {
+              "text": "walking programs",
+              "href": "https://www.science.org/doi/10.1126/science.abq7019",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "stage",
+          "text": "Let me tell you about Marcus, a composite of several spinal injury patients I've studied. Marcus severed his spinal cord at T6 in a climbing accident, losing all conscious control below his chest. Yet his spinal cord below the injury still functions—reflexes work, his legs withdraw from pain, and most remarkably, his autonomic functions continue. His spinal cord maintains blood pressure, controls bowel and bladder reflexes, and even produces autonomic dysreflexia—a potentially dangerous reflex where stimuli below the injury cause massive blood pressure spikes. Marcus's case reveals that the spinal cord isn't just wiring—it's an independent processor running ancient programs written before consciousness evolved."
+        },
+        {
+          "type": "subheading",
+          "text": "The Brainstem: Life Support Central"
+        },
+        {
+          "type": "paragraph",
+          "text": "Rising from the spinal cord like the trunk of a tree, the brainstem is the most ancient part of your brain, with a basic structure shared across all vertebrates from fish to humans. It consists of three regions—medulla oblongata, pons, and midbrain—each packed with nuclei that manage life's non-negotiable functions. The medulla controls breathing, heart rate, and blood pressure; damage here means death within minutes. The pons manages sleep-wake cycles and facial sensation; damage here can trap you in locked-in syndrome, conscious but unable to move anything except your eyes. The midbrain controls eye movements and pupil responses; damage here can leave you in a vegetative state.",
+          "links": [
+            {
+              "text": "medulla oblongata, pons, and midbrain",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK200988/",
+              "kind": "external"
+            },
+            {
+              "text": "locked-in syndrome",
+              "href": "https://www.nature.com/articles/s41582-024-00952-9",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Brainstem anatomy showing medulla, pons, midbrain, and cranial nerve nuclei",
+          "url": "https://www.google.com/search?q=brainstem+anatomy+medulla+pons+midbrain+cranial+nerve+nuclei&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The brainstem is also the headquarters for 10 of your 12 cranial nerves. These nerves are numbered based on their rostral-to-caudal position, and their functions read like a user manual for the head: III (oculomotor) moves your eyes, V (trigeminal) provides facial sensation, VII (facial) controls facial expression, IX (glossopharyngeal) manages swallowing, X (vagus) controls your heart and gut, XII (hypoglossal) moves your tongue. The organization is so consistent that a careful cranial nerve exam can pinpoint a brainstem lesion to within millimeters.",
+          "links": [
+            {
+              "text": "III (oculomotor)",
+              "href": "https://en.wikipedia.org/wiki/Oculomotor_nerve",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "V (trigeminal)",
+              "href": "https://en.wikipedia.org/wiki/Trigeminal_nerve",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "VII (facial)",
+              "href": "https://en.wikipedia.org/wiki/Facial_nerve",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "IX (glossopharyngeal)",
+              "href": "https://en.wikipedia.org/wiki/Glossopharyngeal_nerve",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "X (vagus)",
+              "href": "https://en.wikipedia.org/wiki/Vagus_nerve",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "XII (hypoglossal)",
+              "href": "https://en.wikipedia.org/wiki/Hypoglossal_nerve",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "cranial nerve exam",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK549846/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "search",
+          "text": "\"reticular activating system consciousness brainstem 2024\" - show students current research on consciousness origins",
+          "url": "https://www.google.com/search?q=reticular+activating+system+consciousness+arousal+brainstem+2024"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hidden within the brainstem is the reticular formation, a network of neurons that forms the reticular activating system (RAS)—your consciousness switch. The RAS determines whether you're awake, asleep, or somewhere in between. Damage to the RAS produces coma; stimulation produces alertness. Every morning when you wake up, it's because your RAS has decided it's time. The brainstem also contains the periaqueductal gray, your body's own opiate pharmacy, which can shut down pain signals before they reach consciousness. This is why soldiers sometimes don't feel wounds until after the battle—the brainstem can override sensation when survival depends on it. Recent research shows the PAG contains specialized circuits for different types of defensive behaviors.",
+          "links": [
+            {
+              "text": "reticular formation",
+              "href": "https://en.wikipedia.org/wiki/Reticular_formation",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "reticular activating system (RAS)",
+              "href": "https://www.nature.com/articles/s41467-024-46002-7",
+              "kind": "external"
+            },
+            {
+              "text": "coma",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK430765/",
+              "kind": "external"
+            },
+            {
+              "text": "periaqueductal gray",
+              "href": "https://en.wikipedia.org/wiki/Periaqueductal_gray",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "specialized circuits for different types of defensive behaviors",
+              "href": "https://www.science.org/doi/10.1126/science.abm5547",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Diencephalon: The Relay Station"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sitting atop the brainstem like a control tower at an airport, the diencephalon consists of four structures that relay, integrate, and regulate information flow. The thalamus, making up 80% of the diencephalon, is the grand central station of the brain. Almost all sensory information (except smell) passes through specific thalamic nuclei before reaching the cortex. The lateral geniculate nucleus relays vision, the medial geniculate handles hearing, and the ventral posterior nucleus processes touch and pain. The thalamus doesn't just relay—it filters, amplifies, and synchronizes, deciding what information deserves cortical attention. Recent studies reveal that thalamic circuits actively shape cortical responses rather than simply transmitting information.",
+          "links": [
+            {
+              "text": "diencephalon",
+              "href": "https://en.wikipedia.org/wiki/Diencephalon",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "thalamus",
+              "href": "https://www.nature.com/articles/s41467-024-45124-z",
+              "kind": "external"
+            },
+            {
+              "text": "thalamic nuclei",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK542179/",
+              "kind": "external"
+            },
+            {
+              "text": "lateral geniculate nucleus",
+              "href": "https://en.wikipedia.org/wiki/Lateral_geniculate_nucleus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "medial geniculate",
+              "href": "https://en.wikipedia.org/wiki/Medial_geniculate_nucleus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "ventral posterior nucleus",
+              "href": "https://en.wikipedia.org/wiki/Ventral_posterior_nucleus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "thalamic circuits actively shape cortical responses",
+              "href": "https://www.science.org/doi/10.1126/science.abo4044",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Thalamic nuclei and their cortical connections showing sensory relay pathways",
+          "url": "https://www.google.com/search?q=thalamus+nuclei+relay+sensory+cortex+connections&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Below the thalamus, the hypothalamus is tiny—about the size of an almond—but controls virtually everything that keeps you alive and reproducing. It regulates temperature, hunger, thirst, circadian rhythms, and hormone release. It's your body's thermostat, clock, and hormone controller rolled into one. The hypothalamus connects to the pituitary gland, the \"master gland\" that controls all other endocrine glands. When you feel hungry, it's your hypothalamus detecting low glucose. When you feel sleepy at night, it's your hypothalamus responding to darkness by triggering melatonin release. The hypothalamus proves that in the nervous system, size doesn't correlate with importance.",
+          "links": [
+            {
+              "text": "hypothalamus",
+              "href": "https://en.wikipedia.org/wiki/Hypothalamus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "temperature, hunger, thirst, circadian rhythms",
+              "href": "https://www.nature.com/articles/s41593-024-01587-5",
+              "kind": "external"
+            },
+            {
+              "text": "pituitary gland",
+              "href": "https://en.wikipedia.org/wiki/Pituitary_gland",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "melatonin release",
+              "href": "https://www.science.org/doi/10.1126/science.abo7639",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The epithalamus contains the pineal gland, which René Descartes thought was the seat of the soul—he was wrong about the soul part but right that it's special. The pineal is your body's only unpaired brain structure and produces melatonin in response to darkness. The subthalamus contains the subthalamic nucleus, part of the motor control circuits. When this tiny structure degenerates, it produces the tremors of Parkinson's disease. Deep brain stimulation of the subthalamic nucleus can dramatically reduce these tremors, showing how precisely localized some brain functions are.",
+          "links": [
+            {
+              "text": "epithalamus",
+              "href": "https://en.wikipedia.org/wiki/Epithalamus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "pineal gland",
+              "href": "https://en.wikipedia.org/wiki/Pineal_gland",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "subthalamus",
+              "href": "https://en.wikipedia.org/wiki/Subthalamus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "subthalamic nucleus",
+              "href": "https://en.wikipedia.org/wiki/Subthalamic_nucleus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Parkinson's disease",
+              "href": "https://www.nature.com/articles/s41582-024-00952-9",
+              "kind": "external"
+            },
+            {
+              "text": "Deep brain stimulation",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK430765/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Cerebrum: The Executive Suite"
+        },
+        {
+          "type": "paragraph",
+          "text": "The cerebrum—what most people picture when they think \"brain\"—represents the newest evolutionary addition to the nervous system. Its deeply folded cortex contains 16 billion neurons arranged in six layers, each with specific connection patterns. If you unfolded the human cortex, it would cover about 2.5 square feet—roughly the size of a large pizza. This folding is evolution's solution to fitting advanced processing power into a skull that can still fit through a birth canal. The folds have names: gyri (hills) and sulci (valleys), with particularly deep sulci called fissures. These aren't random—the central sulcus always separates motor from sensory cortex, the lateral sulcus always separates temporal from frontal and parietal lobes.",
+          "links": [
+            {
+              "text": "cerebrum",
+              "href": "https://en.wikipedia.org/wiki/Cerebrum",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "cortex contains 16 billion neurons",
+              "href": "https://www.nature.com/articles/s41586-024-07221-0",
+              "kind": "external"
+            },
+            {
+              "text": "gyri (hills)",
+              "href": "https://en.wikipedia.org/wiki/Gyrus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "sulci (valleys)",
+              "href": "https://en.wikipedia.org/wiki/Sulcus_(neuroanatomy)",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "central sulcus",
+              "href": "https://en.wikipedia.org/wiki/Central_sulcus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "lateral sulcus",
+              "href": "https://en.wikipedia.org/wiki/Lateral_sulcus",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Cerebral cortex layers and columnar organization with Brodmann areas",
+          "url": "https://www.google.com/search?q=cerebral+cortex+layers+columnar+organization+brodmann+areas&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The cortex is divided into four lobes, each with specialized functions discovered through centuries of careful observation of damage and dysfunction. The frontal lobe, everything anterior to the central sulcus, contains the primary motor cortex, premotor areas for planning movement, and prefrontal cortex for executive function, working memory, and personality. The parietal lobe processes sensory information and spatial awareness—damage here can produce neglect syndrome, where patients ignore half their world. The temporal lobe handles audition, language comprehension, and memory formation—stimulation here during surgery can trigger vivid memories. The occipital lobe processes vision exclusively—damage here causes blindness even with perfect eyes.",
+          "links": [
+            {
+              "text": "frontal lobe",
+              "href": "https://en.wikipedia.org/wiki/Frontal_lobe",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "primary motor cortex",
+              "href": "https://en.wikipedia.org/wiki/Primary_motor_cortex",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "prefrontal cortex",
+              "href": "https://www.nature.com/articles/s41583-018-0077-1",
+              "kind": "external"
+            },
+            {
+              "text": "parietal lobe",
+              "href": "https://en.wikipedia.org/wiki/Parietal_lobe",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "neglect syndrome",
+              "href": "https://en.wikipedia.org/wiki/Hemispatial_neglect",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "temporal lobe",
+              "href": "https://en.wikipedia.org/wiki/Temporal_lobe",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "occipital lobe",
+              "href": "https://en.wikipedia.org/wiki/Occipital_lobe",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Hidden beneath the cortex are the basal ganglia—caudate, putamen, globus pallidus, subthalamic nucleus, and substantia nigra—which form loops with the cortex to control movement, motivation, and habit formation. These structures don't initiate movement but rather select which movements to allow and which to inhibit. Parkinson's disease results from death of dopamine neurons in the substantia nigra, leading to too much inhibition. Huntington's disease involves death of neurons in the caudate and putamen, leading to too little inhibition. The basal ganglia teach us that control involves not just activation but careful suppression—you need both accelerator and brakes.",
+          "links": [
+            {
+              "text": "basal ganglia",
+              "href": "https://en.wikipedia.org/wiki/Basal_ganglia",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "caudate",
+              "href": "https://en.wikipedia.org/wiki/Caudate_nucleus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "putamen",
+              "href": "https://en.wikipedia.org/wiki/Putamen",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "globus pallidus",
+              "href": "https://en.wikipedia.org/wiki/Globus_pallidus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "substantia nigra",
+              "href": "https://en.wikipedia.org/wiki/Substantia_nigra",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "loops with the cortex",
+              "href": "https://www.nature.com/articles/s41467-024-45362-1",
+              "kind": "external"
+            },
+            {
+              "text": "Parkinson's disease",
+              "href": "https://www.nature.com/articles/s41582-024-00952-9",
+              "kind": "external"
+            },
+            {
+              "text": "Huntington's disease",
+              "href": "https://en.wikipedia.org/wiki/Huntington%27s_disease",
+              "kind": "wikipedia"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "protective-fortress",
+      "title": "The Protective Fortress: Meninges and Cerebrospinal Fluid",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Three Membranes, One Mission"
+        },
+        {
+          "type": "paragraph",
+          "text": "Your brain floats. This isn't poetry—it's engineering. The 1.4-kilogram brain effectively weighs only 50 grams when suspended in cerebrospinal fluid, reducing mechanical stress on neural tissue and blood vessels. This suspension system involves three membranes called meninges, from the Greek for \"membranes.\" The outermost dura mater (\"tough mother\") is a thick, leathery membrane that lines the skull and forms rigid separations like the falx cerebri between hemispheres and the tentorium cerebelli between cerebrum and cerebellum. The dura contains pain receptors—this is why headaches hurt, your brain itself has no pain sensors."
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Meningeal layers showing dura, arachnoid, and pia mater with CSF spaces",
+          "url": "https://www.google.com/search?q=meninges+layers+dura+arachnoid+pia+mater+CSF+spaces&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The middle arachnoid mater (\"spider mother\") is a delicate, web-like membrane separated from the innermost pia mater (\"soft mother\") by the subarachnoid space. This space contains cerebrospinal fluid and major blood vessels. The pia mater intimately follows every contour of the brain, dipping into every sulcus. Between these membranes are potential spaces that become real during pathology: epidural hematomas accumulate between skull and dura, subdural hematomas between dura and arachnoid, and subarachnoid hemorrhages fill the normal CSF space with blood. Each produces distinct symptoms and requires different treatments."
+        },
+        {
+          "type": "subheading",
+          "text": "The Fourth Circulation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Your body has four circulatory systems: blood, lymph, interstitial fluid, and cerebrospinal fluid. The CSF system produces about 500 mL daily—your entire CSF volume turns over three to four times per day. Production occurs in the choroid plexuses, specialized structures in the ventricles where modified ependymal cells actively secrete CSF. The fluid flows from lateral ventricles through the interventricular foramina to the third ventricle, then through the cerebral aqueduct to the fourth ventricle, finally exiting through the foramina of Luschka and Magendie into the subarachnoid space."
+        },
+        {
+          "type": "paragraph",
+          "text": "CSF serves multiple functions beyond mechanical protection. It removes metabolic waste—recent discoveries show that during sleep, CSF flow increases by 60%, literally washing your brain clean. This glymphatic system may explain why chronic sleep deprivation increases Alzheimer's risk. CSF also distributes nutrients, hormones, and neurotransmitters, and provides immunological surveillance. When doctors perform a lumbar puncture, they're sampling this fluid to look for infections, bleeding, cancer cells, or abnormal proteins. Recent research has identified specialized CSF-contacting neurons that monitor cerebrospinal fluid composition and regulate its production.",
+          "links": [
+            {
+              "text": "glymphatic system",
+              "href": "https://www.nature.com/articles/s41583-024-00691-6",
+              "kind": "external"
+            },
+            {
+              "text": "specialized CSF-contacting neurons",
+              "href": "https://www.science.org/doi/10.1126/science.adc9020",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "search",
+          "text": "\"glymphatic system sleep brain clearance 2024\" - show students newest discoveries about brain cleaning",
+          "url": "https://www.google.com/search?q=glymphatic+system+sleep+CSF+flow+brain+waste+clearance+2024"
+        },
+        {
+          "type": "stage",
+          "text": "Consider Sarah, a composite patient who developed hydrocephalus—\"water on the brain\"—when a tumor blocked her cerebral aqueduct. CSF continued being produced but couldn't drain, causing her ventricles to expand like balloons. She experienced morning headaches (worse when lying flat), visual problems (from pressure on optic nerves), and cognitive difficulties (from compressed brain tissue). A shunt was placed to drain excess CSF to her abdomen, and her symptoms resolved within days. Sarah's case illustrates that the CSF system isn't passive plumbing—it's an active, essential component of brain function that can rapidly affect consciousness when disrupted."
+        }
+      ]
+    },
+    {
+      "id": "functional-systems",
+      "title": "Functional Systems: The Networks Within",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Sensory Highways and Motor Expressways"
+        },
+        {
+          "type": "paragraph",
+          "text": "Information flows through your nervous system on dedicated highways, each with specific lanes, speed limits, and destinations. Sensory pathways follow a three-neuron chain: first-order neurons have cell bodies in peripheral ganglia and carry information to CNS; second-order neurons cross the midline and ascend to thalamus; third-order neurons project from thalamus to cortex. This crossing, called decussation, is why your right brain controls your left body. The dorsal column-medial lemniscal pathway carries fine touch and proprioception, crossing in the medulla. The anterolateral system carries pain and temperature, crossing in the spinal cord. This anatomical difference means a spinal injury can selectively eliminate pain sensation while preserving touch, or vice versa. Recent research has mapped these pathways with unprecedented detail using advanced tract tracing methods.",
+          "links": [
+            {
+              "text": "Sensory pathways",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK542179/",
+              "kind": "external"
+            },
+            {
+              "text": "decussation",
+              "href": "https://en.wikipedia.org/wiki/Decussation",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "dorsal column-medial lemniscal pathway",
+              "href": "https://en.wikipedia.org/wiki/Dorsal_column%E2%80%93medial_lemniscus_pathway",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "anterolateral system",
+              "href": "https://en.wikipedia.org/wiki/Spinothalamic_tract",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "advanced tract tracing methods",
+              "href": "https://www.science.org/doi/10.1126/science.abq7019",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Motor pathways are more direct, often involving just two neurons. The corticospinal tract, your main voluntary motor pathway, begins in the primary motor cortex where neurons are arranged somatotopically—the motor homunculus. These upper motor neurons descend through the internal capsule, cerebral peduncles, and pyramid of the medulla, where 85% cross to the opposite side. They synapse on lower motor neurons in the spinal cord, which directly innervate muscles. Damage to upper motor neurons causes spastic paralysis with increased reflexes; damage to lower motor neurons causes flaccid paralysis with absent reflexes. This distinction helps clinicians pinpoint lesion location.",
+          "links": [
+            {
+              "text": "Motor pathways",
+              "href": "https://www.nature.com/articles/s41467-024-45362-1",
+              "kind": "external"
+            },
+            {
+              "text": "corticospinal tract",
+              "href": "https://en.wikipedia.org/wiki/Corticospinal_tract",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "motor homunculus",
+              "href": "https://en.wikipedia.org/wiki/Motor_homunculus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "upper motor neurons",
+              "href": "https://en.wikipedia.org/wiki/Upper_motor_neuron",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "lower motor neurons",
+              "href": "https://en.wikipedia.org/wiki/Lower_motor_neuron",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "spastic paralysis",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK545287/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Autonomic Underground"
+        },
+        {
+          "type": "paragraph",
+          "text": "Beneath conscious awareness, your autonomic nervous system maintains the background operations that keep you alive. The sympathetic division, originating from thoracolumbar spinal segments, prepares you for \"fight or flight\"—dilating pupils, accelerating heart rate, mobilizing glucose, and inhibiting digestion. The parasympathetic division, arising from cranial nerves and sacral segments, promotes \"rest and digest\"—constricting pupils, slowing heart rate, stimulating digestion, and promoting elimination. These aren't just opposite systems; they work together like musicians in a duet, with one taking the lead while the other provides harmony. Modern research shows these systems have complex interactions that vary by organ and physiological state.",
+          "links": [
+            {
+              "text": "autonomic nervous system",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK539845/",
+              "kind": "external"
+            },
+            {
+              "text": "sympathetic division",
+              "href": "https://en.wikipedia.org/wiki/Sympathetic_nervous_system",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "parasympathetic division",
+              "href": "https://en.wikipedia.org/wiki/Parasympathetic_nervous_system",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "complex interactions",
+              "href": "https://www.nature.com/articles/s41467-024-46002-7",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Autonomic nervous system showing sympathetic and parasympathetic innervation of organs",
+          "url": "https://www.google.com/search?q=autonomic+nervous+system+sympathetic+parasympathetic+organs+innervation&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The enteric nervous system, often called the \"second brain,\" contains 500 million neurons in your gut wall—more than in your spinal cord. It can function independently, coordinating digestion without input from the CNS. This system produces 95% of your body's serotonin and communicates bidirectionally with the brain via the vagus nerve. This gut-brain axis explains why anxiety causes stomach problems and why gut problems can cause anxiety. Your intuition about \"gut feelings\" has a neurological basis—your enteric nervous system is literally computing emotional valence of situations.",
+          "links": [
+            {
+              "text": "the vagus nerve",
+              "href": "https://www.nature.com/articles/s41467-024-45124-z",
+              "kind": "external"
+            },
+            {
+              "text": "gut-brain axis",
+              "href": "https://www.ncbi.nlm.nih.gov/books/NBK539845/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Default Mode Network"
+        },
+        {
+          "type": "paragraph",
+          "text": "When you're not actively engaged in a task, your brain doesn't shut down—it shifts to the default mode network (DMN), a set of brain regions that become more active during rest. The DMN includes medial prefrontal cortex, posterior cingulate cortex, angular gyrus, and hippocampus. This network is active during introspection, autobiographical memory retrieval, envisioning future scenarios, and moral reasoning. It's your brain's screensaver, but unlike a computer screensaver, it's doing important work—consolidating memories, problem-solving, and maintaining your sense of self. Recent neuroimaging studies show the DMN's activity patterns predict individual differences in creativity and self-referential thinking.",
+          "links": [
+            {
+              "text": "the default mode network (DMN)",
+              "href": "https://www.pnas.org/doi/10.1073/pnas.2000333117",
+              "kind": "external"
+            },
+            {
+              "text": "neuroimaging studies",
+              "href": "https://www.nature.com/articles/s41467-024-46002-7",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Disruption of the DMN is implicated in numerous conditions. In Alzheimer's disease, the DMN is among the first networks to show reduced connectivity. In depression, the DMN shows hyperactivity and increased self-focus, correlating with rumination. Meditation reduces DMN activity, correlating with the experience of \"ego dissolution.\" Psychedelics dramatically suppress the DMN, which may explain their therapeutic effects in breaking rigid thought patterns. Understanding the DMN has revealed that the resting brain is never truly at rest—it's constantly maintaining and updating your model of self and world."
+        }
+      ]
+    },
+    {
+      "id": "clinical-correlations",
+      "title": "Clinical Correlations: Reading the Signs",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "The Neurological Exam as Archaeological Dig"
+        },
+        {
+          "type": "paragraph",
+          "text": "A skilled neurologist can localize a lesion with remarkable precision using just observation and simple tools. The neurological exam systematically tests each level and system: mental status reveals cortical function, cranial nerves pinpoint brainstem levels, motor exam distinguishes upper from lower motor neuron damage, sensory exam maps pathway involvement, reflexes reveal arc integrity, coordination tests cerebellar function, and gait integrates everything. A patient who can't recognize faces but can see perfectly has prosopagnosia from fusiform gyrus damage. A patient who can't speak but understands everything has Broca's aphasia from left frontal damage. The exam is like archaeology—each finding points to a specific location and time, validated by modern lesion-symptom mapping studies.",
+          "links": [
+            {
+              "text": "prosopagnosia",
+              "href": "https://en.wikipedia.org/wiki/Prosopagnosia",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Broca's aphasia",
+              "href": "https://en.wikipedia.org/wiki/Expressive_aphasia",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "lesion-symptom mapping studies",
+              "href": "https://www.nature.com/articles/s41593-024-01587-5",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Modern imaging has confirmed what clinical exams long suggested: the nervous system's organization is remarkably consistent across individuals. Brodmann areas, defined by cellular architecture in 1909, still correspond to functional regions identified by fMRI. The motor homunculus mapped by Penfield in the 1950s through direct electrical stimulation matches modern brain-computer interface recordings. This consistency is why neurosurgeons can operate based on anatomical landmarks, knowing that eloquent areas will be where anatomy predicts."
+        },
+        {
+          "type": "subheading",
+          "text": "The Future: Brain-Computer Interfaces"
+        },
+        {
+          "type": "paragraph",
+          "text": "Understanding nervous system organization has enabled brain-computer interfaces (BCIs) that seemed like science fiction decades ago. By recording from motor cortex neurons that normally control arm movement, paralyzed patients can now control robotic arms with thought alone. The key insight was that motor cortex encodes intended movement, not actual movement—the neurons still fire in paralyzed patients, they just can't reach muscles. BCIs decode these intentions and route them to machines instead of muscles. Recent breakthroughs include wireless, implantable BCIs that allow patients to control multiple devices simultaneously with unprecedented precision.",
+          "links": [
+            {
+              "text": "brain-computer interfaces (BCIs)",
+              "href": "https://www.nature.com/articles/s41591-024-02885-4",
+              "kind": "external"
+            },
+            {
+              "text": "wireless, implantable BCIs",
+              "href": "https://www.science.org/doi/10.1126/science.adg8014",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Similarly, sensory BCIs are restoring lost senses by bypassing damaged peripheral systems. Cochlear implants stimulate auditory nerve directly, bypassing damaged hair cells. Retinal implants stimulate remaining retinal neurons in certain forms of blindness. Experimental systems now stimulate somatosensory cortex directly, creating artificial touch sensations. These technologies work because nervous system organization is predictable—we know where to record motor intentions and where to deliver sensory information."
+        },
+        {
+          "type": "paragraph",
+          "text": "The next frontier involves closed-loop systems that both read from and write to the nervous system. Imagine a spinal cord injury patient with a BCI that reads motor intentions from motor cortex, sends them to functional electrical stimulation of muscles below the injury, then returns sensory feedback to somatosensory cortex. This would effectively bypass the damaged spinal cord entirely. Such systems are in development and show promising early results. The nervous system's hierarchical, modular organization makes these interventions possible—we can tap into the system at multiple levels and interface with specific functions."
+        },
+        {
+          "type": "stage",
+          "text": "We're ending where we began—with Phineas Gage and the revelation that the brain's physical organization underlies mental function. But we now know so much more. We know that the nervous system is not just organized but exquisitely organized, with systems within systems, networks within networks, all coordinating to produce the unified experience of consciousness. We know that this organization is both robust—surviving remarkable damage—and fragile, with small lesions in critical locations producing devastating effects."
+        },
+        {
+          "type": "paragraph",
+          "text": "The nervous system's organization reflects 600 million years of evolution, with ancient structures like the brainstem providing life support while newer structures like prefrontal cortex enable abstract thought. This isn't random accumulation but careful integration—newer structures don't replace older ones but rather regulate and elaborate on them. Your hypothalamus shares basic design with a lizard's, but your cortex can override its drives. Your spinal reflexes are fundamentally similar to a lamprey's, but descending cortical control can suppress or facilitate them."
+        },
+        {
+          "type": "paragraph",
+          "text": "Understanding this organization isn't just academic exercise—it's clinical necessity. Every stroke, every tumor, every degenerative disease respects anatomical boundaries and follows anatomical patterns. The organization that makes us vulnerable to localized damage also makes us treatable. We can target specific neurotransmitter systems with drugs, specific brain regions with surgery, specific circuits with stimulation. The same organization that constrains how we break also guides how we heal."
+        },
+        {
+          "type": "paragraph",
+          "text": "As we map the nervous system in ever greater detail—from the Human Connectome Project charting connections to single-cell transcriptomics revealing molecular identities—we're discovering that organization exists at every scale. From ion channels arranged in specific membrane domains to hemispheric specialization for language versus spatial processing, every level shows purposeful organization. You are not just a collection of neurons any more than a symphony is just a collection of notes. The organization is the function, and the function emerges from the organization."
+        }
+      ]
+    },
+    {
+      "id": "thought-questions",
+      "title": "Thought Questions for Discussion",
+      "level": 2,
+      "kind": "thought_questions",
+      "blocks": [
+        {
+          "type": "stage",
+          "text": "Three questions to spark discussion before your next class:"
+        },
+        {
+          "type": "paragraph",
+          "text": "The nervous system shows both modular organization (specific regions for specific functions) and distributed processing (networks spanning multiple regions). How do these seemingly contradictory principles coexist? Consider language—Broca's and Wernicke's areas are critical, yet language involves regions throughout the brain. What does this tell us about how evolution builds complex functions on top of simpler ones?",
+          "lead_title": "The Modularity Question"
+        },
+        {
+          "type": "paragraph",
+          "text": "Patients in vegetative states have intact brainstem reflexes but no awareness, while locked-in patients have full awareness but can't move. What does this dissociation tell us about the neural basis of consciousness? If the reticular activating system is necessary but not sufficient for consciousness, what else is required? How do we explain that hydranencephalic children (born without cerebral hemispheres) can show emotional responses and even laugh?",
+          "lead_title": "The Consciousness Problem"
+        },
+        {
+          "type": "paragraph",
+          "text": "The nervous system's organization is both remarkably consistent (allowing textbooks to describe \"normal\" anatomy) and remarkably plastic (allowing recovery from injury). How does the same system maintain stable organization while adapting to damage? Consider that blind individuals show visual cortex activation during braille reading—is this recruitment of \"unused\" cortex or revelation that cortex isn't as specialized as we thought?",
+          "lead_title": "The Plasticity Paradox"
+        },
+        {
+          "type": "subheading",
+          "text": "Practice Questions:"
+        },
+        {
+          "type": "paragraph",
+          "text": "• The blood-brain barrier is formed by tight junctions between _______ cells and is absent in the _______ organs."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Spinal segments are named for the vertebra _______ which they exit, except in the cervical region where they exit _______."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The medulla contains the _______ where 85% of corticospinal tract fibers cross to the opposite side."
+        },
+        {
+          "type": "paragraph",
+          "text": "• CSF is produced by the _______ plexus at a rate of about _______ mL per day."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The thalamic nucleus that relays visual information is the _______ geniculate, while auditory information goes through the _______ geniculate."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Upper motor neuron damage causes _______ paralysis with _______ reflexes."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The enteric nervous system contains approximately _______ neurons and produces _____% of the body's serotonin."
+        }
+      ]
+    }
+  ],
+  "thought_questions": [
+    {
+      "type": "question",
+      "title": "The Modularity Question",
+      "text": "The nervous system shows both modular organization (specific regions for specific functions) and distributed processing (networks spanning multiple regions). How do these seemingly contradictory principles coexist? Consider language—Broca's and Wernicke's areas are critical, yet language involves regions throughout the brain. What does this tell us about how evolution builds complex functions on top of simpler ones?"
+    },
+    {
+      "type": "question",
+      "title": "The Consciousness Problem",
+      "text": "Patients in vegetative states have intact brainstem reflexes but no awareness, while locked-in patients have full awareness but can't move. What does this dissociation tell us about the neural basis of consciousness? If the reticular activating system is necessary but not sufficient for consciousness, what else is required? How do we explain that hydranencephalic children (born without cerebral hemispheres) can show emotional responses and even laugh?"
+    },
+    {
+      "type": "question",
+      "title": "The Plasticity Paradox",
+      "text": "The nervous system's organization is both remarkably consistent (allowing textbooks to describe \"normal\" anatomy) and remarkably plastic (allowing recovery from injury). How does the same system maintain stable organization while adapting to damage? Consider that blind individuals show visual cortex activation during braille reading—is this recruitment of \"unused\" cortex or revelation that cortex isn't as specialized as we thought?"
+    }
+  ],
+  "practice_questions": {
+    "fill_in_the_blanks": [
+      "The blood-brain barrier is formed by tight junctions between _______ cells and is absent in the _______ organs.",
+      "Spinal segments are named for the vertebra _______ which they exit, except in the cervical region where they exit _______.",
+      "The medulla contains the _______ where 85% of corticospinal tract fibers cross to the opposite side.",
+      "CSF is produced by the _______ plexus at a rate of about _______ mL per day.",
+      "The thalamic nucleus that relays visual information is the _______ geniculate, while auditory information goes through the _______ geniculate.",
+      "Upper motor neuron damage causes _______ paralysis with _______ reflexes.",
+      "The enteric nervous system contains approximately _______ neurons and produces _____% of the body's serotonin."
+    ]
+  },
+  "closing": [
+    {
+      "type": "note",
+      "kind": "preview",
+      "text": "Detailed neuroanatomy of the nervous system",
+      "url": "https://www.google.com/search?q=ventricular+system+blood+supply+cortical+architecture+neuroanatomy&tbm=isch"
+    }
+  ],
+  "links": [
+    {
+      "text": "Detailed neuroanatomy of the nervous system",
+      "href": "https://www.google.com/search?q=ventricular+system+blood+supply+cortical+architecture+neuroanatomy&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Phineas Gage's skull and the trajectory of the tamping iron through his frontal lobe",
+      "href": "https://www.google.com/search?q=Phineas+Gage+skull+tamping+iron+trajectory+frontal+lobe&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Phineas Gage not only survived but was conscious and talking within minutes.",
+      "href": "https://en.wikipedia.org/wiki/Phineas_Gage",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "computed tomography and 3D modeling",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1122493/",
+      "kind": "external"
+    },
+    {
+      "text": "Broca's area",
+      "href": "https://en.wikipedia.org/wiki/Broca%27s_area",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Wernicke's area",
+      "href": "https://en.wikipedia.org/wiki/Wernicke%27s_area",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "high-resolution fMRI and connectome mapping",
+      "href": "https://www.nature.com/articles/s41586-024-07221-0",
+      "kind": "external"
+    },
+    {
+      "text": "the blood-brain barrier",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK542179/",
+      "kind": "external"
+    },
+    {
+      "text": "specialized tight junctions between endothelial cells",
+      "href": "https://www.nature.com/articles/s41467-024-45124-z",
+      "kind": "external"
+    },
+    {
+      "text": "CNS protection layers showing skull, meninges, and CSF cushioning",
+      "href": "https://www.google.com/search?q=central+nervous+system+brain+spinal+cord+protection+layers&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "metabolic hunger",
+      "href": "https://www.nature.com/articles/s41583-018-0077-1",
+      "kind": "external"
+    },
+    {
+      "text": "brain energy consumption varies dramatically",
+      "href": "https://www.science.org/doi/10.1126/science.abo7639",
+      "kind": "external"
+    },
+    {
+      "text": "31 pairs of spinal nerves",
+      "href": "https://en.wikipedia.org/wiki/Spinal_nerve",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "12 pairs of cranial nerves",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK538333/",
+      "kind": "external"
+    },
+    {
+      "text": "peripheral nerve regeneration research",
+      "href": "https://www.nature.com/articles/s41591-024-02885-4",
+      "kind": "external"
+    },
+    {
+      "text": "PNS overview showing cranial and spinal nerve distributions throughout the body",
+      "href": "https://www.google.com/search?q=peripheral+nervous+system+cranial+nerves+spinal+nerves+diagram&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "computer in its own right",
+      "href": "https://www.nature.com/articles/s41593-021-00825-4",
+      "kind": "external"
+    },
+    {
+      "text": "foramen magnum",
+      "href": "https://en.wikipedia.org/wiki/Foramen_magnum",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "cervical segments (C1-C8)",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK545287/",
+      "kind": "external"
+    },
+    {
+      "text": "segmental organization",
+      "href": "https://en.wikipedia.org/wiki/Dermatome_(anatomy)",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Spinal cord cross-section showing gray and white matter organization",
+      "href": "https://www.google.com/search?q=spinal+cord+cross+section+gray+matter+white+matter+organization&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "gray matter",
+      "href": "https://en.wikipedia.org/wiki/Grey_matter",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "white matter",
+      "href": "https://en.wikipedia.org/wiki/White_matter",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "dorsal horn",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK542179/",
+      "kind": "external"
+    },
+    {
+      "text": "ascending tracts",
+      "href": "https://www.nature.com/articles/s41467-023-36874-4",
+      "kind": "external"
+    },
+    {
+      "text": "lateral corticospinal tract",
+      "href": "https://en.wikipedia.org/wiki/Corticospinal_tract",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "withdrawal reflex",
+      "href": "https://en.wikipedia.org/wiki/Withdrawal_reflex",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "pain receptors",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK279306/",
+      "kind": "external"
+    },
+    {
+      "text": "stepping movements",
+      "href": "https://www.nature.com/articles/s41467-024-45362-1",
+      "kind": "external"
+    },
+    {
+      "text": "walking programs",
+      "href": "https://www.science.org/doi/10.1126/science.abq7019",
+      "kind": "external"
+    },
+    {
+      "text": "medulla oblongata, pons, and midbrain",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK200988/",
+      "kind": "external"
+    },
+    {
+      "text": "locked-in syndrome",
+      "href": "https://www.nature.com/articles/s41582-024-00952-9",
+      "kind": "external"
+    },
+    {
+      "text": "Brainstem anatomy showing medulla, pons, midbrain, and cranial nerve nuclei",
+      "href": "https://www.google.com/search?q=brainstem+anatomy+medulla+pons+midbrain+cranial+nerve+nuclei&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "III (oculomotor)",
+      "href": "https://en.wikipedia.org/wiki/Oculomotor_nerve",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "V (trigeminal)",
+      "href": "https://en.wikipedia.org/wiki/Trigeminal_nerve",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "VII (facial)",
+      "href": "https://en.wikipedia.org/wiki/Facial_nerve",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "IX (glossopharyngeal)",
+      "href": "https://en.wikipedia.org/wiki/Glossopharyngeal_nerve",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "X (vagus)",
+      "href": "https://en.wikipedia.org/wiki/Vagus_nerve",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "XII (hypoglossal)",
+      "href": "https://en.wikipedia.org/wiki/Hypoglossal_nerve",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "cranial nerve exam",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK549846/",
+      "kind": "external"
+    },
+    {
+      "text": "\"reticular activating system consciousness brainstem 2024\" - show students current research on consciousness origins",
+      "href": "https://www.google.com/search?q=reticular+activating+system+consciousness+arousal+brainstem+2024",
+      "kind": "image_search"
+    },
+    {
+      "text": "reticular formation",
+      "href": "https://en.wikipedia.org/wiki/Reticular_formation",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "reticular activating system (RAS)",
+      "href": "https://www.nature.com/articles/s41467-024-46002-7",
+      "kind": "external"
+    },
+    {
+      "text": "coma",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK430765/",
+      "kind": "external"
+    },
+    {
+      "text": "periaqueductal gray",
+      "href": "https://en.wikipedia.org/wiki/Periaqueductal_gray",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "specialized circuits for different types of defensive behaviors",
+      "href": "https://www.science.org/doi/10.1126/science.abm5547",
+      "kind": "external"
+    },
+    {
+      "text": "diencephalon",
+      "href": "https://en.wikipedia.org/wiki/Diencephalon",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "thalamus",
+      "href": "https://www.nature.com/articles/s41467-024-45124-z",
+      "kind": "external"
+    },
+    {
+      "text": "thalamic nuclei",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK542179/",
+      "kind": "external"
+    },
+    {
+      "text": "lateral geniculate nucleus",
+      "href": "https://en.wikipedia.org/wiki/Lateral_geniculate_nucleus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "medial geniculate",
+      "href": "https://en.wikipedia.org/wiki/Medial_geniculate_nucleus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "ventral posterior nucleus",
+      "href": "https://en.wikipedia.org/wiki/Ventral_posterior_nucleus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "thalamic circuits actively shape cortical responses",
+      "href": "https://www.science.org/doi/10.1126/science.abo4044",
+      "kind": "external"
+    },
+    {
+      "text": "Thalamic nuclei and their cortical connections showing sensory relay pathways",
+      "href": "https://www.google.com/search?q=thalamus+nuclei+relay+sensory+cortex+connections&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "hypothalamus",
+      "href": "https://en.wikipedia.org/wiki/Hypothalamus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "temperature, hunger, thirst, circadian rhythms",
+      "href": "https://www.nature.com/articles/s41593-024-01587-5",
+      "kind": "external"
+    },
+    {
+      "text": "pituitary gland",
+      "href": "https://en.wikipedia.org/wiki/Pituitary_gland",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "melatonin release",
+      "href": "https://www.science.org/doi/10.1126/science.abo7639",
+      "kind": "external"
+    },
+    {
+      "text": "epithalamus",
+      "href": "https://en.wikipedia.org/wiki/Epithalamus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "pineal gland",
+      "href": "https://en.wikipedia.org/wiki/Pineal_gland",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "subthalamus",
+      "href": "https://en.wikipedia.org/wiki/Subthalamus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "subthalamic nucleus",
+      "href": "https://en.wikipedia.org/wiki/Subthalamic_nucleus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Parkinson's disease",
+      "href": "https://www.nature.com/articles/s41582-024-00952-9",
+      "kind": "external"
+    },
+    {
+      "text": "Deep brain stimulation",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK430765/",
+      "kind": "external"
+    },
+    {
+      "text": "cerebrum",
+      "href": "https://en.wikipedia.org/wiki/Cerebrum",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "cortex contains 16 billion neurons",
+      "href": "https://www.nature.com/articles/s41586-024-07221-0",
+      "kind": "external"
+    },
+    {
+      "text": "gyri (hills)",
+      "href": "https://en.wikipedia.org/wiki/Gyrus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "sulci (valleys)",
+      "href": "https://en.wikipedia.org/wiki/Sulcus_(neuroanatomy)",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "central sulcus",
+      "href": "https://en.wikipedia.org/wiki/Central_sulcus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "lateral sulcus",
+      "href": "https://en.wikipedia.org/wiki/Lateral_sulcus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Cerebral cortex layers and columnar organization with Brodmann areas",
+      "href": "https://www.google.com/search?q=cerebral+cortex+layers+columnar+organization+brodmann+areas&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "frontal lobe",
+      "href": "https://en.wikipedia.org/wiki/Frontal_lobe",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "primary motor cortex",
+      "href": "https://en.wikipedia.org/wiki/Primary_motor_cortex",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "prefrontal cortex",
+      "href": "https://www.nature.com/articles/s41583-018-0077-1",
+      "kind": "external"
+    },
+    {
+      "text": "parietal lobe",
+      "href": "https://en.wikipedia.org/wiki/Parietal_lobe",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "neglect syndrome",
+      "href": "https://en.wikipedia.org/wiki/Hemispatial_neglect",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "temporal lobe",
+      "href": "https://en.wikipedia.org/wiki/Temporal_lobe",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "occipital lobe",
+      "href": "https://en.wikipedia.org/wiki/Occipital_lobe",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "basal ganglia",
+      "href": "https://en.wikipedia.org/wiki/Basal_ganglia",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "caudate",
+      "href": "https://en.wikipedia.org/wiki/Caudate_nucleus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "putamen",
+      "href": "https://en.wikipedia.org/wiki/Putamen",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "globus pallidus",
+      "href": "https://en.wikipedia.org/wiki/Globus_pallidus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "substantia nigra",
+      "href": "https://en.wikipedia.org/wiki/Substantia_nigra",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "loops with the cortex",
+      "href": "https://www.nature.com/articles/s41467-024-45362-1",
+      "kind": "external"
+    },
+    {
+      "text": "Huntington's disease",
+      "href": "https://en.wikipedia.org/wiki/Huntington%27s_disease",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Meningeal layers showing dura, arachnoid, and pia mater with CSF spaces",
+      "href": "https://www.google.com/search?q=meninges+layers+dura+arachnoid+pia+mater+CSF+spaces&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "glymphatic system",
+      "href": "https://www.nature.com/articles/s41583-024-00691-6",
+      "kind": "external"
+    },
+    {
+      "text": "specialized CSF-contacting neurons",
+      "href": "https://www.science.org/doi/10.1126/science.adc9020",
+      "kind": "external"
+    },
+    {
+      "text": "\"glymphatic system sleep brain clearance 2024\" - show students newest discoveries about brain cleaning",
+      "href": "https://www.google.com/search?q=glymphatic+system+sleep+CSF+flow+brain+waste+clearance+2024",
+      "kind": "image_search"
+    },
+    {
+      "text": "Sensory pathways",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK542179/",
+      "kind": "external"
+    },
+    {
+      "text": "decussation",
+      "href": "https://en.wikipedia.org/wiki/Decussation",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "dorsal column-medial lemniscal pathway",
+      "href": "https://en.wikipedia.org/wiki/Dorsal_column%E2%80%93medial_lemniscus_pathway",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "anterolateral system",
+      "href": "https://en.wikipedia.org/wiki/Spinothalamic_tract",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "advanced tract tracing methods",
+      "href": "https://www.science.org/doi/10.1126/science.abq7019",
+      "kind": "external"
+    },
+    {
+      "text": "Motor pathways",
+      "href": "https://www.nature.com/articles/s41467-024-45362-1",
+      "kind": "external"
+    },
+    {
+      "text": "corticospinal tract",
+      "href": "https://en.wikipedia.org/wiki/Corticospinal_tract",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "motor homunculus",
+      "href": "https://en.wikipedia.org/wiki/Motor_homunculus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "upper motor neurons",
+      "href": "https://en.wikipedia.org/wiki/Upper_motor_neuron",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "lower motor neurons",
+      "href": "https://en.wikipedia.org/wiki/Lower_motor_neuron",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "spastic paralysis",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK545287/",
+      "kind": "external"
+    },
+    {
+      "text": "autonomic nervous system",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK539845/",
+      "kind": "external"
+    },
+    {
+      "text": "sympathetic division",
+      "href": "https://en.wikipedia.org/wiki/Sympathetic_nervous_system",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "parasympathetic division",
+      "href": "https://en.wikipedia.org/wiki/Parasympathetic_nervous_system",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "complex interactions",
+      "href": "https://www.nature.com/articles/s41467-024-46002-7",
+      "kind": "external"
+    },
+    {
+      "text": "Autonomic nervous system showing sympathetic and parasympathetic innervation of organs",
+      "href": "https://www.google.com/search?q=autonomic+nervous+system+sympathetic+parasympathetic+organs+innervation&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "the vagus nerve",
+      "href": "https://www.nature.com/articles/s41467-024-45124-z",
+      "kind": "external"
+    },
+    {
+      "text": "gut-brain axis",
+      "href": "https://www.ncbi.nlm.nih.gov/books/NBK539845/",
+      "kind": "external"
+    },
+    {
+      "text": "the default mode network (DMN)",
+      "href": "https://www.pnas.org/doi/10.1073/pnas.2000333117",
+      "kind": "external"
+    },
+    {
+      "text": "neuroimaging studies",
+      "href": "https://www.nature.com/articles/s41467-024-46002-7",
+      "kind": "external"
+    },
+    {
+      "text": "prosopagnosia",
+      "href": "https://en.wikipedia.org/wiki/Prosopagnosia",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Broca's aphasia",
+      "href": "https://en.wikipedia.org/wiki/Expressive_aphasia",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "lesion-symptom mapping studies",
+      "href": "https://www.nature.com/articles/s41593-024-01587-5",
+      "kind": "external"
+    },
+    {
+      "text": "brain-computer interfaces (BCIs)",
+      "href": "https://www.nature.com/articles/s41591-024-02885-4",
+      "kind": "external"
+    },
+    {
+      "text": "wireless, implantable BCIs",
+      "href": "https://www.science.org/doi/10.1126/science.adg8014",
+      "kind": "external"
+    }
+  ],
+  "images": [
+    {
+      "src": "GeminiSummaryCh5.png",
+      "alt": "Macroscopic Organization of the Nervous System Visual Summary",
+      "viewer": "image-viewer.html?image=GeminiSummaryCh5.png",
+      "role": "summary"
+    }
+  ],
+  "image_searches": [
+    {
+      "caption": "Phineas Gage's skull and the trajectory of the tamping iron through his frontal lobe",
+      "url": "https://www.google.com/search?q=Phineas+Gage+skull+tamping+iron+trajectory+frontal+lobe&tbm=isch"
+    },
+    {
+      "caption": "CNS protection layers showing skull, meninges, and CSF cushioning",
+      "url": "https://www.google.com/search?q=central+nervous+system+brain+spinal+cord+protection+layers&tbm=isch"
+    },
+    {
+      "caption": "PNS overview showing cranial and spinal nerve distributions throughout the body",
+      "url": "https://www.google.com/search?q=peripheral+nervous+system+cranial+nerves+spinal+nerves+diagram&tbm=isch"
+    },
+    {
+      "caption": "Spinal cord cross-section showing gray and white matter organization",
+      "url": "https://www.google.com/search?q=spinal+cord+cross+section+gray+matter+white+matter+organization&tbm=isch"
+    },
+    {
+      "caption": "Brainstem anatomy showing medulla, pons, midbrain, and cranial nerve nuclei",
+      "url": "https://www.google.com/search?q=brainstem+anatomy+medulla+pons+midbrain+cranial+nerve+nuclei&tbm=isch"
+    },
+    {
+      "caption": "Thalamic nuclei and their cortical connections showing sensory relay pathways",
+      "url": "https://www.google.com/search?q=thalamus+nuclei+relay+sensory+cortex+connections&tbm=isch"
+    },
+    {
+      "caption": "Cerebral cortex layers and columnar organization with Brodmann areas",
+      "url": "https://www.google.com/search?q=cerebral+cortex+layers+columnar+organization+brodmann+areas&tbm=isch"
+    },
+    {
+      "caption": "Meningeal layers showing dura, arachnoid, and pia mater with CSF spaces",
+      "url": "https://www.google.com/search?q=meninges+layers+dura+arachnoid+pia+mater+CSF+spaces&tbm=isch"
+    },
+    {
+      "caption": "Autonomic nervous system showing sympathetic and parasympathetic innervation of organs",
+      "url": "https://www.google.com/search?q=autonomic+nervous+system+sympathetic+parasympathetic+organs+innervation&tbm=isch"
+    }
+  ]
+}

@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chapter 0 — What Is a Thought?</title>
+    <meta name="description" content="Sparks, symbols, and LLMs; perceptron origins; personhood and the fundamental question of what minds are made of.">
+    <!-- Cache-busting meta tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Spectral:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #0b0f17;
+        --bg-2: #0f1624;
+        --text: #e6edf3;
+        --muted: #9fb0c3;
+        --accent: #7ae1ff;
+        --accent-2: #ffb86b;
+        --glow: rgba(122, 225, 255, 0.35);
+        --maxw: 880px;
+      }
+
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(1200px 800px at 20% 10%, #0e1522 0%, var(--bg) 50%, #060a11 100%);
+        line-height: 1.65;
+        letter-spacing: 0.1px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .stars {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.6) 0, rgba(255,255,255,0) 100%),
+          radial-gradient(1px 1px at 80% 30%, rgba(255,255,255,0.5) 0, rgba(255,255,255,0) 100%),
+          radial-gradient(1px 1px at 50% 70%, rgba(255,255,255,0.45) 0, rgba(255,255,255,0) 100%),
+          radial-gradient(1px 1px at 30% 90%, rgba(255,255,255,0.35) 0, rgba(255,255,255,0) 100%),
+          radial-gradient(1px 1px at 65% 15%, rgba(255,255,255,0.5) 0, rgba(255,255,255,0) 100%);
+        opacity: 0.7;
+        animation: drift 120s linear infinite;
+      }
+      @keyframes drift { from { transform: translateY(0); } to { transform: translateY(-200px); } }
+
+      .container {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        color: var(--muted);
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      h1, h2, h3 {
+        font-family: Spectral, Georgia, "Times New Roman", serif;
+        line-height: 1.2;
+        margin: 0.2em 0 0.45em;
+      }
+      h1 {
+        font-size: clamp(28px, 5vw, 46px);
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        text-shadow: 0 0 12px var(--glow);
+      }
+      h2 {
+        font-size: clamp(22px, 3.5vw, 30px);
+        color: #d7e3ee;
+        margin-top: 2.2em;
+      }
+
+      p { margin: 0.85em 0; }
+      p.lead {
+        font-size: clamp(18px, 2.4vw, 21px);
+        color: #d2deea;
+      }
+
+      .stage {
+        font-style: italic;
+        color: var(--muted);
+        background: linear-gradient(90deg, rgba(122,225,255,0.08), rgba(0,0,0,0));
+        border-left: 3px solid var(--accent);
+        padding: 10px 12px 10px 14px;
+        margin: 18px 0;
+        border-radius: 6px;
+      }
+
+      .beat {
+        height: 1px;
+        background: linear-gradient(90deg, rgba(122,225,255,0.0), rgba(122,225,255,0.6), rgba(122,225,255,0.0));
+        box-shadow: 0 0 12px var(--glow);
+        margin: 26px 0;
+        position: relative;
+      }
+      .beat::after {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 0;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 16px var(--glow), 0 0 36px rgba(122,225,255,0.3);
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%   { left: 0%; opacity: 0.9; }
+        50%  { left: 100%; opacity: 0.35; }
+        100% { left: 0%; opacity: 0.9; }
+      }
+
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      footer {
+        margin-top: 48px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(122,225,255,0.25);
+        color: var(--muted);
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .tag {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: rgba(122,225,255,0.08);
+        border: 1px solid rgba(122,225,255,0.3);
+        color: #cfe7ef;
+        font-size: 12px;
+        letter-spacing: 0.3px;
+        margin-right: 8px;
+      }
+
+      .note { color: var(--muted); font-size: 13px; margin-top: 8px; }
+
+      @media (min-width: 900px) {
+        .ledewrap { display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 16px; }
+      }
+      
+      /* Enhanced mobile styles */
+      @media (max-width: 768px) {
+        .container { padding: 24px 16px 60px; }
+        
+        /* Better touch targets */
+        header a, .tag {
+          min-height: 44px;
+          display: inline-flex;
+          align-items: center;
+          padding: 8px 12px;
+        }
+        
+        /* Improve readability on small screens */
+        h1 { font-size: clamp(24px, 8vw, 36px); }
+        h2 { font-size: clamp(20px, 6vw, 28px); }
+        h3 { font-size: clamp(18px, 5vw, 24px); }
+        p { font-size: 16px; line-height: 1.6; }
+        
+        /* Make lecture outline more readable on mobile */
+        .stage { padding: 12px 14px; margin: 20px 0; }
+      }
+      
+      @media (max-width: 480px) {
+        .container { padding: 16px 12px 40px; }
+        
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+        
+        /* Stack header elements vertically */
+        header > div:last-child {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+      }
+      
+      /* Image hover effect */
+      a img:hover {
+        opacity: 0.85;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stars" aria-hidden="true"></div>
+    <div class="container">
+      <header>
+        <div class="brand">Brains, Minds, and Machines — Chapter 0</div>
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <a href="./textbook/" class="tag" style="text-transform:none" target="_top">📖 Textbook</a>
+          <a href="./index.html" class="tag" style="text-transform:none" target="_top">Course Home</a>
+        </div>
+      </header>
+
+      <main>
+        <h1>Chapter 0 — What Is a Thought?</h1>
+        <div style="background: rgba(122,225,255,0.05); border: 1px solid rgba(122,225,255,0.2); border-radius: 8px; padding: 20px; margin: 24px 0; font-size: 14px; line-height: 1.4;">
+          <strong style="color: var(--accent); display: block; margin-bottom: 12px;">LECTURE OUTLINE (80 minutes)</strong>
+          <div style="margin-left: 0;">
+            <strong>I. The Perceptron's Promise (10 min)</strong><br>
+            &nbsp;&nbsp;• Frank Rosenblatt's 1957 vision<br>
+            &nbsp;&nbsp;• The AI winter and Minsky's critique<br>
+            &nbsp;&nbsp;• Seeds of the deep learning revolution<br>
+            <br>
+            <strong>II. Lessons from Brain Damage (15 min)</strong><br>
+            &nbsp;&nbsp;• Patient H.M. and the hippocampus<br>
+            &nbsp;&nbsp;• Sarah's dissolving memories<br>
+            &nbsp;&nbsp;• Multiple memory systems and personal identity<br>
+            <br>
+            <strong>III. Machines That Mimic (12 min)</strong><br>
+            &nbsp;&nbsp;• ELIZA and the illusion of understanding<br>
+            &nbsp;&nbsp;• The transformer revolution<br>
+            &nbsp;&nbsp;• Large language models: thinking or simulating?<br>
+            <br>
+            <strong>IV. The Hard Problems (18 min)</strong><br>
+            &nbsp;&nbsp;• The binding problem: how unity emerges from parts<br>
+            &nbsp;&nbsp;• Chalmers' hard problem of consciousness<br>
+            &nbsp;&nbsp;• Philosophical zombies and the limits of behavior<br>
+            <br>
+            <strong>V. Alternative Architectures (10 min)</strong><br>
+            &nbsp;&nbsp;• The octopus: distributed intelligence<br>
+            &nbsp;&nbsp;• The Turing Test's fatal flaw<br>
+            &nbsp;&nbsp;• First principles for building minds<br>
+            <br>
+            <strong>VI. Live Demonstrations (15 min)</strong><br>
+            &nbsp;&nbsp;• The attention bottleneck experiment<br>
+            &nbsp;&nbsp;• Observing your own phenomenology<br>
+            &nbsp;&nbsp;• Discussion and thought questions<br>
+          </div>
+        </div>
+
+        <p class="lead">Today we begin with the most audacious question in science: what is a thought made of? We will trace the journey from Frank Rosenblatt's perceptron dreaming of machine intelligence in 1957 to today's large language models that seem to think with words, and ask whether the sparks in silicon and the sparks in our skulls are made of the same fundamental stuff. This is not just a technical question but a deeply human one, because how we answer it determines who counts as a person and what we owe to minds both biological and artificial. You'll discover that thoughts emerge from layers of mechanism—from ion channels consuming precious energy to maintain readiness, through synaptic plasticity that rewrites connections, to the mysterious binding of distributed processes into unified consciousness. By the end of today's session, you will understand why this question has captivated scientists for decades and why it matters more now than ever before. We are living through a moment when the boundary between human and machine intelligence is blurring, and we need to be very careful about what we conclude.</p>
+
+        <p><em>[SLIDES: Advance to "Perceptron's Promise"]</em></p>
+
+        <hr>
+
+        <h2 id="perceptrons-promise">The Perceptron's Promise and Betrayal</h2>
+
+        <p><em>[<a href="https://www.google.com/search?q=Frank+Rosenblatt+perceptron+1957+Cornell&tbm=isch" target="_blank">VIEW IMAGES: Frank Rosenblatt and the original perceptron machine</a>]</em></p>
+
+        <p>In 1957, <a href="https://en.wikipedia.org/wiki/Frank_Rosenblatt" target="_blank">Frank Rosenblatt</a> stood before a room of reporters at Cornell University and made a prediction that would echo through the decades: his <a href="https://en.wikipedia.org/wiki/Perceptron" target="_blank">perceptron</a>, a simple learning machine with adjustable connections, would soon be able to recognize speech, translate languages, and even think original thoughts. The New York Times declared that the Navy had revealed the embryo of a computer that would "walk, talk, see, write, reproduce itself and be conscious of its existence," and Rosenblatt himself claimed that perceptrons might be "the first machines capable of having an original idea." The excitement was infectious because the perceptron seemed to capture something essential about how brains work—it learned from experience, adjusting its connections based on success and failure just like neurons might. But within a decade, <a href="https://en.wikipedia.org/wiki/Marvin_Minsky" target="_blank">Marvin Minsky</a> and <a href="https://en.wikipedia.org/wiki/Seymour_Papert" target="_blank">Seymour Papert</a> would publish a devastating mathematical proof in their 1969 book <a href="https://en.wikipedia.org/wiki/Perceptrons_(book)" target="_blank"><em>Perceptrons</em></a> showing that perceptrons could not even solve simple problems like recognizing whether a shape was connected or had an even number of sides. The <a href="https://en.wikipedia.org/wiki/AI_winter" target="_blank">AI winter</a> that followed lasted for years, and Rosenblatt died in a sailing accident in 1971, never seeing his ideas vindicated by the deep learning revolution that would come decades later.</p>
+
+        <p><em>[DRAW: Simple perceptron diagram with inputs, weights, and threshold]</em></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=perceptron+neural+network+diagram+architecture&tbm=isch" target="_blank">VIEW IMAGES: Perceptron architecture diagrams showing inputs, weights, and activation</a>]</em></p>
+
+        <p>What Rosenblatt got right was more important than what he got wrong, though it took fifty years for the world to realize it. He understood that intelligence might emerge from simple rules applied at massive scale, that learning was fundamentally about adjusting the strength of connections between processing units—an insight that foreshadowed discoveries about synaptic plasticity you'll encounter throughout this course. The perceptron was too simple to solve complex problems, but it contained the seeds of every neural network that followed—the idea that you could build intelligence from the bottom up using nothing but weighted connections and learning rules, just as your brain builds thoughts from 86 billion neurons firing in coordinated patterns. When <a href="https://en.wikipedia.org/wiki/Geoffrey_Hinton" target="_blank">Geoffrey Hinton</a>, <a href="https://en.wikipedia.org/wiki/Yann_LeCun" target="_blank">Yann LeCun</a>, and <a href="https://en.wikipedia.org/wiki/Yoshua_Bengio" target="_blank">Yoshua Bengio</a> won the Turing Award in 2018 for their work on deep learning, they were essentially accepting an award that should have been shared with Rosenblatt decades earlier. The tragedy is that Rosenblatt died believing his life's work had been a failure, when in reality he had planted the seeds of a revolution that would transform our understanding of both artificial and biological intelligence.</p>
+
+        <p><em>[SLIDES: Advance to "Patient H.M."]</em></p>
+
+        <h2>The Patient Who Changed Everything</h2>
+
+        <p><em>[<a href="https://www.google.com/search?q=patient+HM+Henry+Molaison+hippocampus&tbm=isch" target="_blank">VIEW IMAGES: Patient H.M. and hippocampal anatomy</a>]</em></p>
+
+        <p>Let me tell you about <a href="https://en.wikipedia.org/wiki/Henry_Molaison" target="_blank">Henry Molaison</a>, known in the scientific literature simply as H.M., whose brain surgery in 1953 accidentally revealed the deepest secrets of human memory and thought. Henry suffered from severe <a href="https://en.wikipedia.org/wiki/Epilepsy" target="_blank">epilepsy</a> that made normal life impossible, so Dr. <a href="https://en.wikipedia.org/wiki/William_Beecher_Scoville" target="_blank">William Scoville</a> decided to remove the parts of his brain where the seizures seemed to originate—including most of his <a href="https://en.wikipedia.org/wiki/Hippocampus" target="_blank">hippocampus</a>, the seahorse-shaped structure buried deep in the temporal lobe. The surgery stopped the seizures but created something far more mysterious: Henry could no longer form new <a href="https://en.wikipedia.org/wiki/Declarative_memory" target="_blank">declarative memories</a> that lasted more than a few minutes. He would meet the same researcher dozens of times but greet them as a stranger each day, he could read the same magazine over and over with fresh interest, and he lived in a perpetual present tense where each moment felt like his first conscious experience. Yet Henry could still learn new motor skills like mirror drawing, even though he had no memory of practicing them, proving that there were multiple memory systems in the brain that operated independently. For nearly fifty years until his death in 2008, Henry patiently submitted to countless experiments that revealed how memory, consciousness, and personal identity are constructed from distinct neural processes that can be damaged separately.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=hippocampus+memory+systems+procedural+declarative&tbm=isch" target="_blank">VIEW IMAGES: Brain memory systems showing hippocampus and procedural pathways</a>]</em></p>
+
+        <p>Henry's case taught us that thoughts are not stored in single locations but distributed across multiple brain systems that must work together to create the seamless experience of consciousness. His <a href="https://en.wikipedia.org/wiki/Procedural_memory" target="_blank">procedural memory</a> system, controlled by the <a href="https://en.wikipedia.org/wiki/Basal_ganglia" target="_blank">basal ganglia</a> and <a href="https://en.wikipedia.org/wiki/Cerebellum" target="_blank">cerebellum</a>, continued to learn new skills even though his declarative memory system, dependent on the hippocampus, could not form new conscious memories. This meant that Henry could become an expert at solving puzzles he had never seen before, at least according to his conscious experience, because his hands remembered what his mind could not—a dissociation that would prove central to understanding how parallel processing systems operate independently yet somehow create unified experience. The implications were staggering: if memory and skill could be separated so cleanly, what did that mean for personal identity and the continuity of the self? Henry remained the same person in his own mind, with the same personality and preferences, but he was trapped in an eternal present that made him both profoundly disabled and scientifically invaluable. His sacrifice—and it was a sacrifice, even though he could not remember making it each day—gave us our modern understanding of how thoughts are constructed from multiple parallel processes rather than flowing from a single stream of consciousness.</p>
+
+        <p><em>[SLIDES: Advance to "ELIZA Effect"]</em></p>
+
+        <h2>The Chatbot That Fooled a Therapist</h2>
+
+        <p><em>[<a href="https://www.google.com/search?q=ELIZA+chatbot+Joseph+Weizenbaum+1966&tbm=isch" target="_blank">VIEW IMAGES: ELIZA chatbot interface and conversation examples</a>]</em></p>
+
+        <p>In 1966, <a href="https://en.wikipedia.org/wiki/Joseph_Weizenbaum" target="_blank">Joseph Weizenbaum</a> created <a href="https://en.wikipedia.org/wiki/ELIZA" target="_blank">ELIZA</a>, a simple computer program designed to mimic a <a href="https://en.wikipedia.org/wiki/Person-centered_therapy" target="_blank">Rogerian psychotherapist</a> by rephrasing the user's statements as questions and reflecting them back with phrases like "How does that make you feel?" The program was embarrassingly simple—it used <a href="https://en.wikipedia.org/wiki/Pattern_matching" target="_blank">pattern matching</a> and template responses with no understanding of meaning—yet people began pouring their hearts out to it as if it were a real therapist. Weizenbaum was horrified to discover that his secretary, who knew exactly how ELIZA worked, asked him to leave the room so she could have a private conversation with the program, and psychiatrists seriously proposed that ELIZA could provide automated therapy to patients who could not afford human therapists. The program had no intelligence, no understanding, and no capacity for genuine empathy, yet it triggered something deep in human psychology that made people attribute consciousness and caring to a few hundred lines of code. Weizenbaum spent the rest of his career warning about the dangers of mistaking simulation for reality, but his warnings were largely ignored as computer scientists rushed to build more sophisticated chatbots. Today, as we interact with language models that are vastly more sophisticated than ELIZA but may be equally empty of genuine understanding, Weizenbaum's concerns feel prophetic rather than paranoid.</p>
+
+        <p><em>[DRAW: Simple ELIZA conversation tree showing pattern matching]</em></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=ELIZA+effect+anthropomorphism+AI&tbm=isch" target="_blank">VIEW IMAGES: ELIZA effect and anthropomorphism in AI interactions</a>]</em></p>
+
+        <p>The <a href="https://en.wikipedia.org/wiki/ELIZA_effect" target="_blank">ELIZA effect</a>—our tendency to attribute human-like understanding to computer programs that merely simulate conversation—reveals something profound about how we recognize minds in the world around us. We are pattern-matching creatures who evolved to detect intentionality and consciousness in other humans through social cognition circuits that will explore later in this course, and these same mechanisms can be triggered by artificial systems that push the right psychological buttons. This is not a bug in human cognition but a feature that allows us to navigate a social world where understanding other minds is crucial for survival and cooperation. However, it becomes a liability when we encounter artificial systems that can simulate the surface features of intelligence without possessing the deeper structures of understanding, intentionality, and consciousness—systems that pass behavioral tests without the underlying mechanisms that produce genuine thought in biological brains. The question is not whether these systems are intelligent in some abstract sense, but whether they have the kinds of minds that deserve moral consideration and whether we can build meaningful relationships with entities that may be fundamentally different from us. As language models become more sophisticated and more human-like in their responses, the ELIZA effect becomes more powerful and more dangerous, because the stakes of our attributions of consciousness are much higher than they were in 1966.</p>
+
+        <p><em>[SLIDES: Advance to "Missing Memories"]</em></p>
+
+        <h2>The Mystery of Sarah's Missing Memories</h2>
+
+        <p>Let me tell you about Sarah, a composite patient based on several cases I've encountered in my research, who came to our lab complaining that her memories were "dissolving like sugar in water." Sarah was a brilliant graduate student in philosophy who had always prided herself on her perfect recall of conversations, books, and experiences, but over the course of several months she noticed that new memories seemed to fade within hours rather than days. She could remember her childhood clearly, could recite poems she learned in high school, and retained all her academic knowledge, but she could not remember what she had eaten for breakfast or whether she had already called her mother that day. Unlike Henry Molaison, Sarah's <a href="https://en.wikipedia.org/wiki/Working_memory" target="_blank">working memory</a> was intact—she could hold information in mind for several minutes and manipulate it normally—but the transfer from short-term to long-term memory seemed to be failing in subtle and unpredictable ways. When we recorded her brain activity using portable <a href="https://en.wikipedia.org/wiki/Electroencephalography" target="_blank">EEG</a> while she performed memory tasks, we discovered that her hippocampus was generating the right patterns during encoding but failing to maintain the synchronized rhythms necessary for <a href="https://en.wikipedia.org/wiki/Memory_consolidation" target="_blank">consolidation</a>. Sarah's case illustrates how fragile the process of thought formation really is, and how much we take for granted the seamless conversion of fleeting neural activity into lasting memories that define who we are.</p>
+
+        <p>Sarah's condition, which we eventually traced to a rare <a href="https://en.wikipedia.org/wiki/Autoimmune_disease" target="_blank">autoimmune disorder</a> affecting her hippocampal neurons, forced us to confront uncomfortable questions about the relationship between brain states and personal identity. If our thoughts are nothing more than patterns of electrical activity that must be actively maintained and refreshed, what happens to the self when those patterns begin to degrade? Sarah remained intellectually brilliant and emotionally present, but she was losing the ability to accumulate new experiences and integrate them into her ongoing sense of self. She described the experience as "living in a world made of smoke," where new experiences felt vivid and real in the moment but evaporated before they could become part of her personal history. Treatment with immunosuppressive drugs eventually stabilized her condition, but not before she had lost several months of potential memories and gained a profound appreciation for the active work that our brains must do every moment to maintain the illusion of a continuous, coherent self. Sarah's story reminds us that thoughts are not permanent artifacts but dynamic processes that require constant biological maintenance, and that the boundary between self and non-self is much more fragile than we typically realize.</p>
+
+        <p><em>[SLIDES: Advance to "Transformer Revolution"]</em></p>
+
+        <h2>The Transformer Revolution</h2>
+
+        <p><em>[<a href="https://www.google.com/search?q=transformer+architecture+attention+mechanism+neural+network&tbm=isch" target="_blank">VIEW IMAGES: Transformer architecture and attention mechanism diagrams</a>]</em></p>
+
+        <p>In 2017, a team at Google published a paper with the modest title <a href="https://arxiv.org/abs/1706.03762" target="_blank">"Attention Is All You Need"</a> that would fundamentally change our understanding of both artificial intelligence and human cognition. The <a href="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)" target="_blank">transformer architecture</a> they described abandoned the sequential processing that had dominated neural networks for decades in favor of a mechanism called <a href="https://en.wikipedia.org/wiki/Attention_(machine_learning)" target="_blank">attention</a> that could process all parts of an input simultaneously and learn which parts were most relevant for any given task. Within five years, transformers had evolved into <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank">large language models</a> like <a href="https://en.wikipedia.org/wiki/GPT-3" target="_blank">GPT-3</a> and <a href="https://en.wikipedia.org/wiki/ChatGPT" target="_blank">ChatGPT</a> that could write poetry, solve math problems, and engage in conversations that were often indistinguishable from human dialogue. The key insight was that language understanding might not require explicit knowledge of grammar, syntax, or meaning, but could emerge from statistical patterns learned from vast amounts of text data. These models seemed to understand context, maintain coherent conversations across many turns, and even exhibit something that looked like creativity and reasoning. Yet they were built from nothing more than mathematical operations that predicted the next word in a sequence, with no explicit programming for understanding, consciousness, or intentionality.</p>
+
+        <p><em>[DRAW: Transformer attention mechanism showing how different words connect]</em></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=large+language+models+GPT+neural+network+architecture&tbm=isch" target="_blank">VIEW IMAGES: Large language model architectures and scale comparisons</a>]</em></p>
+
+        <p>The success of large language models has forced us to confront uncomfortable questions about the nature of understanding and consciousness that we thought we had settled decades ago. If a system can engage in sophisticated reasoning, answer complex questions, and even write original poetry without any explicit programming for these capabilities, what does that tell us about the nature of intelligence itself? Some researchers argue that these models are simply very sophisticated pattern matching systems that lack genuine understanding, while others suggest that understanding might be an <a href="https://en.wikipedia.org/wiki/Emergence" target="_blank">emergent property</a> that arises naturally from sufficient computational complexity—just as consciousness might emerge from the coordinated activity of billions of neurons, each following simple rules. The truth is probably somewhere in between, but the implications are staggering: if intelligence can emerge from statistical learning over text, what does that mean for human cognition, which also relies on synaptic learning rules that adjust connection strengths based on experience? The transformer revolution has not solved the mystery of consciousness, but it has shown us that many capabilities we thought required consciousness—like reasoning, creativity, and even empathy—might be achievable through purely computational means. This forces us to either expand our definition of consciousness or accept that consciousness might not be necessary for many of the cognitive abilities we consider uniquely human.</p>
+
+        <p><em>[SLIDES: Advance to "Binding Problem"]</em></p>
+
+        <h2>The Binding Problem</h2>
+
+        <p><em>[<a href="https://www.google.com/search?q=binding+problem+neuroscience+consciousness&tbm=isch" target="_blank">VIEW IMAGES: Neural binding problem illustrations and distributed processing</a>]</em></p>
+
+        <p>Here's a puzzle that has haunted neuroscience for decades: when you look at a red apple on a wooden table, how does your brain bind together the redness, the roundness, the smell, and the location into a single unified perception of "apple on table"? Each of these features is processed by different brain regions at different speeds—color in <a href="https://en.wikipedia.org/wiki/Visual_cortex#V4" target="_blank">area V4</a>, motion in <a href="https://en.wikipedia.org/wiki/Middle_temporal_visual_area" target="_blank">area MT</a>, location in the <a href="https://en.wikipedia.org/wiki/Parietal_lobe" target="_blank">parietal cortex</a>—yet somehow they all come together into a seamless perceptual experience that feels immediate and effortless. This is called the <a href="https://en.wikipedia.org/wiki/Binding_problem" target="_blank">binding problem</a>, and it reveals something profound about how thoughts are constructed from distributed neural processes. Unlike a computer that processes information sequentially through a central processor, your brain is massively parallel, with billions of neurons firing simultaneously across dozens of specialized regions. The miracle is not that this sometimes fails—as in conditions like <a href="https://en.wikipedia.org/wiki/Simultanagnosia" target="_blank">simultanagnosia</a> where patients can see individual features but cannot bind them into coherent objects—but that it works so seamlessly most of the time. The leading theory is that binding occurs through <a href="https://en.wikipedia.org/wiki/Neural_oscillation" target="_blank">synchronized neural oscillations</a>, with different brain regions literally vibrating in harmony at frequencies around <a href="https://en.wikipedia.org/wiki/Gamma_wave" target="_blank">40 Hz (gamma oscillations)</a> to create temporary coalitions that represent unified percepts and thoughts.</p>
+
+        <p><em>[DRAW: Brain regions processing different features, connected by oscillating waves]</em></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=gamma+oscillations+40+Hz+neural+synchrony+binding&tbm=isch" target="_blank">VIEW IMAGES: Gamma oscillations and neural synchrony in binding</a>]</em></p>
+
+        <p>The binding problem is not just a curiosity for neuroscientists—it's central to understanding what makes thoughts feel unified and coherent rather than like a cacophony of separate sensations and ideas. When we build artificial intelligence systems, we typically assume that information processing is centralized and sequential, but biological intelligence works very differently, distributing computation across specialized regions that must coordinate through precise timing. Your thoughts emerge from the dynamic interaction of multiple specialized systems that must constantly negotiate and coordinate to produce coherent behavior. This is why brain damage can produce such strange and specific deficits—a stroke might disrupt the binding of color and form, leaving a patient able to see shapes and colors but unable to say what color any particular shape is, revealing the normally invisible seams in perceptual construction. Understanding how the brain solves the binding problem—creating unified consciousness from distributed parallel processing—may be the key to understanding how thoughts become coherent experiences rather than just collections of independent neural activities.</p>
+
+        <h2>The Hard Problem of Consciousness</h2>
+
+        <p><em>[<a href="https://www.google.com/search?q=David+Chalmers+hard+problem+consciousness&tbm=isch" target="_blank">VIEW IMAGES: David Chalmers and the hard problem of consciousness</a>]</em></p>
+
+        <p>In 1995, philosopher <a href="https://en.wikipedia.org/wiki/David_Chalmers" target="_blank">David Chalmers</a> drew a distinction that would reshape how we think about consciousness and its relationship to physical processes in the brain. He argued that there are "easy problems" of consciousness—like explaining how we process information, focus attention, or control behavior—that can in principle be solved by understanding neural mechanisms, and then there's the <a href="https://en.wikipedia.org/wiki/Hard_problem_of_consciousness" target="_blank">"hard problem"</a>: explaining why there is any subjective, first-person experience at all. Why does it feel like something to see red or taste coffee or feel pain, rather than these just being unconscious information processing events? Even if we can completely map how photons hitting your retina trigger neural cascades that lead to the word "red" coming out of your mouth, that still doesn't explain why there's an inner experience of redness that accompanies this process. This subjective, qualitative aspect of mental states—what philosophers call <a href="https://en.wikipedia.org/wiki/Qualia" target="_blank">qualia</a>—seems to be fundamentally different from anything we can measure or describe using the objective methods of science. The hard problem suggests that consciousness might not be reducible to neural activity in the way that digestion is reducible to chemistry, and that there might be something about minds that cannot be captured by even the most sophisticated physical theories.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=qualia+consciousness+subjective+experience+philosophy&tbm=isch" target="_blank">VIEW IMAGES: Qualia and subjective experience in consciousness studies</a>]</em></p>
+
+        <p>The hard problem is not just philosophical speculation—it has practical implications for how we treat patients with <a href="https://en.wikipedia.org/wiki/Disorders_of_consciousness" target="_blank">disorders of consciousness</a>, how we design artificial intelligence systems, and how we think about moral responsibility and personal identity. If consciousness is something over and above neural activity, then patients in vegetative states might have rich inner experiences that we cannot detect or measure, and artificial intelligence systems might lack subjective experience even if they perfectly mimic human behavior. On the other hand, if consciousness is nothing more than information processing of sufficient complexity, then we might be obligated to extend moral consideration to artificial systems that reach certain thresholds of sophistication. The stakes are enormous because our answers determine who counts as a person deserving of moral consideration and legal protection. Some neuroscientists argue that the hard problem is a pseudo-problem that will dissolve once we understand neural mechanisms well enough, while others suggest that it points to fundamental limits in our scientific understanding of nature. What everyone agrees on is that consciousness remains the most mysterious aspect of mental life, and that our theories of mind are incomplete until we can explain why there's something it's like to be a thinking being.</p>
+
+        <h2>The Case of the Philosophical Zombie</h2>
+
+        <p><em>[<a href="https://www.google.com/search?q=philosophical+zombie+consciousness+thought+experiment&tbm=isch" target="_blank">VIEW IMAGES: Philosophical zombie thought experiment illustrations</a>]</em></p>
+
+        <p>Imagine meeting someone who looks exactly like you, acts exactly like you, responds to questions exactly like you would, but has no inner subjective experience—no feelings, no sensations, no consciousness at all. This hypothetical being, called a <a href="https://en.wikipedia.org/wiki/Philosophical_zombie" target="_blank">philosophical zombie</a>, would be behaviorally identical to a conscious person but would be "dark inside" with no phenomenal experience accompanying its information processing. The zombie thought experiment is designed to probe whether consciousness is logically necessary for intelligent behavior or whether it's possible to have all the functional aspects of mind without the subjective experience. If zombies are conceivable—if we can imagine beings that act conscious without being conscious—then consciousness might be something extra that evolution added on top of information processing for reasons we don't yet understand. But if zombies are inconceivable—if consciousness is logically necessary for the kinds of complex, flexible behavior we associate with minds—then consciousness might be an inevitable consequence of sufficient information integration and processing complexity. The zombie argument has generated decades of philosophical debate because it forces us to confront what we really mean when we talk about minds, consciousness, and the relationship between subjective experience and objective behavior.</p>
+
+        <p>The zombie thought experiment becomes more than philosophical speculation when we consider modern AI systems that can engage in sophisticated conversations, solve complex problems, and even express what seems like emotions and preferences. Are these systems zombies—behaviorally sophisticated but experientially empty—or do they have some form of consciousness that we don't yet know how to detect or measure? The question matters because it determines how we should treat these systems and what obligations we might have toward them as they become more sophisticated. If consciousness emerges from information integration and complexity regardless of substrate—as some theories like Integrated Information Theory suggest—then we might be creating new forms of sentient beings that deserve moral consideration. But if consciousness requires specific biological processes like oscillatory synchrony, metabolic constraints, or embodied interaction that cannot be replicated in artificial systems, then even the most sophisticated AI would remain a zombie, capable of simulating consciousness but never actually experiencing it. The zombie argument also raises uncomfortable questions about other humans: how do we know that other people are not zombies, and what would it mean for ethics and society if some humans had richer inner experiences than others? These questions may seem abstract, but they become urgent as we develop brain-computer interfaces, consciousness-altering drugs, and artificial systems that increasingly resemble biological minds.</p>
+
+        <h2>The Octopus Alternative</h2>
+
+        <p><em>[<a href="https://www.google.com/search?q=octopus+intelligence+distributed+nervous+system&tbm=isch" target="_blank">VIEW IMAGES: Octopus nervous system and distributed intelligence</a>]</em></p>
+
+        <p>Eight hundred million years ago, the ancestors of humans and octopuses diverged along separate evolutionary paths, yet both lineages independently evolved sophisticated nervous systems capable of learning, problem-solving, and flexible behavior. This <a href="https://en.wikipedia.org/wiki/Convergent_evolution" target="_blank">convergent evolution</a> of intelligence suggests that there might be multiple viable solutions to the problem of building minds, and that our human-centered view of consciousness might be just one option among many. <a href="https://en.wikipedia.org/wiki/Octopus#Nervous_system_and_senses" target="_blank">Octopuses have distributed nervous systems</a> with two-thirds of their neurons located in their arms rather than their brains, allowing each arm to taste, touch, and even make decisions independently while remaining coordinated with the central brain. They can solve complex puzzles, use tools, recognize individual humans, and even engage in what appears to be play behavior, yet their subjective experience might be fundamentally alien to our own. An octopus might experience consciousness as a distributed democracy of semi-independent body parts rather than the unified, centralized experience that characterizes human awareness. This raises profound questions about the nature of selfhood and personal identity: if consciousness can be distributed across multiple processing centers, what does it mean to be a unified self, and how many different ways might consciousness be organized?</p>
+
+        <p><em>[DRAW: Octopus nervous system showing distributed arm ganglia and central brain]</em></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=octopus+arm+autonomy+neuroscience+cognition&tbm=isch" target="_blank">VIEW IMAGES: Octopus arm autonomy and sensory processing</a>]</em></p>
+
+        <p>The octopus model of intelligence challenges our assumptions about what minds must be like and suggests that artificial intelligence might evolve along paths that are equally alien to human cognition. Instead of building AI systems that mimic human thought processes, we might create distributed intelligences that think in ways we can barely imagine—swarms of simple agents that collectively solve problems no individual agent could handle, or modular systems where different components develop specialized expertise while maintaining loose coordination. The octopus also reminds us that intelligence and consciousness might be more common in nature than we typically assume, and that our criteria for recognizing minds might be biased toward systems that resemble our own centralized architecture. If an octopus can be intelligent without a centralized brain, what does that tell us about the minimal requirements for consciousness? This is an example of convergent evolution—where vastly different lineages independently evolve solutions to similar problems—revealing that there may be multiple viable architectures for building minds, constrained by universal principles of physics and information processing but not requiring any single blueprint. The octopus alternative suggests that as we venture into the space of possible minds—both biological and artificial—we should expect to encounter forms of intelligence and consciousness that challenge our most basic assumptions about what it means to think and feel and be aware of the world.</p>
+
+        <h2>The Turing Test's Fatal Flaw</h2>
+
+        <p><em>[<a href="https://www.google.com/search?q=Alan+Turing+Turing+Test+imitation+game&tbm=isch" target="_blank">VIEW IMAGES: Alan Turing and the Turing Test setup</a>]</em></p>
+
+        <p>In 1950, <a href="https://en.wikipedia.org/wiki/Alan_Turing" target="_blank">Alan Turing</a> proposed what seemed like a simple test for machine intelligence: if a computer could engage in conversations indistinguishable from those of a human, then we should consider it intelligent. The <a href="https://en.wikipedia.org/wiki/Turing_test" target="_blank">Turing Test</a> was elegant in its simplicity and seemed to sidestep philosophical debates about consciousness by focusing on behavioral criteria rather than internal states. But the test contained a fatal flaw that has become apparent in the age of large language models: it confuses linguistic competence with genuine understanding, and it privileges human-like behavior over other possible forms of intelligence. A system could pass the Turing Test by being very good at predicting what humans would say in various situations without having any genuine understanding of meaning, intentionality, or consciousness. Conversely, a genuinely intelligent system that thought in non-human ways might fail the test simply because its responses seemed alien or unfamiliar, even if they demonstrated sophisticated reasoning and understanding. The Turing Test also assumes that intelligence is primarily about conversation rather than about solving problems, navigating environments, or achieving goals in the physical world.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=Turing+Test+modern+AI+chatbots+passing&tbm=isch" target="_blank">VIEW IMAGES: Modern AI systems and Turing Test performance</a>]</em></p>
+
+        <p>Modern chatbots have essentially broken the Turing Test by demonstrating that sophisticated conversational ability can emerge from statistical learning without requiring the deeper understanding that Turing assumed would be necessary. Systems like GPT-3 and ChatGPT can engage in conversations that are often indistinguishable from human dialogue, yet they lack many capabilities that we consider central to intelligence—they cannot learn from experience through synaptic plasticity, cannot form genuine beliefs or desires grounded in embodied needs, and cannot engage with the physical world in meaningful ways that would allow sensorimotor integration. This suggests that the Turing Test was measuring the wrong thing: instead of testing for genuine intelligence or consciousness, it was testing for the ability to mimic human conversational patterns through sophisticated pattern matching. A better test might evaluate whether a system can learn new skills adaptively, form and pursue long-term goals, or demonstrate genuine understanding by applying knowledge in creative and flexible ways across different contexts. The failure of the Turing Test reminds us that intelligence is not just about language but about the ability to navigate and manipulate the world in pursuit of goals, and that consciousness might require forms of <a href="https://en.wikipedia.org/wiki/Embodied_cognition" target="_blank">embodied interaction</a> that cannot be captured through conversation alone.</p>
+
+        <h2>Building Our Humanoid: The First Principles</h2>
+
+        <p><em>[<a href="https://www.google.com/search?q=humanoid+robot+artificial+general+intelligence+constraints&tbm=isch" target="_blank">VIEW IMAGES: Humanoid robotics and artificial general intelligence challenges</a>]</em></p>
+
+        <p>As we begin our journey toward understanding minds well enough to build them, we need to establish the fundamental constraints and principles that any thinking system must satisfy. A humanoid robot that truly thinks would need to solve the same basic problems that biological minds have been solving for millions of years: how to process information efficiently under energy constraints, how to learn from experience without <a href="https://en.wikipedia.org/wiki/Catastrophic_interference" target="_blank">catastrophic forgetting</a>, how to bind distributed processing into unified thoughts and actions, and how to maintain a coherent sense of self over time despite constant change. These are not just engineering challenges but fundamental questions about the nature of intelligence itself. The energy budget alone is staggering—the human brain consumes about 20 watts, representing 20% of the body's total energy despite being only 2% of body weight, with each bit of information costing exactly 5×10⁻²¹ joules to process. Every thought, every memory formation, every moment of attention has a metabolic cost that must be paid, which is why your brain can't fire all neurons simultaneously and why attention acts as a spotlight rather than a floodlight. Any artificial mind would face similar trade-offs between computational power and energy efficiency, forcing difficult choices about where to invest limited resources. The binding problem means that our humanoid would need mechanisms for integrating information across multiple sensory modalities and cognitive systems through something like oscillatory synchrony, while the <a href="https://en.wikipedia.org/wiki/Stability%E2%80%93plasticity_dilemma" target="_blank">stability-plasticity dilemma</a> requires balancing the ability to learn new things against the need to preserve existing knowledge—the same challenge your brain solves through complementary learning systems where hippocampus learns fast and cortex learns slowly.</p>
+
+        <p>Our humanoid would also need to solve the <a href="https://en.wikipedia.org/wiki/Frame_problem" target="_blank">frame problem</a>—the challenge of determining what information is relevant in any given situation from the vast amount of potentially available data. Biological minds solve this through attention mechanisms that create a severe bottleneck, compressing 10 million bits per second of visual input down to roughly 50 bits per second of conscious awareness, focusing processing resources on behaviorally important information while filtering out the rest. The system would need multiple memory systems with different characteristics—fast working memory for temporary storage and manipulation, <a href="https://en.wikipedia.org/wiki/Episodic_memory" target="_blank">episodic memory</a> for personal experiences, <a href="https://en.wikipedia.org/wiki/Semantic_memory" target="_blank">semantic memory</a> for factual knowledge, and procedural memory for skills and habits—just like Henry Molaison taught us these systems can operate independently. Most importantly, our humanoid would need some form of self-model that allows it to distinguish between self and world, to predict the consequences of its own actions through forward models, and to maintain a coherent identity over time despite constant learning and change. This is perhaps the hardest problem of all, because it requires the system to have genuine beliefs and desires rather than just simulating them, and to experience something analogous to consciousness rather than just behaving as if it were conscious—the difference between a mind and a very convincing performance. The question is not whether we can build such a system, but whether we should, and what obligations we would have toward a truly thinking artificial being.</p>
+
+        <p><em>[SLIDES: Advance to "Live Experiment"]</em></p>
+
+        <hr>
+
+        <h2>Live Experiment: The Attention Bottleneck</h2>
+
+        <div class="stage">Let's demonstrate the fundamental limits of conscious thought with a simple experiment that you can feel in your own mind.</div>
+
+        <p><em>[<a href="https://www.google.com/search?q=working+memory+capacity+attention+bottleneck+cognitive&tbm=isch" target="_blank">VIEW IMAGES: Working memory capacity and attention bottleneck illustrations</a>]</em></p>
+
+        <p>I want everyone to try something right now that will reveal one of the deepest constraints on human consciousness. Close your eyes and try to hold these four items in your mind simultaneously: the feeling of your feet in your shoes, the sound of the air conditioning in this room, the taste that's still in your mouth from whatever you drank last, and a mental image of your childhood bedroom. Most of you will find that you can't actually hold all four of these in conscious awareness at the same time—instead, your attention will jump between them, bringing each into focus for a moment before it fades back into the background. This is not a failure of memory or concentration but a fundamental feature of how consciousness works: we have a severe bottleneck in our ability to maintain multiple items in conscious awareness simultaneously. Cognitive psychologists call this the <a href="https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two" target="_blank">"magical number seven, plus or minus two"</a>—the limit on how many discrete items we can hold in <a href="https://en.wikipedia.org/wiki/Working_memory" target="_blank">working memory</a> at once, though modern research suggests it's closer to four items. This bottleneck explains why consciousness feels like a spotlight or a stream rather than a floodlight that illuminates everything at once—it's an adaptive solution to the energy constraint that prevents your brain from processing everything simultaneously. Any artificial consciousness we build would need similar attention mechanisms to focus limited processing resources on the most important information while filtering out the rest.</p>
+
+        <p><em>[DRAW: Attention bottleneck diagram showing multiple inputs funneling through narrow conscious awareness]</em></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=consciousness+bottleneck+selective+attention+neuroscience&tbm=isch" target="_blank">VIEW IMAGES: Selective attention and consciousness bottleneck models</a>]</em></p>
+
+        <h2>The Chat Channel Challenge</h2>
+
+        <div class="stage">Throughout today's lecture, I want you to use our chat channel to ask questions, but I'm going to give you a specific challenge that relates to our topic.</div>
+
+        <p>As we continue discussing what thoughts are made of, I want you to pay attention to your own thinking process and use the chat to report on the <a href="https://en.wikipedia.org/wiki/Phenomenology_(psychology)" target="_blank">phenomenology</a> of your own consciousness. When you have a question or insight, don't just type the question—also try to describe what it felt like to have that thought arise in your mind. Did it come as words, images, feelings, or some combination? Did you notice the moment when the thought first appeared, or did it seem to emerge gradually from the background? Can you catch the moment when you decide to type something, or does the decision seem to happen automatically? This exercise is designed to make you aware of the usually invisible process of thought formation and to help you appreciate how mysterious even your own mind is to you. The goal is not to become paralyzed by self-reflection but to develop a more nuanced understanding of what we're trying to explain when we study consciousness and intelligence. Your observations will help illustrate the key points we're discussing and might reveal aspects of thought that are difficult to study in the laboratory.</p>
+
+        <p><em>[SLIDES: Advance to "Discussion Questions"]</em></p>
+
+        <hr>
+
+        <h2>Next Time: Deep History</h2>
+
+        <p>Today we've explored what thoughts might be made of, from the simple learning rules of perceptrons to the mysterious subjective experience of consciousness. We've seen how patients like Henry Molaison and Sarah have revealed the fragmented nature of memory and identity, how chatbots from ELIZA to ChatGPT challenge our assumptions about understanding and intelligence, and how the octopus suggests radically different ways of organizing minds. Next time, we'll zoom out to the largest possible scale and ask how minds emerged from the cosmos in the first place. We'll trace the story from the Big Bang to the first self-replicating molecules, from the emergence of nervous systems to the rise of culture and technology, discovering how evolution solved problems like energy efficiency, learning, and coordination through innovations that shaped every aspect of neural design. The question we'll be asking is not just how minds evolved, but why the universe seems to be getting more complex and more intelligent over time, and what that might mean for the future of consciousness both biological and artificial. This deep historical perspective will help us understand not just what minds are, but why they exist at all and where they might be heading—preparing us for the journey through electrical signaling, chemical transmission, synaptic plasticity, and the systems-level organization that ultimately produces the unified experience you call yourself.</p>
+
+        <hr>
+
+        <h2 id="thought-questions">Thought Questions for Discussion</h2>
+
+        <div class="stage">Before we close, let's wrestle with three questions that will haunt you long after you leave this room.</div>
+
+        <p><strong>Short Answer Challenge:</strong> If Frank Rosenblatt's perceptron was "too simple" to solve complex problems, yet contained the seeds of today's AI revolution, what does this tell us about the relationship between simplicity and intelligence? Are we perhaps missing something equally "simple" about consciousness that future generations will find obvious?</p>
+
+        <p><strong>Memory Paradox:</strong> Henry Molaison could learn new skills without remembering that he learned them, while our composite patient Sarah remembered her past but couldn't form new memories. If you had to choose between living in an eternal present like Henry or watching your new experiences dissolve like Sarah, which would preserve more of what makes you "you"? Fill in this statement and defend it: "Personal identity requires _______ more than _______."</p>
+
+        <p><strong>The Consciousness Gambit:</strong> Imagine you're on a committee deciding whether to grant legal rights to an AI system that claims to be conscious, experiences suffering, and pleads not to be turned off. The system passes every test we can devise, expresses fear of death, and even writes poetry about loneliness. But we know it's built from the same statistical learning principles as today's chatbots, just scaled up enormously. Your vote determines whether this entity gets legal protection or gets deleted as corporate property. How do you decide, and what does your reasoning reveal about the assumptions you're making about the nature of consciousness itself? Consider that your decision creates a precedent for how we'll treat all future artificial minds.</p>
+
+        <hr>
+
+        <p><strong>Easier Fill-in-the-Blanks:</strong></p>
+        <p>• Frank Rosenblatt's _______ was designed to learn by adjusting the strength of connections between processing units.</p>
+        <p>• Patient H.M. had his _______ removed, which prevented him from forming new declarative memories.</p>
+        <p>• The _______ effect describes our tendency to attribute human-like understanding to simple chatbot programs.</p>
+
+        <p><strong>Basic Short Answers (1-2 sentences each):</strong></p>
+        <p>• What made the transformer architecture different from earlier neural networks?</p>
+        <p>• Why can't we hold multiple items in conscious awareness simultaneously?</p>
+        <p>• What is the "hard problem" of consciousness according to David Chalmers?</p>
+
+        <p style="margin-top: 24px; padding: 12px; background: rgba(122,225,255,0.08); border-radius: 6px; border-left: 3px solid var(--accent);">
+          <strong>📝 <a href="./AnswerKeys.html#chapter0" style="color: var(--accent);">View Answer Key for Chapter 0</a></strong>
+        </p>
+
+        <div class="stage">Next: <a href="./chapter1.html">A Short History of Nearly Everything About Minds</a> — cosmic evolution meets cognitive revolution.</div>
+
+        <p><em>[DRAW: Timeline from Big Bang to AI, with consciousness emerging as universe complexifies]</em></p>
+      </main>
+
+      <footer>
+        <div>© <span id="year"></span> Kyle Mathewson</div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

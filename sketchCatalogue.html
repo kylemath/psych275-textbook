@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brain & Behaviour — Interactive Sketch Catalogue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <!-- Prism.js for syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script>
+    // Verify p5.js loaded
+    window.addEventListener('DOMContentLoaded', function() {
+      if (typeof p5 === 'undefined') {
+        console.error('p5.js failed to load!');
+        document.body.innerHTML = '<h1 style="color:red;padding:50px;">Error: p5.js library failed to load. Check your internet connection.</h1>';
+      } else {
+        console.log('p5.js loaded successfully, version:', p5.VERSION);
+      }
+    });
+  </script>
+  <style>
+    :root {
+      --bg-dark: #0b0f17;
+      --bg-panel: #0f1624;
+      --bg-code: #0d1117;
+      --accent-cyan: #7ae1ff;
+      --accent-orange: #ffb86b;
+      --accent-pink: #ff6b9d;
+      --accent-green: #7bed9f;
+      --accent-red: #ff6b6b;
+      --text-primary: #e6edf3;
+      --text-muted: #9fb0c3;
+      --border: rgba(122, 225, 255, 0.15);
+      --glow: rgba(122, 225, 255, 0.35);
+    }
+
+    /* Light mode */
+    [data-theme="light"] {
+      --bg-dark: #f8f9fa;
+      --bg-panel: #ffffff;
+      --bg-code: #f4f6f8;
+      --accent-cyan: #0077b6;
+      --accent-orange: #d45d00;
+      --accent-pink: #d63384;
+      --accent-green: #198754;
+      --accent-red: #dc3545;
+      --text-primary: #1a1a2e;
+      --text-muted: #5a6677;
+      --border: rgba(0, 119, 182, 0.2);
+      --glow: rgba(0, 119, 182, 0.15);
+    }
+
+    [data-theme="light"] .nav {
+      background: linear-gradient(180deg, var(--bg-panel) 0%, rgba(255, 255, 255, 0.95) 100%);
+      border-bottom-color: var(--border);
+    }
+
+    [data-theme="light"] .nav-brand {
+      text-shadow: none;
+    }
+
+    [data-theme="light"] .chapter-tab.active {
+      background: linear-gradient(135deg, rgba(0, 119, 182, 0.12) 0%, rgba(0, 119, 182, 0.05) 100%);
+      box-shadow: none;
+    }
+
+    [data-theme="light"] .code-panel {
+      background: var(--bg-code);
+    }
+
+    [data-theme="light"] .code-header,
+    [data-theme="light"] .code-toolbar {
+      background: var(--bg-panel);
+    }
+
+    [data-theme="light"] .sketch-panel {
+      background: linear-gradient(135deg, #f0f4f8 0%, #e8ecf0 100%);
+    }
+
+    [data-theme="light"] .sketch-header {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    [data-theme="light"] .controls-panel {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    [data-theme="light"] #sketch-canvas {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="light"] .line-numbers {
+      background: var(--bg-code);
+      color: #8b949e;
+      border-right-color: rgba(0, 119, 182, 0.15);
+    }
+
+    [data-theme="light"] .code-editor {
+      caret-color: var(--accent-cyan);
+    }
+
+    [data-theme="light"] .code-btn.run {
+      background: rgba(25, 135, 84, 0.1);
+      border-color: var(--accent-green);
+      color: var(--accent-green);
+    }
+    [data-theme="light"] .code-btn.run:hover {
+      background: rgba(25, 135, 84, 0.2);
+      box-shadow: none;
+    }
+
+    [data-theme="light"] .code-btn.pause {
+      background: rgba(212, 93, 0, 0.1);
+      border-color: var(--accent-orange);
+      color: var(--accent-orange);
+    }
+    [data-theme="light"] .code-btn.pause:hover {
+      background: rgba(212, 93, 0, 0.2);
+      box-shadow: none;
+    }
+
+    [data-theme="light"] .code-btn.reset {
+      background: rgba(0, 119, 182, 0.08);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+    [data-theme="light"] .code-btn.reset:hover {
+      background: rgba(0, 119, 182, 0.15);
+      box-shadow: none;
+    }
+
+    [data-theme="light"] .code-editor::selection {
+      background: rgba(0, 119, 182, 0.3);
+    }
+
+    [data-theme="light"] .chapter-tab:hover {
+      background: rgba(0, 119, 182, 0.08);
+      border-color: rgba(0, 119, 182, 0.2);
+    }
+
+    /* Syntax colors for light mode */
+    [data-theme="light"] .token.comment { color: #6a737d; }
+    [data-theme="light"] .token.keyword { color: #d73a49; }
+    [data-theme="light"] .token.function { color: #6f42c1; }
+    [data-theme="light"] .token.number { color: #005cc5; }
+    [data-theme="light"] .token.string { color: #032f62; }
+    [data-theme="light"] .token.operator { color: #24292e; }
+    [data-theme="light"] .token.punctuation { color: #6a737d; }
+    [data-theme="light"] .token.variable { color: #e36209; }
+    [data-theme="light"] .token.class-name { color: #22863a; }
+    [data-theme="light"] .token.constant { color: #005cc5; }
+    [data-theme="light"] .token.property { color: #005cc5; }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html, body {
+      height: 100%;
+      font-family: 'Outfit', system-ui, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      overflow: hidden;
+    }
+
+    .app {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Top Navigation */
+    .nav {
+      background: linear-gradient(180deg, var(--bg-panel) 0%, rgba(19, 24, 32, 0.95) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 56px;
+      flex-shrink: 0;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-brand {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      white-space: nowrap;
+      text-shadow: 0 0 20px var(--glow);
+    }
+
+    .nav-divider {
+      width: 1px;
+      height: 24px;
+      background: var(--border);
+    }
+
+    .chapter-tabs {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      padding: 8px 0;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .chapter-tabs::-webkit-scrollbar { display: none; }
+
+    .chapter-tab {
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .chapter-tab:hover {
+      background: rgba(0, 212, 255, 0.08);
+      color: var(--text-primary);
+      border-color: rgba(0, 212, 255, 0.2);
+    }
+
+    .chapter-tab.active {
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(0, 212, 255, 0.05) 100%);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+    }
+
+    .home-link {
+      margin-left: auto;
+      padding: 8px 16px;
+      background: rgba(255, 184, 107, 0.1);
+      border: 1px solid rgba(255, 184, 107, 0.3);
+      border-radius: 6px;
+      color: var(--accent-orange);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    .home-link:hover {
+      background: rgba(255, 184, 107, 0.2);
+      box-shadow: 0 0 15px rgba(255, 184, 107, 0.3);
+    }
+    [data-theme="light"] .home-link {
+      background: rgba(212, 93, 0, 0.08);
+      border-color: rgba(212, 93, 0, 0.3);
+    }
+    [data-theme="light"] .home-link:hover {
+      background: rgba(212, 93, 0, 0.15);
+      box-shadow: none;
+    }
+
+    .theme-toggle {
+      padding: 8px 12px;
+      background: rgba(122, 225, 255, 0.1);
+      border: 1px solid rgba(122, 225, 255, 0.3);
+      border-radius: 6px;
+      color: var(--accent-cyan);
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .theme-toggle:hover {
+      background: rgba(122, 225, 255, 0.2);
+    }
+    [data-theme="light"] .theme-toggle {
+      background: rgba(0, 119, 182, 0.08);
+      border-color: rgba(0, 119, 182, 0.3);
+    }
+    [data-theme="light"] .theme-toggle:hover {
+      background: rgba(0, 119, 182, 0.15);
+    }
+
+    /* Main Content */
+    .main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* Code Panel */
+    .code-panel {
+      width: 480px;
+      background: var(--bg-code);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .code-header {
+      padding: 10px 16px;
+      background: var(--bg-panel);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .code-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .code-status {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: auto;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      transition: background 0.3s;
+    }
+
+    .status-dot.paused { background: var(--accent-orange); }
+    .status-dot.error { background: var(--accent-red); }
+
+    .status-text {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .code-toolbar {
+      display: flex;
+      gap: 8px;
+      padding: 10px 16px;
+      background: rgba(13, 17, 23, 0.8);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-btn {
+      padding: 6px 14px;
+      border-radius: 5px;
+      border: 1px solid;
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .code-btn.run {
+      background: rgba(123, 237, 159, 0.15);
+      border-color: var(--accent-green);
+      color: var(--accent-green);
+    }
+    .code-btn.run:hover {
+      background: rgba(123, 237, 159, 0.25);
+      box-shadow: 0 0 12px rgba(123, 237, 159, 0.3);
+    }
+
+    .code-btn.pause {
+      background: rgba(255, 159, 67, 0.15);
+      border-color: var(--accent-orange);
+      color: var(--accent-orange);
+    }
+    .code-btn.pause:hover {
+      background: rgba(255, 159, 67, 0.25);
+      box-shadow: 0 0 12px rgba(255, 159, 67, 0.3);
+    }
+
+    .code-btn.reset {
+      background: rgba(0, 212, 255, 0.1);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+    .code-btn.reset:hover {
+      background: rgba(0, 212, 255, 0.2);
+      box-shadow: 0 0 12px var(--glow);
+    }
+
+    .code-content {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .code-editor-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: var(--bg-code);
+      display: flex;
+    }
+
+    .line-numbers {
+      position: sticky;
+      left: 0;
+      top: 0;
+      width: 45px;
+      padding: 16px 8px 16px 16px;
+      background: var(--bg-code);
+      color: #4a5568;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: right;
+      user-select: none;
+      border-right: 1px solid rgba(0, 212, 255, 0.1);
+      flex-shrink: 0;
+      white-space: pre;
+      z-index: 5;
+    }
+
+    .code-area {
+      flex: 1;
+      min-height: 0;
+      display: grid;
+    }
+
+    /* Both elements occupy the same grid cell, overlapping perfectly */
+    .code-editor,
+    .code-highlight {
+      grid-area: 1 / 1 / 2 / 2;
+      padding: 0;
+      margin: 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      white-space: pre;
+      tab-size: 2;
+      -moz-tab-size: 2;
+      box-sizing: border-box;
+      letter-spacing: 0;
+      word-spacing: 0;
+      overflow: visible;
+    }
+
+    .code-editor {
+      position: relative;
+      z-index: 2;
+      padding: 16px;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      caret-color: #00d4ff;
+      background: transparent;
+      border: none;
+      resize: none;
+      outline: none;
+    }
+
+    .code-editor::selection {
+      background: rgba(0, 212, 255, 0.3);
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .code-editor::-moz-selection {
+      background: rgba(0, 212, 255, 0.3);
+    }
+
+    .code-highlight {
+      position: relative;
+      z-index: 1;
+      pointer-events: none;
+      padding: 16px;
+    }
+
+    /* Custom syntax colors matching p5.js editor */
+    .token.comment { color: #6a9955; }
+    .token.keyword { color: #569cd6; }
+    .token.function { color: #dcdcaa; }
+    .token.number { color: #b5cea8; }
+    .token.string { color: #ce9178; }
+    .token.operator { color: #d4d4d4; }
+    .token.punctuation { color: #808080; }
+    .token.variable { color: #9cdcfe; }
+    .token.class-name { color: #4ec9b0; }
+    .token.constant { color: #4fc1ff; }
+    .token.property { color: #9cdcfe; }
+
+    .code-hint {
+      position: absolute;
+      bottom: 10px;
+      left: 16px;
+      right: 16px;
+      padding: 8px 12px;
+      background: rgba(255, 159, 67, 0.1);
+      border: 1px solid rgba(255, 159, 67, 0.3);
+      border-radius: 6px;
+      font-size: 11px;
+      color: var(--accent-orange);
+    }
+
+    /* Sketch Panel */
+    .sketch-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, #0d1117 0%, #0a0e14 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sketch-header {
+      padding: 16px 24px;
+      background: rgba(19, 24, 32, 0.8);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+
+    .sketch-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .sketch-description {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .sketch-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    #sketch-canvas {
+      border-radius: 12px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), 0 0 60px rgba(0, 212, 255, 0.1);
+    }
+
+    .paused-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 14, 20, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .paused-overlay.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .paused-text {
+      font-size: 24px;
+      color: var(--accent-orange);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    /* Controls Panel */
+    .controls-panel {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(19, 24, 32, 0.95);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 24px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      z-index: 100;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .control-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+    }
+
+    .control-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: var(--accent-cyan);
+    }
+
+    input[type="range"] {
+      width: 120px;
+      height: 4px;
+      border-radius: 2px;
+      background: rgba(0, 212, 255, 0.2);
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      cursor: pointer;
+      box-shadow: 0 0 10px var(--glow);
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--accent-cyan);
+      background: rgba(0, 212, 255, 0.1);
+      color: var(--accent-cyan);
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      background: rgba(0, 212, 255, 0.2);
+      box-shadow: 0 0 15px var(--glow);
+    }
+
+    /* Error display */
+    .error-panel {
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 107, 107, 0.15);
+      border: 1px solid var(--accent-red);
+      border-radius: 8px;
+      padding: 12px 20px;
+      color: var(--accent-red);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      max-width: 500px;
+      z-index: 200;
+      display: none;
+    }
+
+    .error-panel.visible {
+      display: block;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 900px) {
+      .code-panel { display: none; }
+      .nav-brand { font-size: 12px; }
+      .chapter-tab { padding: 6px 10px; font-size: 12px; }
+    }
+
+    @media (max-width: 600px) {
+      .controls-panel {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 16px;
+        width: calc(100% - 40px);
+      }
+      input[type="range"] { width: 100px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <nav class="nav">
+      <div class="nav-brand">PSYCH 275 Sketches</div>
+      <div class="nav-divider"></div>
+      <div class="chapter-tabs" id="chapterTabs">
+        <!-- Tabs populated by JS -->
+      </div>
+      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle light/dark mode">
+        <span id="themeIcon">🌙</span>
+      </button>
+      <a href="./textbook/" class="home-link" style="background: rgba(122, 225, 255, 0.1); border-color: var(--accent-cyan); color: var(--accent-cyan);">📖 Textbook</a>
+      <a href="./index.html" class="home-link">← Course Home</a>
+    </nav>
+
+    <main class="main">
+      <aside class="code-panel">
+        <div class="code-header">
+          <span class="code-title">📝 Live Code Editor</span>
+          <div class="code-status">
+            <span class="status-dot" id="statusDot"></span>
+            <span class="status-text" id="statusText">Running</span>
+          </div>
+        </div>
+        <div class="code-toolbar">
+          <button class="code-btn run" id="runBtn" title="Run code (Ctrl+Enter)">
+            <span>▶</span> Run
+          </button>
+          <button class="code-btn pause" id="pauseBtn" title="Pause/Resume">
+            <span>⏸</span> Pause
+          </button>
+          <button class="code-btn reset" id="resetCodeBtn" title="Reset to original">
+            <span>↺</span> Reset Code
+          </button>
+        </div>
+        <div class="code-content">
+          <div class="code-editor-wrapper" id="editorWrapper">
+            <div class="line-numbers" id="lineNumbers"></div>
+            <div class="code-area">
+              <div class="code-highlight" id="codeHighlight"></div>
+              <textarea class="code-editor" id="codeEditor" spellcheck="false"></textarea>
+            </div>
+          </div>
+          <div class="code-hint" id="codeHint">
+            💡 Edit variables above and click <strong>Run</strong> to see changes. Comments show what each variable controls.
+          </div>
+        </div>
+      </aside>
+
+      <section class="sketch-panel">
+        <header class="sketch-header">
+          <h1 class="sketch-title" id="sketchTitle">Select a Chapter</h1>
+          <p class="sketch-description" id="sketchDescription">Choose a chapter from the menu above to explore interactive neuroscience concepts.</p>
+        </header>
+        <div class="sketch-container">
+          <div id="sketch-canvas"></div>
+          <div class="paused-overlay" id="pausedOverlay">
+            <span class="paused-text">⏸ Paused</span>
+          </div>
+          <div class="error-panel" id="errorPanel"></div>
+        </div>
+        <div class="controls-panel" id="controlsPanel" style="display: none;">
+          <!-- Controls populated by each sketch -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle functionality
+    function getCurrentTheme() {
+      const stored = localStorage.getItem('site-theme');
+      if (stored) return stored;
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+      return 'light';
+    }
+    
+    function applyTheme(theme) {
+      if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.getElementById('themeIcon').textContent = '☀️';
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        document.getElementById('themeIcon').textContent = '🌙';
+      }
+    }
+    
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const newTheme = current === 'light' ? 'dark' : 'light';
+      localStorage.setItem('site-theme', newTheme);
+      applyTheme(newTheme);
+    }
+    
+    // Apply theme on load
+    applyTheme(getCurrentTheme());
+    
+    // Listen for system theme changes
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('site-theme')) {
+          applyTheme(e.matches ? 'light' : 'dark');
+        }
+      });
+    }
+
+    // Chapter definitions
+    const chapters = [
+      { id: 0, title: "What Is a Thought?", shortTitle: "Ch 0", description: "Interactive perceptron: see how simple neural units combine inputs to make decisions." },
+      { id: 1, title: "History of Minds", shortTitle: "Ch 1", description: "Brain evolution across 500 million years: visualize the growth of neural complexity." },
+      { id: 2, title: "Electrical Signaling", shortTitle: "Ch 2", description: "Action potential simulation: watch ions flow and voltage spike in real-time." },
+      { id: 3, title: "Chemical Signaling", shortTitle: "Ch 3", description: "Synaptic transmission: vesicle release, neurotransmitter diffusion, and receptor binding." },
+      { id: 4, title: "Neural Plasticity", shortTitle: "Ch 4", description: "Hebbian learning: 'neurons that fire together wire together' in action." },
+      { id: 5, title: "Nervous System", shortTitle: "Ch 5", description: "Interactive brain map: explore regions and their functions." },
+      { id: 6, title: "Sensation & Touch", shortTitle: "Ch 6", description: "Receptive fields: how touch receptors tile the skin and encode pressure." },
+      { id: 7, title: "Vision", shortTitle: "Ch 7", description: "Center-surround receptive fields: edge detection in the retina." },
+      { id: 8, title: "Attention", shortTitle: "Ch 8", description: "Spotlight attention: filtering relevant signals from neural noise." },
+      { id: 9, title: "Motor Control", shortTitle: "Ch 9", description: "Motor unit recruitment: the size principle in muscle activation." },
+      { id: 10, title: "Learning & Memory", shortTitle: "Ch 10", description: "Memory consolidation: from short-term traces to long-term storage." },
+      { id: 11, title: "Executive Function", shortTitle: "Ch 11", description: "Stroop effect: cognitive control and response inhibition." },
+      { id: 12, title: "Sleep & Consciousness", shortTitle: "Ch 12", description: "Sleep stages: brainwave patterns from wakefulness to REM." },
+      { id: 13, title: "Psychopharmacology", shortTitle: "Ch 13", description: "Drug effects: agonists, antagonists, and reuptake inhibitors at the synapse." },
+      { id: 14, title: "Synthesis", shortTitle: "Ch 14", description: "Neural network synthesis: all course concepts integrated in a living network." }
+    ];
+
+    let currentChapter = null;
+    let currentSketch = null;
+    let originalCode = '';
+    let isPaused = false;
+    let sketchModule = null;
+
+    // DOM elements
+    const codeEditor = document.getElementById('codeEditor');
+    const codeHighlight = document.getElementById('codeHighlight');
+    const lineNumbers = document.getElementById('lineNumbers');
+    const editorWrapper = document.getElementById('editorWrapper');
+    const statusDot = document.getElementById('statusDot');
+    const statusText = document.getElementById('statusText');
+    const pausedOverlay = document.getElementById('pausedOverlay');
+    const errorPanel = document.getElementById('errorPanel');
+
+    // Syntax highlighting function
+    function updateHighlight() {
+      const code = codeEditor.value;
+      const highlighted = Prism.highlight(code, Prism.languages.javascript, 'javascript');
+      codeHighlight.innerHTML = highlighted;
+      
+      // Update line numbers
+      const lines = code.split('\n').length;
+      lineNumbers.innerHTML = Array.from({length: lines}, (_, i) => i + 1).join('\n');
+    }
+
+    // Update highlighting on input
+    codeEditor.addEventListener('input', updateHighlight);
+
+    // Handle tab key for indentation
+    codeEditor.addEventListener('keydown', function(e) {
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        const start = this.selectionStart;
+        const end = this.selectionEnd;
+        const value = this.value;
+        
+        if (e.shiftKey) {
+          // Shift+Tab: Remove indentation
+          const lineStart = value.lastIndexOf('\n', start - 1) + 1;
+          if (value.substring(lineStart, lineStart + 2) === '  ') {
+            this.value = value.substring(0, lineStart) + value.substring(lineStart + 2);
+            this.selectionStart = this.selectionEnd = start - 2;
+            updateHighlight();
+          }
+        } else {
+          // Tab: Add indentation
+          this.value = value.substring(0, start) + '  ' + value.substring(end);
+          this.selectionStart = this.selectionEnd = start + 2;
+          updateHighlight();
+        }
+      }
+    });
+
+    // Create chapter tabs
+    const tabsContainer = document.getElementById('chapterTabs');
+    chapters.forEach(ch => {
+      const tab = document.createElement('button');
+      tab.className = 'chapter-tab';
+      tab.textContent = ch.shortTitle;
+      tab.title = ch.title;
+      tab.onclick = () => loadChapter(ch.id);
+      tabsContainer.appendChild(tab);
+    });
+
+    // Code control buttons
+    document.getElementById('runBtn').addEventListener('click', runCode);
+    document.getElementById('pauseBtn').addEventListener('click', togglePause);
+    document.getElementById('resetCodeBtn').addEventListener('click', resetCode);
+
+    // Keyboard shortcut for running code
+    codeEditor.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        e.preventDefault();
+        runCode();
+      }
+    });
+
+    function loadChapter(id) {
+      // Update UI
+      document.querySelectorAll('.chapter-tab').forEach((tab, i) => {
+        tab.classList.toggle('active', i === id);
+      });
+
+      const chapter = chapters[id];
+      document.getElementById('sketchTitle').textContent = `Chapter ${id}: ${chapter.title}`;
+      document.getElementById('sketchDescription').textContent = chapter.description;
+
+      // Remove existing sketch
+      if (currentSketch) {
+        currentSketch.remove();
+        currentSketch = null;
+      }
+
+      // Clear canvas container
+      const container = document.getElementById('sketch-canvas');
+      container.innerHTML = '';
+
+      // Reset state
+      isPaused = false;
+      pausedOverlay.classList.remove('visible');
+      errorPanel.classList.remove('visible');
+      updateStatus('running');
+
+      // Load new sketch
+      currentChapter = id;
+      loadSketch(id);
+    }
+
+    function loadSketch(id) {
+      // Show loading state
+      codeEditor.value = '// Loading sketch...';
+      updateHighlight();
+      
+      // Remove existing sketch
+      if (currentSketch) {
+        try { currentSketch.remove(); } catch(e) {}
+        currentSketch = null;
+      }
+      
+      // Clear canvas and reset
+      document.getElementById('sketch-canvas').innerHTML = '';
+      document.getElementById('controlsPanel').style.display = 'none';
+      if (window.initSketch) {
+        delete window.initSketch;
+      }
+      
+      // Remove old sketch scripts
+      document.querySelectorAll('script[data-sketch]').forEach(s => s.remove());
+      
+      // Load sketch via script tag (more reliable than fetch + eval)
+      const script = document.createElement('script');
+      script.setAttribute('data-sketch', 'true');
+      script.src = `./sketches/chapter${id}.js?v=${Date.now()}`;
+      
+      script.onload = function() {
+        console.log('[Sketch] Script loaded successfully');
+        console.log('[Sketch] window.initSketch type:', typeof window.initSketch);
+        console.log('[Sketch] window.initSketch value:', window.initSketch);
+        
+        // Also fetch the code for the editor display
+        fetch(`./sketches/chapter${id}.js?v=${Date.now()}`)
+          .then(r => r.text())
+          .then(code => {
+            originalCode = code;
+            codeEditor.value = code;
+            updateHighlight();
+          })
+          .catch(() => {
+            codeEditor.value = '// Could not load code for editor';
+            updateHighlight();
+          });
+        
+        // Create p5 instance
+        if (typeof window.initSketch === 'function') {
+          try {
+            currentSketch = new p5(window.initSketch, 'sketch-canvas');
+            updateStatus('running');
+            errorPanel.classList.remove('visible');
+          } catch (err) {
+            showError('p5.js error: ' + err.message);
+            console.error('p5 error:', err);
+          }
+        } else {
+          showError('Sketch file loaded but initSketch function not found');
+        }
+      };
+      
+      script.onerror = function(e) {
+        showError(`Failed to load sketch file: ./sketches/chapter${id}.js`);
+        codeEditor.value = `// Error: Could not load sketch file\n// Check that ./sketches/chapter${id}.js exists`;
+        updateHighlight();
+        console.error('Script load error:', e);
+      };
+      
+      document.body.appendChild(script);
+    }
+
+    function executeCode(code) {
+      // Remove existing sketch
+      if (currentSketch) {
+        try {
+          currentSketch.remove();
+        } catch(e) {}
+        currentSketch = null;
+      }
+
+      // Clear canvas
+      const container = document.getElementById('sketch-canvas');
+      container.innerHTML = '';
+
+      // Hide controls panel initially
+      document.getElementById('controlsPanel').style.display = 'none';
+
+      // Clear error
+      errorPanel.classList.remove('visible');
+
+      // Remove previous initSketch and any old script
+      window.initSketch = null;
+      const oldScript = document.getElementById('sketchScript');
+      if (oldScript) oldScript.remove();
+
+      try {
+        // Create a blob URL for the script
+        const blob = new Blob([code], { type: 'application/javascript' });
+        const scriptURL = URL.createObjectURL(blob);
+        
+        // Create script element
+        const script = document.createElement('script');
+        script.id = 'sketchScript';
+        script.src = scriptURL;
+        
+        script.onload = function() {
+          URL.revokeObjectURL(scriptURL);
+          
+          // Check if initSketch was defined
+          if (typeof window.initSketch === 'function') {
+            try {
+              currentSketch = new p5(window.initSketch, 'sketch-canvas');
+              updateStatus('running');
+            } catch (p5Err) {
+              showError('p5.js error: ' + p5Err.message);
+              updateStatus('error');
+              console.error('p5 error:', p5Err);
+            }
+          } else {
+            showError('Sketch must define: window.initSketch = function(p) {...}');
+            updateStatus('error');
+          }
+        };
+        
+        script.onerror = function(e) {
+          URL.revokeObjectURL(scriptURL);
+          // Fallback to inline script
+          console.log('Blob URL failed, trying inline script...');
+          executeInline(code);
+        };
+        
+        document.body.appendChild(script);
+        
+      } catch (err) {
+        showError('Code error: ' + err.message);
+        updateStatus('error');
+        console.error('Sketch error:', err);
+      }
+    }
+
+    function executeInline(code) {
+      console.log('[Run] Executing edited code...');
+      console.log('[Run] Code length:', code.length);
+      
+      if (!code || code.trim().length === 0) {
+        showError('No code to execute - editor is empty');
+        return;
+      }
+      
+      // Clear previous
+      if (window.initSketch) {
+        delete window.initSketch;
+      }
+      
+      try {
+        // Direct inline script execution
+        const script = document.createElement('script');
+        script.textContent = code;
+        document.body.appendChild(script);
+        console.log('[Run] Script element added');
+        
+        // Small delay then check
+        setTimeout(() => {
+          console.log('[Run] Checking for initSketch, type:', typeof window.initSketch);
+          console.log('[Run] window.initSketch value:', window.initSketch);
+          
+          if (window.initSketch && typeof window.initSketch === 'function') {
+            try {
+              console.log('[Run] Creating p5 instance...');
+              currentSketch = new p5(window.initSketch, 'sketch-canvas');
+              console.log('[Run] p5 instance created successfully');
+              updateStatus('running');
+            } catch (p5Err) {
+              showError('p5.js error: ' + p5Err.message);
+              updateStatus('error');
+              console.error('[Run] p5 error:', p5Err);
+            }
+          } else {
+            showError('Could not find initSketch function after executing code');
+            updateStatus('error');
+            console.error('[Run] initSketch not found. window.initSketch =', window.initSketch);
+          }
+        }, 100);
+      } catch (err) {
+        showError('Inline execution error: ' + err.message);
+        updateStatus('error');
+        console.error('[Run] Execution error:', err);
+      }
+    }
+
+    function runCode() {
+      const code = codeEditor.value;
+      isPaused = false;
+      pausedOverlay.classList.remove('visible');
+      document.getElementById('pauseBtn').innerHTML = '<span>⏸</span> Pause';
+      
+      // Remove existing sketch
+      if (currentSketch) {
+        try { currentSketch.remove(); } catch(e) {}
+        currentSketch = null;
+      }
+      
+      // Clear canvas and reset
+      document.getElementById('sketch-canvas').innerHTML = '';
+      document.getElementById('controlsPanel').style.display = 'none';
+      errorPanel.classList.remove('visible');
+      if (window.initSketch) {
+        delete window.initSketch;
+      }
+      
+      // Execute the edited code
+      executeInline(code);
+    }
+
+    function togglePause() {
+      isPaused = !isPaused;
+      
+      if (currentSketch) {
+        if (isPaused) {
+          currentSketch.noLoop();
+          pausedOverlay.classList.add('visible');
+          document.getElementById('pauseBtn').innerHTML = '<span>▶</span> Resume';
+          updateStatus('paused');
+        } else {
+          currentSketch.loop();
+          pausedOverlay.classList.remove('visible');
+          document.getElementById('pauseBtn').innerHTML = '<span>⏸</span> Pause';
+          updateStatus('running');
+        }
+      }
+    }
+
+    function resetCode() {
+      codeEditor.value = originalCode;
+      updateHighlight();
+      runCode();
+    }
+
+    function updateStatus(status) {
+      statusDot.className = 'status-dot';
+      switch(status) {
+        case 'running':
+          // Don't add empty class - just keep base class
+          statusText.textContent = 'Running';
+          break;
+        case 'paused':
+          statusDot.classList.add('paused');
+          statusText.textContent = 'Paused';
+          break;
+        case 'error':
+          statusDot.classList.add('error');
+          statusText.textContent = 'Error';
+          break;
+      }
+    }
+
+    function showError(message) {
+      errorPanel.textContent = message;
+      errorPanel.classList.add('visible');
+      updateStatus('error');
+    }
+
+    // Load chapter 0 by default
+    loadChapter(0);
+  </script>
+</body>
+</html>

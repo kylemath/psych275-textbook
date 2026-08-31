@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chapter 8 — Vision: The Brain's Beautiful Lie</title>
+    <meta name="description" content="From photons to perception; retinal computation; parallel pathways; predictive vision; how your brain invents what you see.">
+    <!-- Cache-busting meta tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Spectral:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #0b0f17;
+        --bg-2: #0f1624;
+        --text: #e6edf3;
+        --muted: #9fb0c3;
+        --accent: #7ae1ff;
+        --accent-2: #ffb86b;
+        --glow: rgba(122, 225, 255, 0.35);
+        --maxw: 880px;
+      }
+
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(1200px 800px at 20% 10%, #0e1522 0%, var(--bg) 50%, #060a11 100%);
+        line-height: 1.65;
+        letter-spacing: 0.1px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .stars {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.6) 0, rgba(255,255,255,0) 100%),
+          radial-gradient(1px 1px at 80% 30%, rgba(255,255,255,0.5) 0, rgba(255,255,255,0) 100%),
+          radial-gradient(1px 1px at 50% 70%, rgba(255,255,255,0.45) 0, rgba(255,255,255,0) 100%),
+          radial-gradient(1px 1px at 30% 90%, rgba(255,255,255,0.35) 0, rgba(255,255,255,0) 100%),
+          radial-gradient(1px 1px at 65% 15%, rgba(255,255,255,0.5) 0, rgba(255,255,255,0) 100%);
+        opacity: 0.7;
+        animation: drift 120s linear infinite;
+      }
+      @keyframes drift { from { transform: translateY(0); } to { transform: translateY(-200px); } }
+
+      .container {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        color: var(--muted);
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      h1, h2, h3 {
+        font-family: Spectral, Georgia, "Times New Roman", serif;
+        line-height: 1.2;
+        margin: 0.2em 0 0.45em;
+      }
+      h1 {
+        font-size: clamp(28px, 5vw, 46px);
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        text-shadow: 0 0 12px var(--glow);
+      }
+      h2 {
+        font-size: clamp(22px, 3.5vw, 30px);
+        color: #d7e3ee;
+        margin-top: 2.2em;
+      }
+
+      p { margin: 0.85em 0; }
+      p.lead {
+        font-size: clamp(18px, 2.4vw, 21px);
+        color: #d2deea;
+      }
+
+      .stage {
+        font-style: italic;
+        color: var(--muted);
+        background: linear-gradient(90deg, rgba(122,225,255,0.08), rgba(0,0,0,0));
+        border-left: 3px solid var(--accent);
+        padding: 10px 12px 10px 14px;
+        margin: 18px 0;
+        border-radius: 6px;
+      }
+
+      .quiz-notice {
+        background: linear-gradient(180deg, rgba(255,184,107,0.15), rgba(255,184,107,0.05));
+        border: 1px solid rgba(255,184,107,0.45);
+        border-radius: 10px;
+        padding: 16px 18px;
+        margin: 24px 0;
+        color: #ffe0bf;
+      }
+
+      .beat {
+        height: 1px;
+        background: linear-gradient(90deg, rgba(122,225,255,0.0), rgba(122,225,255,0.6), rgba(122,225,255,0.0));
+        box-shadow: 0 0 12px var(--glow);
+        margin: 26px 0;
+        position: relative;
+      }
+      .beat::after {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 0;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 16px var(--glow), 0 0 36px rgba(122,225,255,0.3);
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%   { left: 0%; opacity: 0.9; }
+        50%  { left: 100%; opacity: 0.35; }
+        100% { left: 0%; opacity: 0.9; }
+      }
+
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      footer {
+        margin-top: 48px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(122,225,255,0.25);
+        color: var(--muted);
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .tag {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: rgba(122,225,255,0.08);
+        border: 1px solid rgba(122,225,255,0.3);
+        color: #cfe7ef;
+        font-size: 12px;
+        letter-spacing: 0.3px;
+        margin-right: 8px;
+      }
+
+      .note { color: var(--muted); font-size: 13px; margin-top: 8px; }
+
+      @media (min-width: 900px) {
+        .ledewrap { display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 16px; }
+      }
+      
+      /* Enhanced mobile styles */
+      @media (max-width: 768px) {
+        .container { padding: 24px 16px 60px; }
+        
+        /* Better touch targets */
+        header a, .tag {
+          min-height: 44px;
+          display: inline-flex;
+          align-items: center;
+          padding: 8px 12px;
+        }
+        
+        /* Improve readability on small screens */
+        h1 { font-size: clamp(24px, 8vw, 36px); }
+        h2 { font-size: clamp(20px, 6vw, 28px); }
+        h3 { font-size: clamp(18px, 5vw, 24px); }
+        p { font-size: 16px; line-height: 1.6; }
+        
+        /* Make lecture outline more readable on mobile */
+        .stage { padding: 12px 14px; margin: 20px 0; }
+      }
+      
+      @media (max-width: 480px) {
+        .container { padding: 16px 12px 40px; }
+        
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+        
+        /* Stack header elements vertically */
+        header > div:last-child {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stars" aria-hidden="true"></div>
+    <div class="container">
+      <header>
+        <div class="brand">Brains, Minds, and Machines — Chapter 8</div>
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <a href="./textbook/" class="tag" style="text-transform:none" target="_top">📖 Textbook</a>
+
+          <a href="./index.html" class="tag" style="text-transform:none" target="_top">Course Home</a>
+        </div>
+      </header>
+
+      <main>
+        <h1>Vision: The Brain's Beautiful Lie</h1>
+
+        <div style="background: rgba(122,225,255,0.05); border: 1px solid rgba(122,225,255,0.2); border-radius: 8px; padding: 20px; margin: 24px 0; font-size: 14px; line-height: 1.4;">
+          <strong style="color: var(--accent); display: block; margin-bottom: 12px;">LECTURE OUTLINE (80 minutes)</strong>
+          <div style="margin-left: 0;">
+            <strong>I. The Upside-Down World (15 min)</strong><br>
+            &nbsp;&nbsp;• The inverted image problem and Hermann von Helmholtz<br>
+            &nbsp;&nbsp;• Light as information carrier: wavelength, intensity, spatial pattern<br>
+            &nbsp;&nbsp;• Regional specialization: fovea vs periphery<br>
+            <br>
+            <strong>II. Eye Optics and Anatomy (10 min)</strong><br>
+            &nbsp;&nbsp;• Cornea, lens, and accommodation<br>
+            &nbsp;&nbsp;• Visual field deficits and clinical diagnosis<br>
+            &nbsp;&nbsp;• The blind spot you never notice<br>
+            <br>
+            <strong>III. Retinal Architecture (20 min)</strong><br>
+            &nbsp;&nbsp;• Rods vs cones: scotopic vs photopic vision<br>
+            &nbsp;&nbsp;• Phototransduction cascade: light closes channels<br>
+            &nbsp;&nbsp;• Center-surround receptive fields<br>
+            &nbsp;&nbsp;• Convergence and the resolution-sensitivity trade-off<br>
+            <br>
+            <strong>IV. From Retina to Cortex (15 min)</strong><br>
+            &nbsp;&nbsp;• M and P ganglion cell pathways<br>
+            &nbsp;&nbsp;• Lateral geniculate nucleus architecture<br>
+            &nbsp;&nbsp;• Primary visual cortex: simple and complex cells<br>
+            &nbsp;&nbsp;• Retinotopy and cortical magnification<br>
+            <br>
+            <strong>V. Parallel Processing Streams (12 min)</strong><br>
+            &nbsp;&nbsp;• Ventral "what" pathway: object and color<br>
+            &nbsp;&nbsp;• Dorsal "where" pathway: motion and space<br>
+            &nbsp;&nbsp;• Patient D.F. and visual form agnosia<br>
+            <br>
+            <strong>VI. Predictive Vision and Illusions (8 min)</strong><br>
+            &nbsp;&nbsp;• Your brain fills in the blind spot<br>
+            &nbsp;&nbsp;• Change blindness and inattentional blindness<br>
+            &nbsp;&nbsp;• Vision as controlled hallucination<br>
+          </div>
+        </div>
+
+        <p class="lead">Right now, you believe you're seeing the world. You're not. Your retinas receive an inverted, blurred, two-dimensional projection with a hole in the middle, sampled by cells that can't tell you what color anything is unless you're looking directly at it. This raw data doesn't reach your consciousness—it's processed by at least ten layers of neurons before the first signals leave your eye, then filtered through the thalamus, reorganized across multiple cortical areas, and finally assembled into the vivid, stable, three-dimensional perception you call "sight." Today we'll trace the 100-millisecond journey from photon to perception, discovering why your peripheral vision is colorblind, how your fovea packs more neurons than some entire brains, why you're blind for 40 minutes every day during eye movements, and how your visual cortex dedicates more processing power to your thumbnail at arm's length than to your entire peripheral world. You'll learn that the blind spot you never notice is being filled in with hallucinated content, that motion and color are computed in entirely different brain regions that can break independently, and that what you see has more to do with what your brain expects than what your eyes report. Vision isn't about seeing reality—it's about constructing a useful fiction that keeps you alive.</p>
+
+        <hr>
+
+        <div class="stage">Today's journey: From the upside-down image on your retina to the right-side-up world in your mind. We'll discover how 130 million photoreceptors become conscious perception through the most energy-intensive computation in biology.</div>
+
+        <h2>Opening: The Upside-Down Problem</h2>
+
+        <p><em>[<a href="https://www.google.com/search?q=inverted+retinal+image+upside+down+vision+brain&tbm=isch" target="_blank">VIEW IMAGES: Inverted retinal image diagram showing how the lens flips the world upside down</a>]</em></p>
+
+        <p>Close your right eye. Now look straight ahead with your left eye and slowly move your left hand from the far left side of your vision toward the center while wiggling your fingers. Keep looking straight ahead—don't cheat by looking at your hand. Your fingers will disappear when your hand reaches about 15 degrees left of center. You've just found your <a href="https://en.wikipedia.org/wiki/Blind_spot_(vision)" target="_blank">blind spot</a>, a hole in your vision the size of 13 full moons where your optic nerve exits the retina and no photoreceptors exist. Yet you never notice this enormous gap because your brain fills it in with hallucinated content matching the surroundings. This isn't a metaphor—your visual cortex is literally inventing visual information for a part of the world you cannot see.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=blind+spot+demonstration+test+visual+field&tbm=isch" target="_blank">VIEW IMAGES: Blind spot demonstrations you can try</a>]</em></p>
+
+        <p>The inverted retinal image posed an even deeper puzzle. <a href="https://en.wikipedia.org/wiki/Hermann_von_Helmholtz" target="_blank">Hermann von Helmholtz</a>, the German physicist and physician who dominated 19th-century sensory physiology, understood that the cornea and lens project an upside-down, reversed image onto the retina—just like a <a href="https://en.wikipedia.org/wiki/Camera_obscura" target="_blank">camera obscura</a>. Top becomes bottom, left becomes right. Yet we perceive the world right-side up. Helmholtz proposed that vision is an act of "<a href="https://en.wikipedia.org/wiki/Unconscious_inference" target="_blank">unconscious inference</a>"—the brain doesn't passively receive images but actively interprets them based on experience and expectation. In 1896, <a href="https://en.wikipedia.org/wiki/George_M._Stratton" target="_blank">George Stratton</a> tested this idea by wearing inverting goggles that flipped his visual world. After several days of nauseating disorientation, his brain adapted, and the world appeared normal again despite his retinas still receiving inverted images. When he removed the goggles, he had to readapt to normal vision. The brain doesn't care what the raw input looks like—it learns whatever mapping keeps behavior functional.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=George+Stratton+inverting+goggles+experiment+1896" target="_blank">SEARCH: "George Stratton inverting goggles experiment" - see how vision adapts to inverted input</a>]</em></p>
+
+        <p><a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter14.html" target="_blank">Vision begins with light, electromagnetic radiation with wavelengths between 400 and 700 nanometers.</a> This narrow slice of the electromagnetic spectrum carries information in three dimensions: wavelength encodes color, intensity encodes brightness, and spatial pattern encodes form. But the eye doesn't passively capture this information like a camera. The human retina contains approximately 130 million photoreceptors but only 1.2 million ganglion cells sending information to the brain. This 100:1 compression ratio means that 99% of the computation happens in the retina itself—vision is an act of data reduction before signals even leave the eye.</p>
+
+        <p><a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter14.html" target="_blank">The visual field, the total area you can see without moving your eyes, is dramatically non-uniform.</a> Hold your arm straight out and look at your thumbnail. That tiny patch, subtending about 2 degrees of visual angle, is processed by nearly half of your primary visual cortex. This is your <a href="https://en.wikipedia.org/wiki/Fovea_centralis" target="_blank">fovea</a>, a specialized pit in the center of your retina packed with cone photoreceptors at a density of 200,000 per square millimeter. This region delivers the high-acuity color vision you assume extends across your entire visual world. It doesn't. Everything more than 5 degrees from the center—95% of your visual field—is <a href="https://en.wikipedia.org/wiki/Peripheral_vision" target="_blank">peripheral vision</a>, with progressively worse acuity and color sensitivity. You're essentially color-blind in your periphery and don't realize it because you never look there without moving your fovea to it.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=fovea+centralis+cone+density+retina+microscopy&tbm=isch" target="_blank">VIEW IMAGES: Foveal structure and cone photoreceptor density</a>]</em></p>
+
+        <p><em>[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2781889/" target="_blank">READ: The Human Visual System: Structure and Function - comprehensive review</a>]</em></p>
+
+        <hr>
+
+        <h2>The Eye as Optical Instrument</h2>
+
+        <p><strong>Optics and Image Formation</strong></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=eye+anatomy+cornea+lens+retina+cross+section&tbm=isch" target="_blank">VIEW IMAGES: Cross-section of human eye showing optical components and light path</a>]</em></p>
+
+        <p>The <a href="https://en.wikipedia.org/wiki/Human_eye" target="_blank">eye</a> is a beautifully engineered optical instrument evolved to balance conflicting constraints: maximum light gathering, minimum aberration, compact size, and variable focus. The <a href="https://en.wikipedia.org/wiki/Cornea" target="_blank">cornea</a>, that transparent dome covering the front of your eye, provides about two-thirds of your eye's total refractive power—approximately 43 <a href="https://en.wikipedia.org/wiki/Dioptre" target="_blank">diopters</a> out of the eye's total 58. It's fixed-focus, shaped by the mechanical properties of collagen fibers arranged in precise orthogonal layers. <a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter14.html" target="_blank">The cornea is avascular—it contains no blood vessels—because any vasculature would scatter light and degrade image quality.</a> Instead, oxygen diffuses in from the tear film coating the surface, and nutrients arrive from the <a href="https://en.wikipedia.org/wiki/Aqueous_humour" target="_blank">aqueous humor</a> behind it. This is why you shouldn't sleep in contact lenses—you're suffocating your cornea.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=cornea+structure+collagen+layers+anatomy&tbm=isch" target="_blank">VIEW IMAGES: Corneal structure showing collagen fiber organization</a>]</em></p>
+
+        <p>The <a href="https://en.wikipedia.org/wiki/Lens_(anatomy)" target="_blank">crystalline lens</a> provides the remaining 15 diopters and, crucially, is adjustable. The lens is suspended by <a href="https://en.wikipedia.org/wiki/Zonule_of_Zinn" target="_blank">zonule fibers</a> attached to <a href="https://en.wikipedia.org/wiki/Ciliary_muscle" target="_blank">ciliary muscles</a>. When you look at distant objects, the ciliary muscles relax, the zonules pull tight, and the lens flattens. When you focus on nearby objects—<a href="https://en.wikipedia.org/wiki/Accommodation_(eye)" target="_blank">accommodation</a>—the ciliary muscles contract, releasing tension on the zonules, and the lens's natural elasticity makes it bulge into a more spherical shape. This automatic refocusing happens 100,000 times per day without conscious thought. With age, the lens loses elasticity—<a href="https://en.wikipedia.org/wiki/Presbyopia" target="_blank">presbyopia</a>—which is why people over 45 need reading glasses. The lens can't bulge enough to focus on near objects anymore, a mechanical failure of the protein scaffolding inside lens cells.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=accommodation+lens+mechanism+ciliary+muscle&tbm=isch" target="_blank">VIEW IMAGES: Lens accommodation mechanism showing near vs far focus</a>]</em></p>
+
+        <p>Light travels through the transparent <a href="https://en.wikipedia.org/wiki/Vitreous_body" target="_blank">vitreous humor</a> filling the eye's interior and finally strikes the <a href="https://en.wikipedia.org/wiki/Retina" target="_blank">retina</a>. But here's something remarkable: the retina is installed backward. Photoreceptors point away from incoming light, toward the back of the eye where the <a href="https://en.wikipedia.org/wiki/Retinal_pigment_epithelium" target="_blank">retinal pigment epithelium</a> recycles photopigments and absorbs stray photons. Light must pass through several layers of neurons, blood vessels, and support cells before reaching the photoreceptors. This seemingly poor design actually reflects a critical metabolic constraint—photoreceptors have the highest energy consumption per unit mass of any tissue in the body, demanding intimate contact with the blood supply of the <a href="https://en.wikipedia.org/wiki/Choroid" target="_blank">choroid</a> behind them.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=retina+inverted+structure+photoreceptors+layers&tbm=isch" target="_blank">VIEW IMAGES: Inverted retinal structure showing backward photoreceptor orientation</a>]</em></p>
+
+        <p><em>[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1312291/" target="_blank">READ: Anatomy and Physiology of the Human Eye - detailed structural review</a>]</em></p>
+
+        <p><strong>Visual Fields and Clinical Diagnosis</strong></p>
+
+        <p><a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter14.html" target="_blank">The visual field for a single eye extends approximately 60 degrees nasally, 90 degrees temporally, 60 degrees superiorly, and 75 degrees inferiorly</a>—an asymmetric coverage limited by your nose, brow, and cheekbones. The <a href="https://en.wikipedia.org/wiki/Binocular_vision" target="_blank">binocular field</a>, where the visual fields of both eyes overlap, covers about 120 degrees horizontally. This overlap is essential for <a href="https://en.wikipedia.org/wiki/Stereopsis" target="_blank">stereoscopic depth perception</a>, but it's a luxury—many prey animals sacrifice binocular overlap for 360-degree coverage, a different optimization for a different survival problem.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=visual+field+map+binocular+monocular+perimetry&tbm=isch" target="_blank">VIEW IMAGES: Visual field maps showing binocular and monocular regions</a>]</em></p>
+
+        <p>Neurologists can localize brain lesions with stunning precision just by mapping visual field deficits. A <a href="https://en.wikipedia.org/wiki/Scotoma" target="_blank">scotoma</a>, a blind region in the visual field, tells a story about where in the visual pathway damage occurred. Damage to one <a href="https://en.wikipedia.org/wiki/Optic_nerve" target="_blank">optic nerve</a> causes monocular blindness in that eye only. Damage at the <a href="https://en.wikipedia.org/wiki/Optic_chiasm" target="_blank">optic chiasm</a>, where fibers from the nasal retina of each eye cross, produces <a href="https://en.wikipedia.org/wiki/Bitemporal_hemianopsia" target="_blank">bitemporal hemianopia</a>—loss of both temporal fields—because those are mapped by the nasal retinas. Damage to the optic tract or visual cortex on one side produces <a href="https://en.wikipedia.org/wiki/Homonymous_hemianopsia" target="_blank">homonymous hemianopia</a>—loss of the same half of the visual field in both eyes. The visual system's precise anatomical organization turns field deficits into diagnostic gold.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=visual+field+defects+hemianopia+scotoma+lesion+localization&tbm=isch" target="_blank">VIEW IMAGES: Visual field defects and lesion localization diagrams</a>]</em></p>
+
+        <p><em>[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2826881/" target="_blank">READ: The Visual Pathways: Anatomy and Function - clinical correlation</a>]</em></p>
+
+        <hr>
+
+        <h2>Retinal Computation: The First Ten Layers</h2>
+
+        <p><strong>Photoreceptors: Rods and Cones</strong></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=rod+cone+photoreceptor+structure+outer+segment+phototransduction&tbm=isch" target="_blank">VIEW IMAGES: Rod and cone photoreceptor structure showing outer segments and cellular organization</a>]</em></p>
+
+        <p><a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter14.html" target="_blank">The human retina contains approximately 120 million rods and 6 million cones, two photoreceptor types optimized for different light conditions.</a> <a href="https://en.wikipedia.org/wiki/Rod_cell" target="_blank">Rods</a> mediate <a href="https://en.wikipedia.org/wiki/Scotopic_vision" target="_blank">scotopic (dim light) vision</a>, are exquisitely sensitive—capable of detecting single photons—but provide no color information and have low spatial resolution. <a href="https://en.wikipedia.org/wiki/Cone_cell" target="_blank">Cones</a> mediate <a href="https://en.wikipedia.org/wiki/Photopic_vision" target="_blank">photopic (bright light) vision</a>, require higher light levels, come in three types tuned to different wavelengths (giving us trichromatic color vision), and provide high spatial acuity. The fovea contains only cones packed at maximum density. The periphery is dominated by rods—your night vision comes from the periphery, which is why astronomers use <a href="https://en.wikipedia.org/wiki/Averted_vision" target="_blank">averted gaze</a> to see dim stars.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=rods+and+cones+microscopy+photoreceptor+structure&tbm=isch" target="_blank">VIEW IMAGES: Microscopic images of rod and cone photoreceptors</a>]</em></p>
+
+        <p><em>[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4979275/" target="_blank">READ: Rods and Cones: Structure and Function - photoreceptor physiology</a>]</em></p>
+
+        <p>Each photoreceptor is a metabolic powerhouse wrapped around a signaling system of elegant simplicity. The outer segment contains hundreds of membranous discs, each studded with millions of <a href="https://en.wikipedia.org/wiki/Opsin" target="_blank">opsin</a> molecules—<a href="https://en.wikipedia.org/wiki/Rhodopsin" target="_blank">rhodopsin</a> in rods, <a href="https://en.wikipedia.org/wiki/Photopsin" target="_blank">photopsins</a> in cones. <a href="https://en.wikipedia.org/wiki/Phototransduction" target="_blank">When a photon strikes an opsin, it photoisomerizes the retinal chromophore from 11-cis to all-trans configuration in under a picosecond.</a> This conformational change activates the opsin, which activates <a href="https://en.wikipedia.org/wiki/Transducin" target="_blank">transducin</a>, a G-protein, which activates <a href="https://en.wikipedia.org/wiki/Phosphodiesterase" target="_blank">phosphodiesterase</a>, which hydrolyzes <a href="https://en.wikipedia.org/wiki/Cyclic_guanosine_monophosphate" target="_blank">cGMP</a>. Here's the twist: in darkness, cGMP holds open cyclic nucleotide-gated channels, allowing sodium and calcium to flow in, keeping the photoreceptor depolarized. Light closes these channels by destroying cGMP, causing hyperpolarization. Light doesn't excite photoreceptors—it silences them.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=rhodopsin+photoisomerization+retinal+11-cis+all-trans&tbm=isch" target="_blank">VIEW IMAGES: Rhodopsin photoisomerization and retinal chromophore configuration</a>]</em></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=phototransduction+cascade+cGMP+channels+hyperpolarization+mechanism&tbm=isch" target="_blank">VIEW IMAGES: Phototransduction cascade showing how light leads to photoreceptor hyperpolarization</a>]</em></p>
+
+        <p>This inverted logic—light causes hyperpolarization instead of depolarization—is actually a brilliant solution to the signal-to-noise problem. In darkness, photoreceptors continuously release glutamate at their ribbon synapses. Light reduces this release. The signaling range is determined by the dark release rate, which can be very high, giving a large dynamic range. The cascade also provides massive amplification: one photon isomerizes one rhodopsin, which activates hundreds of transducins, which activate phosphodiesterases that hydrolyze thousands of cGMP molecules, closing hundreds of channels. Single photons become detectable signals through this molecular amplification.</p>
+
+        <p><strong>Retinal Circuits: Compression and Computation</strong></p>
+
+        <p>The <a href="https://en.wikipedia.org/wiki/Retina" target="_blank">retina</a> contains five major neuron types arranged in three cellular layers with two synaptic layers between them. Photoreceptors occupy the outermost nuclear layer. They synapse onto <a href="https://en.wikipedia.org/wiki/Bipolar_cell_of_the_retina" target="_blank">bipolar cells</a> in the outer plexiform layer. Bipolar cells, in turn, synapse onto <a href="https://en.wikipedia.org/wiki/Retinal_ganglion_cell" target="_blank">ganglion cells</a> in the inner plexiform layer. <a href="https://en.wikipedia.org/wiki/Horizontal_cell" target="_blank">Horizontal cells</a> and <a href="https://en.wikipedia.org/wiki/Amacrine_cell" target="_blank">amacrine cells</a> provide lateral connections that create the center-surround receptive fields that are the retina's fundamental computational output.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=retinal+layers+structure+photoreceptors+bipolar+ganglion&tbm=isch" target="_blank">VIEW IMAGES: Retinal layer organization showing cellular architecture</a>]</em></p>
+
+        <p><a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter14.html" target="_blank">Bipolar cells come in two flavors: ON-bipolars that depolarize when light hits their receptive field center, and OFF-bipolars that hyperpolarize to the same stimulus.</a> This split happens because the two types express different <a href="https://en.wikipedia.org/wiki/Glutamate_receptor" target="_blank">glutamate receptors</a>. Remember, photoreceptors release less glutamate in light. ON-bipolars have <a href="https://en.wikipedia.org/wiki/Metabotropic_glutamate_receptor" target="_blank">metabotropic receptors (mGluR6)</a> that inhibit them, so less glutamate disinhibits them—light turns them on. OFF-bipolars have ionotropic <a href="https://en.wikipedia.org/wiki/AMPA_receptor" target="_blank">AMPA</a>/<a href="https://en.wikipedia.org/wiki/Kainate_receptor" target="_blank">kainate receptors</a> that excite them, so less glutamate shuts them off—light turns them off. A single photoreceptor drives both pathways simultaneously, creating parallel representations of light increments and decrements.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=ON+OFF+bipolar+cells+retina+receptive+fields&tbm=isch" target="_blank">VIEW IMAGES: ON and OFF bipolar cell pathways and receptive field organization</a>]</em></p>
+
+        <p>Horizontal cells, laterally interconnected neurons in the outer plexiform layer, receive input from photoreceptors and feed back onto them and onto bipolar cells. This creates <a href="https://en.wikipedia.org/wiki/Receptive_field#Center-surround_receptive_fields" target="_blank">center-surround antagonism</a>: light in the receptive field center excites (or inhibits) the bipolar cell, while light in the surround has the opposite effect. <a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter14.html" target="_blank">This organization makes retinal neurons respond most strongly to edges and contrast rather than uniform illumination.</a> A uniformly lit field produces little response because center and surround cancel. An edge, with light on one side and dark on the other, produces maximal response. The retina throws away information about absolute light levels and encodes spatial change—edges are where information lives.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=center+surround+receptive+field+retina+edge+detection&tbm=isch" target="_blank">VIEW IMAGES: Center-surround receptive fields and edge detection in retina</a>]</em></p>
+
+        <p>Amacrine cells, the most diverse retinal neuron class with over 30 types, operate in the inner plexiform layer between bipolar and ganglion cells. They refine signals, detect motion, compute direction selectivity, and implement temporal filtering. Some amacrine cells use unconventional neurotransmitters—dopamine, acetylcholine, peptides—to modulate retinal processing based on circadian rhythms and adaptive state. The retina isn't a passive camera but an adaptive processor that changes its operating mode based on context.</p>
+
+        <p><strong>Ganglion Cells: The Output Neurons</strong></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=M+P+ganglion+cells+magnocellular+parvocellular+properties+pathways&tbm=isch" target="_blank">VIEW IMAGES: M and P ganglion cell pathways showing different response properties</a>]</em></p>
+
+        <p><a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter14.html" target="_blank">Retinal ganglion cells are the sole output of the retina, sending action potentials down the optic nerve to the brain.</a> The two major classes, M (magnocellular) and P (parvocellular) ganglion cells, create parallel information streams with complementary specializations. P-cells, constituting about 80% of ganglion cells, have small receptive fields, slow conduction velocities, sustained responses, and color-opponent properties—they're optimized for high-resolution form and color. M-cells, about 10% of ganglion cells, have large receptive fields, fast conduction velocities, transient responses, and high contrast sensitivity—they're optimized for motion and change detection.</p>
+
+        <p>This segregation reflects a fundamental constraint: you can't optimize for both high spatial resolution and high temporal resolution simultaneously. High resolution requires small receptive fields and sustained integration, which sacrifices speed. High temporal resolution requires large receptive fields and transient responses, which sacrifices spatial precision. The visual system solves this by building both analyzers in parallel, then keeping them separate all the way to cortex. M-cells connect to magnocellular layers of the lateral geniculate nucleus (LGN), which connect to cortical layer 4Cα, which feeds the dorsal stream. P-cells connect to parvocellular LGN layers, which connect to cortical layer 4Cβ, which feeds the ventral stream. The segregation that starts in the retina persists throughout the visual system.</p>
+
+        <p>The convergence ratio differs dramatically across the retina. In the fovea, some cones connect to a single midget bipolar cell, which connects to a single P-cell—a direct line to the brain preserving maximum resolution. In the periphery, hundreds of rods converge onto a single bipolar cell, which converges with other bipolar cells onto a single M-cell. This pooling increases sensitivity—necessary for dim-light vision—but destroys spatial resolution. The same peripheral M-cell that can detect a single photon cannot tell you where in its large receptive field that photon arrived. The retina implements different computational strategies in parallel, optimizing for different ecological demands.</p>
+
+        <hr>
+
+        <h2>From Eye to Brain: The Visual Pathway</h2>
+
+        <p><strong>Optic Nerve, Chiasm, and Tract</strong></p>
+
+        <p>Ganglion cell axons exit the eye at the <a href="https://en.wikipedia.org/wiki/Optic_disc" target="_blank">optic disc</a>—your blind spot—and form the <a href="https://en.wikipedia.org/wiki/Optic_nerve" target="_blank">optic nerve</a>. This is a misnomer: the optic nerve is actually a brain tract, myelinated by <a href="https://en.wikipedia.org/wiki/Oligodendrocyte" target="_blank">oligodendrocytes</a> rather than <a href="https://en.wikipedia.org/wiki/Schwann_cell" target="_blank">Schwann cells</a>, a cable of white matter extending from each eye toward the brain. At the <a href="https://en.wikipedia.org/wiki/Optic_chiasm" target="_blank">optic chiasm</a>, sitting just below the hypothalamus above the pituitary, roughly half the fibers cross to the opposite side. Specifically, fibers from the nasal retina cross, while fibers from the temporal retina remain ipsilateral. Because of the inverted image, nasal retina sees temporal visual field and vice versa. The crossing ensures that all information from the right visual field (from both eyes) ends up in the left hemisphere, and left visual field information reaches the right hemisphere.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=optic+chiasm+decussation+visual+field+pathway&tbm=isch" target="_blank">VIEW IMAGES: Optic chiasm showing partial decussation and visual field mapping</a>]</em></p>
+
+        <p>This partial decussation is an evolutionary solution to binocular vision. Fish, with eyes on opposite sides of their heads, have complete crossing—each eye's entire output goes to the opposite hemisphere. Primates, with front-facing eyes and overlapping visual fields, need both eyes' information about the same region of space to reach the same hemisphere for stereoscopic processing. The architecture of the chiasm directly reflects the overlap of the visual fields—larger overlap means smaller fraction crossing.</p>
+
+        <p><strong>Lateral Geniculate Nucleus: The Thalamic Gateway</strong></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=lateral+geniculate+nucleus+layers+magnocellular+parvocellular+structure&tbm=isch" target="_blank">VIEW IMAGES: Lateral geniculate nucleus showing six-layered structure and M/P segregation</a>]</em></p>
+
+        <p><a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter15.html" target="_blank">The lateral geniculate nucleus, a layered structure in the thalamus, is the first central station for visual processing.</a> It contains six distinct layers in primates, numbered 1-6 from ventral to dorsal. Layers 1 and 2, containing large cells, are the magnocellular layers receiving M-cell input. Layers 3-6, containing small cells, are the parvocellular layers receiving P-cell input. The M and P streams remain segregated, never mixing within the LGN. Moreover, each layer receives input from only one eye: layers 1, 4, and 6 from the contralateral eye; layers 2, 3, and 5 from the ipsilateral eye. This precise lamination keeps information from the two eyes separate until binocular integration happens in cortex.</p>
+
+        <p>For decades, the LGN was thought to be a passive relay, simply transmitting retinal signals to cortex. This was wrong. LGN neurons have complex response properties, receive massive <a href="https://en.wikipedia.org/wiki/Corticothalamic_pathway" target="_blank">feedback from cortex</a> (ten times more synapses from cortex than from retina), and are modulated by attention, arousal, and behavioral state. The LGN is a gate, not a relay—it controls which retinal signals reach consciousness based on top-down expectations and task demands. When you pay attention to something, cortex actively enhances LGN responses to that location, amplifying the signal before it even reaches conscious processing. Your brain is reaching back down to the thalamus to turn up the volume on inputs that matter.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=lateral+geniculate+nucleus+feedback+attention+modulation&tbm=isch" target="_blank">VIEW IMAGES: LGN feedback pathways and attentional modulation</a>]</em></p>
+
+        <p><em>[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2922645/" target="_blank">READ: Functional Organization of the Visual Cortex - from LGN to cortex</a>]</em></p>
+
+        <p><strong>Primary Visual Cortex: Constructing Orientation</strong></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=Hubel+Wiesel+simple+complex+cells+orientation+columns+V1&tbm=isch" target="_blank">VIEW IMAGES: Hubel and Wiesel's discoveries of orientation-selective neurons in V1</a>]</em></p>
+
+        <p><a href="https://en.wikipedia.org/wiki/Visual_cortex" target="_blank">David Hubel and Torsten Wiesel's recordings in cat and monkey visual cortex in the 1960s revolutionized our understanding of sensory processing.</a> They discovered that V1 neurons don't respond to spots of light like retinal or LGN neurons—they respond to oriented edges. A V1 simple cell has an elongated receptive field with ON and OFF subregions arranged side by side. It responds maximally to a bar or edge at a specific orientation and position. Rotate the stimulus 90 degrees, and the neuron falls silent. This orientation selectivity is constructed from LGN inputs: simple cells receive convergent input from several LGN neurons whose center-surround receptive fields are aligned in a row. The geometry of the wiring creates the feature selectivity.</p>
+
+        <p>Complex cells, also orientation-selective, show position invariance within their receptive fields—they respond to their preferred orientation anywhere within a larger region. They likely receive input from multiple simple cells with the same orientation preference but different positions. This creates a hierarchy: circular center-surround → oriented simple cell → position-invariant complex cell. Each stage extracts progressively more abstract features while discarding irrelevant details.</p>
+
+        <p><a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter15.html" target="_blank">V1 is organized into orientation columns—vertical slabs of cortex where all neurons share the same orientation preference.</a> As you move tangentially across the cortical surface, preferred orientation rotates smoothly, cycling through 180 degrees every millimeter or so. V1 also contains <a href="https://en.wikipedia.org/wiki/Ocular_dominance_column" target="_blank">ocular dominance columns</a>, alternating stripes where neurons prefer input from one eye or the other. The intersection of orientation and ocular dominance creates a two-dimensional map where every combination of orientation and eye preference has a dedicated cortical representation. This columnar organization, revealed by <a href="https://en.wikipedia.org/wiki/Optical_imaging" target="_blank">optical imaging</a> and anatomical tracers, shows that cortex is not randomly wired but highly structured to represent stimulus feature space efficiently.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=orientation+columns+ocular+dominance+columns+V1+optical+imaging&tbm=isch" target="_blank">VIEW IMAGES: Orientation and ocular dominance columns in V1 revealed by optical imaging</a>]</em></p>
+
+        <p>V1 exhibits extreme <a href="https://en.wikipedia.org/wiki/Cortical_magnification" target="_blank">cortical magnification</a>—disproportionate allocation of cortical area to central vision. The fovea, representing 1% of the visual field, claims 50% of V1. This overrepresentation is why you can read text: the tiny foveal image requires massive parallel processing to extract the fine spatial detail that letters demand. <a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter15.html" target="_blank">Cortical magnification means that a 1-degree stimulus in the fovea activates 100 times more cortex than the same stimulus in the far periphery.</a> Your visual experience of a uniform, detailed world is an illusion—you have an island of high resolution surrounded by a sea of vague, low-resolution vision that you never notice because you move your fovea to anything interesting.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=cortical+magnification+V1+fovea+visual+field+representation&tbm=isch" target="_blank">VIEW IMAGES: Cortical magnification showing disproportionate foveal representation in V1</a>]</em></p>
+
+        <hr>
+
+        <h2>Higher Visual Areas: What and Where</h2>
+
+        <p><strong>The Ventral Stream: Object Recognition</strong></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=ventral+dorsal+stream+what+where+pathway+visual+cortex&tbm=isch" target="_blank">VIEW IMAGES: Ventral "what" and dorsal "where" streams in visual processing</a>]</em></p>
+
+        <p><a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter15.html" target="_blank">Beyond V1, visual processing splits into two great streams: the ventral stream projecting into temporal cortex, and the dorsal stream projecting into parietal cortex.</a> The <a href="https://en.wikipedia.org/wiki/Two-streams_hypothesis" target="_blank">ventral stream</a>, often called the "what" pathway, specializes in object recognition, color, and fine form. It starts with V1 and V2, continues through <a href="https://en.wikipedia.org/wiki/Visual_cortex#V4" target="_blank">V4</a> (critical for color processing), and culminates in <a href="https://en.wikipedia.org/wiki/Inferior_temporal_gyrus" target="_blank">inferotemporal cortex (IT)</a>, where neurons respond to complex objects—faces, hands, bodies—with remarkable selectivity and invariance. A face-selective IT neuron might respond to a face regardless of size, position, lighting, or viewing angle. This is invariant object recognition, the ability to identify the same object across transformations, implemented through hierarchical feature extraction.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=ventral+stream+temporal+cortex+object+recognition+what+pathway&tbm=isch" target="_blank">VIEW IMAGES: Ventral stream anatomy and object recognition processing</a>]</em></p>
+
+        <p>The organization of IT cortex is not random. <a href="https://en.wikipedia.org/wiki/Fusiform_face_area" target="_blank">The fusiform face area (FFA) responds preferentially to faces.</a> The <a href="https://en.wikipedia.org/wiki/Parahippocampal_place_area" target="_blank">parahippocampal place area (PPA)</a> responds to scenes and spaces. The <a href="https://en.wikipedia.org/wiki/Extrastriate_body_area" target="_blank">extrastriate body area (EBA)</a> responds to body parts. This category-selective organization suggests that evolution has tuned cortical circuits to recognize ecologically important object categories. Face recognition is so important for social primates that we dedicate specialized hardware to it. Damage to FFA causes <a href="https://en.wikipedia.org/wiki/Prosopagnosia" target="_blank">prosopagnosia</a>—face blindness—where patients can see faces perfectly but cannot recognize them, sometimes failing to recognize even their own reflection.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=fusiform+face+area+prosopagnosia+face+recognition&tbm=isch" target="_blank">VIEW IMAGES: Fusiform face area and face-selective neural responses</a>]</em></p>
+
+        <div class="stage">Let me tell you about <a href="https://en.wikipedia.org/wiki/Visual_form_agnosia" target="_blank">patient D.F.</a>, studied by Mel Goodale and David Milner. D.F. suffered carbon monoxide poisoning that damaged her ventral stream, particularly area LO involved in shape processing. When shown a slot at different orientations and asked to describe it, she couldn't. When asked to reach out and post a card through the slot, her hand rotated to the correct angle smoothly and accurately. She couldn't consciously perceive orientation but could use it to guide action. This revealed a stunning dissociation: the ventral stream supports conscious perception and recognition (what is it?), while the dorsal stream supports visually guided action (where is it, and how do I interact with it?). D.F. could catch objects she couldn't identify, navigate spaces she couldn't describe, and grasp objects whose shape she couldn't see. She had vision for action without vision for perception.</div>
+
+        <p><em>[<a href="https://www.google.com/search?q=patient+DF+visual+form+agnosia+ventral+stream+damage" target="_blank">SEARCH: "patient D.F. visual form agnosia" - see dissociation between perception and action</a>]</em></p>
+
+        <p><strong>The Dorsal Stream: Space and Action</strong></p>
+
+        <p>The <a href="https://en.wikipedia.org/wiki/Two-streams_hypothesis#Dorsal_stream" target="_blank">dorsal stream</a>, projecting from V1 through V2, V3, and MT (middle temporal area) into parietal cortex, specializes in spatial vision, motion processing, and visually guided action. <a href="https://en.wikipedia.org/wiki/Middle_temporal_visual_area" target="_blank">Area MT, also called V5, is the motion center of the visual system.</a> MT neurons are direction-selective, responding to motion in a preferred direction and speed. They integrate local motion signals from V1 to compute global motion patterns—solving the <a href="https://en.wikipedia.org/wiki/Motion_perception#The_aperture_problem" target="_blank">aperture problem</a> where local motion is ambiguous but global motion is clear. Damage to MT produces <a href="https://en.wikipedia.org/wiki/Akinetopsia" target="_blank">akinetopsia</a>, motion blindness, a rare condition where patients see the world as a series of static snapshots. One patient described pouring tea as impossible—the stream appeared frozen, then the cup was suddenly overflowing.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=MT+V5+area+motion+processing+direction+selectivity&tbm=isch" target="_blank">VIEW IMAGES: MT/V5 area showing motion-selective neural responses</a>]</em></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=akinetopsia+motion+blindness+neurological+case" target="_blank">SEARCH: "akinetopsia motion blindness" - see cases of selective motion perception deficits</a>]</em></p>
+
+        <p><a href="https://en.wikipedia.org/wiki/Parietal_lobe" target="_blank">Parietal cortex</a>, the dorsal stream's terminus, contains multiple specialized areas. The <a href="https://en.wikipedia.org/wiki/Lateral_intraparietal_cortex" target="_blank">lateral intraparietal area (LIP)</a> encodes spatial attention and saccade planning—its neurons respond to locations where attention is directed or where eye movements are planned, creating a priority map of visual space. The <a href="https://en.wikipedia.org/wiki/Anterior_intraparietal_sulcus" target="_blank">anterior intraparietal area (AIP)</a> processes object <a href="https://en.wikipedia.org/wiki/Affordance" target="_blank">affordances</a>—how graspable things are—and guides hand shaping during reaching. <a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter15.html" target="_blank">The dorsal stream is intimately connected to motor systems, implementing sensorimotor transformations that convert visual information into action coordinates.</a></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=dorsal+stream+parietal+cortex+visuomotor+transformation&tbm=isch" target="_blank">VIEW IMAGES: Dorsal stream and parietal areas for visuomotor control</a>]</em></p>
+
+        <p>The what/where distinction isn't absolute—the streams interact extensively through interconnections. But the dissociation is real and has profound implications. Conscious visual perception, the vivid sense of seeing, is predominantly a ventral stream phenomenon. The dorsal stream operates largely unconsciously, guiding action without awareness. This is why you can catch a ball without consciously computing its trajectory, why skilled athletes respond "without thinking," and why your hand knows how to reach for your coffee cup even when your mind is elsewhere. The two systems see different things in different ways for different purposes.</p>
+
+        <hr>
+
+        <h2>Color Vision: Three Receptors, Infinite Hues</h2>
+
+        <p><strong>Trichromatic Theory and Opponent Processing</strong></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=color+vision+trichromatic+theory+cone+types+spectral+sensitivity&tbm=isch" target="_blank">VIEW IMAGES: Spectral sensitivity curves of the three cone types</a>]</em></p>
+
+        <p>Human color vision is based on three cone types with overlapping spectral sensitivities. <a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter14.html" target="_blank">S-cones peak around 420 nm (blue), M-cones around 530 nm (green), and L-cones around 560 nm (red).</a> These aren't pure color detectors—each responds to a broad range of wavelengths. The visual system determines color by comparing the responses of the three cone types. A 580 nm light stimulates M-cones and L-cones but not S-cones; the ratio of M to L response encodes "yellow." This is <a href="https://en.wikipedia.org/wiki/Trichromacy" target="_blank">trichromacy</a>, the principle that three receptor types suffice to create the entire perceptual color space because any wavelength produces a unique pattern of responses across the three cone types.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=trichromatic+color+vision+cone+spectral+sensitivity+curves&tbm=isch" target="_blank">VIEW IMAGES: Spectral sensitivity curves of the three cone types</a>]</em></p>
+
+        <p><em>[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3073021/" target="_blank">READ: Neural Mechanisms of Color Vision - from cones to perception</a>]</em></p>
+
+        <p>But raw trichromatic signals aren't what reaches consciousness. Retinal circuits transform cone outputs into <a href="https://en.wikipedia.org/wiki/Opponent_process" target="_blank">opponent signals</a>: L-M (red-green), S-(L+M) (blue-yellow), and L+M (luminance). <a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter14.html" target="_blank">Color-opponent neurons in the retina and LGN have center-surround receptive fields where center and surround prefer different wavelengths—for example, L-ON/M-OFF in the center, M-ON/L-OFF in the surround.</a> These neurons signal color contrast, not absolute color. They respond maximally at red-green borders and fall silent for uniform color fields. Like spatial vision, color vision is about edges and differences, not absolute values.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=opponent+process+color+vision+red+green+blue+yellow&tbm=isch" target="_blank">VIEW IMAGES: Opponent process theory and color-opponent neurons</a>]</em></p>
+
+        <p><a href="https://en.wikipedia.org/wiki/Color_constancy" target="_blank">Color constancy</a>, the fact that a red apple looks red under both sunlight and tungsten illumination despite different wavelengths reaching the eye, emerges from these opponent mechanisms. The brain doesn't care about absolute cone responses but about ratios and contrasts across space. Surfaces surrounded by the same illumination maintain constant ratios even when absolute values change. This is why you can only see color distortions when you compare different illuminations side by side—your brain normalizes everything within a scene based on contextual cues.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=color+constancy+perception+same+object+different+lighting&tbm=isch" target="_blank">VIEW IMAGES: Color constancy demonstrations and illusions</a>]</em></p>
+
+        <p><strong>Color Blindness and Tetrachromacy</strong></p>
+
+        <p><a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter14.html" target="_blank">The genes for L and M opsins lie on the X chromosome, while the S opsin gene is autosomal.</a> This means <a href="https://en.wikipedia.org/wiki/Color_blindness" target="_blank">color blindness</a> affecting red-green discrimination is X-linked and more common in males (8%) than females (0.5%). <a href="https://en.wikipedia.org/wiki/Protanopia" target="_blank">Protanopia</a> (missing L-cones) and <a href="https://en.wikipedia.org/wiki/Deuteranopia" target="_blank">deuteranopia</a> (missing M-cones) produce similar red-green confusion because L and M are so spectrally close. True <a href="https://en.wikipedia.org/wiki/Tetrachromacy" target="_blank">tetrachromats</a>—people with four functioning cone types—may exist in the female population due to X-chromosome heterozygosity, potentially seeing color dimensions invisible to normal trichromats. We can barely imagine their perceptual world, just as dichromats cannot imagine ours.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=color+blindness+types+protanopia+deuteranopia+ishihara+test&tbm=isch" target="_blank">VIEW IMAGES: Color blindness types and Ishihara test plates</a>]</em></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=tetrachromacy+four+cone+types+color+vision&tbm=isch" target="_blank">VIEW IMAGES: Tetrachromacy and extended color vision</a>]</em></p>
+
+        <hr>
+
+        <h2>Predictive Vision: Filling In and Leaving Out</h2>
+
+        <p><strong>The Blind Spot and Perceptual Completion</strong></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=blind+spot+filling+in+visual+completion+perception&tbm=isch" target="_blank">VIEW IMAGES: Blind spot demonstrations and perceptual filling-in phenomena</a>]</em></p>
+
+        <p>Your blind spot is not experienced as a dark hole or a blur—it's filled in with whatever matches the surroundings. If you stare at a uniform background, the blind spot region appears uniform. If you place the blind spot over a pattern, your brain continues the pattern across the gap. This is not the retina filling in—there's no retina there—but cortical completion, where V1 and higher areas hallucinate visual content based on surrounding context. The brain assumes the world is continuous and smooth unless evidence suggests otherwise.</p>
+
+        <p>This completion is so automatic and convincing that you genuinely see the filled-in content. When researchers use clever stimuli to put entirely novel content in the blind spot, subjects report seeing it, and their V1 shows activity corresponding to the hallucinated features. The brain doesn't tolerate gaps in perception—it would rather make something up than admit ignorance. This strategy usually works because the world is locally smooth, and predicting the blind spot content from surroundings is usually correct. But it means your conscious visual experience includes hallucinated content you can't distinguish from sensory input.</p>
+
+        <p><strong>Change Blindness and Inattentional Blindness</strong></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=change+blindness+inattentional+blindness+experiments+2024" target="_blank">SEARCH: "change blindness inattentional blindness experiments 2024" - show students latest research on limits of visual awareness</a>]</em></p>
+
+        <p>Change blindness reveals another uncomfortable truth: you notice far less than you think. If a change to a visual scene occurs during an eye movement, a blink, or a brief visual disruption, even enormous changes go unnoticed. A person you're talking to can be swapped for someone completely different behind an obstruction, and you'll continue the conversation without noticing. This isn't stupidity—it's the fundamental architecture of attention. The brain doesn't maintain a detailed representation of the entire visual scene. It constructs vivid representations of attended locations on demand while leaving unattended regions poorly represented. You feel like you see everything because you can look anywhere, but you're not storing what you saw when you looked away.</p>
+
+        <p>Inattentional blindness takes this further. The famous <a href="https://en.wikipedia.org/wiki/Inattentional_blindness" target="_blank">invisible gorilla experiment</a> asked subjects to count basketball passes. While they counted, a person in a gorilla suit walked through the scene, clearly visible. Half of subjects never saw it. They weren't looking for gorillas; gorillas were therefore invisible. Attention is a spotlight that illuminates a small region of visual space while leaving the rest in darkness. What you don't attend to might as well not exist—it produces neural responses in early visual areas, but those signals don't reach awareness without attention amplifying them.</p>
+
+        <p>This has staggering implications. Eyewitness testimony is unreliable not because memory is bad (though it is) but because witnesses never saw half of what they claim to remember. Radiologists miss tumors on chest X-rays because attention was directed elsewhere. Drivers in accidents claim the pedestrian appeared from nowhere because inattention rendered the pedestrian invisible despite being in plain sight. Vision is not a video camera recording everything. It's a limited-capacity inference engine that constructs a sparse representation of behaviorally relevant features while ignoring the rest.</p>
+
+        <p><strong>Vision as Controlled Hallucination</strong></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=predictive+processing+brain+vision+perception+prediction" target="_blank">SEARCH: "predictive processing vision brain 2024" - show students latest theories of perception as prediction</a>]</em></p>
+
+        <p>Modern theories frame perception as controlled hallucination—the brain generates predictions about what it expects to see, compares these predictions to sensory input, and updates its predictions based on prediction errors. <a href="https://en.wikipedia.org/wiki/Predictive_coding" target="_blank">This predictive coding framework</a> explains a range of phenomena: why familiar objects are easier to see, why context influences perception, why ambiguous figures flip between interpretations, and why hallucinations are indistinguishable from perception when prediction errors are suppressed.</p>
+
+        <p>Every moment, your brain is predicting the visual input it expects to receive and comparing those predictions against actual retinal input. Only the differences—prediction errors—propagate up the hierarchy to update the model. Most of what you see is predicted, not sensed. This is efficient: transmission of prediction errors requires far less bandwidth than raw sensory data. But it means your conscious perception is a mixture of bottom-up sensory evidence and top-down predictions, blended so seamlessly that you cannot distinguish which is which.</p>
+
+        <p>Vision, then, is not about accurately representing the world but about constructing a useful model that supports action and survival. The model is constrained by sensory evidence but not determined by it. Your brain is hallucinating your visual world into existence every moment, using retinal input merely to guide and constrain the hallucination. The question isn't whether perception is accurate—it's whether it's adaptive. Fitness beats fidelity.</p>
+
+        <hr>
+
+        <h2>Clinical Perspectives and Disorders</h2>
+
+        <p><strong>Retinal Pathologies</strong></p>
+
+        <p><a href="https://nba.uth.tmc.edu/neuroscience/s2/chapter14.html" target="_blank">Retinitis pigmentosa, a group of genetic disorders affecting photoreceptors, typically begins with rod degeneration.</a> Patients first lose night vision and peripheral vision—tunnel vision—as rods die. Eventually, cones degenerate too, leading to blindness. <a href="https://en.wikipedia.org/wiki/Macular_degeneration" target="_blank">Age-related macular degeneration (AMD)</a>, the leading cause of blindness in developed countries, destroys the fovea while leaving peripheral vision intact. Patients can navigate rooms but cannot read or recognize faces—the opposite loss pattern from retinitis pigmentosa. <a href="https://en.wikipedia.org/wiki/Diabetic_retinopathy" target="_blank">Diabetic retinopathy</a> damages retinal blood vessels, causing hemorrhages and edema that destroy local patches of retina, producing irregular scotomas. Each pathology reveals the retina's organization through the pattern of vision loss.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=retinitis+pigmentosa+macular+degeneration+diabetic+retinopathy&tbm=isch" target="_blank">VIEW IMAGES: Retinal pathologies and their characteristic vision loss patterns</a>]</em></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=visual+disorders+eye+diseases+treatment+2024" target="_blank">SEARCH: "visual disorders treatment 2024" - see latest advances in treating vision loss</a>]</em></p>
+
+        <p><strong>Cortical Blindness and Visual Agnosias</strong></p>
+
+        <p>Bilateral V1 damage causes <a href="https://en.wikipedia.org/wiki/Cortical_blindness" target="_blank">cortical blindness</a>—patients claim to see nothing and behave as if blind, yet may show <a href="https://en.wikipedia.org/wiki/Blindsight" target="_blank">blindsight</a>, responding to visual stimuli they deny seeing. Residual pathways through <a href="https://en.wikipedia.org/wiki/Superior_colliculus" target="_blank">superior colliculus</a> and <a href="https://en.wikipedia.org/wiki/Pulvinar" target="_blank">pulvinar</a> bypass the damaged V1, allowing unconscious visual processing to guide behavior without awareness. Ventral stream lesions cause <a href="https://en.wikipedia.org/wiki/Visual_agnosia" target="_blank">visual agnosias</a>—patients can see but cannot recognize. <a href="https://en.wikipedia.org/wiki/Agnosia#Visual_agnosia" target="_blank">Object agnosia</a> (difficulty recognizing objects), prosopagnosia (difficulty recognizing faces), and color agnosia (difficulty recognizing colors despite intact color discrimination) fractionate the "what" pathway into dissociable components. Dorsal stream lesions cause <a href="https://en.wikipedia.org/wiki/Optic_ataxia" target="_blank">optic ataxia</a> (difficulty reaching under visual guidance) and <a href="https://en.wikipedia.org/wiki/Hemispatial_neglect" target="_blank">spatial neglect</a> (failure to attend to one side of space). These dissociations validate the anatomical segregation revealed by physiology.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=cortical+blindness+blindsight+unconscious+vision&tbm=isch" target="_blank">VIEW IMAGES: Cortical blindness and blindsight phenomenon</a>]</em></p>
+
+        <p><em>[<a href="https://www.google.com/search?q=visual+agnosia+prosopagnosia+optic+ataxia+neglect&tbm=isch" target="_blank">VIEW IMAGES: Visual agnosias and dorsal stream deficits</a>]</em></p>
+
+        <hr>
+
+        <h2>Closing: The Invention of Light</h2>
+
+        <div class="stage">Vision is not about capturing reality—it's about constructing a model reliable enough to navigate, manipulate, and communicate. The compression from 130 million photoreceptors to 1.2 million output channels means the retina throws away 99% of the input before it reaches the brain. The brain then takes these sparse signals, fills gaps with predictions, emphasizes edges and changes while ignoring uniform regions, dedicates 50% of processing to 1% of the visual field, and splits the information into parallel streams that never fully recombine. What you call "seeing" is the controlled hallucination assembled from these pieces, constrained by evidence but not determined by it.</div>
+
+        <p>You are not seeing the electromagnetic radiation between 400 and 700 nanometers that reaches your retina. You are seeing a model—a useful fiction constructed by billions of neurons applying 600 million years of evolutionary priors about what visual input usually means. Your brain's assumptions about the world—that surfaces are smooth, that lighting is consistent, that objects persist, that edges matter more than uniform regions—are so deeply embedded in visual processing that you cannot see without them. When these assumptions are violated, you get illusions. When they're correct, you get perception. The difference isn't in your consciousness—it's in the world.</p>
+
+        <p>The marvel is not that vision is sometimes wrong. The marvel is that a 3-pound biological computer, consuming 20 watts, can construct a dynamic three-dimensional model of the world from two 2D projections, update it 60 times per second, maintain stable perception despite constant eye movements, fill in missing information, adjust for changing lighting, segment objects from backgrounds, recognize faces in milliseconds, guide actions with millimeter precision, and do all this so effortlessly that you never notice it's happening. Vision is not a window on reality. It's reality's most beautiful lie, and you believe it utterly.</p>
+
+        <p><em>[<a href="https://www.google.com/search?q=vision+neuroscience+breakthroughs+2024+visual+processing+research" target="_blank">SEARCH: "vision neuroscience 2024" - explore latest discoveries in visual processing</a>]</em></p>
+
+        <p><em>[<a href="https://www.sciencedaily.com/news/mind_brain/vision/" target="_blank">READ: Latest vision research news from ScienceDaily</a>]</em></p>
+
+        <hr>
+
+        <h2 id="thought-questions">Thought Questions for Discussion</h2>
+
+        <div class="stage">Three questions to spark discussion before your next class:</div>
+
+        <p><strong>The Resolution Illusion:</strong> You have the subjective experience of seeing the entire visual world in sharp, colorful detail. But the physiology shows that only your fovea (2 degrees) has high acuity and full color vision, while the remaining 95% of your visual field is progressively lower resolution and color-blind. How does the brain create the illusion of uniform high-resolution vision when the underlying representation is so non-uniform? What evolutionary advantage might this illusion provide, and what vulnerabilities does it create? Consider how this relates to attention, eye movements, and working memory.</p>
+
+        <p><strong>Parallel Streams and Consciousness:</strong> The ventral and dorsal streams process different aspects of vision (what vs. where/how), and only ventral stream processing reliably reaches consciousness. Patient D.F. could guide actions with vision she couldn't consciously perceive. What does this dissociation tell us about the relationship between vision and consciousness? If the dorsal stream implements sophisticated visual processing without awareness, what determines which neural processes enter consciousness? How might this inform debates about unconscious perception, subliminal processing, and the hard problem of consciousness?</p>
+
+        <p><strong>Controlled Hallucination:</strong> Modern theories propose that perception is controlled hallucination—the brain generates predictions and uses sensory input merely to constrain and update them. This explains why your blind spot is filled in, why change blindness occurs, and why context influences perception. But if perception is predominantly prediction rather than sensation, what distinguishes perception from hallucination? Are psychiatric hallucinations fundamentally different from normal perception, or just prediction errors that fail to be corrected? What are the implications for concepts like "objective reality" if all perception is constructed rather than received?</p>
+
+        <hr>
+
+        <p><strong>Practice Questions:</strong></p>
+        <p>• The fovea contains only _______ photoreceptors and represents approximately _______% of the visual field but claims _______% of V1.</p>
+        <p>• Photoreceptors _______ (depolarize/hyperpolarize) in response to light because light destroys _______, which normally holds _______ channels open.</p>
+        <p>• The retina contains _______ million rods and _______ million cones, with rods mediating _______ vision and cones mediating _______ vision.</p>
+        <p>• ON-bipolar cells use _______ glutamate receptors that _______ them, while OFF-bipolar cells use _______ receptors that _______ them.</p>
+        <p>• Retinal ganglion cells create _______ and _______ pathways, with the first optimized for _______ and the second for _______.</p>
+        <p>• At the optic chiasm, fibers from the _______ retina cross to the opposite hemisphere, ensuring that the _______ visual field is represented in the _______ hemisphere.</p>
+        <p>• The lateral geniculate nucleus contains _______ layers, with layers 1-2 being _______ and layers 3-6 being _______.</p>
+        <p>• V1 simple cells respond to _______ at specific _______, while complex cells show _______ invariance within their receptive fields.</p>
+        <p>• The ventral stream, projecting into _______ cortex, specializes in _______ and _______, while the dorsal stream projects into _______ cortex for _______ and _______.</p>
+        <p>• Color vision is based on _______ cone types with peaks at _______ nm (S), _______ nm (M), and _______ nm (L).</p>
+
+        <p style="margin-top: 24px; padding: 12px; background: rgba(122,225,255,0.08); border-radius: 6px; border-left: 3px solid var(--accent);">
+          <strong>📝 <a href="./AnswerKeys.html#chapter8" style="color: var(--accent);">View Answer Key for Chapter 8</a></strong>
+        </p>
+
+        <div class="stage">Next: <a href="./chapter9.html">Pain and Pleasure</a> — valence, control, suffering, and healing; how the same circuits encode agony and ecstasy.</div>
+
+        <p><em>[<a href="https://www.google.com/search?q=pain+pathway+pleasure+reward+system+neuroscience" target="_blank">PREVIEW: Neural circuits of pain and pleasure processing</a>]</em></p>
+      </main>
+
+      <footer>
+        <div>© <span id="year"></span> Kyle Mathewson</div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Force cache refresh by adding timestamp to any internal links
+      document.addEventListener('DOMContentLoaded', function() {
+        const timestamp = Date.now();
+        const internalLinks = document.querySelectorAll('a[href^="./"], a[href^="/"]');
+        internalLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && !href.includes('?')) {
+            link.setAttribute('href', href + '?v=' + timestamp);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+

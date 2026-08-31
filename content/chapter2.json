@@ -1,0 +1,1284 @@
+{
+  "id": "chapter2",
+  "source": "chapter2.html",
+  "chapter": "2",
+  "chapter_number": "2",
+  "title": "Electric Flesh and Fire: The Biophysics of Thought",
+  "page_title": "Chapter 2 — Electric Flesh and Fire: The Biophysics of Thought",
+  "description": "Membrane potentials and spikes; resting potential, Nernst and Goldman equations, ionic mechanisms of action potentials, propagation and cable properties.",
+  "brand": "Brains, Minds, and Machines — Chapter 2",
+  "subtitle": null,
+  "lead": {
+    "text": "Your thoughts move at 120 meters per second—the speed of a Formula 1 car—yet this biological lightning is a million times slower than electricity in copper wire. Today we decode the most elegant hack in evolutionary history: how life transforms a 70-millivolt battery smaller than a virus into the computational foundation of consciousness. We'll discover why your brain burns 20% of your calories just maintaining electrical readiness, how two equations—the Nernst and Goldman—predict the voltage of every neuron on Earth, and how Hodgkin and Huxley's squid experiments revealed the molecular machinery underlying every thought. From the resting potential that sets the stage to the action potential that carries the signal, we'll trace the complete electrical journey within a single neuron—saving the chemical synapse for next time."
+  },
+  "opening": [
+    {
+      "type": "stage",
+      "text": "Today's journey: From the ion gradients that create the resting potential, through the voltage-gated channels that generate action potentials, to the cable properties that propagate signals along axons. We stop at the axon terminal—next class, we'll see what happens when electricity meets chemistry."
+    }
+  ],
+  "table_of_contents": [
+    {
+      "number": "I",
+      "title": "The Resting Membrane Potential",
+      "duration": "20 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Ion distributions and the Na⁺/K⁺-ATPase"
+        },
+        {
+          "text": "The Nernst equation: equilibrium potentials for single ions"
+        },
+        {
+          "text": "The Goldman-Hodgkin-Katz equation: multiple ion contributions"
+        },
+        {
+          "text": "Why neurons rest at −70 mV, not at E_K"
+        }
+      ]
+    },
+    {
+      "number": "II",
+      "title": "The Action Potential: Ionic Mechanisms",
+      "duration": "20 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Hodgkin and Huxley's voltage clamp experiments"
+        },
+        {
+          "text": "Voltage-gated Na⁺ channels: activation and inactivation"
+        },
+        {
+          "text": "Voltage-gated K⁺ channels: delayed rectification"
+        },
+        {
+          "text": "The absolute and relative refractory periods"
+        }
+      ]
+    },
+    {
+      "number": "III",
+      "title": "Propagation of the Action Potential",
+      "duration": "15 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Local circuit currents and the cable equation"
+        },
+        {
+          "text": "Length constant and time constant"
+        },
+        {
+          "text": "Continuous vs. saltatory conduction"
+        },
+        {
+          "text": "Myelination and conduction velocity"
+        }
+      ]
+    },
+    {
+      "number": "IV",
+      "title": "Channel Diversity and Clinical Relevtic",
+      "duration": "15 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Channelopathies: from painlessness to paralysis"
+        },
+        {
+          "text": "Multiple sclerosis and demyelination"
+        },
+        {
+          "text": "Epilepsy as electrical storms"
+        },
+        {
+          "text": "Pharmacology of ion channels"
+        }
+      ]
+    },
+    {
+      "number": "V",
+      "title": "Evolutionary Origins",
+      "duration": "10 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Bacterial action potentials and ancient ion channels"
+        },
+        {
+          "text": "The thermodynamic cost of thought"
+        }
+      ]
+    }
+  ],
+  "summary_image": {
+    "src": "GeminiSummaryCh2.png",
+    "alt": "Electrical Neural activity Visual Summary",
+    "viewer": "image-viewer.html?image=GeminiSummaryCh2.png",
+    "role": "summary"
+  },
+  "resources": {
+    "textbook": "./textbook/",
+    "slides_html": null,
+    "slides_pdf": null,
+    "course_home": "./index.html",
+    "answer_key": "./AnswerKeys.html#chapter2",
+    "related_chapters": [],
+    "next_chapter": {
+      "href": "./chapter3.html",
+      "title": "Chemical Conversations",
+      "note": "Next: Chemical Conversations — how electrical signals become chemical messages at the synapse, from vesicle fusion to receptor activation."
+    },
+    "header_links": [
+      {
+        "text": "📖 Textbook",
+        "href": "./textbook/",
+        "kind": "internal"
+      },
+      {
+        "text": "Course Home",
+        "href": "./index.html",
+        "kind": "internal"
+      }
+    ],
+    "interactives": null
+  },
+  "sections": [
+    {
+      "id": "the-resting-membrane-potential-a-battery-waiting-to-fire",
+      "title": "The Resting Membrane Potential: A Battery Waiting to Fire",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Resting membrane potential and ion distributions across the neuronal membrane",
+          "url": "https://www.google.com/search?q=resting+membrane+potential+ion+distribution+neuron+diagram&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The resting membrane potential is the voltage difference across the neuronal membrane when the cell is not actively signaling—typically around −70 mV (inside negative relative to outside). This isn't just a baseline; it's a loaded battery, an energetic reservoir that enables rapid electrical signaling. Understanding where this voltage comes from requires understanding ion distributions and the forces that create them.",
+          "links": [
+            {
+              "text": "The resting membrane potential",
+              "href": "https://en.wikipedia.org/wiki/Resting_potential",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Ion Distributions: The Unequal Players"
+        },
+        {
+          "type": "paragraph",
+          "text": "The intracellular and extracellular fluids have dramatically different ion compositions. Potassium (K⁺) is concentrated inside cells (~140 millimolar (mM) intracellular vs. ~5 mM extracellular—a 28:1 ratio). Sodium (Na⁺) shows the opposite pattern (~15 mM inside vs. ~145 mM outside—approximately a 1:10 ratio). Chloride (Cl⁻) is concentrated outside (~120 mM extracellular vs. ~10 mM intracellular—a 12:1 ratio). These concentration gradients represent stored electrochemical potential energy—like a charged battery waiting to discharge.",
+          "links": [
+            {
+              "text": "Potassium (K⁺)",
+              "href": "https://en.wikipedia.org/wiki/Potassium_in_biology",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Sodium (Na⁺)",
+              "href": "https://en.wikipedia.org/wiki/Sodium_in_biology",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Chloride (Cl⁻)",
+              "href": "https://en.wikipedia.org/wiki/Chloride",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The gradients don't exist by accident—they're actively maintained by the Na⁺/K⁺-ATPase pump, a molecular machine that burns one ATP molecule to export 3 Na⁺ ions and import 2 K⁺ ions (note the asymmetry: 3:2 stoichiometry, not 1:1). This electrogenic pump actually contributes a few millivolts directly to the resting potential because of the unequal exchange, but its primary role is maintaining the ion gradients. The pump consumes roughly 25% of all ATP produced by neurons—and up to 70% in heavily active neurons—representing the energetic price of electrical readiness.",
+          "links": [
+            {
+              "text": "Na⁺/K⁺-ATPase pump",
+              "href": "https://en.wikipedia.org/wiki/Na%2B/K%2B-ATPase",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Na⁺/K⁺-ATPase structure and pumping mechanism",
+          "url": "https://www.google.com/search?q=sodium+potassium+ATPase+pump+mechanism+diagram&tbm=isch"
+        }
+      ],
+      "subsections": [
+        {
+          "id": "the-nernst-equation-predicting-equilibrium-potentials",
+          "title": "The Nernst Equation: Predicting Equilibrium Potentials",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "If a membrane were permeable only to potassium, what voltage would result? Walther Nernst answered this in 1889 with his equation:",
+              "links": [
+                {
+                  "text": "Walther Nernst",
+                  "href": "https://en.wikipedia.org/wiki/Nernst_equation",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "equation",
+              "latex": "E_{\\text{ion}} = \\frac{RT}{zF} \\ln\\left(\\frac{[\\text{ion}]_{\\text{out}}}{[\\text{ion}]_{\\text{in}}}\\right)"
+            },
+            {
+              "type": "paragraph",
+              "text": "where:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                {
+                  "text": "\\(E_{\\text{ion}}\\) = equilibrium potential for the ion (in volts)"
+                },
+                {
+                  "text": "\\(R\\) = universal gas constant (8.314 J/(mol·K))"
+                },
+                {
+                  "text": "\\(T\\) = absolute temperature (in Kelvin; 310 K = 37°C for body temperature)"
+                },
+                {
+                  "text": "\\(z\\) = valence of the ion (charge: +1 for K⁺ and Na⁺, −1 for Cl⁻, +2 for Ca²⁺)"
+                },
+                {
+                  "text": "\\(F\\) = Faraday's constant (96,485 C/mol, the charge of one mole of electrons)"
+                },
+                {
+                  "text": "ln = natural logarithm (base e)"
+                },
+                {
+                  "text": "\\([\\text{ion}]_{\\text{out}}\\) and \\([\\text{ion}]_{\\text{in}}\\) = ion concentrations outside and inside the cell (in mM or M)"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "This equation emerges from thermodynamics: at equilibrium, the electrical potential energy (\\(zFE\\)) must exactly balance the chemical potential energy from the concentration gradient (\\(RT \\ln([\\text{out}]/[\\text{in}])\\)). The \\(RT/zF\\) term is essentially a conversion factor between the world of chemistry (concentrations) and the world of electricity (voltage)."
+            },
+            {
+              "type": "paragraph",
+              "text": "At body temperature (37°C = 310 K), we can simplify by plugging in the constants and converting to base-10 logarithms:"
+            },
+            {
+              "type": "equation",
+              "latex": "E_{\\text{ion}} = \\frac{61.5}{z} \\log_{10}\\left(\\frac{[\\text{ion}]_{\\text{out}}}{[\\text{ion}]_{\\text{in}}}\\right) \\text{ mV}"
+            },
+            {
+              "type": "paragraph",
+              "text": "The constant 61.5 mV comes from \\((RT/F) \\times \\ln(10)\\) at 310 K—a convenient shortcut that eliminates the need to remember multiple physical constants. Notice that this equation tells us something profound: a 10-fold concentration difference produces approximately 61.5 mV of potential difference (for a monovalent ion), while a 100-fold difference produces 123 mV. The relationship is logarithmic, not linear—doubling the concentration gradient doesn't double the voltage."
+            },
+            {
+              "type": "subheading",
+              "text": "Calculating equilibrium potentials for real neurons:"
+            },
+            {
+              "type": "paragraph",
+              "text": "For potassium, with its 28:1 inside-to-outside ratio: \\(E_K = 61.5 \\times \\log(5/140) = -89\\text{ mV}\\). For sodium: \\(E_{\\text{Na}} = 61.5 \\times \\log(145/15) = +60\\text{ mV}\\). These equilibrium potentials represent the voltage at which the electrical force on an ion exactly balances its concentration gradient—no net flow occurs."
+            },
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Nernst equation calculations and equilibrium potential diagrams",
+              "url": "https://www.google.com/search?q=Nernst+equation+equilibrium+potential+graph+calculation&tbm=isch"
+            },
+            {
+              "type": "paragraph",
+              "text": "The Nernst equation reveals a profound truth: the voltage across a membrane is determined by ion concentrations and membrane permeability. Change either, and you change the voltage. Neurons exploit this principle continuously—they don't create new ions during signaling; they simply open and close channels that change permeability, allowing the pre-existing gradients to drive voltage changes. This is why action potentials are so fast: channels change conformation in microseconds, and ions flow down pre-existing gradients. The slow part—rebuilding the gradients—happens continuously in the background via the ATP-consuming pump."
+            }
+          ]
+        },
+        {
+          "id": "the-goldman-hodgkin-katz-equation-competing-ions",
+          "title": "The Goldman-Hodgkin-Katz Equation: Competing Ions",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Real membranes are permeable to multiple ions simultaneously. The Goldman-Hodgkin-Katz (GHK) equation accounts for this by weighting each ion's contribution by its relative permeability:",
+              "links": [
+                {
+                  "text": "The Goldman-Hodgkin-Katz (GHK) equation",
+                  "href": "https://en.wikipedia.org/wiki/Goldman_equation",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "equation",
+              "latex": "V_m = 61.5 \\times \\log_{10}\\left[\\frac{P_K[\\text{K}^+]_{\\text{out}} + P_{\\text{Na}}[\\text{Na}^+]_{\\text{out}} + P_{\\text{Cl}}[\\text{Cl}^-]_{\\text{in}}}{P_K[\\text{K}^+]_{\\text{in}} + P_{\\text{Na}}[\\text{Na}^+]_{\\text{in}} + P_{\\text{Cl}}[\\text{Cl}^-]_{\\text{out}}}\\right]"
+            },
+            {
+              "type": "paragraph",
+              "text": "where:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                {
+                  "text": "\\(V_m\\) = membrane potential (in mV)"
+                },
+                {
+                  "text": "\\(P_K\\), \\(P_{\\text{Na}}\\), \\(P_{\\text{Cl}}\\) = relative permeabilities of the membrane to K⁺, Na⁺, and Cl⁻"
+                },
+                {
+                  "text": "\\([\\text{K}^+]_{\\text{out}}\\), \\([\\text{Na}^+]_{\\text{out}}\\), etc. = ion concentrations (in mM)"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Notice that chloride concentrations appear \"backwards\" (inside/outside reversed) compared to the cations. This is because Cl⁻ is negatively charged—the equation accounts for this by reversing the concentration ratio, which is mathematically equivalent to changing the sign of the valence \\(z\\) in the derivation from the Nernst equation.",
+              "lead_title": "Why is chloride's concentration flipped?"
+            },
+            {
+              "type": "paragraph",
+              "text": "The GHK equation is essentially a weighted average of the individual Nernst potentials, where each ion's influence is proportional to how easily it can cross the membrane. If potassium permeability were infinitely larger than all others, the equation would reduce to the Nernst equation for potassium alone, and \\(V_m = E_K\\). If all permeabilities were equal, sodium would dominate because of its steep concentration gradient.",
+              "lead_title": "Interpreting the equation"
+            },
+            {
+              "type": "paragraph",
+              "text": "At rest, \\(P_K: P_{\\text{Na}}: P_{\\text{Cl}} \\approx 1: 0.04: 0.45\\). Because potassium permeability dominates (25 times more permeable than sodium), the resting potential (−70 mV) sits much closer to \\(E_K\\) (−89 mV) than to \\(E_{\\text{Na}}\\) (+60 mV). The small sodium permeability is why neurons rest at −70 mV rather than at the potassium equilibrium potential—sodium's inward leak slightly depolarizes the membrane from where pure potassium selectivity would place it."
+            },
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Goldman-Hodgkin-Katz equation and relative ion permeabilities",
+              "url": "https://www.google.com/search?q=Goldman+equation+GHK+membrane+potential+permeability&tbm=isch"
+            },
+            {
+              "type": "paragraph",
+              "text": "This framework explains why the resting potential isn't fixed but can be modulated. Changing extracellular potassium concentration shifts \\(E_K\\) and therefore \\(V_m\\)—this is why hyperkalemia (high blood potassium) can cause cardiac arrhythmias and why dialysis patients must carefully manage potassium intake. Similarly, drugs that alter sodium permeability shift the resting potential toward \\(E_{\\text{Na}}\\), bringing neurons closer to threshold.",
+              "links": [
+                {
+                  "text": "This framework explains why the resting potential isn't fixed but can be modulated.",
+                  "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter01.html",
+                  "kind": "neuroscience_online"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the-action-potential-ionic-mechanisms",
+      "title": "The Action Potential: Ionic Mechanisms",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Hodgkin and Huxley's voltage clamp experiments on squid giant axon",
+          "url": "https://www.google.com/search?q=Hodgkin+Huxley+squid+giant+axon+voltage+clamp+Nobel+Prize&tbm=isch"
+        },
+        {
+          "type": "stage",
+          "text": "In 1952, Alan Hodgkin and Andrew Huxley published five papers that explained how action potentials work at the ionic level. They shared the 1963 Nobel Prize for this work—experiments done before anyone knew what an ion channel protein looked like."
+        },
+        {
+          "type": "paragraph",
+          "text": "Hodgkin and Huxley used the squid giant axon (up to 1 mm diameter—visible to the naked eye) and the voltage clamp technique to isolate how membrane conductance changed with voltage. By \"clamping\" the membrane at a fixed voltage, they could measure the ionic currents flowing across the membrane without the complication of voltage changes. Their key insight: during an action potential, sodium conductance (\\(g_{\\text{Na}}\\), measured in siemens (S) or mS/cm², the inverse of resistance) increases first and transiently, then potassium conductance (\\(g_K\\)) increases more slowly and persistently. Conductance directly reflects how many ion channels are open—more open channels means higher conductance and greater ionic current flow.",
+          "links": [
+            {
+              "text": "Hodgkin and Huxley",
+              "href": "https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "voltage clamp technique",
+              "href": "https://en.wikipedia.org/wiki/Voltage_clamp",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Rising Phase: Sodium Channel Activation"
+        },
+        {
+          "type": "paragraph",
+          "text": "When membrane potential reaches threshold (approximately −55 mV), voltage-gated sodium channels undergo a conformational change: their S4 voltage-sensing segments move outward in response to depolarization, opening the channel pore. Sodium rushes in, driven by both its concentration gradient and the electrical gradient—the membrane is negative inside, attracting positive Na⁺. This influx further depolarizes the membrane, opening more sodium channels in a positive feedback loop (the Hodgkin cycle). Within a fraction of a millisecond, the membrane potential swings from −70 mV toward +40 mV—approaching \\(E_{\\text{Na}}\\) (+60 mV) but never quite reaching it.",
+          "links": [
+            {
+              "text": "voltage-gated sodium channels",
+              "href": "https://en.wikipedia.org/wiki/Voltage-gated_sodium_channel",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Voltage-gated sodium channel structure showing activation and inactivation gates",
+          "url": "https://www.google.com/search?q=voltage+gated+sodium+channel+structure+activation+inactivation&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "The Falling Phase: Inactivation and Potassium Channels"
+        },
+        {
+          "type": "paragraph",
+          "text": "Two mechanisms terminate the sodium influx. First, sodium channels inactivate: an intracellular \"ball-and-chain\" structure swings into the pore, blocking further sodium entry even though the activation gates remain open. This inactivation is distinct from closing—the channel is open but blocked. Second, voltage-gated potassium channels open more slowly (delayed rectifiers). Potassium rushes out, driven by both its concentration gradient (high K⁺ inside) and the now-positive membrane potential. This potassium efflux repolarizes the membrane back toward \\(E_K\\).",
+          "links": [
+            {
+              "text": "sodium channels inactivate",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter02.html",
+              "kind": "neuroscience_online"
+            },
+            {
+              "text": "voltage-gated potassium channels",
+              "href": "https://en.wikipedia.org/wiki/Voltage-gated_potassium_channel",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The potassium channels close slowly, causing a brief afterhyperpolarization where the membrane potential dips below the resting level (to approximately −80 mV) before returning to −70 mV as potassium permeability returns to baseline. Meanwhile, the Na⁺/K⁺-ATPase works continuously in the background, restoring the ion gradients slightly depleted by each action potential."
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Action potential phases showing depolarization, repolarization, and hyperpolarization",
+          "url": "https://www.google.com/search?q=action+potential+phases+depolarization+repolarization+hyperpolarization+diagram&tbm=isch"
+        }
+      ],
+      "subsections": [
+        {
+          "id": "refractory-periods-why-signals-travel-one-way",
+          "title": "Refractory Periods: Why Signals Travel One Way",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The absolute refractory period (approximately 1 ms) occurs while sodium channels are inactivated—no stimulus, however strong, can trigger another action potential. The relative refractory period (several ms) follows, when some sodium channels have recovered but potassium channels remain open; a stronger-than-normal stimulus is required. These refractory periods serve crucial functions: they limit maximum firing frequency (typically 500-1000 Hz), ensure all-or-nothing amplitude by allowing full channel recovery, and enforce unidirectional propagation—the membrane behind an advancing action potential is refractory and cannot be re-excited."
+            },
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Absolute and relative refractory periods during action potential recovery",
+              "url": "https://www.google.com/search?q=refractory+period+absolute+relative+action+potential+graph&tbm=isch"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "propagation-of-the-action-potential",
+      "title": "Propagation of the Action Potential",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Action potential propagation via local circuit currents",
+          "url": "https://www.google.com/search?q=action+potential+propagation+local+circuit+currents+axon&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "An action potential at one point on an axon must somehow trigger action potentials further along. This propagation occurs through local circuit currents: the depolarized region becomes a current source, and positive charges flow intracellularly toward adjacent resting membrane, depolarizing it to threshold. The action potential doesn't \"travel\"—it regenerates sequentially along the axon, like a line of dominoes falling.",
+          "links": [
+            {
+              "text": "This propagation occurs through local circuit currents",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter03.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        }
+      ],
+      "subsections": [
+        {
+          "id": "cable-properties-length-and-time-constants",
+          "title": "Cable Properties: Length and Time Constants",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The passive electrical properties of axons determine how effectively local currents spread. The cable equation describes this spread using two key parameters:",
+              "links": [
+                {
+                  "text": "cable equation",
+                  "href": "https://en.wikipedia.org/wiki/Cable_theory",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "subheading",
+              "text": "Length constant (\\(\\lambda\\)):"
+            },
+            {
+              "type": "equation",
+              "latex": "\\lambda = \\sqrt{\\frac{r_m}{r_i}}"
+            },
+            {
+              "type": "paragraph",
+              "text": "where:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                {
+                  "text": "\\(\\lambda\\) = length constant (in mm or μm), the characteristic distance for passive current spread"
+                },
+                {
+                  "text": "\\(r_m\\) = specific membrane resistance (in Ω·cm²), measuring how \"leaky\" the membrane is to ions"
+                },
+                {
+                  "text": "\\(r_i\\) = internal (axoplasmic) resistance per unit length (in Ω/cm), measuring resistance to current flow inside the axon"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "The length constant measures how far current spreads along the axon before decaying to 37% (1/e) of its original value—typically 0.1-1 mm in unmyelinated axons. Think of \\(\\lambda\\) as the \"reach\" of electrical influence: a larger \\(\\lambda\\) means current spreads further. Larger diameter axons have lower \\(r_i\\) (more cross-sectional area for current flow, like a wider pipe) and therefore larger \\(\\lambda\\), which is why the squid giant axon (500 μm diameter) conducts faster than your thin unmyelinated C-fibers (1 μm diameter). The square root relationship means you need to quadruple the diameter to double the length constant."
+            },
+            {
+              "type": "subheading",
+              "text": "Time constant (\\(\\tau\\)):"
+            },
+            {
+              "type": "equation",
+              "latex": "\\tau = r_m \\times c_m"
+            },
+            {
+              "type": "paragraph",
+              "text": "where:"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                {
+                  "text": "\\(\\tau\\) = membrane time constant (in milliseconds), the characteristic time for voltage changes"
+                },
+                {
+                  "text": "\\(r_m\\) = specific membrane resistance (in Ω·cm²)"
+                },
+                {
+                  "text": "\\(c_m\\) = specific membrane capacitance (in F/cm² or μF/cm²), measuring the membrane's ability to store charge"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "The time constant measures how quickly the membrane potential responds to current injection—typically 1-20 ms. Specifically, \\(\\tau\\) is the time required for the voltage to reach 63% (1 − 1/e) of its final steady-state value after a step current injection. A membrane acts like an RC circuit: the resistance controls how much current flows, while the capacitance stores charge and slows voltage changes. Longer time constants mean slower responses but better temporal integration of synaptic inputs—the membrane acts as a low-pass filter, smoothing rapid fluctuations. Shorter time constants allow faster signaling but less integration."
+            },
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Cable properties of neurons showing length constant and time constant",
+              "url": "https://www.google.com/search?q=cable+properties+neuron+length+constant+time+constant+diagram&tbm=isch"
+            }
+          ]
+        },
+        {
+          "id": "continuous-vs-saltatory-conduction",
+          "title": "Continuous vs. Saltatory Conduction",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "In unmyelinated axons, action potentials propagate continuously—each micrometer of membrane must depolarize and fire. Conduction velocity depends on axon diameter following a square-root relationship: \\(\\text{velocity} \\propto \\sqrt{\\text{diameter}}\\). This arises because larger diameter decreases internal resistance (helping current spread), but also increases membrane area (increasing capacitance, which slows charging). The net effect is the square-root dependence. Velocity ranges from about 0.5-1 m/s for thin 1 μm C-fibers (slow pain and temperature) to 25 m/s for the massive 500 μm squid giant axon (escape response)."
+            },
+            {
+              "type": "paragraph",
+              "text": "Myelination revolutionizes propagation. Oligodendrocytes (in the CNS) and Schwann cells (in the PNS) wrap axons in multiple layers (up to 150 wraps) of lipid-rich membrane, creating an insulating sheath. This increases membrane resistance (\\(r_m\\)) by ~5000-fold (less ion leakage through the thick myelin) and decreases membrane capacitance (\\(c_m\\)) by ~50-fold (greater separation between the conducting solutions). Recall that \\(\\lambda = \\sqrt{r_m/r_i}\\) and \\(\\tau = r_m \\times c_m\\)—the increased \\(r_m\\) dramatically increases the length constant (current spreads much further), while the decreased \\(c_m\\) partially compensates to keep the time constant reasonable.",
+              "links": [
+                {
+                  "text": "Myelination",
+                  "href": "https://en.wikipedia.org/wiki/Saltatory_conduction",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "Oligodendrocytes",
+                  "href": "https://en.wikipedia.org/wiki/Oligodendrocyte",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "Schwann cells",
+                  "href": "https://en.wikipedia.org/wiki/Schwann_cell",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Action potentials occur only at nodes of Ranvier, unmyelinated gaps (~1 μm wide, spaced 1-2 mm apart) where voltage-gated sodium channels cluster at extraordinary density (1000-2000 channels/μm², compared to 10-100/μm² in unmyelinated membrane). Current \"jumps\" from node to node—saltatory conduction (from Latin saltare, \"to jump\")—achieving velocities up to 120 m/s in 20 μm myelinated fibers while using 100× less energy than continuous conduction would require (fewer channels open, less ATP needed to restore gradients).",
+              "links": [
+                {
+                  "text": "nodes of Ranvier",
+                  "href": "https://en.wikipedia.org/wiki/Node_of_Ranvier",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Saltatory conduction at nodes of Ranvier in myelinated axons",
+              "url": "https://www.google.com/search?q=saltatory+conduction+nodes+of+Ranvier+myelination+diagram&tbm=isch"
+            },
+            {
+              "type": "stage",
+              "text": "Evolution faced a tradeoff: increase axon diameter (metabolically expensive, takes up space) or evolve myelination (complex developmental program, vulnerable to autoimmune attack). Vertebrates chose myelination, enabling complex brains in compact skulls. Invertebrates chose large axons, which is why the squid giant axon—used for escape responses—reaches 1 mm diameter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "channel-diversity-and-clinical-relevance",
+      "title": "Channel Diversity and Clinical Relevance",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Channelopathies: When Channels Fail"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Nav1.7 mutations causing congenital insensitivity to pain",
+          "url": "https://www.google.com/search?q=SCN9A+Nav1.7+congenital+insensitivity+pain+mutation&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Channelopathies are diseases caused by ion channel mutations. In 2006, Cambridge researchers discovered a Pakistani family where some members felt no pain whatsoever—mutations in SCN9A eliminated functional Nav1.7 sodium channels, specifically expressed in pain-sensing neurons. These individuals could feel touch, temperature, and pressure, but never experienced pain. Tragically, without pain's protective warnings, they suffered repeated injuries. The opposite mutation—Nav1.7 hyperactivity—causes erythromelalgia, where patients experience burning pain from mild warmth.",
+          "links": [
+            {
+              "text": "Channelopathies",
+              "href": "https://en.wikipedia.org/wiki/Channelopathy",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Cambridge researchers discovered a Pakistani family",
+              "href": "https://doi.org/10.1038/nature05413",
+              "kind": "doi"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Multiple Sclerosis and Demyelination"
+        },
+        {
+          "type": "paragraph",
+          "text": "Multiple sclerosis is an autoimmune disease where immune cells attack myelin. As myelin degrades, the length constant shrinks—current no longer reaches the next node, and conduction fails. Patients experience progressive paralysis, sensory loss, and cognitive decline as white matter highways dissolve. The temperature sensitivity of MS symptoms (worsening with heat) reflects how membrane capacitance and channel kinetics change with temperature, further degrading already-marginal conduction.",
+          "links": [
+            {
+              "text": "Multiple sclerosis",
+              "href": "https://en.wikipedia.org/wiki/Multiple_sclerosis",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Multiple sclerosis demyelination visible on brain MRI",
+          "url": "https://www.google.com/search?q=multiple+sclerosis+demyelination+MRI+lesions+brain&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "Epilepsy: Electrical Storms"
+        },
+        {
+          "type": "paragraph",
+          "text": "Epilepsy represents network-level electrical failure. Dravet syndrome, caused by SCN1A mutations, illustrates the exquisite balance required: the mutation affects inhibitory interneurons more than excitatory neurons, shifting the network toward hyperexcitability. During seizures, millions of neurons fire synchronously—the opposite of normal desynchronized activity. Antiepileptic drugs typically work by enhancing inhibition (benzodiazepines enhance GABA receptors) or reducing sodium channel activity (phenytoin, carbamazepine).",
+          "links": [
+            {
+              "text": "Epilepsy",
+              "href": "https://en.wikipedia.org/wiki/Epilepsy",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Dravet syndrome",
+              "href": "https://doi.org/10.1038/nrneurol.2014.20",
+              "kind": "doi"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "EEG recordings during epileptic seizures showing spike-wave patterns",
+          "url": "https://www.google.com/search?q=epilepsy+EEG+seizure+spike+wave+pattern&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "Channel Pharmacology"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ion channels are major drug targets. Local anesthetics (lidocaine, novocaine) block voltage-gated sodium channels, preventing action potentials in pain fibers. Tetrodotoxin (from pufferfish) and saxitoxin (from dinoflagellates) are exquisitely potent sodium channel blockers—nanomolar concentrations cause paralysis and death. TEA (tetraethylammonium) and 4-aminopyridine block potassium channels, prolonging action potentials—4-AP is used therapeutically in multiple sclerosis to enhance conduction through demyelinated segments.",
+          "links": [
+            {
+              "text": "Local anesthetics",
+              "href": "https://en.wikipedia.org/wiki/Local_anesthetic",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Tetrodotoxin",
+              "href": "https://en.wikipedia.org/wiki/Tetrodotoxin",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "saxitoxin",
+              "href": "https://en.wikipedia.org/wiki/Saxitoxin",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "TEA (tetraethylammonium)",
+              "href": "https://en.wikipedia.org/wiki/Tetraethylammonium",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "4-aminopyridine",
+              "href": "https://en.wikipedia.org/wiki/4-Aminopyridine",
+              "kind": "wikipedia"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evolutionary-origins-the-ancient-voltage-of-life",
+      "title": "Evolutionary Origins: The Ancient Voltage of Life",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Bacterial action potentials in Bacillus subtilis biofilms",
+          "url": "https://www.google.com/search?q=bacterial+action+potential+Bacillus+subtilis+biofilm+potassium+channel&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Electrical signaling is ancient. Gürol Süel's lab discovered that Bacillus subtilis bacteria generate action potentials using potassium channels structurally similar to yours. When nutrients run low in a biofilm's center, bacteria fire electrical signals that propagate outward, coordinating colony behavior. These bacterial channels follow Hodgkin-Huxley dynamics—the same equations govern bacterial and human electrical signaling. The molecular machinery for bioelectricity evolved once, billions of years ago, and has been conserved ever since.",
+          "links": [
+            {
+              "text": "Gürol Süel's lab discovered",
+              "href": "https://doi.org/10.1038/nature15709",
+              "kind": "doi"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Thermodynamic Cost of Thought"
+        },
+        {
+          "type": "paragraph",
+          "text": "David Attwell and Simon Laughlin calculated that approximately 50% of the brain's energy budget goes to reversing ion movements from action potentials and synaptic transmission. Your brain consumes roughly 20 watts of power—enough to power a dim light bulb—with 86 billion neurons, each firing action potentials at rates from 0.1 to 100 Hz. A single action potential costs relatively little energy per se (perhaps ~10⁸ ATP molecules to restore gradients after one spike), but multiply this by billions of neurons firing continuously, and the costs add up dramatically. This is why your brain, despite being just 2% of body weight, uses 20% of your oxygen consumption and 25% of your glucose. The price of consciousness is fundamentally thermodynamic—every thought increases universal entropy as orderly chemical energy (ATP) dissipates into heat and disorder.",
+          "links": [
+            {
+              "text": "David Attwell and Simon Laughlin calculated",
+              "href": "https://doi.org/10.1038/35090500",
+              "kind": "doi"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Brain energy metabolism and neuronal ATP consumption",
+          "url": "https://www.google.com/search?q=brain+energy+metabolism+ATP+consumption+neuron&tbm=isch"
+        }
+      ]
+    },
+    {
+      "id": "thought-questions",
+      "title": "Thought Questions for Discussion",
+      "level": 2,
+      "kind": "thought_questions",
+      "blocks": [
+        {
+          "type": "stage",
+          "text": "Three questions to spark discussion before your next class:"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Nernst equation predicts \\(E_K = -89\\text{ mV}\\) for potassium, yet neurons rest at −70 mV. Why the 19 mV difference? Consider what happens if you experimentally block all sodium channels—does the resting potential shift toward \\(E_K\\)? What does this tell you about the molecular basis of the resting potential, and how might pharmacological manipulation of sodium leak channels affect neuronal excitability?",
+          "lead_title": "The Nernst vs. Reality Puzzle"
+        },
+        {
+          "type": "paragraph",
+          "text": "Evolution produced two solutions for fast conduction: giant axons (squid) and myelinated axons (vertebrates). The squid giant axon is 500 μm diameter and conducts at 25 m/s. Your myelinated motor neurons are 20 μm diameter and conduct at 120 m/s. Calculate how large an unmyelinated axon would need to be to conduct at 120 m/s. (Hint: velocity scales with \\(\\sqrt{\\text{diameter}}\\) for unmyelinated axons.) Why was this solution not viable for vertebrate nervous systems?",
+          "lead_title": "The Speed-Size Tradeoff"
+        },
+        {
+          "type": "paragraph",
+          "text": "Myelination increases conduction velocity 100-fold and appeared 425 million years ago, enabling complex vertebrate nervous systems. Yet myelin is uniquely vulnerable—multiple sclerosis, Guillain-Barré syndrome, and leukodystrophies all attack it. Why didn't evolution produce a more robust insulation? What does myelin's vulnerability reveal about biological tradeoffs between performance and resilience?",
+          "lead_title": "The Vulnerability Question"
+        }
+      ]
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions",
+      "level": 2,
+      "kind": "practice",
+      "blocks": [],
+      "subsections": [
+        {
+          "id": "fill-in-the-blank",
+          "title": "Fill in the Blank",
+          "level": 3,
+          "kind": "practice",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "• The resting membrane potential of a typical neuron is approximately _______ mV, maintained by the _______ pump."
+            },
+            {
+              "type": "paragraph",
+              "text": "• The Nernst equation calculates the _______ potential for a single ion, while the _______ equation accounts for multiple permeable ions."
+            },
+            {
+              "type": "paragraph",
+              "text": "• During the action potential rising phase, voltage-gated _______ channels open first, driving the membrane toward \\(E_{\\text{Na}}\\) = _______ mV."
+            },
+            {
+              "type": "paragraph",
+              "text": "• Sodium channel _______ (not closing) terminates Na⁺ influx and is responsible for the _______ refractory period."
+            },
+            {
+              "type": "paragraph",
+              "text": "• The length constant \\(\\lambda = \\sqrt{r_m/r_i}\\) measures how far _______ spreads before decaying to _______% of its original value."
+            },
+            {
+              "type": "paragraph",
+              "text": "• Myelination increases the _______ constant and decreases the _______ constant, enabling saltatory conduction."
+            },
+            {
+              "type": "paragraph",
+              "text": "• In myelinated axons, action potentials regenerate only at _______ of Ranvier, where sodium channels cluster at densities of _______/μm²."
+            },
+            {
+              "type": "paragraph",
+              "text": "• Congenital insensitivity to pain is caused by mutations in _______, the gene encoding _______ sodium channels."
+            }
+          ]
+        },
+        {
+          "id": "short-answer-questions",
+          "title": "Short Answer Questions",
+          "level": 3,
+          "kind": "practice",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "• Explain why the resting membrane potential (−70 mV) is closer to \\(E_K\\) (−89 mV) than to \\(E_{\\text{Na}}\\) (+60 mV)."
+            },
+            {
+              "type": "paragraph",
+              "text": "• Describe the sequence of ion channel events during the action potential, from threshold to afterhyperpolarization."
+            },
+            {
+              "type": "paragraph",
+              "text": "• Why do refractory periods ensure unidirectional action potential propagation?"
+            },
+            {
+              "type": "paragraph",
+              "text": "• Compare continuous conduction in unmyelinated axons with saltatory conduction in myelinated axons. What are the advantages and vulnerabilities of each?"
+            },
+            {
+              "type": "paragraph",
+              "text": "• How does local anesthetic work at the molecular level, and why does it block pain before motor function?"
+            },
+            {
+              "type": "paragraph",
+              "text": "• Explain how a mutation that slightly shifts sodium channel activation voltage could cause either painlessness or chronic pain."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "thought_questions": [
+    {
+      "type": "question",
+      "title": "The Nernst vs. Reality Puzzle",
+      "text": "The Nernst equation predicts \\(E_K = -89\\text{ mV}\\) for potassium, yet neurons rest at −70 mV. Why the 19 mV difference? Consider what happens if you experimentally block all sodium channels—does the resting potential shift toward \\(E_K\\)? What does this tell you about the molecular basis of the resting potential, and how might pharmacological manipulation of sodium leak channels affect neuronal excitability?"
+    },
+    {
+      "type": "question",
+      "title": "The Speed-Size Tradeoff",
+      "text": "Evolution produced two solutions for fast conduction: giant axons (squid) and myelinated axons (vertebrates). The squid giant axon is 500 μm diameter and conducts at 25 m/s. Your myelinated motor neurons are 20 μm diameter and conduct at 120 m/s. Calculate how large an unmyelinated axon would need to be to conduct at 120 m/s. (Hint: velocity scales with \\(\\sqrt{\\text{diameter}}\\) for unmyelinated axons.) Why was this solution not viable for vertebrate nervous systems?"
+    },
+    {
+      "type": "question",
+      "title": "The Vulnerability Question",
+      "text": "Myelination increases conduction velocity 100-fold and appeared 425 million years ago, enabling complex vertebrate nervous systems. Yet myelin is uniquely vulnerable—multiple sclerosis, Guillain-Barré syndrome, and leukodystrophies all attack it. Why didn't evolution produce a more robust insulation? What does myelin's vulnerability reveal about biological tradeoffs between performance and resilience?"
+    }
+  ],
+  "practice_questions": {
+    "fill_in_the_blanks": [
+      "The resting membrane potential of a typical neuron is approximately _______ mV, maintained by the _______ pump.",
+      "The Nernst equation calculates the _______ potential for a single ion, while the _______ equation accounts for multiple permeable ions.",
+      "During the action potential rising phase, voltage-gated _______ channels open first, driving the membrane toward \\(E_{\\text{Na}}\\) = _______ mV.",
+      "Sodium channel _______ (not closing) terminates Na⁺ influx and is responsible for the _______ refractory period.",
+      "The length constant \\(\\lambda = \\sqrt{r_m/r_i}\\) measures how far _______ spreads before decaying to _______% of its original value.",
+      "Myelination increases the _______ constant and decreases the _______ constant, enabling saltatory conduction.",
+      "In myelinated axons, action potentials regenerate only at _______ of Ranvier, where sodium channels cluster at densities of _______/μm².",
+      "Congenital insensitivity to pain is caused by mutations in _______, the gene encoding _______ sodium channels."
+    ],
+    "short_answers": [
+      "Explain why the resting membrane potential (−70 mV) is closer to \\(E_K\\) (−89 mV) than to \\(E_{\\text{Na}}\\) (+60 mV).",
+      "Describe the sequence of ion channel events during the action potential, from threshold to afterhyperpolarization.",
+      "Why do refractory periods ensure unidirectional action potential propagation?",
+      "Compare continuous conduction in unmyelinated axons with saltatory conduction in myelinated axons. What are the advantages and vulnerabilities of each?",
+      "How does local anesthetic work at the molecular level, and why does it block pain before motor function?",
+      "Explain how a mutation that slightly shifts sodium channel activation voltage could cause either painlessness or chronic pain."
+    ]
+  },
+  "closing": [
+    {
+      "type": "note",
+      "kind": "preview",
+      "text": "Synaptic transmission, vesicle fusion, and neurotransmitter release at the synapse",
+      "url": "https://www.google.com/search?q=synaptic+transmission+neuromuscular+junction+vesicle+fusion+neurotransmitter&tbm=isch"
+    }
+  ],
+  "links": [
+    {
+      "text": "Synaptic transmission, vesicle fusion, and neurotransmitter release at the synapse",
+      "href": "https://www.google.com/search?q=synaptic+transmission+neuromuscular+junction+vesicle+fusion+neurotransmitter&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Resting membrane potential and ion distributions across the neuronal membrane",
+      "href": "https://www.google.com/search?q=resting+membrane+potential+ion+distribution+neuron+diagram&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "The resting membrane potential",
+      "href": "https://en.wikipedia.org/wiki/Resting_potential",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Potassium (K⁺)",
+      "href": "https://en.wikipedia.org/wiki/Potassium_in_biology",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Sodium (Na⁺)",
+      "href": "https://en.wikipedia.org/wiki/Sodium_in_biology",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Chloride (Cl⁻)",
+      "href": "https://en.wikipedia.org/wiki/Chloride",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Na⁺/K⁺-ATPase pump",
+      "href": "https://en.wikipedia.org/wiki/Na%2B/K%2B-ATPase",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Na⁺/K⁺-ATPase structure and pumping mechanism",
+      "href": "https://www.google.com/search?q=sodium+potassium+ATPase+pump+mechanism+diagram&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Walther Nernst",
+      "href": "https://en.wikipedia.org/wiki/Nernst_equation",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Nernst equation calculations and equilibrium potential diagrams",
+      "href": "https://www.google.com/search?q=Nernst+equation+equilibrium+potential+graph+calculation&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "The Goldman-Hodgkin-Katz (GHK) equation",
+      "href": "https://en.wikipedia.org/wiki/Goldman_equation",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Goldman-Hodgkin-Katz equation and relative ion permeabilities",
+      "href": "https://www.google.com/search?q=Goldman+equation+GHK+membrane+potential+permeability&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "This framework explains why the resting potential isn't fixed but can be modulated.",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter01.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "Hodgkin and Huxley's voltage clamp experiments on squid giant axon",
+      "href": "https://www.google.com/search?q=Hodgkin+Huxley+squid+giant+axon+voltage+clamp+Nobel+Prize&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Hodgkin and Huxley",
+      "href": "https://en.wikipedia.org/wiki/Hodgkin%E2%80%93Huxley_model",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "voltage clamp technique",
+      "href": "https://en.wikipedia.org/wiki/Voltage_clamp",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "voltage-gated sodium channels",
+      "href": "https://en.wikipedia.org/wiki/Voltage-gated_sodium_channel",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Voltage-gated sodium channel structure showing activation and inactivation gates",
+      "href": "https://www.google.com/search?q=voltage+gated+sodium+channel+structure+activation+inactivation&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "sodium channels inactivate",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter02.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "voltage-gated potassium channels",
+      "href": "https://en.wikipedia.org/wiki/Voltage-gated_potassium_channel",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Action potential phases showing depolarization, repolarization, and hyperpolarization",
+      "href": "https://www.google.com/search?q=action+potential+phases+depolarization+repolarization+hyperpolarization+diagram&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Absolute and relative refractory periods during action potential recovery",
+      "href": "https://www.google.com/search?q=refractory+period+absolute+relative+action+potential+graph&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Action potential propagation via local circuit currents",
+      "href": "https://www.google.com/search?q=action+potential+propagation+local+circuit+currents+axon&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "This propagation occurs through local circuit currents",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter03.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "cable equation",
+      "href": "https://en.wikipedia.org/wiki/Cable_theory",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Cable properties of neurons showing length constant and time constant",
+      "href": "https://www.google.com/search?q=cable+properties+neuron+length+constant+time+constant+diagram&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Myelination",
+      "href": "https://en.wikipedia.org/wiki/Saltatory_conduction",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Oligodendrocytes",
+      "href": "https://en.wikipedia.org/wiki/Oligodendrocyte",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Schwann cells",
+      "href": "https://en.wikipedia.org/wiki/Schwann_cell",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "nodes of Ranvier",
+      "href": "https://en.wikipedia.org/wiki/Node_of_Ranvier",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Saltatory conduction at nodes of Ranvier in myelinated axons",
+      "href": "https://www.google.com/search?q=saltatory+conduction+nodes+of+Ranvier+myelination+diagram&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Nav1.7 mutations causing congenital insensitivity to pain",
+      "href": "https://www.google.com/search?q=SCN9A+Nav1.7+congenital+insensitivity+pain+mutation&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Channelopathies",
+      "href": "https://en.wikipedia.org/wiki/Channelopathy",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Cambridge researchers discovered a Pakistani family",
+      "href": "https://doi.org/10.1038/nature05413",
+      "kind": "doi"
+    },
+    {
+      "text": "Multiple sclerosis",
+      "href": "https://en.wikipedia.org/wiki/Multiple_sclerosis",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Multiple sclerosis demyelination visible on brain MRI",
+      "href": "https://www.google.com/search?q=multiple+sclerosis+demyelination+MRI+lesions+brain&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Epilepsy",
+      "href": "https://en.wikipedia.org/wiki/Epilepsy",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Dravet syndrome",
+      "href": "https://doi.org/10.1038/nrneurol.2014.20",
+      "kind": "doi"
+    },
+    {
+      "text": "EEG recordings during epileptic seizures showing spike-wave patterns",
+      "href": "https://www.google.com/search?q=epilepsy+EEG+seizure+spike+wave+pattern&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Local anesthetics",
+      "href": "https://en.wikipedia.org/wiki/Local_anesthetic",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Tetrodotoxin",
+      "href": "https://en.wikipedia.org/wiki/Tetrodotoxin",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "saxitoxin",
+      "href": "https://en.wikipedia.org/wiki/Saxitoxin",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "TEA (tetraethylammonium)",
+      "href": "https://en.wikipedia.org/wiki/Tetraethylammonium",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "4-aminopyridine",
+      "href": "https://en.wikipedia.org/wiki/4-Aminopyridine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Bacterial action potentials in Bacillus subtilis biofilms",
+      "href": "https://www.google.com/search?q=bacterial+action+potential+Bacillus+subtilis+biofilm+potassium+channel&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Gürol Süel's lab discovered",
+      "href": "https://doi.org/10.1038/nature15709",
+      "kind": "doi"
+    },
+    {
+      "text": "David Attwell and Simon Laughlin calculated",
+      "href": "https://doi.org/10.1038/35090500",
+      "kind": "doi"
+    },
+    {
+      "text": "Brain energy metabolism and neuronal ATP consumption",
+      "href": "https://www.google.com/search?q=brain+energy+metabolism+ATP+consumption+neuron&tbm=isch",
+      "kind": "image_search"
+    }
+  ],
+  "images": [
+    {
+      "src": "GeminiSummaryCh2.png",
+      "alt": "Electrical Neural activity Visual Summary",
+      "viewer": "image-viewer.html?image=GeminiSummaryCh2.png",
+      "role": "summary"
+    }
+  ],
+  "image_searches": [
+    {
+      "caption": "Resting membrane potential and ion distributions across the neuronal membrane",
+      "url": "https://www.google.com/search?q=resting+membrane+potential+ion+distribution+neuron+diagram&tbm=isch"
+    },
+    {
+      "caption": "Na⁺/K⁺-ATPase structure and pumping mechanism",
+      "url": "https://www.google.com/search?q=sodium+potassium+ATPase+pump+mechanism+diagram&tbm=isch"
+    },
+    {
+      "caption": "Nernst equation calculations and equilibrium potential diagrams",
+      "url": "https://www.google.com/search?q=Nernst+equation+equilibrium+potential+graph+calculation&tbm=isch"
+    },
+    {
+      "caption": "Goldman-Hodgkin-Katz equation and relative ion permeabilities",
+      "url": "https://www.google.com/search?q=Goldman+equation+GHK+membrane+potential+permeability&tbm=isch"
+    },
+    {
+      "caption": "Hodgkin and Huxley's voltage clamp experiments on squid giant axon",
+      "url": "https://www.google.com/search?q=Hodgkin+Huxley+squid+giant+axon+voltage+clamp+Nobel+Prize&tbm=isch"
+    },
+    {
+      "caption": "Voltage-gated sodium channel structure showing activation and inactivation gates",
+      "url": "https://www.google.com/search?q=voltage+gated+sodium+channel+structure+activation+inactivation&tbm=isch"
+    },
+    {
+      "caption": "Action potential phases showing depolarization, repolarization, and hyperpolarization",
+      "url": "https://www.google.com/search?q=action+potential+phases+depolarization+repolarization+hyperpolarization+diagram&tbm=isch"
+    },
+    {
+      "caption": "Absolute and relative refractory periods during action potential recovery",
+      "url": "https://www.google.com/search?q=refractory+period+absolute+relative+action+potential+graph&tbm=isch"
+    },
+    {
+      "caption": "Action potential propagation via local circuit currents",
+      "url": "https://www.google.com/search?q=action+potential+propagation+local+circuit+currents+axon&tbm=isch"
+    },
+    {
+      "caption": "Cable properties of neurons showing length constant and time constant",
+      "url": "https://www.google.com/search?q=cable+properties+neuron+length+constant+time+constant+diagram&tbm=isch"
+    },
+    {
+      "caption": "Saltatory conduction at nodes of Ranvier in myelinated axons",
+      "url": "https://www.google.com/search?q=saltatory+conduction+nodes+of+Ranvier+myelination+diagram&tbm=isch"
+    },
+    {
+      "caption": "Nav1.7 mutations causing congenital insensitivity to pain",
+      "url": "https://www.google.com/search?q=SCN9A+Nav1.7+congenital+insensitivity+pain+mutation&tbm=isch"
+    },
+    {
+      "caption": "Multiple sclerosis demyelination visible on brain MRI",
+      "url": "https://www.google.com/search?q=multiple+sclerosis+demyelination+MRI+lesions+brain&tbm=isch"
+    },
+    {
+      "caption": "EEG recordings during epileptic seizures showing spike-wave patterns",
+      "url": "https://www.google.com/search?q=epilepsy+EEG+seizure+spike+wave+pattern&tbm=isch"
+    },
+    {
+      "caption": "Bacterial action potentials in Bacillus subtilis biofilms",
+      "url": "https://www.google.com/search?q=bacterial+action+potential+Bacillus+subtilis+biofilm+potassium+channel&tbm=isch"
+    },
+    {
+      "caption": "Brain energy metabolism and neuronal ATP consumption",
+      "url": "https://www.google.com/search?q=brain+energy+metabolism+ATP+consumption+neuron&tbm=isch"
+    }
+  ]
+}

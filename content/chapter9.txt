@@ -1,0 +1,175 @@
+# Chapter 9 — Attention and Chemical Senses: Filtering Reality
+
+Your senses flood your brain with far more information than you can consciously process. Every second, millions of photons hit your retinas, thousands of sound pressure waves reach your ears, hundreds of odorant molecules bind to nasal receptors, and countless mechanoreceptors fire across your skin. Yet your conscious experience is selective, focused, and coherent. This is attention—the brain's solution to information overload. Today we'll discover how attention acts as both spotlight and filter, amplifying relevant signals while suppressing distractions, implemented through gain modulation across sensory cortex. We'll explore how sound transforms from air pressure to perceived speech through the cochlea's elegant frequency analysis, how smell bypasses the thalamus to directly reach cortex and limbic structures linking scent to memory and emotion, and how taste provides just five elementary signals that combine with smell and touch to create the rich experience of flavor. Finally, we'll revisit the universal principles—receptive fields, tuning, topographic representation, population coding—that unite all sensory systems, and understand how distributed neural ensembles form engrams, the physical traces of memory distributed across the brain.
+
+Today's journey: From the spotlight of attention to the chemical languages of smell and taste, discovering the computational principles that unite all our senses and bind sensation to memory.
+
+## Opening: The Cocktail Party Problem
+
+You're at a crowded party. Dozens of conversations surround you, music plays in the background, glasses clink, people laugh. Yet somehow you can focus on the single voice of the person in front of you, filtering out all other sounds. Then someone across the room says your name, and your attention immediately shifts—you heard your name despite not consciously attending to that conversation. This is the cocktail party effect, first described by cognitive psychologist Colin Cherry in 1953. It reveals two crucial features of attention: selective filtering (you can focus on one voice among many) and automatic capture (highly relevant stimuli break through the filter).
+
+The computational problem is staggering. Your auditory system must separate overlapping sound sources, identify which frequency components belong to which speaker, enhance the attended stream while suppressing unattended streams, and maintain this segregation continuously as speakers move and background noise fluctuates. This is attention—not a single mechanism but a collection of neural processes that select relevant information for detailed processing while filtering irrelevant information. Without attention, your conscious experience would be chaos, an undifferentiated blend of all sensory inputs arriving simultaneously.
+
+Michael Posner and Steven Petersen's influential framework divides attention into three partially independent networks. The alerting network, involving right frontal and parietal cortex and the locus coeruleus (the brain's norepinephrine factory), maintains vigilance and readiness to respond. The orienting network, involving superior and inferior parietal cortex, frontal eye fields, and superior colliculus, directs attention to specific locations in space—this is the spotlight. The executive control network, involving dorsolateral prefrontal cortex and anterior cingulate cortex, resolves conflicts between competing inputs and maintains task goals. These networks operate in parallel, supported by different neuromodulators—norepinephrine for alerting, acetylcholine for orienting, dopamine for executive control.
+
+Attention comes in two flavors: exogenous (bottom-up) and endogenous (top-down). Exogenous attention is automatic, stimulus-driven, pulled by salient events—a sudden loud noise, a bright flash, your name spoken across a room. It's fast, involuntary, and hard to suppress. Endogenous attention is voluntary, goal-driven, pushed by your intentions—deliberately listening to a specific voice, searching for a lost object, reading this sentence. It's slower, effortful, and flexible. Both types modulate sensory processing, but through different neural pathways. Exogenous attention relies on subcortical structures like the superior colliculus and pulvinar thalamus. Endogenous attention relies on frontal and parietal cortex sending top-down signals to sensory areas.
+
+## Neural Mechanisms of Attention
+
+### Gain Modulation: Turning Up the Volume
+
+How does attention change neural processing? The dominant mechanism is gain modulation—attention multiplies neural responses by a constant factor, amplifying attended stimuli while leaving unattended stimuli relatively suppressed. When you attend to a location in space, neurons with receptive fields at that location increase their firing rates by 20-50%, even before the stimulus appears. This is anticipatory modulation—your brain is pre-amplifying the relevant neural channels based on where you expect something important to happen.
+
+John Maunsell and colleagues recorded from neurons in area V4 (intermediate visual cortex) while monkeys performed attention tasks. When the monkey attended to a stimulus inside a neuron's receptive field, that neuron's response was enhanced. When attention was directed elsewhere, the same stimulus produced a weaker response. The neuron's selectivity didn't change—its preferred features remained the same—but its overall responsiveness scaled up or down. This is multiplicative gain control, like turning up the volume knob on a stereo. The signal-to-noise ratio improves because both signal and noise are amplified, but signal benefits more because it starts larger.
+
+But where does the gain signal come from? Frontal and parietal cortex, the sources of top-down control, send feedback projections to sensory cortex. These projections target inhibitory interneurons, disinhibiting excitatory neurons and increasing their responsiveness. Attention doesn't create new sensory information—it amplifies existing signals selectively. The computational advantage is that selective amplification requires less energy than processing everything at full strength. Your brain operates under severe energy constraints; attention allocates limited resources to behaviorally relevant information.
+
+### Competition and Biased Competition
+
+The biased competition model, developed by Robert Desimone and John Duncan, proposes that multiple stimuli within a neuron's receptive field compete for neural representation. When two objects fall within the same receptive field, the neuron's response is typically weaker than the response to either object alone—the objects mutually suppress each other. Attention resolves this competition by biasing neural responses toward the attended object. If you attend to the left object, neurons respond as if only the left object were present, ignoring the right object. Attention doesn't just enhance neurons representing attended stimuli; it also suppresses neurons representing unattended stimuli.
+
+This competition occurs at multiple levels simultaneously. Within sensory cortex, neurons compete locally through lateral inhibition. Across cortical areas, higher areas (frontal and parietal) compete to bias processing in lower sensory areas. The network implements a winner-take-all dynamic, where attended representations dominate while unattended representations are suppressed. The result is that only the most relevant information reaches conscious awareness and guides behavior. Your phenomenological experience of a unified, coherent perceptual world emerges from this ruthless competition where most sensory information loses and never reaches consciousness.
+
+## Audition: The Frequency Analyzer
+
+### From Air Pressure to Neural Code
+
+The auditory system performs a Fourier transform—decomposing complex sounds into their frequency components—mechanically, before any neural processing begins. Sound is air pressure variation; your ear must convert these rapid oscillations (20 to 20,000 Hz) into neural signals. The tympanic membrane (eardrum) vibrates in response to sound pressure, moving three tiny bones—malleus, incus, and stapes—that amplify the vibration and transmit it to the fluid-filled cochlea. This mechanical linkage solves an impedance-matching problem: air and fluid have different acoustic impedances, and without the middle ear's amplification, 99.9% of sound energy would reflect off the cochlear fluid rather than entering it.
+
+The cochlea is a coiled, fluid-filled tube containing the organ of Corti, the sensory epithelium where mechanical vibration becomes neural signal. The key structure is the basilar membrane, a flexible partition running the length of the cochlea. When sound enters, it creates a traveling wave along the basilar membrane. The membrane is narrow and stiff at the base (near the stapes) and wide and flexible at the apex. High-frequency sounds cause maximum displacement near the base; low-frequency sounds cause maximum displacement near the apex. This is tonotopy—the mapping of sound frequency onto spatial position along the cochlea.
+
+[READ: The Cochlea: Structure and Function - comprehensive review of cochlear mechanics]
+
+### Hair Cells: Mechanotransduction at Microsecond Resolution
+
+Sitting on the basilar membrane are approximately 16,000 hair cells—the actual sensory receptors of hearing. Each hair cell has a bundle of stereocilia (not cilia, despite the name—they're rigid actin-filled protrusions) arranged in rows of increasing height. Adjacent stereocilia are connected by tip links, fine protein filaments that gate mechanosensitive ion channels. When the basilar membrane vibrates upward, the stereocilia bundle bends toward the tallest stereocilia, stretching tip links and opening ion channels. Potassium rushes in (the scala media contains high-potassium endolymph, maintained by the stria vascularis), depolarizing the hair cell. When the membrane moves downward, channels close, and the hair cell hyperpolarizes. The hair cell's membrane potential oscillates in sync with sound vibration.
+
+Inner hair cells (one row, 3,500 cells) are the actual sensory receptors that send information to the brain via spiral ganglion neurons. Outer hair cells (three rows, 12,000 cells) are something stranger—they're motors. When depolarized, outer hair cells contract; when hyperpolarized, they elongate. This electromotility amplifies basilar membrane motion, enhancing sensitivity and sharpening frequency tuning. Outer hair cells are biological amplifiers, boosting weak sounds by up to 1,000-fold. This amplification is so powerful that the cochlea actually produces sound—otoacoustic emissions—detectable with a sensitive microphone in the ear canal. Your ears don't just receive sound; they generate it.
+
+The speed of mechanotransduction is extraordinary. Ion channels open in less than 10 microseconds after stereocilia deflection. This is orders of magnitude faster than any G-protein-coupled or biochemical cascade—it must be, to encode sounds up to 20,000 Hz. The mechanism is purely mechanical: tip links directly gate channels without any intermediate biochemical steps. This makes hair cells the fastest sensory receptors in the body, capable of phase-locking to sound frequencies (firing at a particular phase of the sound wave) up to about 4,000 Hz in humans.
+
+### Central Auditory Pathways: Building Sound Perception
+
+Spiral ganglion neurons project to the cochlear nucleus in the medulla, preserving tonotopic organization—high frequencies represented dorsally, low frequencies ventrally. Unlike the visual system, which synapses only twice between retina and cortex, the auditory system includes multiple brainstem nuclei that perform crucial computations. From the cochlear nucleus, pathways split into multiple parallel streams projecting to the superior olivary complex (SOC) in the pons. The SOC is the first site of binaural interaction—where information from the two ears converges—enabling sound localization.
+
+Sound localization uses two cues: interaural time differences (ITDs) and interaural level differences (ILDs). If a sound source is to your right, it reaches your right ear microseconds before your left ear. Neurons in the medial superior olive (MSO) act as coincidence detectors, firing maximally when inputs from the two ears arrive simultaneously. Different MSO neurons are tuned to different ITDs, creating a map of azimuthal sound location. For high-frequency sounds where wavelengths are too short for ITD analysis, the lateral superior olive (LSO) uses ILDs—sounds are louder in the ear closer to the source because the head casts an acoustic shadow. The combination of ITD and ILD cues enables precise sound localization across frequencies.
+
+From the SOC, projections ascend to the inferior colliculus in the midbrain, the auditory analog of the superior colliculus for vision. The inferior colliculus integrates monaural and binaural information, frequency and amplitude, and projects to the medial geniculate nucleus (MGN) of the thalamus, which in turn projects to primary auditory cortex (A1) in the superior temporal gyrus. Like all sensory cortex, A1 is tonotopically organized—a frequency map where neighboring neurons respond to similar frequencies. Beyond A1, higher auditory areas extract increasingly complex features: pitch, timbre, phonemes, words, melodies. The auditory system, like vision, implements hierarchical processing where simple features combine to represent complex sounds.
+
+## Olfaction: The Ancient Sense
+
+### Chemical Detection Without a Map
+
+Olfaction is evolutionarily ancient—bacteria use chemotaxis, and even single-celled organisms detect chemicals. In humans, olfaction begins in the olfactory epithelium, a postage-stamp-sized patch of specialized tissue in the roof of the nasal cavity containing approximately 10 million olfactory receptor neurons (ORNs). Each ORN expresses one type of olfactory receptor from a family of approximately 400 genes (in humans—mice have 1,000). These are G-protein-coupled receptors that detect airborne odorant molecules. When an odorant binds, the receptor activates a G-protein cascade that opens cyclic nucleotide-gated channels, depolarizing the neuron.
+
+The coding strategy is combinatorial. Each receptor responds to multiple odorants, and each odorant activates multiple receptors. A rose's scent activates a specific pattern across the 400 receptor types; a lemon's scent activates a different pattern. The identity of a smell is encoded by the combination of activated receptors, not by any single receptor. This combinatorial code allows 400 receptor types to distinguish thousands of distinct odors—potentially over a trillion according to recent estimates, though the actual number of behaviorally distinguishable odors is debated.
+
+[READ: Olfactory Receptor Neurons and Olfactory Coding - molecular mechanisms of smell]
+
+### The Olfactory Bulb: Convergence and Contrast
+
+ORNs project directly to the olfactory bulb, the first central processing station. Here's the organizational principle: all ORNs expressing the same receptor type converge onto the same glomeruli—spherical structures where ORN axons synapse onto mitral and tufted cells. Each bulb contains about 2,000 glomeruli, creating a spatial map where each glomerulus represents one receptor type. This convergence provides enormous amplification—thousands of ORNs funnel into each glomerulus, increasing sensitivity. The olfactory system can detect some odorants at parts-per-trillion concentrations.
+
+Within the olfactory bulb, lateral inhibition via granule cells (interneurons) implements center-surround antagonism and contrast enhancement, similar to retinal processing. Activated glomeruli inhibit neighboring glomeruli, sharpening the representation by suppressing weakly activated receptors and amplifying strongly activated ones. This lateral inhibition is modifiable—it changes with experience and attention, allowing learned odor discrimination to improve sensitivity. Professional perfumers and wine tasters have demonstrably enhanced olfactory discrimination, likely reflecting both genetic variation in receptor expression and learned changes in bulbar processing.
+
+### Direct Route to Cortex and Limbic System
+
+Here's what's unique about olfaction: it's the only sensory system that bypasses the thalamus. Mitral and tufted cells project directly to primary olfactory cortex—the piriform cortex and nearby areas—and to the amygdala and entorhinal cortex (hippocampal gateway). This direct projection to limbic structures explains why smells so powerfully evoke emotions and memories. The scent of your grandmother's perfume or your childhood home triggers vivid memories because olfactory information reaches memory and emotion systems directly, without the filtering and abstraction that thalamic processing imposes on other senses.
+
+The Proust effect—odor-evoked autobiographical memory—is named for Marcel Proust's famous madeleine episode in "In Search of Lost Time," where the taste and smell of tea-soaked cake triggered cascading childhood memories. This phenomenon reflects the anatomical fact that olfactory cortex projects heavily to the hippocampus and amygdala, structures essential for episodic memory and emotional processing. Smells don't just remind you of events; they transport you back, recreating the emotional state and sensory context. No other sensory modality has this direct line to the memory system.
+
+## Gustation: Five Basic Tastes
+
+### Taste Transduction: Five Receptors, Five Qualities
+
+Taste (gustation) detects five basic qualities: sweet, sour, salty, bitter, and umami (savory/glutamate). These aren't arbitrary categories but reflect fundamental nutritional and toxicological significance. Sweet detects sugars (energy sources), umami detects amino acids (protein), salty detects sodium (electrolyte balance), sour detects acids (potentially spoiled food), and bitter detects alkaloids (many plant toxins). The five taste qualities are hardwired—innate, not learned—though preferences for each vary with experience and culture.
+
+Taste buds, containing 50-100 taste receptor cells each, are embedded in papillae on the tongue, soft palate, and pharynx. The tongue map showing discrete regions for each taste (sweet at tip, bitter at back) is a myth—all taste qualities are detected across the tongue, though with some regional variation in sensitivity. Each taste receptor cell expresses receptors for only one taste quality. Sweet, bitter, and umami use G-protein-coupled receptors (T1R and T2R families). Salty taste uses epithelial sodium channels directly. Sour taste uses ion channels sensitive to hydrogen ions. The transduction mechanisms differ, but all converge on the same output: depolarization causing neurotransmitter release onto sensory afferents.
+
+### Central Gustatory Pathways
+
+Taste information travels through cranial nerves—VII (facial), IX (glossopharyngeal), and X (vagus)—to the nucleus of the solitary tract in the medulla. From there, projections ascend to the thalamus (ventral posteromedial nucleus, adjacent to the tactile representation of the face), then to primary gustatory cortex in the insula and frontal operculum. Unlike olfaction, gustation follows the standard sensory pathway through thalamus. But like olfaction, gustatory cortex projects extensively to the amygdala and orbitofrontal cortex, where taste information combines with smell, texture, temperature, and context to create flavor perception.
+
+### Flavor as Multisensory Integration
+
+What you call "taste" is actually flavor—a multisensory construction combining taste (five qualities detected by taste buds), smell (hundreds of volatile compounds detected by olfactory receptors during retronasal olfaction when you exhale through your nose while eating), touch (texture, temperature, fat content detected by trigeminal somatosensory afferents), and even sound (crunchiness). When you have a cold and complain that food has no taste, you're actually experiencing loss of smell—your taste system works fine, but without retronasal olfaction, flavor collapses to five elementary sensations.
+
+The integration happens in orbitofrontal cortex, where neurons respond to specific flavor combinations. Some neurons fire to tomato and basil together but not separately. These are flavor-specific neurons, representing learned associations between taste and smell components that co-occur in foods. This is why wine experts can identify hundreds of wines—they've built elaborate flavor representations in orbitofrontal cortex through extensive experience. The gustatory and olfactory systems provide the elementary dimensions; experience and learning construct the high-dimensional flavor space.
+
+## Universal Principles: Receptive Fields, Tuning, Representation
+
+### Receptive Fields Across Modalities
+
+Every sensory neuron has a receptive field—the region of sensory space where stimuli can influence that neuron's activity. For a somatosensory neuron, it's a patch of skin. For a retinal ganglion cell, it's a region of visual space. For an auditory neuron, it's a range of sound frequencies. For an olfactory mitral cell, it's a set of odorant molecules. The concept is universal, but the geometry differs across modalities because the sensory stimulus spaces have different structures.
+
+Visual and tactile receptive fields are spatial—they map onto two-dimensional surfaces (retina, skin). This enables topographic maps preserving spatial relationships. Auditory receptive fields are frequency-based—organized tonotopically along the cochlea, then represented in tonotopic maps in auditory cortex. Olfactory receptive fields are chemical—defined by molecular structure of odorants—and don't map onto any obvious spatial or continuous dimension. There's no "odorotopic" map in the same way there's a retinotopic or tonotopic map, because chemical space is high-dimensional and non-Euclidean.
+
+### Tuning Curves: Selectivity Functions
+
+A tuning curve plots a neuron's response as a function of some stimulus parameter. Visual neurons have orientation tuning curves showing preferred angles. Auditory neurons have frequency tuning curves showing preferred tones. Tactile neurons have velocity tuning curves for different movement speeds across skin. The width of the tuning curve indicates selectivity—narrow curves mean high selectivity (the neuron cares deeply about precise stimulus values), while broad curves mean low selectivity (the neuron responds to a wide range).
+
+Across sensory systems, tuning emerges from the same computational strategy: weighted combination of inputs. A V1 simple cell receives aligned inputs from LGN neurons, creating orientation selectivity. An auditory cortex neuron receives inputs from a specific band of frequencies, creating frequency selectivity. The tuning curve reflects the pattern of input connectivity. Plasticity—learning and experience—modifies tuning curves by changing synaptic weights. Musicians show narrower frequency tuning for behaviorally relevant frequencies. Blind Braille readers show enhanced tactile acuity reflecting sharpened tuning curves in somatosensory cortex.
+
+### Population Coding: Ensembles Over Individuals
+
+Here's a crucial insight: perception doesn't depend on single neurons but on populations. The brain uses population coding—information is distributed across many neurons with overlapping tuning curves. The advantage is robustness: if a few neurons die or fire noisily, the population response remains stable. The disadvantage is metabolic cost: representing information redundantly requires more neurons and energy.
+
+A specific stimulus activates a pattern of activity across the population—a neural code. Different stimuli produce different patterns. The brain reads out stimulus identity by analyzing which neurons are active and how much they're firing. This is a vector in a high-dimensional neural space. Similar stimuli produce similar vectors (nearby points in neural space); dissimilar stimuli produce dissimilar vectors (distant points). Perceptual discrimination depends on the distance between neural representations—when patterns are too similar, you can't tell stimuli apart.
+
+### Engrams: The Physical Trace of Memory
+
+An engram is the physical embodiment of a memory—the set of neurons and synapses that store a particular memory trace. The concept dates to Richard Semon in 1904, but only recently has technology allowed identification of engram cells. Susumu Tonegawa's lab used genetic techniques to label neurons active during learning, then reactivated those specific neurons, causing the animal to behave as if experiencing the learned event. This is optogenetic memory reactivation—directly controlling memory by controlling engram cells.
+
+Engrams are distributed—a memory involves coordinated activity across multiple brain regions. A memory of your grandmother might involve visual cortex (her face), auditory cortex (her voice), olfactory cortex (her perfume), hippocampus (the spatiotemporal context), amygdala (your emotional response), and frontal cortex (the meaning and associations). These distributed representations are linked by synaptic plasticity—neurons that fire together wire together, creating a functional ensemble. Reactivating part of the engram (smelling her perfume) reactivates the whole pattern (complete memory).
+
+This brings us full circle to attention. Attention determines which sensory representations are strengthened and encoded into engrams. Attended stimuli produce stronger hippocampal responses and better memory formation. Unattended stimuli may activate sensory cortex, but without attentional amplification, they don't form lasting engrams. Attention is the gateway to memory—the mechanism that selects which experiences, out of the continuous flood of sensation, will be preserved as engrams and shape future behavior.
+
+## Synthesis: The Architecture of Sensation
+
+We've surveyed attention and three sensory modalities—audition, olfaction, gustation—discovering that despite their different stimulus spaces and transduction mechanisms, they share fundamental computational principles. All implement receptive fields defining what stimuli drive each neuron. All use tuning curves to achieve selectivity for behaviorally relevant features. All employ population coding for robustness. All project to cortex where learning and experience refine representations. All interface with attention systems that select relevant information and suppress distractions.
+
+Yet the differences are equally instructive. Vision and audition preserve spatial or frequency topology in cortical maps; olfaction does not. Vision and touch remain largely separate until association cortex; taste and smell merge early to create flavor. Vision and audition send information through thalamus; olfaction bypasses it, connecting directly to limbic memory systems. These differences reflect different ecological demands—vision for navigation and object recognition, audition for communication and threat detection, olfaction for food evaluation and social signaling, taste for toxin avoidance and nutrient detection.
+
+The universal finding is that sensation is active construction, not passive reception. At every level—receptor, brainstem, thalamus, cortex—neurons transform input, extracting features, enhancing contrast, suppressing redundancy, predicting upcoming stimuli. By the time a sensory signal reaches your consciousness, it has been filtered, amplified, compared to predictions, integrated across modalities, and biased by attention. What you experience as immediate and direct is actually the end product of massive parallel computation.
+
+And attention is the executive control over this process. It allocates neural resources, determines what gets processed in detail, what gets ignored, and ultimately what gets encoded into engrams. Without attention, you would experience every sensation equally—no focus, no coherence, no prioritization. With attention, you construct a selective, filtered, but actionable model of the world. This is the tradeoff: you lose completeness (change blindness, inattentional blindness) but gain the ability to act adaptively in an overwhelmingly complex environment.
+
+Your brain doesn't sample reality uniformly. It spotlights some features, suppresses others, fills gaps with predictions, integrates across modalities, and stores only the attended information as engrams. Every moment, you are living inside a actively constructed simulation—constrained by sensory data, but shaped by attention, expectation, and memory. This chapter has shown you how the machinery works: the gain modulation of attention, the frequency analysis of the cochlea, the combinatorial code of olfaction, the five dimensions of taste, and the population codes that unite them all. You now understand that what you perceive is not the world as it is, but the world as your brain—under severe constraints of bandwidth, energy, and time—has chosen to represent it.
+
+## Thought Questions for Discussion
+
+Three questions to spark discussion before your next class:
+
+### Attention as Resource Allocation
+
+Attention enhances processing of attended stimuli but at the cost of missing unattended information. Is there an optimal attention strategy, or does the best strategy depend on the task and environment? Consider the tradeoff between focused attention (spotlighting one thing deeply) and distributed attention (monitoring many things shallowly). When would each strategy maximize fitness? Can you think of occupations or survival scenarios that demand different attentional strategies?
+
+### The Olfactory Exception
+
+Olfaction is the only sense that bypasses the thalamus and projects directly to cortex and limbic structures. This explains olfaction's unique link to emotion and memory, but what is lost by bypassing thalamic processing? Other senses use the thalamus for gating, filtering, and gain control. Does olfaction sacrifice these functions? Or does the olfactory bulb implement equivalent processing? What might this tell us about the evolution of chemosensation versus distance senses like vision and audition?
+
+### Engrams and the Self
+
+If all your memories are engrams—distributed patterns of synaptic weights across neural populations—and attention determines which experiences become engrams, then your sense of self is shaped by what you've attended to. Does this mean that changing your attentional habits would literally change who you are by altering which engrams form? Consider meditation practices that train attention: are they not just changing what you focus on, but fundamentally restructuring the engrams that constitute your self? What are the implications for personal identity if the self is an ensemble of attention-gated engrams?
+
+### Practice Questions:
+
+• The three attention networks identified by Posner and Petersen are the _______ network (vigilance), the _______ network (spatial selection), and the _______ network (conflict resolution).
+
+• Attention modulates neural responses through _______ modulation, increasing firing rates by _______% for attended stimuli even before stimuli appear.
+
+• The cochlea implements frequency analysis mechanically via the _______ membrane, with high frequencies mapped to the _______ and low frequencies to the _______.
+
+• Hair cells transduce sound through _______ connected to mechanosensitive channels that open in less than _______ microseconds.
+
+• Olfactory receptor neurons expressing the same receptor converge onto single _______ in the olfactory bulb, creating a spatial map of receptor types.
+
+• Olfaction is unique because it bypasses the _______ and projects directly to _______ cortex and the _______ (limbic structures), explaining odor's power to evoke emotion and memory.
+
+• The five basic taste qualities are _______, _______, _______, _______, and _______ (umami), detected by specialized taste receptor cells.
+
+• Flavor is a _______ construction combining taste, _______ (via retronasal olfaction), and somatosensory input, integrated in _______ cortex.
+
+• An engram is the _______ trace of a memory, implemented as a _______ pattern of synaptic connections across multiple brain regions.
+
+• Population coding distributes information across _______ with overlapping _______ curves, providing robustness to neural noise and cell death.

@@ -1,0 +1,1652 @@
+{
+  "id": "chapter11",
+  "source": "chapter11.html",
+  "chapter": "11",
+  "chapter_number": "10",
+  "title": "Learning and Memory: Building a Personal History",
+  "page_title": "Chapter 11 — Learning and Memory: Building a Personal History",
+  "description": "From synaptic plasticity to memory systems; how the brain encodes, consolidates, and retrieves experience across multiple timescales and storage formats.",
+  "brand": "Brains, Minds, and Machines — Chapter 11",
+  "subtitle": null,
+  "lead": {
+    "text": "You are not the person who began reading this sentence. In the microseconds between the first word and the last, your synapses changed—some strengthened, some weakened, patterns shifted. Every experience leaves a trace; every thought rewires the architecture. Learning is the brain's defining feature—the ability to be modified by its own activity. Memory is learning's shadow, the persistence of those modifications across time. Without learning and memory, you would wake each morning as a newborn, unable to recognize faces, speak language, or understand the symbols on this page. Today we explore how neural circuits transform experience into lasting change, from molecular modifications at single synapses to large-scale reorganization of memory systems that create your continuous sense of self across decades. We'll trace learning from its simplest forms—reflexes growing stronger or weaker—through skill acquisition, habit formation, and finally to the extraordinary systems that let you mentally travel through time, re-experiencing past events or imagining futures that haven't happened yet."
+  },
+  "opening": [
+    {
+      "type": "stage",
+      "text": "Today's arc: From motor learning in cerebellum and basal ganglia, through the molecular machinery of synaptic plasticity, across multiple forms and timescales of learning, into the architecture of memory systems, ending with working memory—the interface between past knowledge and future action."
+    }
+  ],
+  "table_of_contents": [
+    {
+      "number": "I",
+      "title": "Motor Learning Systems: Cerebellum and Basal Ganglia",
+      "duration": "12 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Cerebellum: error correction and forward models"
+        },
+        {
+          "text": "Basal ganglia: action selection and reinforcement learning"
+        },
+        {
+          "text": "Complementary roles in skill acquisition"
+        }
+      ]
+    },
+    {
+      "number": "II",
+      "title": "Synaptic Plasticity: The Molecular Basis",
+      "duration": "12 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Hebbian learning: cells that fire together wire together"
+        },
+        {
+          "text": "Long-term potentiation (LTP) and depression (LTD)"
+        },
+        {
+          "text": "NMDA receptors as coincidence detectors"
+        },
+        {
+          "text": "Spike-timing-dependent plasticity (STDP)"
+        }
+      ]
+    },
+    {
+      "number": "III",
+      "title": "Learning Across Scales and Types",
+      "duration": "12 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Non-associative: habituation and sensitization"
+        },
+        {
+          "text": "Classical conditioning: Pavlov to prediction error"
+        },
+        {
+          "text": "Instrumental learning: actions and consequences"
+        },
+        {
+          "text": "Observational and cognitive learning"
+        }
+      ]
+    },
+    {
+      "number": "IV",
+      "title": "Learning Beyond the Individual: Deep Time and Culture",
+      "duration": "12 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Evolution as genetic memory: archetypes and instincts"
+        },
+        {
+          "text": "Lamarck's revenge: epigenetic inheritance"
+        },
+        {
+          "text": "Cultural memory: language, memes, and gossip"
+        },
+        {
+          "text": "Cumulative cultural evolution as collective learning"
+        }
+      ]
+    },
+    {
+      "number": "V",
+      "title": "Memory Systems: Multiple Forms of Storage",
+      "duration": "18 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Declarative vs procedural: H.M. and double dissociation"
+        },
+        {
+          "text": "Episodic memory: the hippocampal time machine"
+        },
+        {
+          "text": "Semantic memory: conceptual knowledge networks"
+        },
+        {
+          "text": "Consolidation: from hippocampus to cortex"
+        }
+      ]
+    },
+    {
+      "number": "VI",
+      "title": "Working Memory: The Workspace of Thought",
+      "duration": "14 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Baddeley's model and capacity limits (4±1 chunks)"
+        },
+        {
+          "text": "Prefrontal cortex: persistent activity and maintenance"
+        },
+        {
+          "text": "Interface to executive function (preview next lecture)"
+        }
+      ]
+    }
+  ],
+  "summary_image": {
+    "src": "GeminiSummaryCh11.png",
+    "alt": "Learning and Memory Visual Summary",
+    "viewer": "image-viewer.html?image=GeminiSummaryCh11.png",
+    "role": "summary"
+  },
+  "resources": {
+    "textbook": "./textbook/",
+    "slides_html": "./slides/Chapter11/LearningandMemoryBuildingaPersonalHistorySlides.html",
+    "slides_pdf": null,
+    "course_home": "./index.html",
+    "answer_key": "./AnswerKeys.html#chapter11",
+    "related_chapters": [],
+    "next_chapter": {
+      "href": "./chapter12.html",
+      "title": "Executive Function: The Brain's CEO",
+      "note": "Next: Executive Function: The Brain's CEO — planning, decision-making, cognitive control, and the high-level regulation of thought and action by prefrontal cortex."
+    },
+    "header_links": [
+      {
+        "text": "📖 Textbook",
+        "href": "./textbook/",
+        "kind": "internal"
+      },
+      {
+        "text": "📊 Slides HTML",
+        "href": "./slides/Chapter11/LearningandMemoryBuildingaPersonalHistorySlides.html",
+        "kind": "internal"
+      },
+      {
+        "text": "Course Home",
+        "href": "./index.html",
+        "kind": "internal"
+      }
+    ],
+    "interactives": null
+  },
+  "sections": [
+    {
+      "id": "bridge-from-motor-control-the-learning-systems",
+      "title": "Bridge from Motor Control: The Learning Systems",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Cerebellum: The Precision Timing Machine"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Cerebellar anatomy showing distinctive layered architecture",
+          "url": "https://www.google.com/search?q=cerebellum+structure+purkinje+cells+parallel+fibers&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The cerebellum (Latin: \"little brain\") contains more neurons than the rest of the brain combined—80 billion neurons packed into 10% of brain volume. Its structure is remarkably regular and repetitive, suggesting a stereotyped computation performed millions of times in parallel. The cerebellum receives input from virtually every sensory system and motor area, yet lesions don't paralyze you—they make your movements uncoordinated, mistimed, and inaccurate. Patients with cerebellar damage show ataxia (uncoordinated movement), dysmetria (overshooting or undershooting targets), and intention tremor (trembling during purposeful movements). These symptoms reveal the cerebellum's computational role: it doesn't initiate movement but refines it, correcting errors and learning to anticipate disturbances.",
+          "links": [
+            {
+              "text": "The cerebellum (Latin: \"little brain\") contains more neurons than the rest of the brain combined—80 billion neurons packed into 10% of brain volume.",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s3/chapter05.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The cerebellum implements supervised learning—it compares intended movements with actual outcomes, using error signals to adjust future commands. David Marr and James Albus independently proposed models in which climbing fibers (from the inferior olive) carry error signals that modify the synapses between parallel fibers and Purkinje cells—the sole output neurons of the cerebellar cortex. When a movement error occurs, climbing fibers fire, causing long-term depression (LTD) at recently active parallel fiber synapses. Over repeated trials, the pattern of parallel fiber activity associated with errors gets systematically weakened, reducing future errors. This is how you learn to catch a ball, type without looking, or play a musical instrument—cerebellar circuits refine motor commands until predictions match outcomes.",
+          "links": [
+            {
+              "text": "David Marr",
+              "href": "https://en.wikipedia.org/wiki/David_Marr_(neuroscientist)",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "James Albus",
+              "href": "https://en.wikipedia.org/wiki/James_Albus",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Cerebellar learning in eyeblink conditioning paradigm",
+          "url": "https://www.google.com/search?q=cerebellar+learning+eyeblink+conditioning+timing&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The cerebellum's role extends beyond motor control. It's involved in cognitive timing, working memory, attention, and even emotion regulation. Recent theories suggest the cerebellum builds forward models not just of physical movements but of cognitive operations—predicting the sensory or cognitive consequences of mental actions. When you mentally rehearse a speech or imagine a chess move, your cerebellum may be simulating the expected outcomes. This unifying view—the cerebellum as a universal learning machine for prediction—explains its ubiquitous connections and mysterious involvement in autism, dyslexia, and schizophrenia.",
+          "links": [
+            {
+              "text": "cognitive timing, working memory, attention, and even emotion regulation",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6494642/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Basal Ganglia: The Action Selection Committee"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Basal ganglia circuit showing direct and indirect pathways",
+          "url": "https://www.google.com/search?q=basal+ganglia+anatomy+striatum+substantia+nigra&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The basal ganglia—a set of subcortical nuclei including the striatum, globus pallidus, substantia nigra, and subthalamic nucleus—solve a different problem: action selection. At any moment, countless potential actions compete for execution. The basal ganglia implement a gating mechanism that selects which action to perform and suppresses alternatives. Damage to different basal ganglia components produces strikingly different motor disorders. Parkinson's disease, caused by death of dopamine neurons in the substantia nigra, produces akinesia (difficulty initiating movements), bradykinesia (slowness), and rigidity. Huntington's disease, caused by degeneration of striatal neurons, produces chorea (involuntary, dance-like movements). Too little basal ganglia output—movements get stuck. Too much—movements escape control.",
+          "links": [
+            {
+              "text": "The basal ganglia—a set of subcortical nuclei including the striatum, globus pallidus, substantia nigra, and subthalamic nucleus—solve a different problem: action selection.",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s3/chapter04.html",
+              "kind": "neuroscience_online"
+            },
+            {
+              "text": "Parkinson's disease",
+              "href": "https://en.wikipedia.org/wiki/Parkinson%27s_disease",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Huntington's disease",
+              "href": "https://en.wikipedia.org/wiki/Huntington%27s_disease",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The basal ganglia learn through reinforcement learning—trial-and-error discovery of which actions lead to rewards. Dopamine neurons signal prediction errors—the difference between expected and received reward. When an unexpected reward arrives, dopamine neurons burst, strengthening the synapses that led to the action (positive reinforcement). When an expected reward fails to appear, dopamine neurons pause, weakening those synapses (negative reinforcement). This is precisely the algorithm used in artificial intelligence for reinforcement learning. The basal ganglia implement it in biological hardware, learning action values through experience.",
+          "links": [
+            {
+              "text": "Dopamine neurons signal prediction errors",
+              "href": "https://www.nature.com/articles/nn1560",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Dopamine neuron responses showing prediction error signals",
+          "url": "https://www.google.com/search?q=dopamine+prediction+error+reinforcement+learning+Schultz&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The complementary roles of cerebellum and basal ganglia illuminate different learning strategies. The cerebellum uses supervised learning with explicit error signals—you know when you've missed the target. The basal ganglia use reinforcement learning with reward signals—you know when outcomes are better or worse than expected, even without knowing the \"correct\" action. Together they enable skill acquisition: basal ganglia select which actions to attempt (exploration and exploitation), cerebellum refines execution (precision and timing). As skills become automatic, control shifts from cortex (slow, effortful) to basal ganglia and cerebellum (fast, automatic). This is why you can drive while conversing—the sensorimotor loops run subcortically, freeing cortex for conversation."
+        }
+      ]
+    },
+    {
+      "id": "synaptic-plasticity-memory-at-the-molecular-level",
+      "title": "Synaptic Plasticity: Memory at the Molecular Level",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Hebb's Postulate: A Rule for Learning"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Donald Hebb and illustrations of his cell assembly theory",
+          "url": "https://www.google.com/search?q=Donald+Hebb+neuroscientist+cell+assembly+theory&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "In 1949, Canadian psychologist Donald Hebb proposed a simple learning rule that would revolutionize neuroscience: \"When an axon of cell A is near enough to excite cell B and repeatedly or persistently takes part in firing it, some growth process or metabolic change takes place in one or both cells such that A's efficiency, as one of the cells firing B, is increased.\" This is colloquially summarized as \"cells that fire together, wire together.\" Hebb's postulate provided a mechanistic account of associative learning—if two neurons are consistently co-active, their connection strengthens. This implements correlation detection at the synaptic level, allowing networks to learn statistical regularities in their inputs.",
+          "links": [
+            {
+              "text": "Donald Hebb",
+              "href": "https://en.wikipedia.org/wiki/Donald_O._Hebb",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Hebb's rule has three key features: locality (changes occur at active synapses, not globally), cooperativity (presynaptic activity alone is insufficient; the postsynaptic cell must also be active), and specificity (only synapses participating in the co-activity are modified). These properties ensure learning is targeted and efficient. For decades, Hebb's postulate was theoretical. Then, in 1973, Terje Lømo and Tim Bliss discovered its molecular implementation in the hippocampus.",
+          "links": [
+            {
+              "text": "Terje Lømo",
+              "href": "https://en.wikipedia.org/wiki/Terje_L%C3%B8mo",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Tim Bliss",
+              "href": "https://en.wikipedia.org/wiki/Tim_Bliss",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Long-Term Potentiation: The Hebbian Mechanism"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "LTP induction showing NMDA receptor activation and signaling cascades",
+          "url": "https://www.google.com/search?q=long+term+potentiation+LTP+mechanism+NMDA+receptor&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Long-term potentiation (LTP) is a lasting increase in synaptic strength following high-frequency stimulation of a pathway. Stimulate a hippocampal pathway with a brief burst of high-frequency pulses (a tetanus), and hours or days later, test stimuli produce larger EPSPs than before—the synapse has been potentiated. LTP exhibits Hebb's properties: it's input-specific (only stimulated synapses are potentiated), associative (weak inputs are potentiated if they coincide with strong inputs), and cooperative (weak stimulation fails to induce LTP; strong stimulation succeeds). This form of LTP is the most compelling molecular implementation of Hebb's rule yet discovered.",
+          "links": [
+            {
+              "text": "Long-term potentiation (LTP) is a lasting increase in synaptic strength following high-frequency stimulation of a pathway.",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter07.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The mechanism involves the NMDA receptor, a glutamate receptor with unique properties. It's a coincidence detector—it opens only when two conditions are simultaneously met: glutamate binds (presynaptic activity) AND the postsynaptic membrane is depolarized (postsynaptic activity). Under resting conditions, the NMDA receptor channel is blocked by magnesium ions (Mg²⁺). Glutamate binding alone can't open it. But if the postsynaptic cell is simultaneously depolarized (by other active synapses or by strong presynaptic input), the depolarization expels the Mg²⁺ block, allowing the channel to open. Calcium (Ca²⁺) flows in, triggering signaling cascades that strengthen the synapse."
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "NMDA receptor showing voltage-dependent magnesium block mechanism",
+          "url": "https://www.google.com/search?q=NMDA+receptor+magnesium+block+calcium+influx&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The calcium influx activates multiple pathways. CaMKII (calcium/calmodulin-dependent protein kinase II) phosphorylates AMPA receptors, increasing their conductance and inserting additional receptors into the synapse. More AMPA receptors means larger responses to glutamate—synaptic strengthening. Early-phase LTP (lasting hours) relies on modifying existing proteins. Late-phase LTP (lasting days to weeks) requires gene transcription and protein synthesis, building new synaptic machinery. This transition from early to late phases parallels the transition from short-term to long-term memory, suggesting LTP is a cellular mechanism of memory storage."
+        },
+        {
+          "type": "subheading",
+          "text": "Long-Term Depression and Spike-Timing-Dependent Plasticity"
+        },
+        {
+          "type": "paragraph",
+          "text": "Not all plasticity strengthens synapses. Long-term depression (LTD) is a lasting decrease in synaptic strength, typically induced by prolonged low-frequency stimulation. LTD involves calcium influx through NMDA receptors (like LTP), but smaller, slower calcium elevations activate different enzymes—phosphatases instead of kinases—that remove AMPA receptors from synapses. LTP and LTD provide bidirectional control—synapses can be strengthened or weakened depending on the pattern of activity. This prevents runaway excitation (if only LTP existed, synapses would saturate at maximum strength) and enables flexible learning (strengthening relevant associations while weakening irrelevant ones).",
+          "links": [
+            {
+              "text": "Not all plasticity strengthens synapses. Long-term depression (LTD) is a lasting decrease in synaptic strength, typically induced by prolonged low-frequency stimulation.",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter07.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "STDP showing how spike timing determines potentiation vs depression",
+          "url": "https://www.google.com/search?q=spike+timing+dependent+plasticity+STDP+temporal+order&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "is a refinement of Hebbian learning discovered in the 1990s. It turns out that mere co-activity isn't sufficient—temporal order matters. If the presynaptic neuron fires just before (within ~20 ms) the postsynaptic neuron fires, LTP occurs—the synapse strengthens. If the postsynaptic neuron fires before the presynaptic neuron, LTD occurs—the synapse weakens. This makes causal sense: if presynaptic activity consistently precedes postsynaptic activity, the synapse likely contributes to making the postsynaptic neuron fire and should be strengthened. If the temporal order is reversed, the synapse didn't contribute and should be weakened. STDP implements a sophisticated causality detector, learning predictive relationships from temporal correlations.",
+          "lead_title": "Spike-timing-dependent plasticity (STDP)",
+          "links": [
+            {
+              "text": "STDP implements a sophisticated causality detector, learning predictive relationships from temporal correlations.",
+              "href": "https://www.nature.com/articles/nn1560",
+              "kind": "external"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "learning-across-scales-and-forms",
+      "title": "Learning Across Scales and Forms",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Non-Associative Learning: The Simplest Forms"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Aplysia (sea slug) gill-withdrawal reflex used in Kandel's studies",
+          "url": "https://www.google.com/search?q=habituation+sensitization+Aplysia+Eric+Kandel&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The simplest learning involves single stimuli changing response strength. Habituation is a decrease in response to repeated, innocuous stimulation—you stop noticing the hum of a refrigerator or the feeling of clothes on your skin. Habituation prevents wasting neural resources on irrelevant stimuli. Sensitization is an increase in response following a strong or noxious stimulus—after touching a hot stove, you become hyperresponsive to thermal stimuli. Eric Kandel won the 2000 Nobel Prize for elucidating the molecular mechanisms of habituation and sensitization in the sea slug Aplysia californica. Habituation involves decreased neurotransmitter release (fewer calcium channels open, less transmitter released). Sensitization involves increased neurotransmitter release (serotonin from modulatory neurons activates second messengers that enhance calcium influx). These simple forms of plasticity—occurring at single synapses—demonstrate that learning and memory begin at the molecular level.",
+          "links": [
+            {
+              "text": "Eric Kandel",
+              "href": "https://en.wikipedia.org/wiki/Eric_Kandel",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Classical Conditioning: Learning Predictions"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Pavlov's apparatus and conditioning paradigm",
+          "url": "https://www.google.com/search?q=Pavlov+classical+conditioning+dogs+salivation&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Classical (Pavlovian) conditioning is learning associations between stimuli. Russian physiologist Ivan Pavlov discovered that dogs would salivate not only to food (unconditioned stimulus, US) but also to stimuli consistently preceding food—a bell, a metronome, even the sight of the lab assistant (conditioned stimulus, CS). After repeated CS-US pairings, the CS alone elicits a conditioned response (CR)—salivation, anticipation, arousal. Classical conditioning implements predictive learning—organisms learn which stimuli predict important events (food, danger, mates), enabling preparatory responses. The NMDA receptor's coincidence detection provides a cellular mechanism: the CS activates presynaptic inputs; the US depolarizes the postsynaptic cell; coincident activity induces LTP, strengthening the CS pathway.",
+          "links": [
+            {
+              "text": "Classical (Pavlovian) conditioning",
+              "href": "https://en.wikipedia.org/wiki/Classical_conditioning",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Ivan Pavlov",
+              "href": "https://en.wikipedia.org/wiki/Ivan_Pavlov",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Modern theories view conditioning as prediction error learning. Rescorla and Wagner showed that learning occurs only when events are surprising—when the US is unexpected. If the CS already predicts the US perfectly, additional pairings produce no further learning. The animal has learned the predictive relationship; there's nothing left to learn. This parallels dopamine prediction error signals in the basal ganglia: dopamine neurons respond to unexpected rewards (prediction errors), not to fully predicted rewards. Classical conditioning and reinforcement learning share a computational core—both minimize prediction errors.",
+          "links": [
+            {
+              "text": "Rescorla",
+              "href": "https://en.wikipedia.org/wiki/Robert_Rescorla",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Wagner",
+              "href": "https://en.wikipedia.org/wiki/Allan_R._Wagner",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Instrumental Learning: Actions and Consequences"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Thorndike's puzzle box experiments demonstrating instrumental learning",
+          "url": "https://www.google.com/search?q=Thorndike+puzzle+box+law+of+effect&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Instrumental (operant) conditioning is learning associations between actions and outcomes. Edward Thorndike placed cats in puzzle boxes; they'd thrash randomly until accidentally triggering the escape mechanism. Across trials, unsuccessful actions decreased while successful actions increased—his Law of Effect: behaviors followed by satisfying consequences are strengthened; those followed by annoying consequences are weakened. B.F. Skinner elaborated this into operant conditioning, demonstrating that animals learn complex behaviors through shaping—reinforcing successive approximations to a target behavior.",
+          "links": [
+            {
+              "text": "Instrumental (operant) conditioning",
+              "href": "https://en.wikipedia.org/wiki/Instrumental_conditioning",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Edward Thorndike",
+              "href": "https://en.wikipedia.org/wiki/Edward_Thorndike",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "B.F. Skinner",
+              "href": "https://en.wikipedia.org/wiki/B._F._Skinner",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The basal ganglia implement instrumental learning through dopamine-modulated plasticity in the striatum. Direct pathway neurons (expressing D1 dopamine receptors) are strengthened by dopamine bursts, learning \"this action led to reward—do it more.\" Indirect pathway neurons (expressing D2 dopamine receptors) are weakened by dopamine pauses, learning \"this action led to no reward—do it less.\" Over trials, the basal ganglia learn action values—which actions are worth performing in which contexts. This is how habits form: initially, actions are goal-directed (you think about consequences); with repetition, they become habitual (automatic, stimulus-triggered). The transition from cortical (goal-directed) to striatal (habitual) control explains both skill mastery and addiction."
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Neural circuits distinguishing goal-directed vs habitual behavior",
+          "url": "https://www.google.com/search?q=habit+formation+goal+directed+habitual+control&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "Observational and Cognitive Learning"
+        },
+        {
+          "type": "paragraph",
+          "text": "Not all learning requires direct experience. Observational learning (social learning, imitation) involves acquiring behaviors by watching others. Albert Bandura's famous Bobo doll experiments demonstrated that children imitate aggressive behaviors they observe, even without reinforcement. Mirror neurons in premotor cortex—neurons that fire both when performing an action and when observing someone else perform it—may support observational learning by mapping observed actions onto your own motor repertoire. Cognitive learning involves building mental models of the world—acquiring knowledge about spatial layouts, causal relationships, abstract concepts. These forms of learning transcend simple associations, requiring the flexible, relational memory systems we'll explore next.",
+          "links": [
+            {
+              "text": "Albert Bandura",
+              "href": "https://en.wikipedia.org/wiki/Albert_Bandura",
+              "kind": "wikipedia"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "learning-beyond-the-individual-deep-time-and-culture",
+      "title": "Learning Beyond the Individual: Deep Time and Culture",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Evolution as Learning: Genes Remember"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Baldwin effect showing how learning can guide evolution",
+          "url": "https://www.google.com/search?q=genetic+evolution+as+learning+Baldwin+effect&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Here's a disorienting thought: your genome is a memory system. Not metaphorically—literally. Every gene you carry is a solution to a problem your ancestors faced, tested across millions of iterations, written in molecular code. That you flinch from snakes before consciously recognizing them? That's a 100-million-year-old memory from when your mammalian ancestors were small and serpents were large. That infants prefer face-like patterns within hours of birth? That's genetic memory of what matters for survival—find the caregivers. Carl Jung called them archetypes—universal symbols and patterns appearing across cultures. He thought they were inherited psychological structures, and neuroscience suggests he wasn't entirely wrong. Not because ideas are genetically transmitted, but because brains shaped by similar evolutionary pressures develop similar intuitions, fears, and attractions.",
+          "links": [
+            {
+              "text": "Carl Jung",
+              "href": "https://en.wikipedia.org/wiki/Carl_Jung",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Natural selection is learning by death—organisms that solve problems (finding food, avoiding predators, attracting mates) leave more offspring; those that fail are deleted. Evolution writes successful solutions into DNA, the ultimate long-term memory lasting millions of years. The timescale is glacial—genetic change across generations—but the algorithm is identical to synaptic learning: vary (mutation), select (survival), retain (heredity). The Baldwin effect shows how individual learning can accelerate evolution: if learning a skill improves survival, individuals with genetic variations making that skill easier to learn will be favored, eventually making the skill innate. This is how learning and evolution dance together—neural plasticity discovers solutions quickly; genetic change encodes them permanently.",
+          "links": [
+            {
+              "text": "The Baldwin effect",
+              "href": "https://en.wikipedia.org/wiki/Baldwin_effect",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Lamarck's Revenge: Epigenetics and Inherited Experience"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Epigenetic modifications showing DNA methylation patterns",
+          "url": "https://www.google.com/search?q=epigenetic+inheritance+transgenerational+methylation&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Jean-Baptiste Lamarck, the early 19th-century French naturalist, proposed that organisms could pass acquired characteristics to offspring—giraffes stretching their necks would have longer-necked children. Darwin's natural selection replaced Lamarckian inheritance in biology's heart, and for 150 years, Lamarck was the punchline of textbook jokes. Except—and here's where biology gets deliciously complicated—Lamarck was partially right. Not about neck-stretching, but about experience modifying heredity. The mechanism is epigenetics—chemical modifications to DNA (methylation) or histones (the proteins DNA wraps around) that change which genes are expressed without altering the genetic sequence itself. And here's the startling part: some epigenetic marks can be inherited.",
+          "links": [
+            {
+              "text": "Lamarck was partially right",
+              "href": "https://www.nature.com/articles/nrg2524",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Studies of Dutch Hunger Winter survivors (1944-45 famine) revealed that children of pregnant women who endured starvation had altered metabolism and increased disease risk—effects persisting into grandchildren. Trauma studies in Holocaust survivors suggest stress-related epigenetic changes may transmit across generations. In mice, fear conditioning produces epigenetic changes in sperm that make offspring more sensitive to the conditioned odor—inherited memory of ancestral danger. This is neo-Lamarckianism: experience modifies gene expression; those modifications can sometimes be inherited. The effects are subtle, time-limited (usually disappearing after a few generations), and controversial—not all studies replicate, mechanisms are debated. But the principle is clear: the boundary between individual experience and hereditary information is porous. Your neurons aren't the only things learning from experience; your genome keeps a shorter-term ledger too.",
+          "links": [
+            {
+              "text": "Hunger Winter survivors",
+              "href": "https://en.wikipedia.org/wiki/Dutch_famine_of_1944%E2%80%931945",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "stress-related epigenetic changes may transmit across generations",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5977074/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Transgenerational epigenetic effects across multiple generations",
+          "url": "https://www.google.com/search?q=transgenerational+trauma+epigenetics+inheritance&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "Cultural Memory: Outsourcing Storage to Society"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Oral traditions and cultural transmission across generations",
+          "url": "https://www.google.com/search?q=oral+tradition+cultural+memory+indigenous+knowledge&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Biological memory—synaptic and genetic—is constrained by the individual lifespan and the flesh that carries it. But humans discovered a trick that changed everything: externalized memory. Language lets one brain share patterns with another brain, transmitting solutions across individuals and generations without waiting for genetic change. An elder who discovers that certain mushrooms are poisonous can tell the young, encoding the knowledge in phonemes and grammar rather than DNA and natural selection. The information transfer is Lamarckian—acquired knowledge passed directly to descendants—but the medium is cultural rather than genetic."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oral traditions preserved complex knowledge for millennia before writing existed. Australian Aboriginal songlines encode geographical information, navigation routes, resource locations, and histories spanning 40,000+ years—the longest continuous cultural memory on Earth. Stories function as mnemonic devices: embedding practical information in narrative makes it memorable, emotionally resonant, resistant to corruption. When writing emerged 5,000 years ago, it was humanity's first persistent, external neural backup—clay tablets as cortical archives. Now books, databases, and the internet form an exocortex, a collective memory system orders of magnitude larger than any individual brain.",
+          "links": [
+            {
+              "text": "Australian Aboriginal songlines",
+              "href": "https://www.science.org/doi/10.1111/1467-8470.00081",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Memes: Ideas as Replicators"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Meme theory and cultural transmission diagrams",
+          "url": "https://www.google.com/search?q=Richard+Dawkins+meme+theory+cultural+evolution&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Richard Dawkins coined \"meme\" in 1976 (long before internet cat pictures) to describe units of cultural transmission—ideas, behaviors, styles—that replicate by jumping from brain to brain through imitation, teaching, or communication. Memes are to culture what genes are to biology: replicators competing for transmission and persistence. A catchy tune, a religious belief, a fashion trend, a scientific theory—all memes, spreading through populations, mutating, being selected for \"fitness\" (how well they propagate). Some memes enhance their hosts' biological fitness (agricultural techniques, medical knowledge). Others reduce it but are excellent at spreading (ideologies demanding self-sacrifice, addictive behaviors). Memes don't care about your wellbeing—only their propagation.",
+          "links": [
+            {
+              "text": "Richard Dawkins coined \"meme\"",
+              "href": "https://en.wikipedia.org/wiki/Meme",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "This might sound abstract until you realize you're currently hosting thousands of memes—words, concepts, skills, beliefs, preferences—most acquired from others, not discovered independently. Your personality is partly an ecosystem of memes competing for expression. Memetics applies evolutionary thinking to culture: ideas have variation (mutation, recombination), selection (some spread more than others), and heredity (transmitted with varying fidelity). The parallel to neural learning is striking—Hebbian learning strengthens neural connections based on co-activity; memetic transmission strengthens ideas based on co-occurrence in social networks. Your brain is simultaneously shaped by genetic evolution (millions of years), synaptic plasticity (milliseconds to days), and memetic evolution (generations to seconds in the internet age).",
+          "links": [
+            {
+              "text": "Memetics",
+              "href": "https://en.wikipedia.org/wiki/Memetics",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Gossip and Social Learning: The Knowledge Network"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Social learning networks and information transmission",
+          "url": "https://www.google.com/search?q=gossip+evolutionary+function+social+learning&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Why do humans spend so much time talking about people who aren't present? Robin Dunbar proposes that gossip—seemingly frivolous social chatter—evolved as a scalable way to maintain group cohesion and share social knowledge. Primates maintain social bonds through grooming, but grooming doesn't scale beyond ~50 individuals (you can only groom one at a time). Language lets you \"groom\" multiple individuals simultaneously while transmitting information about who's trustworthy, who's dangerous, who cheated, who helped. Gossip is distributed social learning—each person acts as a node in a knowledge network, collecting and sharing information about social norms, alliances, threats, and opportunities.",
+          "links": [
+            {
+              "text": "Robin Dunbar",
+              "href": "https://en.wikipedia.org/wiki/Robin_Dunbar",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Humans are obligate social learners—we acquire most knowledge from others rather than through individual trial and error. This is computationally efficient: why test every berry for toxicity when someone else already did the experiment? But it creates vulnerability—we inherit not just useful knowledge but misinformation, superstitions, biases. Social learning strategies have evolved: copy successful individuals (prestige bias), copy the majority (conformity bias), copy kin (nepotistic transmission). These biases shape which memes spread, creating cultural evolutionary dynamics that can run faster than genetic evolution but slower than individual learning. Fashion changes yearly; languages shift over centuries; moral intuitions evolve over millennia. Each timescale is a distinct memory system.",
+          "links": [
+            {
+              "text": "Social learning strategies",
+              "href": "https://www.nature.com/articles/s41562-018-0483-4",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The integration of these memory systems—genetic, epigenetic, neural, cultural—creates cumulative cultural evolution, the ratchet that built civilization. Each generation inherits not just genes but knowledge, adding incremental improvements that persist. No single human could invent agriculture, writing, antibiotics, smartphones from first principles. These are collective achievements, the product of millions of brains across thousands of generations, each contributing small modifications to inherited designs. Your brain contains billions of synapses shaped by your experience, millions of genes shaped by evolution, and thousands of memes shaped by culture. You are a multi-timescale memory system, simultaneously ancient and novel, individual and collective—a temporary pattern in matter that remembers and transmits patterns across scales from milliseconds to millennia."
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Cumulative cultural evolution and technological ratchet effect",
+          "url": "https://www.google.com/search?q=cumulative+cultural+evolution+human+uniqueness&tbm=isch"
+        },
+        {
+          "type": "stage",
+          "text": "We've now extended our view of learning and memory from individual synapses to species evolution to cultural transmission. Each operates on different timescales but implements similar computational principles: variation, selection, retention. Your moment-to-moment experience modifies synapses; your lifetime modifies (slightly) gene expression; your ideas modify culture. Memory isn't confined to your skull—it's distributed across genomes, nervous systems, and societies, operating simultaneously at scales from microseconds to megayears."
+        }
+      ]
+    },
+    {
+      "id": "memory-systems-architecture-of-storage",
+      "title": "Memory Systems: Architecture of Storage",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Multiple Memory Systems: Declarative vs. Procedural"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Taxonomy of memory systems showing major divisions",
+          "url": "https://www.google.com/search?q=memory+systems+taxonomy+declarative+procedural&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The brain contains multiple memory systems, each specialized for different types of information and supported by different neural structures. The fundamental division is between declarative memory (explicit, conscious, \"knowing that\") and procedural memory (implicit, unconscious, \"knowing how\"). Declarative memory includes episodic memory (personal experiences, events in context—your first day of school, what you had for breakfast) and semantic memory (factual knowledge, concepts—Paris is the capital of France, birds have feathers). Procedural memory includes motor skills (riding a bike, playing piano), perceptual skills (reading mirror-reversed text), and cognitive skills (mental arithmetic, chess strategies). The systems differ in their neural substrates, their accessibility to consciousness, and their flexibility."
+        },
+        {
+          "type": "paragraph",
+          "text": "The distinction was revealed by patient H.M., perhaps neuroscience's most famous case. In 1953, to treat intractable epilepsy, surgeon William Scoville removed H.M.'s medial temporal lobes bilaterally, including most of his hippocampus. The surgery controlled his seizures but produced profound amnesia. Brenda Milner discovered that H.M. couldn't form new declarative memories—he forgot conversations minutes after they ended, never learned where he lived, didn't recognize people who cared for him daily. Yet his procedural learning was intact: he learned motor skills (mirror drawing, rotary pursuit) at normal rates, improving across days despite having no conscious memory of practicing. This double dissociation—impaired declarative memory with preserved procedural memory—demonstrated that memory is not unitary but comprises distinct systems.",
+          "links": [
+            {
+              "text": "William Scoville",
+              "href": "https://en.wikipedia.org/wiki/William_Beecher_Scoville",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Brenda Milner",
+              "href": "https://en.wikipedia.org/wiki/Brenda_Milner",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "H.M.'s brain showing bilateral medial temporal lobe resection",
+          "url": "https://www.google.com/search?q=patient+HM+Henry+Molaison+hippocampus+amnesia&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "Episodic Memory: The Hippocampal Time Machine"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Hippocampal structure and place cell activity patterns",
+          "url": "https://www.google.com/search?q=hippocampus+anatomy+place+cells+grid+cells&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The hippocampus is essential for episodic memory—memories of events in their spatial and temporal context. Lesions produce anterograde amnesia (inability to form new episodic memories) and temporally-graded retrograde amnesia (loss of recent memories with relative sparing of remote memories). This pattern suggests the hippocampus is necessary for encoding and initial storage but not for permanent storage—memories are eventually transferred elsewhere. John O'Keefe discovered place cells in the rat hippocampus—neurons that fire when the animal occupies specific locations, creating a neural map of space. Edvard and May-Britt Moser discovered grid cells in entorhinal cortex—neurons that fire in multiple locations forming a hexagonal grid, providing a metric coordinate system for navigation. O'Keefe and the Mosers shared the 2014 Nobel Prize for discovering the brain's \"inner GPS.\"",
+          "links": [
+            {
+              "text": "The hippocampus is essential for episodic memory—memories of events in their spatial and temporal context.",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter05.html",
+              "kind": "neuroscience_online"
+            },
+            {
+              "text": "John O'Keefe",
+              "href": "https://en.wikipedia.org/wiki/John_O%27Keefe_(neuroscientist)",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Edvard",
+              "href": "https://en.wikipedia.org/wiki/Edvard_Moser",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "May-Britt Moser",
+              "href": "https://en.wikipedia.org/wiki/May-Britt_Moser",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "But the hippocampus does more than map space—it constructs episodic memories by binding together distributed cortical representations of an event's components (who, what, where, when). The hippocampus rapidly encodes associations between arbitrary elements, creating unique representations of individual events (pattern separation) while linking related events (pattern completion). During sleep—especially slow-wave sleep—hippocampal activity replays recent experiences, often in fast-forward. This replay is thought to drive systems consolidation, gradually transferring memories from hippocampus to cortex for long-term storage.",
+          "links": [
+            {
+              "text": "The hippocampus rapidly encodes associations between arbitrary elements",
+              "href": "https://www.nature.com/articles/nrn2213",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Hippocampal replay during sleep showing reactivation patterns",
+          "url": "https://www.google.com/search?q=hippocampal+replay+memory+consolidation+sleep&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "Semantic Memory: Building Conceptual Knowledge"
+        },
+        {
+          "type": "paragraph",
+          "text": "Semantic memory—your knowledge of facts, concepts, meanings—is organized differently than episodic memory. You know Paris is the capital of France, but you probably don't remember when or where you learned this. Semantic knowledge becomes decontextualized—abstracted from the episodes in which it was learned. Patients with hippocampal damage can't form new episodic memories but gradually accumulate semantic knowledge, suggesting hippocampal-independent learning mechanisms. Neocortical areas, especially anterior and lateral temporal cortex, store semantic knowledge in distributed networks where concepts are represented by patterns of activity across neurons tuned to different features."
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Semantic network organization showing hierarchical concept representations",
+          "url": "https://www.google.com/search?q=semantic+memory+organization+conceptual+knowledge+networks&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "How does semantic memory acquire structure—categories, hierarchies, similarities? Distributed representations provide the answer. If \"dog\" activates neurons tuned for,,,, and \"cat\" activates overlapping neurons,,,, then \"dog\" and \"cat\" have similar representations—they're semantically related. The similarity structure of neural representations mirrors conceptual relationships. This is why brain damage can produce category-specific deficits—patients who lose knowledge of living things while preserving knowledge of tools, or vice versa. Different categories are represented in different cortical regions, and focal damage disrupts specific semantic domains.",
+          "links": [
+            {
+              "text": "patients who lose knowledge of living things while preserving knowledge of tools, or vice versa",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6420305/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Consolidation: From Hippocampus to Cortex"
+        },
+        {
+          "type": "paragraph",
+          "text": "The standard consolidation model proposes that episodic memories are initially encoded in the hippocampus and distributed neocortical regions. The hippocampus binds the neocortical components—seeing a face activates fusiform face area, hearing a name activates auditory cortex, sensing an emotion activates amygdala; the hippocampus links them. Over time—days to years—memories are consolidated into neocortex through repeated hippocampal-cortical dialogue, especially during sleep. Eventually, cortical connections strengthen enough to support retrieval without hippocampal involvement. This explains temporally-graded retrograde amnesia: recent memories (still hippocampus-dependent) are lost; remote memories (fully consolidated into cortex) are preserved.",
+          "links": [
+            {
+              "text": "The standard consolidation model proposes that episodic memories are initially encoded in the hippocampus and distributed neocortical regions.",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter07.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Systems consolidation model showing gradual memory transfer",
+          "url": "https://www.google.com/search?q=systems+consolidation+hippocampus+to+cortex+memory+transfer&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "However, some episodic memories—vivid, detailed recollections of specific events—seem to retain hippocampal dependence indefinitely. This has led to competing theories: multiple trace theory proposes that each retrieval creates a new hippocampal trace, so frequently retrieved memories leave multiple traces (some vulnerable, some preserved). Transformation theory proposes that consolidated memories lose episodic detail and become more semantic—you remember the gist but not the specifics. The debate continues, but all agree: consolidation is an active, time-dependent process, not passive storage. Memories are dynamic, reconstructed at retrieval, and modified by subsequent experience."
+        }
+      ]
+    },
+    {
+      "id": "working-memory-the-cognitive-workspace",
+      "title": "Working Memory: The Cognitive Workspace",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Working Memory vs. Short-Term Memory"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Baddeley's working memory model showing multiple components",
+          "url": "https://www.google.com/search?q=Baddeley+working+memory+model+components&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "is a temporary storage buffer—hold a phone number long enough to dial it, then forget. Working memory is an active workspace where information is maintained AND manipulated for cognitive tasks. Alan Baddeley and Graham Hitch proposed a multi-component working memory model comprising: (1) the phonological loop (verbal/acoustic information—rehearsing phone numbers, inner speech), (2) the visuospatial sketchpad (visual/spatial information—mental rotation, imagining routes), and (3) the central executive (attentional control, coordinating the subsystems, updating and manipulating information). Later, they added the episodic buffer (integrating information from different modalities and linking working memory with long-term memory).",
+          "lead_title": "Short-term memory",
+          "links": [
+            {
+              "text": "Alan Baddeley",
+              "href": "https://en.wikipedia.org/wiki/Alan_Baddeley",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Graham Hitch",
+              "href": "https://en.wikipedia.org/wiki/Graham_Hitch",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Working memory capacity is famously limited. George Miller's 1956 paper \"The Magical Number Seven, Plus or Minus Two\" suggested humans can hold about 7 items in working memory. More recent estimates suggest the true capacity is closer to 4±1 chunks. This capacity limit has profound implications: it constrains reasoning, problem-solving, learning, and comprehension. When working memory is overloaded, performance collapses. Individual differences in working memory capacity predict fluid intelligence, academic achievement, and attentional control.",
+          "links": [
+            {
+              "text": "George Miller",
+              "href": "https://en.wikipedia.org/wiki/George_Armitage_Miller",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Individual differences in working memory capacity predict fluid intelligence, academic achievement, and attentional control.",
+              "href": "https://en.wikipedia.org/wiki/Working_memory#Individual_differences",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Neural Mechanisms: Persistent Activity in Prefrontal Cortex"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Prefrontal neurons showing sustained delay-period activity",
+          "url": "https://www.google.com/search?q=prefrontal+cortex+persistent+activity+working+memory&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "How does the brain maintain information in working memory? Classic studies by Patricia Goldman-Rakic recorded from monkey prefrontal cortex during delayed-response tasks: show a cue (e.g., a dot at a particular location), wait a delay (several seconds), then the monkey must respond to the remembered location. During the delay—with no external stimulus—prefrontal neurons fire persistently, maintaining a neural representation of the cue's location. This persistent activity is thought to be the neural substrate of working memory: recurrent excitatory connections within prefrontal networks sustain activity, keeping information \"online\" for cognitive processing.",
+          "links": [
+            {
+              "text": "Patricia Goldman-Rakic",
+              "href": "https://en.wikipedia.org/wiki/Patricia_Goldman-Rakic",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "But persistent activity is metabolically expensive and fragile—a distraction can collapse it. Recent theories propose activity-silent working memory: information is encoded in short-term synaptic modifications (e.g., facilitated synapses, calcium-dependent changes) rather than sustained firing. When needed, a \"read-out\" signal reactivates the latent representation. This \"activity-silent\" storage is more robust to distraction and less energetically costly. Working memory likely uses both mechanisms—persistent activity for actively maintained information, synaptic traces for passively stored information."
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Frontoparietal networks supporting working memory maintenance",
+          "url": "https://www.google.com/search?q=working+memory+neural+mechanisms+prefrontal+parietal+2024&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "Working Memory as Interface to Executive Function"
+        },
+        {
+          "type": "paragraph",
+          "text": "Working memory is not just a passive buffer—it's the workspace of thought. It holds the premises while you reason toward a conclusion. It maintains the goal while you plan steps to achieve it. It keeps track of subgoals during complex tasks. Working memory interfaces with long-term memory (retrieving relevant knowledge) and with executive control systems (updating, inhibiting, switching). The central executive component of Baddeley's model overlaps heavily with executive function—processes that regulate thought and action, including planning, cognitive flexibility, inhibitory control, and error monitoring."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prefrontal cortex—especially dorsolateral prefrontal cortex (dlPFC)—implements working memory and executive control. Lesions produce dysexecutive syndrome: impaired planning, perseveration (repeating unsuccessful actions), poor inhibitory control, distractibility. Patients can describe correct behavior but fail to execute it—they lack the online maintenance and control processes that keep goals active and regulate behavior accordingly. Working memory capacity and executive function are closely related, perhaps inseparable—both reflect the ability to maintain and manipulate goal-relevant information in the face of distraction and competing demands."
+        },
+        {
+          "type": "stage",
+          "text": "You've now seen learning and memory at multiple scales: molecular (LTP/LTD at synapses), cellular (place cells encoding space), systems (hippocampal-cortical consolidation), and cognitive (working memory's limited workspace). Learning transforms experience into lasting neural change; memory systems store those changes in different formats for different purposes. Next, we'll explore how prefrontal cortex uses working memory and long-term knowledge to implement executive control—the high-level regulation of thought and action that makes us flexible, goal-directed agents rather than simple stimulus-response machines."
+        },
+        {
+          "type": "note",
+          "kind": "preview",
+          "text": "Executive function and cognitive control in prefrontal cortex",
+          "url": "https://www.google.com/search?q=executive+function+prefrontal+cortex+cognitive+control+2024"
+        }
+      ]
+    },
+    {
+      "id": "thought-questions",
+      "title": "Thought Questions for Discussion",
+      "level": 2,
+      "kind": "thought_questions",
+      "blocks": [
+        {
+          "type": "stage",
+          "text": "Four questions to spark discussion before your next class:"
+        },
+        {
+          "type": "paragraph",
+          "text": "You are simultaneously a carrier of genetic memories (millions of years old), epigenetic marks (potentially from your grandparents' experiences), neural memories (formed throughout your life), and cultural memes (some ancient, some hours old). When you feel inexplicably anxious near snakes, follow a family tradition, remember your first day of school, or quote a TikTok video, different memory systems operating at different timescales are expressing themselves through you. Which of these is most \"you\"? If your cultural and genetic memories sometimes conflict (e.g., evolutionary food preferences vs. cultural dietary norms), which should win? Are you a unified agent, or a temporary coalition of memory systems that occasionally disagree?",
+          "lead_title": "Memory Across Timescales—Who Owns the Pattern?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Patient H.M. could learn new motor skills but had no conscious memory of practicing them. Each day he would improve at mirror drawing, yet claim he'd never done the task before. This dissociation reveals that learning and memory are not identical—you can learn without remembering. What does this tell us about consciousness and skill? If H.M. can acquire complex skills without conscious awareness, what role does consciousness play in learning? Could experts who perform \"automatically\" (musicians, athletes) be accessing procedural memories that never required conscious encoding?",
+          "lead_title": "The Paradox of Learning Without Memory (H.M. and Procedural Learning)"
+        },
+        {
+          "type": "paragraph",
+          "text": "We typically view forgetting as a failure—something to be minimized or overcome. But consider: if you remembered every experience in perfect detail (like patients with hyperthymesia), would this be beneficial or debilitating? They report being overwhelmed by memories, struggling to extract general principles from specific episodes. Perhaps forgetting is adaptive—allowing you to extract regularities (semantic knowledge) by discarding episodic details. Is forgetting a design feature that enables generalization, or a cost we pay for having finite neural resources?",
+          "lead_title": "The Forgetting Paradox: Is Memory Failure a Bug or a Feature?",
+          "links": [
+            {
+              "text": "hyperthymesia",
+              "href": "https://en.wikipedia.org/wiki/Hyperthymesia",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Working memory capacity strongly predicts fluid intelligence and academic achievement. But is large working memory capacity causing higher intelligence, or are both caused by some third factor (e.g., efficient neural processing, attention control)? Consider: training can modestly improve working memory performance, but does this transfer to improved intelligence or only to the trained tasks? If we could dramatically expand working memory capacity (through neural augmentation or brain-computer interfaces), would we become proportionally more intelligent, or would we encounter other bottlenecks?",
+          "lead_title": "Working Memory Capacity and Intelligence: Cause or Correlation?"
+        },
+        {
+          "type": "subheading",
+          "text": "Practice Questions:"
+        },
+        {
+          "type": "paragraph",
+          "text": "• The cerebellum implements _______ learning using _______ fibers that carry error signals to modify synapses between parallel fibers and _______ cells."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The basal ganglia learn through _______ learning; dopamine neurons signal _______ errors—bursts for unexpected rewards, pauses for omitted rewards."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Hebb's postulate states that synapses strengthen when presynaptic and postsynaptic neurons are _______ active; this is summarized as \"cells that fire together, _______.\""
+        },
+        {
+          "type": "paragraph",
+          "text": "• Long-term potentiation (LTP) requires activation of _______ receptors, which act as coincidence detectors requiring both glutamate binding and postsynaptic _______."
+        },
+        {
+          "type": "paragraph",
+          "text": "• NMDA receptors are normally blocked by _______ ions; depolarization expels this block, allowing _______ influx that triggers LTP."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Spike-timing-dependent plasticity (STDP) strengthens synapses when the _______ neuron fires before the _______ neuron, implementing a causality detector."
+        },
+        {
+          "type": "paragraph",
+          "text": "• _______ is decreased response to repeated innocuous stimulation; _______ is increased response following strong or noxious stimulation."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Classical conditioning pairs a conditioned stimulus (CS) with an _______ stimulus (US); learning occurs when the US is _______, not when fully predicted."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Instrumental learning follows the Law of _______: behaviors followed by _______ consequences are strengthened; those followed by annoying consequences are weakened."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Natural selection can be understood as learning by _______; the _______ effect shows how individual learning can accelerate evolution."
+        },
+        {
+          "type": "paragraph",
+          "text": "• _______ refers to chemical modifications (like DNA methylation) that change gene expression without altering the genetic sequence; some marks can be _______ inherited."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Richard Dawkins coined the term _______ to describe units of cultural transmission that replicate by jumping from _______ to _______."
+        },
+        {
+          "type": "paragraph",
+          "text": "• _______ cultural evolution is the process where each generation inherits knowledge and adds incremental improvements, building civilization through _______ contributions."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Declarative memory includes _______ memory (personal experiences) and _______ memory (factual knowledge); both require the _______."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Patient H.M. had bilateral _______ lobe resection, producing profound _______ amnesia (inability to form new memories) with preserved _______ memory (motor skills)."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Hippocampal _______ cells fire when an animal occupies specific locations; _______ cells in entorhinal cortex fire in hexagonal grid patterns."
+        },
+        {
+          "type": "paragraph",
+          "text": "• _______ consolidation is the gradual transfer of memories from _______ to neocortex over time, especially during _______."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Baddeley's working memory model includes the _______ loop (verbal information), the _______ sketchpad (visual/spatial information), and the _______ executive (attentional control)."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Working memory capacity is limited to about _______±1 chunks; persistent activity in _______ cortex maintains information during delays."
+        }
+      ]
+    }
+  ],
+  "thought_questions": [
+    {
+      "type": "question",
+      "title": "Memory Across Timescales—Who Owns the Pattern?",
+      "text": "You are simultaneously a carrier of genetic memories (millions of years old), epigenetic marks (potentially from your grandparents' experiences), neural memories (formed throughout your life), and cultural memes (some ancient, some hours old). When you feel inexplicably anxious near snakes, follow a family tradition, remember your first day of school, or quote a TikTok video, different memory systems operating at different timescales are expressing themselves through you. Which of these is most \"you\"? If your cultural and genetic memories sometimes conflict (e.g., evolutionary food preferences vs. cultural dietary norms), which should win? Are you a unified agent, or a temporary coalition of memory systems that occasionally disagree?"
+    },
+    {
+      "type": "question",
+      "title": "The Paradox of Learning Without Memory (H.M. and Procedural Learning)",
+      "text": "Patient H.M. could learn new motor skills but had no conscious memory of practicing them. Each day he would improve at mirror drawing, yet claim he'd never done the task before. This dissociation reveals that learning and memory are not identical—you can learn without remembering. What does this tell us about consciousness and skill? If H.M. can acquire complex skills without conscious awareness, what role does consciousness play in learning? Could experts who perform \"automatically\" (musicians, athletes) be accessing procedural memories that never required conscious encoding?"
+    },
+    {
+      "type": "question",
+      "title": "The Forgetting Paradox: Is Memory Failure a Bug or a Feature?",
+      "text": "We typically view forgetting as a failure—something to be minimized or overcome. But consider: if you remembered every experience in perfect detail (like patients with hyperthymesia), would this be beneficial or debilitating? They report being overwhelmed by memories, struggling to extract general principles from specific episodes. Perhaps forgetting is adaptive—allowing you to extract regularities (semantic knowledge) by discarding episodic details. Is forgetting a design feature that enables generalization, or a cost we pay for having finite neural resources?"
+    },
+    {
+      "type": "question",
+      "title": "Working Memory Capacity and Intelligence: Cause or Correlation?",
+      "text": "Working memory capacity strongly predicts fluid intelligence and academic achievement. But is large working memory capacity causing higher intelligence, or are both caused by some third factor (e.g., efficient neural processing, attention control)? Consider: training can modestly improve working memory performance, but does this transfer to improved intelligence or only to the trained tasks? If we could dramatically expand working memory capacity (through neural augmentation or brain-computer interfaces), would we become proportionally more intelligent, or would we encounter other bottlenecks?"
+    }
+  ],
+  "practice_questions": {
+    "fill_in_the_blanks": [
+      "The cerebellum implements _______ learning using _______ fibers that carry error signals to modify synapses between parallel fibers and _______ cells.",
+      "The basal ganglia learn through _______ learning; dopamine neurons signal _______ errors—bursts for unexpected rewards, pauses for omitted rewards.",
+      "Hebb's postulate states that synapses strengthen when presynaptic and postsynaptic neurons are _______ active; this is summarized as \"cells that fire together, _______.\"",
+      "Long-term potentiation (LTP) requires activation of _______ receptors, which act as coincidence detectors requiring both glutamate binding and postsynaptic _______.",
+      "NMDA receptors are normally blocked by _______ ions; depolarization expels this block, allowing _______ influx that triggers LTP.",
+      "Spike-timing-dependent plasticity (STDP) strengthens synapses when the _______ neuron fires before the _______ neuron, implementing a causality detector.",
+      "_______ is decreased response to repeated innocuous stimulation; _______ is increased response following strong or noxious stimulation.",
+      "Classical conditioning pairs a conditioned stimulus (CS) with an _______ stimulus (US); learning occurs when the US is _______, not when fully predicted.",
+      "Instrumental learning follows the Law of _______: behaviors followed by _______ consequences are strengthened; those followed by annoying consequences are weakened.",
+      "Natural selection can be understood as learning by _______; the _______ effect shows how individual learning can accelerate evolution.",
+      "_______ refers to chemical modifications (like DNA methylation) that change gene expression without altering the genetic sequence; some marks can be _______ inherited.",
+      "Richard Dawkins coined the term _______ to describe units of cultural transmission that replicate by jumping from _______ to _______.",
+      "_______ cultural evolution is the process where each generation inherits knowledge and adds incremental improvements, building civilization through _______ contributions.",
+      "Declarative memory includes _______ memory (personal experiences) and _______ memory (factual knowledge); both require the _______.",
+      "Patient H.M. had bilateral _______ lobe resection, producing profound _______ amnesia (inability to form new memories) with preserved _______ memory (motor skills).",
+      "Hippocampal _______ cells fire when an animal occupies specific locations; _______ cells in entorhinal cortex fire in hexagonal grid patterns.",
+      "_______ consolidation is the gradual transfer of memories from _______ to neocortex over time, especially during _______.",
+      "Baddeley's working memory model includes the _______ loop (verbal information), the _______ sketchpad (visual/spatial information), and the _______ executive (attentional control).",
+      "Working memory capacity is limited to about _______±1 chunks; persistent activity in _______ cortex maintains information during delays."
+    ]
+  },
+  "closing": [
+    {
+      "type": "note",
+      "kind": "preview",
+      "text": "Executive function systems and prefrontal cortex organization",
+      "url": "https://www.google.com/search?q=executive+function+prefrontal+cortex+planning+inhibition"
+    }
+  ],
+  "links": [
+    {
+      "text": "Executive function systems and prefrontal cortex organization",
+      "href": "https://www.google.com/search?q=executive+function+prefrontal+cortex+planning+inhibition",
+      "kind": "image_search"
+    },
+    {
+      "text": "Cerebellar anatomy showing distinctive layered architecture",
+      "href": "https://www.google.com/search?q=cerebellum+structure+purkinje+cells+parallel+fibers&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "The cerebellum (Latin: \"little brain\") contains more neurons than the rest of the brain combined—80 billion neurons packed into 10% of brain volume.",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s3/chapter05.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "David Marr",
+      "href": "https://en.wikipedia.org/wiki/David_Marr_(neuroscientist)",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "James Albus",
+      "href": "https://en.wikipedia.org/wiki/James_Albus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Cerebellar learning in eyeblink conditioning paradigm",
+      "href": "https://www.google.com/search?q=cerebellar+learning+eyeblink+conditioning+timing&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "cognitive timing, working memory, attention, and even emotion regulation",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6494642/",
+      "kind": "external"
+    },
+    {
+      "text": "Basal ganglia circuit showing direct and indirect pathways",
+      "href": "https://www.google.com/search?q=basal+ganglia+anatomy+striatum+substantia+nigra&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "The basal ganglia—a set of subcortical nuclei including the striatum, globus pallidus, substantia nigra, and subthalamic nucleus—solve a different problem: action selection.",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s3/chapter04.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "Parkinson's disease",
+      "href": "https://en.wikipedia.org/wiki/Parkinson%27s_disease",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Huntington's disease",
+      "href": "https://en.wikipedia.org/wiki/Huntington%27s_disease",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Dopamine neurons signal prediction errors",
+      "href": "https://www.nature.com/articles/nn1560",
+      "kind": "external"
+    },
+    {
+      "text": "Dopamine neuron responses showing prediction error signals",
+      "href": "https://www.google.com/search?q=dopamine+prediction+error+reinforcement+learning+Schultz&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Donald Hebb and illustrations of his cell assembly theory",
+      "href": "https://www.google.com/search?q=Donald+Hebb+neuroscientist+cell+assembly+theory&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Donald Hebb",
+      "href": "https://en.wikipedia.org/wiki/Donald_O._Hebb",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Terje Lømo",
+      "href": "https://en.wikipedia.org/wiki/Terje_L%C3%B8mo",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Tim Bliss",
+      "href": "https://en.wikipedia.org/wiki/Tim_Bliss",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "LTP induction showing NMDA receptor activation and signaling cascades",
+      "href": "https://www.google.com/search?q=long+term+potentiation+LTP+mechanism+NMDA+receptor&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Long-term potentiation (LTP) is a lasting increase in synaptic strength following high-frequency stimulation of a pathway.",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter07.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "NMDA receptor showing voltage-dependent magnesium block mechanism",
+      "href": "https://www.google.com/search?q=NMDA+receptor+magnesium+block+calcium+influx&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Not all plasticity strengthens synapses. Long-term depression (LTD) is a lasting decrease in synaptic strength, typically induced by prolonged low-frequency stimulation.",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter07.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "STDP showing how spike timing determines potentiation vs depression",
+      "href": "https://www.google.com/search?q=spike+timing+dependent+plasticity+STDP+temporal+order&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "STDP implements a sophisticated causality detector, learning predictive relationships from temporal correlations.",
+      "href": "https://www.nature.com/articles/nn1560",
+      "kind": "external"
+    },
+    {
+      "text": "Aplysia (sea slug) gill-withdrawal reflex used in Kandel's studies",
+      "href": "https://www.google.com/search?q=habituation+sensitization+Aplysia+Eric+Kandel&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Eric Kandel",
+      "href": "https://en.wikipedia.org/wiki/Eric_Kandel",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Pavlov's apparatus and conditioning paradigm",
+      "href": "https://www.google.com/search?q=Pavlov+classical+conditioning+dogs+salivation&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Classical (Pavlovian) conditioning",
+      "href": "https://en.wikipedia.org/wiki/Classical_conditioning",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Ivan Pavlov",
+      "href": "https://en.wikipedia.org/wiki/Ivan_Pavlov",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Rescorla",
+      "href": "https://en.wikipedia.org/wiki/Robert_Rescorla",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Wagner",
+      "href": "https://en.wikipedia.org/wiki/Allan_R._Wagner",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Thorndike's puzzle box experiments demonstrating instrumental learning",
+      "href": "https://www.google.com/search?q=Thorndike+puzzle+box+law+of+effect&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Instrumental (operant) conditioning",
+      "href": "https://en.wikipedia.org/wiki/Instrumental_conditioning",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Edward Thorndike",
+      "href": "https://en.wikipedia.org/wiki/Edward_Thorndike",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "B.F. Skinner",
+      "href": "https://en.wikipedia.org/wiki/B._F._Skinner",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Neural circuits distinguishing goal-directed vs habitual behavior",
+      "href": "https://www.google.com/search?q=habit+formation+goal+directed+habitual+control&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Albert Bandura",
+      "href": "https://en.wikipedia.org/wiki/Albert_Bandura",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Baldwin effect showing how learning can guide evolution",
+      "href": "https://www.google.com/search?q=genetic+evolution+as+learning+Baldwin+effect&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Carl Jung",
+      "href": "https://en.wikipedia.org/wiki/Carl_Jung",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "The Baldwin effect",
+      "href": "https://en.wikipedia.org/wiki/Baldwin_effect",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Epigenetic modifications showing DNA methylation patterns",
+      "href": "https://www.google.com/search?q=epigenetic+inheritance+transgenerational+methylation&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Lamarck was partially right",
+      "href": "https://www.nature.com/articles/nrg2524",
+      "kind": "external"
+    },
+    {
+      "text": "Hunger Winter survivors",
+      "href": "https://en.wikipedia.org/wiki/Dutch_famine_of_1944%E2%80%931945",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "stress-related epigenetic changes may transmit across generations",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5977074/",
+      "kind": "external"
+    },
+    {
+      "text": "Transgenerational epigenetic effects across multiple generations",
+      "href": "https://www.google.com/search?q=transgenerational+trauma+epigenetics+inheritance&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Oral traditions and cultural transmission across generations",
+      "href": "https://www.google.com/search?q=oral+tradition+cultural+memory+indigenous+knowledge&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Australian Aboriginal songlines",
+      "href": "https://www.science.org/doi/10.1111/1467-8470.00081",
+      "kind": "external"
+    },
+    {
+      "text": "Meme theory and cultural transmission diagrams",
+      "href": "https://www.google.com/search?q=Richard+Dawkins+meme+theory+cultural+evolution&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Richard Dawkins coined \"meme\"",
+      "href": "https://en.wikipedia.org/wiki/Meme",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Memetics",
+      "href": "https://en.wikipedia.org/wiki/Memetics",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Social learning networks and information transmission",
+      "href": "https://www.google.com/search?q=gossip+evolutionary+function+social+learning&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Robin Dunbar",
+      "href": "https://en.wikipedia.org/wiki/Robin_Dunbar",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Social learning strategies",
+      "href": "https://www.nature.com/articles/s41562-018-0483-4",
+      "kind": "external"
+    },
+    {
+      "text": "Cumulative cultural evolution and technological ratchet effect",
+      "href": "https://www.google.com/search?q=cumulative+cultural+evolution+human+uniqueness&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Taxonomy of memory systems showing major divisions",
+      "href": "https://www.google.com/search?q=memory+systems+taxonomy+declarative+procedural&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "William Scoville",
+      "href": "https://en.wikipedia.org/wiki/William_Beecher_Scoville",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Brenda Milner",
+      "href": "https://en.wikipedia.org/wiki/Brenda_Milner",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "H.M.'s brain showing bilateral medial temporal lobe resection",
+      "href": "https://www.google.com/search?q=patient+HM+Henry+Molaison+hippocampus+amnesia&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Hippocampal structure and place cell activity patterns",
+      "href": "https://www.google.com/search?q=hippocampus+anatomy+place+cells+grid+cells&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "The hippocampus is essential for episodic memory—memories of events in their spatial and temporal context.",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter05.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "John O'Keefe",
+      "href": "https://en.wikipedia.org/wiki/John_O%27Keefe_(neuroscientist)",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Edvard",
+      "href": "https://en.wikipedia.org/wiki/Edvard_Moser",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "May-Britt Moser",
+      "href": "https://en.wikipedia.org/wiki/May-Britt_Moser",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "The hippocampus rapidly encodes associations between arbitrary elements",
+      "href": "https://www.nature.com/articles/nrn2213",
+      "kind": "external"
+    },
+    {
+      "text": "Hippocampal replay during sleep showing reactivation patterns",
+      "href": "https://www.google.com/search?q=hippocampal+replay+memory+consolidation+sleep&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Semantic network organization showing hierarchical concept representations",
+      "href": "https://www.google.com/search?q=semantic+memory+organization+conceptual+knowledge+networks&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "patients who lose knowledge of living things while preserving knowledge of tools, or vice versa",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6420305/",
+      "kind": "external"
+    },
+    {
+      "text": "The standard consolidation model proposes that episodic memories are initially encoded in the hippocampus and distributed neocortical regions.",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s4/chapter07.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "Systems consolidation model showing gradual memory transfer",
+      "href": "https://www.google.com/search?q=systems+consolidation+hippocampus+to+cortex+memory+transfer&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Baddeley's working memory model showing multiple components",
+      "href": "https://www.google.com/search?q=Baddeley+working+memory+model+components&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Alan Baddeley",
+      "href": "https://en.wikipedia.org/wiki/Alan_Baddeley",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Graham Hitch",
+      "href": "https://en.wikipedia.org/wiki/Graham_Hitch",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "George Miller",
+      "href": "https://en.wikipedia.org/wiki/George_Armitage_Miller",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Individual differences in working memory capacity predict fluid intelligence, academic achievement, and attentional control.",
+      "href": "https://en.wikipedia.org/wiki/Working_memory#Individual_differences",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Prefrontal neurons showing sustained delay-period activity",
+      "href": "https://www.google.com/search?q=prefrontal+cortex+persistent+activity+working+memory&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Patricia Goldman-Rakic",
+      "href": "https://en.wikipedia.org/wiki/Patricia_Goldman-Rakic",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Frontoparietal networks supporting working memory maintenance",
+      "href": "https://www.google.com/search?q=working+memory+neural+mechanisms+prefrontal+parietal+2024&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Executive function and cognitive control in prefrontal cortex",
+      "href": "https://www.google.com/search?q=executive+function+prefrontal+cortex+cognitive+control+2024",
+      "kind": "image_search"
+    },
+    {
+      "text": "hyperthymesia",
+      "href": "https://en.wikipedia.org/wiki/Hyperthymesia",
+      "kind": "wikipedia"
+    }
+  ],
+  "images": [
+    {
+      "src": "GeminiSummaryCh11.png",
+      "alt": "Learning and Memory Visual Summary",
+      "viewer": "image-viewer.html?image=GeminiSummaryCh11.png",
+      "role": "summary"
+    }
+  ],
+  "image_searches": [
+    {
+      "caption": "Cerebellar anatomy showing distinctive layered architecture",
+      "url": "https://www.google.com/search?q=cerebellum+structure+purkinje+cells+parallel+fibers&tbm=isch"
+    },
+    {
+      "caption": "Cerebellar learning in eyeblink conditioning paradigm",
+      "url": "https://www.google.com/search?q=cerebellar+learning+eyeblink+conditioning+timing&tbm=isch"
+    },
+    {
+      "caption": "Basal ganglia circuit showing direct and indirect pathways",
+      "url": "https://www.google.com/search?q=basal+ganglia+anatomy+striatum+substantia+nigra&tbm=isch"
+    },
+    {
+      "caption": "Dopamine neuron responses showing prediction error signals",
+      "url": "https://www.google.com/search?q=dopamine+prediction+error+reinforcement+learning+Schultz&tbm=isch"
+    },
+    {
+      "caption": "Donald Hebb and illustrations of his cell assembly theory",
+      "url": "https://www.google.com/search?q=Donald+Hebb+neuroscientist+cell+assembly+theory&tbm=isch"
+    },
+    {
+      "caption": "LTP induction showing NMDA receptor activation and signaling cascades",
+      "url": "https://www.google.com/search?q=long+term+potentiation+LTP+mechanism+NMDA+receptor&tbm=isch"
+    },
+    {
+      "caption": "NMDA receptor showing voltage-dependent magnesium block mechanism",
+      "url": "https://www.google.com/search?q=NMDA+receptor+magnesium+block+calcium+influx&tbm=isch"
+    },
+    {
+      "caption": "STDP showing how spike timing determines potentiation vs depression",
+      "url": "https://www.google.com/search?q=spike+timing+dependent+plasticity+STDP+temporal+order&tbm=isch"
+    },
+    {
+      "caption": "Aplysia (sea slug) gill-withdrawal reflex used in Kandel's studies",
+      "url": "https://www.google.com/search?q=habituation+sensitization+Aplysia+Eric+Kandel&tbm=isch"
+    },
+    {
+      "caption": "Pavlov's apparatus and conditioning paradigm",
+      "url": "https://www.google.com/search?q=Pavlov+classical+conditioning+dogs+salivation&tbm=isch"
+    },
+    {
+      "caption": "Thorndike's puzzle box experiments demonstrating instrumental learning",
+      "url": "https://www.google.com/search?q=Thorndike+puzzle+box+law+of+effect&tbm=isch"
+    },
+    {
+      "caption": "Neural circuits distinguishing goal-directed vs habitual behavior",
+      "url": "https://www.google.com/search?q=habit+formation+goal+directed+habitual+control&tbm=isch"
+    },
+    {
+      "caption": "Baldwin effect showing how learning can guide evolution",
+      "url": "https://www.google.com/search?q=genetic+evolution+as+learning+Baldwin+effect&tbm=isch"
+    },
+    {
+      "caption": "Epigenetic modifications showing DNA methylation patterns",
+      "url": "https://www.google.com/search?q=epigenetic+inheritance+transgenerational+methylation&tbm=isch"
+    },
+    {
+      "caption": "Transgenerational epigenetic effects across multiple generations",
+      "url": "https://www.google.com/search?q=transgenerational+trauma+epigenetics+inheritance&tbm=isch"
+    },
+    {
+      "caption": "Oral traditions and cultural transmission across generations",
+      "url": "https://www.google.com/search?q=oral+tradition+cultural+memory+indigenous+knowledge&tbm=isch"
+    },
+    {
+      "caption": "Meme theory and cultural transmission diagrams",
+      "url": "https://www.google.com/search?q=Richard+Dawkins+meme+theory+cultural+evolution&tbm=isch"
+    },
+    {
+      "caption": "Social learning networks and information transmission",
+      "url": "https://www.google.com/search?q=gossip+evolutionary+function+social+learning&tbm=isch"
+    },
+    {
+      "caption": "Cumulative cultural evolution and technological ratchet effect",
+      "url": "https://www.google.com/search?q=cumulative+cultural+evolution+human+uniqueness&tbm=isch"
+    },
+    {
+      "caption": "Taxonomy of memory systems showing major divisions",
+      "url": "https://www.google.com/search?q=memory+systems+taxonomy+declarative+procedural&tbm=isch"
+    },
+    {
+      "caption": "H.M.'s brain showing bilateral medial temporal lobe resection",
+      "url": "https://www.google.com/search?q=patient+HM+Henry+Molaison+hippocampus+amnesia&tbm=isch"
+    },
+    {
+      "caption": "Hippocampal structure and place cell activity patterns",
+      "url": "https://www.google.com/search?q=hippocampus+anatomy+place+cells+grid+cells&tbm=isch"
+    },
+    {
+      "caption": "Hippocampal replay during sleep showing reactivation patterns",
+      "url": "https://www.google.com/search?q=hippocampal+replay+memory+consolidation+sleep&tbm=isch"
+    },
+    {
+      "caption": "Semantic network organization showing hierarchical concept representations",
+      "url": "https://www.google.com/search?q=semantic+memory+organization+conceptual+knowledge+networks&tbm=isch"
+    },
+    {
+      "caption": "Systems consolidation model showing gradual memory transfer",
+      "url": "https://www.google.com/search?q=systems+consolidation+hippocampus+to+cortex+memory+transfer&tbm=isch"
+    },
+    {
+      "caption": "Baddeley's working memory model showing multiple components",
+      "url": "https://www.google.com/search?q=Baddeley+working+memory+model+components&tbm=isch"
+    },
+    {
+      "caption": "Prefrontal neurons showing sustained delay-period activity",
+      "url": "https://www.google.com/search?q=prefrontal+cortex+persistent+activity+working+memory&tbm=isch"
+    },
+    {
+      "caption": "Frontoparietal networks supporting working memory maintenance",
+      "url": "https://www.google.com/search?q=working+memory+neural+mechanisms+prefrontal+parietal+2024&tbm=isch"
+    }
+  ]
+}

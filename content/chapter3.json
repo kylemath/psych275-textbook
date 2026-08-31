@@ -1,0 +1,1750 @@
+{
+  "id": "chapter3",
+  "source": "chapter3.html",
+  "chapter": "3",
+  "chapter_number": "3",
+  "title": "Chemical Conversations: Synaptic Transmission and Neurotransmitters",
+  "page_title": "Chapter 3 — Chemical Conversations: Synaptic Transmission and Neurotransmitters",
+  "description": "How electrical signals become chemical messages: the neuromuscular junction, vesicle fusion, SNARE proteins, ionotropic and metabotropic receptors, and the diversity of neurotransmitters.",
+  "brand": "Brains, Minds, and Machines — Chapter 3",
+  "subtitle": null,
+  "lead": {
+    "text": "Last time, we traced the electrical signal to the axon terminal and stopped. Now we cross the 20-nanometer synaptic cleft—a gap that action potentials cannot jump. Here, electricity must become chemistry. Today we'll discover how Otto Loewi proved chemical transmission with a frog heart in 1921, how Bernard Katz revealed that neurotransmitters are released in discrete packets called quanta, and how SNARE proteins execute membrane fusion with atomic precision. We'll explore the fundamental dichotomy between fast ionotropic transmission (milliseconds) and slow metabotropic modulation (seconds to minutes), understand why the brain uses over 100 neurotransmitters when one would seem to suffice, and see how drugs from caffeine to cocaine to curare exploit synaptic machinery. From the neuromuscular junction that moves your muscles to the central synapses that generate your thoughts, we'll trace the complete chemical conversation between neurons."
+  },
+  "opening": [
+    {
+      "type": "stage",
+      "text": "Today's journey: From Loewi's dream experiment to molecular machines. We'll see how evolution solved the problem of transmitting information across a gap too wide for electricity but small enough for chemistry."
+    }
+  ],
+  "table_of_contents": [
+    {
+      "number": "I",
+      "title": "The Neuromuscular Junction: A Model Synapse",
+      "duration": "20 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Otto Loewi's \"Vagusstoff\" and the chemical hypothesis"
+        },
+        {
+          "text": "Anatomy of the motor endplate"
+        },
+        {
+          "text": "The endplate potential and curare experiments"
+        },
+        {
+          "text": "Quantal release and Bernard Katz's discovery"
+        }
+      ]
+    },
+    {
+      "number": "II",
+      "title": "Mechanisms of Neurotransmitter Release",
+      "duration": "15 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Calcium as the trigger: voltage-gated Ca²⁺ channels"
+        },
+        {
+          "text": "The SNARE hypothesis: synaptobrevin, syntaxin, SNAP-25"
+        },
+        {
+          "text": "Synaptotagmin as the calcium sensor"
+        },
+        {
+          "text": "Vesicle pools and recycling"
+        }
+      ]
+    },
+    {
+      "number": "III",
+      "title": "Synaptic Transmission in the CNS",
+      "duration": "15 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "EPSPs and IPSPs: excitation and inhibition"
+        },
+        {
+          "text": "Spatial and temporal summation"
+        },
+        {
+          "text": "The reversal potential and driving force"
+        },
+        {
+          "text": "Synaptic integration at the axon hillock"
+        }
+      ]
+    },
+    {
+      "number": "IV",
+      "title": "Receptor Types: Fast and Slow",
+      "duration": "15 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Ionotropic receptors: ligand-gated ion channels"
+        },
+        {
+          "text": "Metabotropic receptors: G-proteins and second messengers"
+        },
+        {
+          "text": "Receptor pharmacology and drug targets"
+        }
+      ]
+    },
+    {
+      "number": "V",
+      "title": "Neurotransmitter Diversity",
+      "duration": "15 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Acetylcholine and the cholinergic system"
+        },
+        {
+          "text": "Amino acids: glutamate and GABA"
+        },
+        {
+          "text": "Biogenic amines: dopamine, serotonin, norepinephrine"
+        },
+        {
+          "text": "Neuropeptides and unconventional transmitters"
+        }
+      ]
+    }
+  ],
+  "summary_image": {
+    "src": "GeminiSummaryCh3.png",
+    "alt": "Chemical Conversations Visual Summary",
+    "viewer": "image-viewer.html?image=GeminiSummaryCh3.png",
+    "role": "summary"
+  },
+  "resources": {
+    "textbook": "./textbook/",
+    "slides_html": null,
+    "slides_pdf": null,
+    "course_home": "./index.html",
+    "answer_key": "./AnswerKeys.html#chapter3",
+    "related_chapters": [],
+    "next_chapter": {
+      "href": "./chapter4.html",
+      "title": "Neural Plasticity: How Brains Learn to Learn",
+      "note": "Next: Neural Plasticity: How Brains Learn to Learn — how synaptic strength changes with experience, from LTP to spike-timing dependent plasticity."
+    },
+    "header_links": [
+      {
+        "text": "📖 Textbook",
+        "href": "./textbook/",
+        "kind": "internal"
+      },
+      {
+        "text": "Course Home",
+        "href": "./index.html",
+        "kind": "internal"
+      }
+    ],
+    "interactives": [
+      {
+        "title": "⚡ Action Potential",
+        "description": "Watch action potentials propagate along myelinated vs unmyelinated axons with visible ion flow.",
+        "href": "action-potential-3d/"
+      },
+      {
+        "title": "🔬 Molecular Membrane",
+        "description": "Explore the axon hillock at molecular scale with voltage-gated channels and ion dynamics.",
+        "href": "membrane-molecular/"
+      },
+      {
+        "title": "🧬 Synaptic Transmission",
+        "description": "Watch vesicle fusion, neurotransmitter release, and receptor activation at the synapse.",
+        "href": "synaptic-transmission/"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "the-neuromuscular-junction-where-chemical-transmission-was-born",
+      "title": "The Neuromuscular Junction: Where Chemical Transmission Was Born",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Otto Loewi's 1921 frog heart experiment demonstrating chemical transmission",
+          "url": "https://www.google.com/search?q=Otto+Loewi+frog+heart+experiment+vagus+nerve+acetylcholine&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "In 1921, Otto Loewi woke at 3 AM with an idea from a dream. He stimulated the vagus nerve of a frog heart floating in saline, slowing its beat. Then he transferred the saline to a second heart—and that heart slowed too, though no nerve had touched it. A diffusible chemical—he called it \"Vagusstoff,\" later identified as acetylcholine (ACh)—had carried the message. This elegant experiment ended decades of debate between \"sparks\" (electrical transmission) and \"soup\" (chemical transmission). Loewi shared the 1936 Nobel Prize with Henry Dale, who had first isolated acetylcholine.",
+          "links": [
+            {
+              "text": "Otto Loewi",
+              "href": "https://en.wikipedia.org/wiki/Otto_Loewi",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "acetylcholine (ACh)",
+              "href": "https://en.wikipedia.org/wiki/Acetylcholine",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Henry Dale",
+              "href": "https://en.wikipedia.org/wiki/Henry_Hallett_Dale",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The neuromuscular junction (NMJ) became the model synapse because of its accessibility and simplicity. Motor neurons from the spinal cord innervate skeletal muscle fibers at specialized regions called motor endplates. The synapse here has three characteristic features visible in electron microscopy: (1) a 20-nm synaptic cleft separating pre- and postsynaptic membranes, (2) clusters of synaptic vesicles in the presynaptic terminal containing neurotransmitter, and (3) a postsynaptic density—thickening of the muscle membrane due to high concentrations of acetylcholine receptors.",
+          "links": [
+            {
+              "text": "The neuromuscular junction (NMJ)",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter04.html",
+              "kind": "neuroscience_online"
+            },
+            {
+              "text": "motor endplates",
+              "href": "https://en.wikipedia.org/wiki/Neuromuscular_junction",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Neuromuscular junction ultrastructure showing synaptic vesicles and cleft",
+          "url": "https://www.google.com/search?q=neuromuscular+junction+electron+microscopy+synaptic+vesicles+cleft&tbm=isch"
+        }
+      ],
+      "subsections": [
+        {
+          "id": "the-endplate-potential-and-curare-experiments",
+          "title": "The Endplate Potential and Curare Experiments",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "When an action potential invades the motor neuron terminal, the muscle fiber depolarizes. This endplate potential (EPP)—a special case of the more general excitatory postsynaptic potential (EPSP)—triggers a muscle action potential and contraction. The EPP differs fundamentally from the action potential: it's graded (larger stimuli produce larger EPPs), it's local (it doesn't regenerate but spreads passively), and it can summate (multiple EPPs add together).",
+              "links": [
+                {
+                  "text": "endplate potential (EPP)",
+                  "href": "https://en.wikipedia.org/wiki/End-plate_potential",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Curare, the arrow poison used by South American Indigenous peoples, proved essential to understanding synaptic transmission. At low doses, curare reduces the EPP amplitude but it still reaches threshold. At higher doses, the EPP becomes subthreshold—the muscle doesn't contract. Curare is a competitive antagonist of ACh receptors: it binds to the receptor without opening the channel, blocking ACh from binding. Crucially, curare doesn't affect the action potential mechanism—it specifically blocks synaptic transmission. This dissociation proved that synaptic and action potential mechanisms are distinct.",
+              "links": [
+                {
+                  "text": "Curare",
+                  "href": "https://en.wikipedia.org/wiki/Curare",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Endplate potential reduction by increasing doses of curare",
+              "url": "https://www.google.com/search?q=endplate+potential+EPP+curare+dose+response+graph&tbm=isch"
+            },
+            {
+              "type": "paragraph",
+              "text": "The EPP amplitude normally far exceeds what's needed to reach threshold—about 50 mV when only 30 mV is required. This 20 mV safety factor ensures reliable transmission despite fatigue or minor pathology. In myasthenia gravis, autoantibodies attack ACh receptors, reducing the safety factor until EPPs fail to reach threshold—patients experience progressive weakness, especially in muscles used repeatedly.",
+              "links": [
+                {
+                  "text": "myasthenia gravis",
+                  "href": "https://en.wikipedia.org/wiki/Myasthenia_gravis",
+                  "kind": "wikipedia"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quantal-release-bernard-katzs-discovery",
+          "title": "Quantal Release: Bernard Katz's Discovery",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Bernard Katz and the discovery of quantal neurotransmitter release",
+              "url": "https://www.google.com/search?q=Bernard+Katz+quantal+release+miniature+EPP+synaptic+vesicle&tbm=isch"
+            },
+            {
+              "type": "paragraph",
+              "text": "Bernard Katz discovered that neurotransmitter release is quantized—it occurs in discrete packets. Even without stimulation, tiny spontaneous potentials (~0.5 mV) occur randomly at the NMJ. Katz called these miniature endplate potentials (mEPPs). The evoked EPP amplitude is always a multiple of the mEPP amplitude—you never see 1.5 or 2.3 mEPPs, only 1, 2, 3, etc. This quantal nature suggests that ACh is released not as individual molecules but as packages.",
+              "links": [
+                {
+                  "text": "Bernard Katz",
+                  "href": "https://en.wikipedia.org/wiki/Bernard_Katz",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Electron microscopy later revealed the packages: synaptic vesicles, ~40 nm spheres each containing thousands of neurotransmitter molecules. Each mEPP corresponds to the spontaneous fusion of one vesicle. A normal EPP results from the coordinated release of ~200 vesicles. Katz received the 1970 Nobel Prize for this work, which established the vesicular basis of synaptic transmission.",
+              "links": [
+                {
+                  "text": "synaptic vesicles",
+                  "href": "https://en.wikipedia.org/wiki/Synaptic_vesicle",
+                  "kind": "wikipedia"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mechanisms-of-neurotransmitter-release",
+      "title": "Mechanisms of Neurotransmitter Release",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Voltage-gated calcium channels triggering neurotransmitter release",
+          "url": "https://www.google.com/search?q=calcium+voltage+gated+channel+neurotransmitter+release+presynaptic&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "Calcium: The Universal Trigger"
+        },
+        {
+          "type": "paragraph",
+          "text": "Katz and colleagues demonstrated that calcium is essential for transmitter release. Remove extracellular Ca²⁺, and EPPs vanish despite normal presynaptic action potentials. The mechanism: when an action potential reaches the terminal, voltage-gated calcium channels (primarily P/Q-type and N-type in neurons) open. Calcium floods in, rising from ~100 nM to >100 μM in microdomains near channels—a 1000-fold increase within microseconds.",
+          "links": [
+            {
+              "text": "voltage-gated calcium channels",
+              "href": "https://en.wikipedia.org/wiki/Voltage-gated_calcium_channel",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The relationship between calcium and release is highly nonlinear: release probability scales with approximately the fourth power of calcium concentration. This steep dependence means that small changes in calcium entry cause large changes in release—providing a mechanism for synaptic modulation. Diseases affecting calcium channels (like Lambert-Eaton myasthenic syndrome, where antibodies attack presynaptic calcium channels) severely impair neuromuscular transmission.",
+          "links": [
+            {
+              "text": "Lambert-Eaton myasthenic syndrome",
+              "href": "https://en.wikipedia.org/wiki/Lambert%E2%80%93Eaton_myasthenic_syndrome",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The SNARE Machinery: Molecular Zippers"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "SNARE protein complex showing synaptobrevin, syntaxin, and SNAP-25",
+          "url": "https://www.google.com/search?q=SNARE+proteins+synaptobrevin+syntaxin+SNAP25+vesicle+fusion&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "How does calcium trigger vesicle fusion? The SNARE hypothesis (soluble NSF attachment protein receptors), developed by James Rothman, Randy Schekman, and Thomas Südhof (2013 Nobel Prize), describes a molecular machine for membrane fusion:",
+          "links": [
+            {
+              "text": "SNARE hypothesis",
+              "href": "https://en.wikipedia.org/wiki/SNARE_(protein)",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "James Rothman",
+              "href": "https://en.wikipedia.org/wiki/James_Rothman",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Randy Schekman",
+              "href": "https://en.wikipedia.org/wiki/Randy_Schekman",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Thomas Südhof",
+              "href": "https://en.wikipedia.org/wiki/Thomas_C._S%C3%BCdhof",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "• Synaptobrevin (VAMP) is anchored in the vesicle membrane\n• Syntaxin and SNAP-25 are anchored in the presynaptic plasma membrane\n• These three proteins \"zip\" together from their N-termini toward the membranes, forming an extraordinarily stable four-helix bundle that pulls the membranes together, overcoming their natural repulsion"
+        },
+        {
+          "type": "paragraph",
+          "text": "The SNARE complex is primed and ready, but a molecular brake prevents spontaneous fusion. Synaptotagmin, the calcium sensor, has two C2 domains that bind calcium with micromolar affinity. When calcium enters, synaptotagmin binds it, undergoes a conformational change, and triggers the final membrane fusion event within 200 microseconds—among the fastest biochemical processes known.",
+          "links": [
+            {
+              "text": "Synaptotagmin",
+              "href": "https://en.wikipedia.org/wiki/Synaptotagmin",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Synaptotagmin structure and calcium-triggered vesicle fusion",
+          "url": "https://www.google.com/search?q=synaptotagmin+calcium+sensor+vesicle+fusion+mechanism&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "Vesicle Pools and Recycling"
+        },
+        {
+          "type": "paragraph",
+          "text": "Synaptic terminals contain distinct vesicle pools: the readily releasable pool (RRP, docked at active zones, ~10-20 vesicles), the recycling pool (~200 vesicles), and the reserve pool (hundreds more). During high-frequency firing, the RRP depletes faster than it can be replenished, causing synaptic depression. Conversely, residual calcium from previous spikes can enhance release probability of subsequent spikes—synaptic facilitation. These short-term plasticity mechanisms shape how information is processed in neural circuits."
+        },
+        {
+          "type": "paragraph",
+          "text": "After fusion, vesicles are recycled through clathrin-mediated endocytosis, refilled with neurotransmitter, and returned to vesicle pools—a process requiring ~30 seconds for full recycling. During sustained activity, faster \"kiss-and-run\" fusion may occur, where vesicles release contents through a transient pore without full membrane merger.",
+          "links": [
+            {
+              "text": "clathrin-mediated endocytosis",
+              "href": "https://en.wikipedia.org/wiki/Clathrin",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Synaptic vesicle cycle showing release, endocytosis, and recycling",
+          "url": "https://www.google.com/search?q=synaptic+vesicle+cycle+endocytosis+clathrin+recycling&tbm=isch"
+        }
+      ]
+    },
+    {
+      "id": "synaptic-transmission-in-the-central-nervous-system",
+      "title": "Synaptic Transmission in the Central Nervous System",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "EPSPs and IPSPs and their integration in neurons",
+          "url": "https://www.google.com/search?q=EPSP+IPSP+postsynaptic+potential+neuronal+integration&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "CNS synapses differ from the NMJ in crucial ways. A single motor neuron–muscle fiber synapse reliably triggers muscle contraction (1:1 relationship). But a single CNS synapse produces only a tiny EPSP (~0.5 mV)—far below the ~15 mV needed to reach threshold. A neuron must integrate thousands of synaptic inputs to decide whether to fire."
+        },
+        {
+          "type": "subheading",
+          "text": "Excitatory and Inhibitory Postsynaptic Potentials"
+        },
+        {
+          "type": "paragraph",
+          "text": "Excitatory postsynaptic potentials (EPSPs) depolarize the neuron, moving it toward threshold. At glutamatergic synapses, binding of glutamate opens channels permeable to Na⁺ and K⁺, with a reversal potential near 0 mV—well above threshold. Current flows inward (Na⁺ entry exceeds K⁺ exit), depolarizing the cell.",
+          "links": [
+            {
+              "text": "Excitatory postsynaptic potentials (EPSPs)",
+              "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter06.html",
+              "kind": "neuroscience_online"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Inhibitory postsynaptic potentials (IPSPs) hyperpolarize the neuron or hold it at the resting potential. At GABAergic synapses, GABA opens Cl⁻-permeable channels. In mature neurons, E_Cl (~−80 mV) is more negative than the resting potential, so Cl⁻ flows in, hyperpolarizing the cell. Even if E_Cl equals the resting potential, opening Cl⁻ channels provides \"shunting inhibition\"—the increased conductance short-circuits excitatory currents.",
+          "links": [
+            {
+              "text": "Inhibitory postsynaptic potentials (IPSPs)",
+              "href": "https://en.wikipedia.org/wiki/Inhibitory_postsynaptic_potential",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Shunting inhibition and its effect on membrane potential",
+          "url": "https://www.google.com/search?q=shunting+inhibition+chloride+conductance+membrane+potential&tbm=isch"
+        }
+      ],
+      "subsections": [
+        {
+          "id": "spatial-and-temporal-summation",
+          "title": "Spatial and Temporal Summation",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "A single EPSP (~0.5 mV) decays passively with a time constant of ~20 ms. To reach threshold, neurons use temporal summation—rapid successive EPSPs from the same synapse add together before earlier ones decay—and spatial summation—simultaneous EPSPs from multiple synapses add together. Dendritic integration is sublinear (inputs on the same branch interact) or supralinear (NMDA spikes), adding computational richness beyond simple addition."
+            },
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Spatial and temporal summation of synaptic potentials",
+              "url": "https://www.google.com/search?q=spatial+temporal+summation+EPSP+integration+neuron&tbm=isch"
+            }
+          ]
+        },
+        {
+          "id": "reversal-potential-and-driving-force",
+          "title": "Reversal Potential and Driving Force",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Every synaptic current follows Ohm's law: I = g(V_m − E_rev). The reversal potential (E_rev) is where current reverses direction—at this voltage, equal cation influx and efflux produce no net current. For glutamate receptors permeable to Na⁺ and K⁺, E_rev ≈ 0 mV. The term (V_m − E_rev) is the driving force. At resting potential (−70 mV), the driving force for glutamate receptors is −70 − 0 = −70 mV, driving strong inward current. As the cell depolarizes toward 0 mV, driving force shrinks—EPSPs become smaller. This self-limiting property prevents runaway excitation."
+            },
+            {
+              "type": "paragraph",
+              "text": "For GABAergic synapses, E_rev ≈ −80 mV (E_Cl in mature neurons). At rest (−70 mV), the driving force is −70 − (−80) = +10 mV—a small outward current that hyperpolarizes slightly. But during excitation, if V_m reaches −50 mV, driving force becomes +30 mV—stronger inhibition precisely when it's most needed."
+            }
+          ]
+        },
+        {
+          "id": "integration-at-the-axon-initial-segment",
+          "title": "Integration at the Axon Initial Segment",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The final decision—fire or not—occurs at the axon initial segment (AIS), where sodium channel density is highest (~1000/μm², vs ~10/μm² on the soma). EPSPs and IPSPs propagate passively from dendrites and soma to the AIS, which acts as the trigger zone. If integrated input exceeds threshold at the AIS, an action potential initiates and propagates down the axon. Recent research shows the AIS is plastic—its position and length can change with experience, tuning neuronal excitability.",
+              "links": [
+                {
+                  "text": "axon initial segment (AIS)",
+                  "href": "https://en.wikipedia.org/wiki/Axon_initial_segment",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Axon initial segment structure and action potential initiation zone",
+              "url": "https://www.google.com/search?q=axon+initial+segment+AIS+sodium+channels+action+potential+initiation&tbm=isch"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "receptor-types-fast-and-slow-signaling",
+      "title": "Receptor Types: Fast and Slow Signaling",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Ionotropic vs metabotropic receptor mechanisms",
+          "url": "https://www.google.com/search?q=ionotropic+metabotropic+receptor+comparison+diagram&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "Ionotropic Receptors: Speed"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ionotropic receptors (ligand-gated ion channels) are fast because the receptor IS the channel. Neurotransmitter binding causes a conformational change that directly opens the ion pore—response time is microseconds to milliseconds. Examples include:",
+          "links": [
+            {
+              "text": "Ionotropic receptors",
+              "href": "https://en.wikipedia.org/wiki/Ionotropic_receptor",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "• Nicotinic ACh receptors: pentameric channels (α₂βγδ at NMJ, various α and β subunits in brain), permeable to Na⁺ and K⁺\n• AMPA receptors: tetrameric glutamate-gated channels mediating fast excitatory transmission\n• NMDA receptors: voltage-dependent (Mg²⁺ block), Ca²⁺-permeable, requiring both glutamate and glycine—coincidence detectors critical for learning\n• GABA_A receptors: pentameric Cl⁻ channels mediating fast inhibition; targets for benzodiazepines, barbiturates, alcohol, and anesthetics\n• Glycine receptors: pentameric Cl⁻ channels mediating inhibition in spinal cord and brainstem",
+          "links": [
+            {
+              "text": "Nicotinic ACh receptors",
+              "href": "https://en.wikipedia.org/wiki/Nicotinic_acetylcholine_receptor",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "AMPA receptors",
+              "href": "https://en.wikipedia.org/wiki/AMPA_receptor",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "NMDA receptors",
+              "href": "https://en.wikipedia.org/wiki/NMDA_receptor",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "GABA_A receptors",
+              "href": "https://en.wikipedia.org/wiki/GABAA_receptor",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Glycine receptors",
+              "href": "https://en.wikipedia.org/wiki/Glycine_receptor",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Nicotinic receptor structure as a pentameric ion channel",
+          "url": "https://www.google.com/search?q=nicotinic+receptor+structure+pentamer+ion+channel&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "Metabotropic Receptors: Flexibility"
+        },
+        {
+          "type": "paragraph",
+          "text": "Metabotropic receptors (G-protein coupled receptors, GPCRs) are slow but powerful. They don't form channels themselves but activate G-proteins that modulate ion channels indirectly or trigger second messenger cascades. Response time is seconds to minutes, but effects are amplified and can alter gene expression.",
+          "links": [
+            {
+              "text": "Metabotropic receptors",
+              "href": "https://en.wikipedia.org/wiki/Metabotropic_receptor",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "G-proteins",
+              "href": "https://en.wikipedia.org/wiki/G_protein",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "• Muscarinic ACh receptors (M1-M5): G-protein coupled, mediate slow ACh effects in heart (slowing), smooth muscle, and brain\n• Metabotropic glutamate receptors (mGluR1-8): modulate synaptic transmission and plasticity\n• GABA_B receptors: activate K⁺ channels (hyperpolarizing) and inhibit Ca²⁺ channels (reducing release); target of baclofen\n• Dopamine receptors (D1-D5): D1-like activate adenylyl cyclase; D2-like inhibit it—targets for antipsychotics and Parkinson's drugs",
+          "links": [
+            {
+              "text": "Muscarinic ACh receptors",
+              "href": "https://en.wikipedia.org/wiki/Muscarinic_acetylcholine_receptor",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Metabotropic glutamate receptors",
+              "href": "https://en.wikipedia.org/wiki/Metabotropic_glutamate_receptor",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "GABA_B receptors",
+              "href": "https://en.wikipedia.org/wiki/GABAB_receptor",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Dopamine receptors",
+              "href": "https://en.wikipedia.org/wiki/Dopamine_receptor",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "G-proteins act as molecular switches. In the inactive state, the α subunit binds GDP. Receptor activation catalyzes GDP→GTP exchange; the GTP-bound α subunit (and/or βγ dimer) then modulates effectors—adenylyl cyclase, phospholipase C, ion channels—until GTP hydrolysis returns the system to baseline. This GTPase cycle provides temporal control and signal amplification."
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "G-protein coupled receptor signaling and second messenger cascades",
+          "url": "https://www.google.com/search?q=G+protein+coupled+receptor+signal+transduction+cAMP+second+messenger&tbm=isch"
+        }
+      ]
+    },
+    {
+      "id": "neurotransmitter-diversity-why-100-messengers",
+      "title": "Neurotransmitter Diversity: Why 100+ Messengers?",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Classification of neurotransmitters showing major categories",
+          "url": "https://www.google.com/search?q=neurotransmitter+types+classification+chart+brain&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "If neurons just need to say \"more\" or \"less,\" why does the brain use over 100 neurotransmitters? The answer: each transmitter system serves distinct functions, operates on different timescales, and can be independently regulated. This chemical diversity enables computational flexibility impossible with a single transmitter."
+        }
+      ],
+      "subsections": [
+        {
+          "id": "acetylcholine-the-original-neurotransmitter",
+          "title": "Acetylcholine: The Original Neurotransmitter",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Acetylcholine is synthesized from choline and acetyl-CoA by choline acetyltransferase (ChAT). After release, it's hydrolyzed by acetylcholinesterase (AChE)—one of the fastest enzymes known, processing 25,000 molecules per second. The choline is recycled into the terminal.",
+              "links": [
+                {
+                  "text": "Acetylcholine",
+                  "href": "https://en.wikipedia.org/wiki/Acetylcholine",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "choline acetyltransferase (ChAT)",
+                  "href": "https://en.wikipedia.org/wiki/Choline_acetyltransferase",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "acetylcholinesterase (AChE)",
+                  "href": "https://en.wikipedia.org/wiki/Acetylcholinesterase",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "In the periphery, ACh mediates neuromuscular transmission (nicotinic receptors) and parasympathetic functions (muscarinic receptors—slowing heart, stimulating digestion). In the brain, cholinergic projections from the basal forebrain modulate attention and memory. Alzheimer's disease involves degeneration of these neurons; acetylcholinesterase inhibitors (donepezil, rivastigmine) provide modest symptomatic benefit. Organophosphate nerve agents irreversibly inhibit AChE, causing fatal cholinergic crisis.",
+              "links": [
+                {
+                  "text": "Alzheimer's disease",
+                  "href": "https://en.wikipedia.org/wiki/Alzheimer%27s_disease",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "Organophosphate",
+                  "href": "https://en.wikipedia.org/wiki/Organophosphate",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Acetylcholine synthesis and degradation pathway",
+              "url": "https://www.google.com/search?q=acetylcholine+synthesis+choline+acetyltransferase+pathway&tbm=isch"
+            }
+          ]
+        },
+        {
+          "id": "amino-acid-transmitters-the-workhorses",
+          "title": "Amino Acid Transmitters: The Workhorses",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Glutamate is the brain's primary excitatory transmitter, used by ~80% of cortical neurons. It's synthesized from glutamine by glutaminase, packaged into vesicles by VGLUTs, and cleared by astrocyte transporters (EAATs). Excess glutamate causes excitotoxicity—calcium overload through NMDA receptors triggers cell death—contributing to stroke and neurodegenerative disease.",
+              "links": [
+                {
+                  "text": "Glutamate",
+                  "href": "https://en.wikipedia.org/wiki/Glutamate_(neurotransmitter)",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "excitotoxicity",
+                  "href": "https://en.wikipedia.org/wiki/Excitotoxicity",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "GABA is the primary inhibitory transmitter, synthesized from glutamate by glutamic acid decarboxylase (GAD)—the same molecule converted from excitatory to inhibitory. GABA is packaged by VGATs and cleared by reuptake (GAT1) and astrocyte uptake. Glycine serves as the primary inhibitory transmitter in spinal cord and brainstem; strychnine (glycine receptor antagonist) causes fatal convulsions.",
+              "links": [
+                {
+                  "text": "GABA",
+                  "href": "https://en.wikipedia.org/wiki/Gamma-Aminobutyric_acid",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "glutamic acid decarboxylase (GAD)",
+                  "href": "https://en.wikipedia.org/wiki/Glutamic_acid_decarboxylase",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "Glycine",
+                  "href": "https://en.wikipedia.org/wiki/Glycine",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Glutamate and GABA synthesis showing their metabolic relationship",
+              "url": "https://www.google.com/search?q=glutamate+GABA+synthesis+pathway+glutamic+acid+decarboxylase&tbm=isch"
+            }
+          ]
+        },
+        {
+          "id": "biogenic-amines-modulators-of-mood-and-movement",
+          "title": "Biogenic Amines: Modulators of Mood and Movement",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "The monoamines—dopamine, norepinephrine, serotonin—are synthesized from amino acid precursors (tyrosine, tryptophan) and degraded by monoamine oxidase (MAO) and COMT. Their cell bodies are concentrated in small brainstem nuclei that project diffusely throughout the brain, modulating global states rather than carrying specific information.",
+              "links": [
+                {
+                  "text": "monoamines",
+                  "href": "https://en.wikipedia.org/wiki/Monoamine_neurotransmitter",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "monoamine oxidase (MAO)",
+                  "href": "https://en.wikipedia.org/wiki/Monoamine_oxidase",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "COMT",
+                  "href": "https://en.wikipedia.org/wiki/Catechol-O-methyltransferase",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Dopamine pathways include the mesolimbic system (reward, motivation—implicated in addiction), the mesocortical system (cognition—implicated in schizophrenia), and the nigrostriatal system (motor control—degeneration causes Parkinson's). Norepinephrine from the locus coeruleus modulates arousal and attention. Serotonin from the raphe nuclei modulates mood, sleep, and appetite—the primary target of antidepressants.",
+              "links": [
+                {
+                  "text": "Dopamine",
+                  "href": "https://en.wikipedia.org/wiki/Dopamine",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "mesolimbic system",
+                  "href": "https://en.wikipedia.org/wiki/Mesolimbic_pathway",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "mesocortical system",
+                  "href": "https://en.wikipedia.org/wiki/Mesocortical_pathway",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "nigrostriatal system",
+                  "href": "https://en.wikipedia.org/wiki/Nigrostriatal_pathway",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "Norepinephrine",
+                  "href": "https://en.wikipedia.org/wiki/Norepinephrine",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "locus coeruleus",
+                  "href": "https://en.wikipedia.org/wiki/Locus_coeruleus",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "Serotonin",
+                  "href": "https://en.wikipedia.org/wiki/Serotonin",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "raphe nuclei",
+                  "href": "https://en.wikipedia.org/wiki/Raphe_nuclei",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Dopamine pathways in the brain",
+              "url": "https://www.google.com/search?q=dopamine+pathway+brain+mesolimbic+nigrostriatal+diagram&tbm=isch"
+            }
+          ]
+        },
+        {
+          "id": "neuropeptides-and-unconventional-transmitters",
+          "title": "Neuropeptides and Unconventional Transmitters",
+          "level": 3,
+          "kind": "reading",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Neuropeptides—chains of 3-40+ amino acids including endorphins, substance P, and neuropeptide Y—are synthesized in the cell body, packaged into large dense-core vesicles, and transported to terminals. They act on GPCRs and are cleared by diffusion and enzymatic degradation (no reuptake). Neuropeptides are often co-released with classical transmitters, providing modulatory effects on longer timescales.",
+              "links": [
+                {
+                  "text": "Neuropeptides",
+                  "href": "https://en.wikipedia.org/wiki/Neuropeptide",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "endorphins",
+                  "href": "https://en.wikipedia.org/wiki/Endorphin",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "substance P",
+                  "href": "https://en.wikipedia.org/wiki/Substance_P",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "neuropeptide Y",
+                  "href": "https://en.wikipedia.org/wiki/Neuropeptide_Y",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Unconventional transmitters include nitric oxide (NO) and endocannabinoids. NO is a gas that diffuses freely across membranes, activating guanylyl cyclase; it's synthesized on demand (no vesicle storage). Endocannabinoids (anandamide, 2-AG) are lipids synthesized postsynaptically and released to act on presynaptic CB1 receptors—retrograde signaling that suppresses further transmitter release. This is the system activated by cannabis.",
+              "links": [
+                {
+                  "text": "nitric oxide (NO)",
+                  "href": "https://en.wikipedia.org/wiki/Nitric_oxide#Biological_functions",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "endocannabinoids",
+                  "href": "https://en.wikipedia.org/wiki/Endocannabinoid",
+                  "kind": "wikipedia"
+                },
+                {
+                  "text": "cannabis",
+                  "href": "https://en.wikipedia.org/wiki/Cannabis",
+                  "kind": "wikipedia"
+                }
+              ]
+            },
+            {
+              "type": "note",
+              "kind": "view_images",
+              "text": "Endocannabinoid retrograde signaling at synapses",
+              "url": "https://www.google.com/search?q=endocannabinoid+retrograde+signaling+CB1+receptor+synapse&tbm=isch"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neurotransmitter-clearance-terminating-the-signal",
+      "title": "Neurotransmitter Clearance: Terminating the Signal",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Synaptic signaling must be terminated rapidly to allow repeated transmission. Three mechanisms clear neurotransmitters from the cleft:"
+        },
+        {
+          "type": "paragraph",
+          "text": "ACh is hydrolyzed by AChE in the synaptic cleft. This is the only transmitter cleared primarily by extracellular enzymes.",
+          "lead_title": "1. Enzymatic degradation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Most transmitters are transported back into the presynaptic terminal by specific transporters (DAT for dopamine, SERT for serotonin, NET for norepinephrine, GAT for GABA, EAAT for glutamate). These are major drug targets: cocaine blocks DAT, SSRIs block SERT, tricyclics block multiple transporters.",
+          "lead_title": "2. Reuptake"
+        },
+        {
+          "type": "paragraph",
+          "text": "Especially important for neuropeptides, which lack dedicated transporters and are cleared slowly by diffusing away from the synapse.",
+          "lead_title": "3. Diffusion"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Neurotransmitter reuptake transporters and their mechanisms",
+          "url": "https://www.google.com/search?q=neurotransmitter+reuptake+transporter+DAT+SERT+mechanism&tbm=isch"
+        }
+      ]
+    },
+    {
+      "id": "clinical-correlations-when-synapses-fail",
+      "title": "Clinical Correlations: When Synapses Fail",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Autoantibodies attack nicotinic ACh receptors at the NMJ. Progressive weakness, worse with use, improved by rest. Treatment: acetylcholinesterase inhibitors (pyridostigmine), immunosuppression.",
+          "lead_title": "• Myasthenia gravis",
+          "links": [
+            {
+              "text": "Myasthenia gravis",
+              "href": "https://en.wikipedia.org/wiki/Myasthenia_gravis",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Autoantibodies attack presynaptic calcium channels. Weakness that improves with use (repeated stimulation allows calcium accumulation). Often paraneoplastic (small cell lung cancer).",
+          "lead_title": "• Lambert-Eaton syndrome",
+          "links": [
+            {
+              "text": "Lambert-Eaton syndrome",
+              "href": "https://en.wikipedia.org/wiki/Lambert%E2%80%93Eaton_myasthenic_syndrome",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Botulinum toxin cleaves SNAREs, preventing ACh release. Descending flaccid paralysis beginning with cranial nerves. Can occur from contaminated food or wound infections.",
+          "lead_title": "• Botulism",
+          "links": [
+            {
+              "text": "Botulism",
+              "href": "https://en.wikipedia.org/wiki/Botulism",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Loss of dopaminergic neurons in the substantia nigra. Tremor, rigidity, bradykinesia. Treatment: L-DOPA (dopamine precursor), dopamine agonists, MAO-B inhibitors.",
+          "lead_title": "• Parkinson's disease",
+          "links": [
+            {
+              "text": "Parkinson's disease",
+              "href": "https://en.wikipedia.org/wiki/Parkinson%27s_disease",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Imbalance between excitation (glutamate) and inhibition (GABA). Antiepileptics enhance GABA (benzodiazepines, barbiturates), block sodium channels (phenytoin, carbamazepine), or block glutamate receptors.",
+          "lead_title": "• Epilepsy",
+          "links": [
+            {
+              "text": "Epilepsy",
+              "href": "https://en.wikipedia.org/wiki/Epilepsy",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Myasthenia gravis pathophysiology at the neuromuscular junction",
+          "url": "https://www.google.com/search?q=myasthenia+gravis+neuromuscular+junction+antibody+pathophysiology&tbm=isch"
+        }
+      ]
+    },
+    {
+      "id": "thought-questions",
+      "title": "Thought Questions for Discussion",
+      "level": 2,
+      "kind": "thought_questions",
+      "blocks": [
+        {
+          "type": "stage",
+          "text": "Three questions to spark discussion before your next class:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bernard Katz showed that neurotransmitter release is quantized—always in multiples of single vesicle contents. But release probability per vesicle is typically only 10-30% per action potential. Why might evolution have favored unreliable synaptic transmission? Consider the computational advantages of probabilistic release for learning, gain control, and energy efficiency.",
+          "lead_title": "The Quantal Puzzle"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ionotropic receptors respond in microseconds; metabotropic receptors take seconds. Yet both exist at many synapses. Why maintain two parallel signaling systems rather than optimizing one? Consider situations where speed matters most versus situations where amplification, duration, and modulation of response are more important.",
+          "lead_title": "The Speed-Flexibility Tradeoff"
+        },
+        {
+          "type": "paragraph",
+          "text": "The brain uses 100+ neurotransmitters, yet glutamate and GABA account for ~95% of fast synaptic transmission. Why maintain so many \"minority\" transmitters? Consider the distinction between point-to-point transmission and neuromodulation, and how different transmitter systems enable different types of computation.",
+          "lead_title": "The Neurotransmitter Diversity Paradox"
+        }
+      ]
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions",
+      "level": 2,
+      "kind": "practice",
+      "blocks": [],
+      "subsections": [
+        {
+          "id": "fill-in-the-blank",
+          "title": "Fill in the Blank",
+          "level": 3,
+          "kind": "practice",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "• Otto Loewi called the substance released from the vagus nerve \"_______,\" later identified as _______."
+            },
+            {
+              "type": "paragraph",
+              "text": "• The synaptic cleft at a typical CNS synapse is approximately _______ nanometers wide."
+            },
+            {
+              "type": "paragraph",
+              "text": "• Bernard Katz discovered that neurotransmitter release is _______—released in discrete packets corresponding to individual _______."
+            },
+            {
+              "type": "paragraph",
+              "text": "• The SNARE proteins involved in vesicle fusion are _______ (on vesicles), _______ (on plasma membrane), and _______ (also on plasma membrane)."
+            },
+            {
+              "type": "paragraph",
+              "text": "• The calcium sensor that triggers vesicle fusion is called _______."
+            },
+            {
+              "type": "paragraph",
+              "text": "• The reversal potential for a glutamate receptor permeable to Na⁺ and K⁺ is approximately _______ mV."
+            },
+            {
+              "type": "paragraph",
+              "text": "• Ionotropic receptors are also called _______ ion channels, while metabotropic receptors are also called _______ receptors."
+            },
+            {
+              "type": "paragraph",
+              "text": "• GABA is synthesized from _______ by the enzyme _______."
+            },
+            {
+              "type": "paragraph",
+              "text": "• Acetylcholine is cleared from the synaptic cleft by the enzyme _______, while most other transmitters are cleared by _______."
+            },
+            {
+              "type": "paragraph",
+              "text": "• The _______ is the site on the neuron where action potentials are initiated, due to high density of sodium channels."
+            }
+          ]
+        },
+        {
+          "id": "short-answer-questions",
+          "title": "Short Answer Questions",
+          "level": 3,
+          "kind": "practice",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "• Explain how curare helped scientists understand synaptic transmission at the neuromuscular junction."
+            },
+            {
+              "type": "paragraph",
+              "text": "• Describe the sequence of molecular events from calcium entry at the presynaptic terminal to vesicle fusion."
+            },
+            {
+              "type": "paragraph",
+              "text": "• What is the \"safety factor\" at the neuromuscular junction, and why does it matter clinically?"
+            },
+            {
+              "type": "paragraph",
+              "text": "• Compare and contrast AMPA and NMDA receptors in terms of structure, ionic selectivity, voltage-dependence, and functional role."
+            },
+            {
+              "type": "paragraph",
+              "text": "• How do G-protein coupled receptors amplify signals compared to ionotropic receptors?"
+            },
+            {
+              "type": "paragraph",
+              "text": "• Explain why cocaine and amphetamine both increase dopamine signaling but through different mechanisms."
+            },
+            {
+              "type": "paragraph",
+              "text": "• What is shunting inhibition, and how does it differ from hyperpolarizing inhibition?"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "thought_questions": [
+    {
+      "type": "question",
+      "title": "The Quantal Puzzle",
+      "text": "Bernard Katz showed that neurotransmitter release is quantized—always in multiples of single vesicle contents. But release probability per vesicle is typically only 10-30% per action potential. Why might evolution have favored unreliable synaptic transmission? Consider the computational advantages of probabilistic release for learning, gain control, and energy efficiency."
+    },
+    {
+      "type": "question",
+      "title": "The Speed-Flexibility Tradeoff",
+      "text": "Ionotropic receptors respond in microseconds; metabotropic receptors take seconds. Yet both exist at many synapses. Why maintain two parallel signaling systems rather than optimizing one? Consider situations where speed matters most versus situations where amplification, duration, and modulation of response are more important."
+    },
+    {
+      "type": "question",
+      "title": "The Neurotransmitter Diversity Paradox",
+      "text": "The brain uses 100+ neurotransmitters, yet glutamate and GABA account for ~95% of fast synaptic transmission. Why maintain so many \"minority\" transmitters? Consider the distinction between point-to-point transmission and neuromodulation, and how different transmitter systems enable different types of computation."
+    }
+  ],
+  "practice_questions": {
+    "fill_in_the_blanks": [
+      "Otto Loewi called the substance released from the vagus nerve \"_______,\" later identified as _______.",
+      "The synaptic cleft at a typical CNS synapse is approximately _______ nanometers wide.",
+      "Bernard Katz discovered that neurotransmitter release is _______—released in discrete packets corresponding to individual _______.",
+      "The SNARE proteins involved in vesicle fusion are _______ (on vesicles), _______ (on plasma membrane), and _______ (also on plasma membrane).",
+      "The calcium sensor that triggers vesicle fusion is called _______.",
+      "The reversal potential for a glutamate receptor permeable to Na⁺ and K⁺ is approximately _______ mV.",
+      "Ionotropic receptors are also called _______ ion channels, while metabotropic receptors are also called _______ receptors.",
+      "GABA is synthesized from _______ by the enzyme _______.",
+      "Acetylcholine is cleared from the synaptic cleft by the enzyme _______, while most other transmitters are cleared by _______.",
+      "The _______ is the site on the neuron where action potentials are initiated, due to high density of sodium channels."
+    ],
+    "short_answers": [
+      "Explain how curare helped scientists understand synaptic transmission at the neuromuscular junction.",
+      "Describe the sequence of molecular events from calcium entry at the presynaptic terminal to vesicle fusion.",
+      "What is the \"safety factor\" at the neuromuscular junction, and why does it matter clinically?",
+      "Compare and contrast AMPA and NMDA receptors in terms of structure, ionic selectivity, voltage-dependence, and functional role.",
+      "How do G-protein coupled receptors amplify signals compared to ionotropic receptors?",
+      "Explain why cocaine and amphetamine both increase dopamine signaling but through different mechanisms.",
+      "What is shunting inhibition, and how does it differ from hyperpolarizing inhibition?"
+    ]
+  },
+  "closing": [
+    {
+      "type": "note",
+      "kind": "preview",
+      "text": "Long-term potentiation and synaptic plasticity mechanisms",
+      "url": "https://www.google.com/search?q=long+term+potentiation+LTP+hippocampus+synaptic+plasticity&tbm=isch"
+    }
+  ],
+  "links": [
+    {
+      "text": "Long-term potentiation and synaptic plasticity mechanisms",
+      "href": "https://www.google.com/search?q=long+term+potentiation+LTP+hippocampus+synaptic+plasticity&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Otto Loewi's 1921 frog heart experiment demonstrating chemical transmission",
+      "href": "https://www.google.com/search?q=Otto+Loewi+frog+heart+experiment+vagus+nerve+acetylcholine&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Otto Loewi",
+      "href": "https://en.wikipedia.org/wiki/Otto_Loewi",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "acetylcholine (ACh)",
+      "href": "https://en.wikipedia.org/wiki/Acetylcholine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Henry Dale",
+      "href": "https://en.wikipedia.org/wiki/Henry_Hallett_Dale",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "The neuromuscular junction (NMJ)",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter04.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "motor endplates",
+      "href": "https://en.wikipedia.org/wiki/Neuromuscular_junction",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Neuromuscular junction ultrastructure showing synaptic vesicles and cleft",
+      "href": "https://www.google.com/search?q=neuromuscular+junction+electron+microscopy+synaptic+vesicles+cleft&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "endplate potential (EPP)",
+      "href": "https://en.wikipedia.org/wiki/End-plate_potential",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Curare",
+      "href": "https://en.wikipedia.org/wiki/Curare",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Endplate potential reduction by increasing doses of curare",
+      "href": "https://www.google.com/search?q=endplate+potential+EPP+curare+dose+response+graph&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "myasthenia gravis",
+      "href": "https://en.wikipedia.org/wiki/Myasthenia_gravis",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Bernard Katz and the discovery of quantal neurotransmitter release",
+      "href": "https://www.google.com/search?q=Bernard+Katz+quantal+release+miniature+EPP+synaptic+vesicle&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Bernard Katz",
+      "href": "https://en.wikipedia.org/wiki/Bernard_Katz",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "synaptic vesicles",
+      "href": "https://en.wikipedia.org/wiki/Synaptic_vesicle",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Voltage-gated calcium channels triggering neurotransmitter release",
+      "href": "https://www.google.com/search?q=calcium+voltage+gated+channel+neurotransmitter+release+presynaptic&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "voltage-gated calcium channels",
+      "href": "https://en.wikipedia.org/wiki/Voltage-gated_calcium_channel",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Lambert-Eaton myasthenic syndrome",
+      "href": "https://en.wikipedia.org/wiki/Lambert%E2%80%93Eaton_myasthenic_syndrome",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "SNARE protein complex showing synaptobrevin, syntaxin, and SNAP-25",
+      "href": "https://www.google.com/search?q=SNARE+proteins+synaptobrevin+syntaxin+SNAP25+vesicle+fusion&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "SNARE hypothesis",
+      "href": "https://en.wikipedia.org/wiki/SNARE_(protein)",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "James Rothman",
+      "href": "https://en.wikipedia.org/wiki/James_Rothman",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Randy Schekman",
+      "href": "https://en.wikipedia.org/wiki/Randy_Schekman",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Thomas Südhof",
+      "href": "https://en.wikipedia.org/wiki/Thomas_C._S%C3%BCdhof",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Synaptotagmin",
+      "href": "https://en.wikipedia.org/wiki/Synaptotagmin",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Synaptotagmin structure and calcium-triggered vesicle fusion",
+      "href": "https://www.google.com/search?q=synaptotagmin+calcium+sensor+vesicle+fusion+mechanism&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "clathrin-mediated endocytosis",
+      "href": "https://en.wikipedia.org/wiki/Clathrin",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Synaptic vesicle cycle showing release, endocytosis, and recycling",
+      "href": "https://www.google.com/search?q=synaptic+vesicle+cycle+endocytosis+clathrin+recycling&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "EPSPs and IPSPs and their integration in neurons",
+      "href": "https://www.google.com/search?q=EPSP+IPSP+postsynaptic+potential+neuronal+integration&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Excitatory postsynaptic potentials (EPSPs)",
+      "href": "https://nba.uth.tmc.edu/neuroscience/s1/chapter06.html",
+      "kind": "neuroscience_online"
+    },
+    {
+      "text": "Inhibitory postsynaptic potentials (IPSPs)",
+      "href": "https://en.wikipedia.org/wiki/Inhibitory_postsynaptic_potential",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Shunting inhibition and its effect on membrane potential",
+      "href": "https://www.google.com/search?q=shunting+inhibition+chloride+conductance+membrane+potential&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Spatial and temporal summation of synaptic potentials",
+      "href": "https://www.google.com/search?q=spatial+temporal+summation+EPSP+integration+neuron&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "axon initial segment (AIS)",
+      "href": "https://en.wikipedia.org/wiki/Axon_initial_segment",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Axon initial segment structure and action potential initiation zone",
+      "href": "https://www.google.com/search?q=axon+initial+segment+AIS+sodium+channels+action+potential+initiation&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Ionotropic vs metabotropic receptor mechanisms",
+      "href": "https://www.google.com/search?q=ionotropic+metabotropic+receptor+comparison+diagram&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Ionotropic receptors",
+      "href": "https://en.wikipedia.org/wiki/Ionotropic_receptor",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Nicotinic ACh receptors",
+      "href": "https://en.wikipedia.org/wiki/Nicotinic_acetylcholine_receptor",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "AMPA receptors",
+      "href": "https://en.wikipedia.org/wiki/AMPA_receptor",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "NMDA receptors",
+      "href": "https://en.wikipedia.org/wiki/NMDA_receptor",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "GABA_A receptors",
+      "href": "https://en.wikipedia.org/wiki/GABAA_receptor",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Glycine receptors",
+      "href": "https://en.wikipedia.org/wiki/Glycine_receptor",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Nicotinic receptor structure as a pentameric ion channel",
+      "href": "https://www.google.com/search?q=nicotinic+receptor+structure+pentamer+ion+channel&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Metabotropic receptors",
+      "href": "https://en.wikipedia.org/wiki/Metabotropic_receptor",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "G-proteins",
+      "href": "https://en.wikipedia.org/wiki/G_protein",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Muscarinic ACh receptors",
+      "href": "https://en.wikipedia.org/wiki/Muscarinic_acetylcholine_receptor",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Metabotropic glutamate receptors",
+      "href": "https://en.wikipedia.org/wiki/Metabotropic_glutamate_receptor",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "GABA_B receptors",
+      "href": "https://en.wikipedia.org/wiki/GABAB_receptor",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Dopamine receptors",
+      "href": "https://en.wikipedia.org/wiki/Dopamine_receptor",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "G-protein coupled receptor signaling and second messenger cascades",
+      "href": "https://www.google.com/search?q=G+protein+coupled+receptor+signal+transduction+cAMP+second+messenger&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Classification of neurotransmitters showing major categories",
+      "href": "https://www.google.com/search?q=neurotransmitter+types+classification+chart+brain&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Acetylcholine",
+      "href": "https://en.wikipedia.org/wiki/Acetylcholine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "choline acetyltransferase (ChAT)",
+      "href": "https://en.wikipedia.org/wiki/Choline_acetyltransferase",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "acetylcholinesterase (AChE)",
+      "href": "https://en.wikipedia.org/wiki/Acetylcholinesterase",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Alzheimer's disease",
+      "href": "https://en.wikipedia.org/wiki/Alzheimer%27s_disease",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Organophosphate",
+      "href": "https://en.wikipedia.org/wiki/Organophosphate",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Acetylcholine synthesis and degradation pathway",
+      "href": "https://www.google.com/search?q=acetylcholine+synthesis+choline+acetyltransferase+pathway&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Glutamate",
+      "href": "https://en.wikipedia.org/wiki/Glutamate_(neurotransmitter)",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "excitotoxicity",
+      "href": "https://en.wikipedia.org/wiki/Excitotoxicity",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "GABA",
+      "href": "https://en.wikipedia.org/wiki/Gamma-Aminobutyric_acid",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "glutamic acid decarboxylase (GAD)",
+      "href": "https://en.wikipedia.org/wiki/Glutamic_acid_decarboxylase",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Glycine",
+      "href": "https://en.wikipedia.org/wiki/Glycine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Glutamate and GABA synthesis showing their metabolic relationship",
+      "href": "https://www.google.com/search?q=glutamate+GABA+synthesis+pathway+glutamic+acid+decarboxylase&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "monoamines",
+      "href": "https://en.wikipedia.org/wiki/Monoamine_neurotransmitter",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "monoamine oxidase (MAO)",
+      "href": "https://en.wikipedia.org/wiki/Monoamine_oxidase",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "COMT",
+      "href": "https://en.wikipedia.org/wiki/Catechol-O-methyltransferase",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Dopamine",
+      "href": "https://en.wikipedia.org/wiki/Dopamine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "mesolimbic system",
+      "href": "https://en.wikipedia.org/wiki/Mesolimbic_pathway",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "mesocortical system",
+      "href": "https://en.wikipedia.org/wiki/Mesocortical_pathway",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "nigrostriatal system",
+      "href": "https://en.wikipedia.org/wiki/Nigrostriatal_pathway",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Norepinephrine",
+      "href": "https://en.wikipedia.org/wiki/Norepinephrine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "locus coeruleus",
+      "href": "https://en.wikipedia.org/wiki/Locus_coeruleus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Serotonin",
+      "href": "https://en.wikipedia.org/wiki/Serotonin",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "raphe nuclei",
+      "href": "https://en.wikipedia.org/wiki/Raphe_nuclei",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Dopamine pathways in the brain",
+      "href": "https://www.google.com/search?q=dopamine+pathway+brain+mesolimbic+nigrostriatal+diagram&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Neuropeptides",
+      "href": "https://en.wikipedia.org/wiki/Neuropeptide",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "endorphins",
+      "href": "https://en.wikipedia.org/wiki/Endorphin",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "substance P",
+      "href": "https://en.wikipedia.org/wiki/Substance_P",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "neuropeptide Y",
+      "href": "https://en.wikipedia.org/wiki/Neuropeptide_Y",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "nitric oxide (NO)",
+      "href": "https://en.wikipedia.org/wiki/Nitric_oxide#Biological_functions",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "endocannabinoids",
+      "href": "https://en.wikipedia.org/wiki/Endocannabinoid",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "cannabis",
+      "href": "https://en.wikipedia.org/wiki/Cannabis",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Endocannabinoid retrograde signaling at synapses",
+      "href": "https://www.google.com/search?q=endocannabinoid+retrograde+signaling+CB1+receptor+synapse&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Neurotransmitter reuptake transporters and their mechanisms",
+      "href": "https://www.google.com/search?q=neurotransmitter+reuptake+transporter+DAT+SERT+mechanism&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Myasthenia gravis",
+      "href": "https://en.wikipedia.org/wiki/Myasthenia_gravis",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Lambert-Eaton syndrome",
+      "href": "https://en.wikipedia.org/wiki/Lambert%E2%80%93Eaton_myasthenic_syndrome",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Botulism",
+      "href": "https://en.wikipedia.org/wiki/Botulism",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Parkinson's disease",
+      "href": "https://en.wikipedia.org/wiki/Parkinson%27s_disease",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Epilepsy",
+      "href": "https://en.wikipedia.org/wiki/Epilepsy",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Myasthenia gravis pathophysiology at the neuromuscular junction",
+      "href": "https://www.google.com/search?q=myasthenia+gravis+neuromuscular+junction+antibody+pathophysiology&tbm=isch",
+      "kind": "image_search"
+    }
+  ],
+  "images": [
+    {
+      "src": "GeminiSummaryCh3.png",
+      "alt": "Chemical Conversations Visual Summary",
+      "viewer": "image-viewer.html?image=GeminiSummaryCh3.png",
+      "role": "summary"
+    }
+  ],
+  "image_searches": [
+    {
+      "caption": "Otto Loewi's 1921 frog heart experiment demonstrating chemical transmission",
+      "url": "https://www.google.com/search?q=Otto+Loewi+frog+heart+experiment+vagus+nerve+acetylcholine&tbm=isch"
+    },
+    {
+      "caption": "Neuromuscular junction ultrastructure showing synaptic vesicles and cleft",
+      "url": "https://www.google.com/search?q=neuromuscular+junction+electron+microscopy+synaptic+vesicles+cleft&tbm=isch"
+    },
+    {
+      "caption": "Endplate potential reduction by increasing doses of curare",
+      "url": "https://www.google.com/search?q=endplate+potential+EPP+curare+dose+response+graph&tbm=isch"
+    },
+    {
+      "caption": "Bernard Katz and the discovery of quantal neurotransmitter release",
+      "url": "https://www.google.com/search?q=Bernard+Katz+quantal+release+miniature+EPP+synaptic+vesicle&tbm=isch"
+    },
+    {
+      "caption": "Voltage-gated calcium channels triggering neurotransmitter release",
+      "url": "https://www.google.com/search?q=calcium+voltage+gated+channel+neurotransmitter+release+presynaptic&tbm=isch"
+    },
+    {
+      "caption": "SNARE protein complex showing synaptobrevin, syntaxin, and SNAP-25",
+      "url": "https://www.google.com/search?q=SNARE+proteins+synaptobrevin+syntaxin+SNAP25+vesicle+fusion&tbm=isch"
+    },
+    {
+      "caption": "Synaptotagmin structure and calcium-triggered vesicle fusion",
+      "url": "https://www.google.com/search?q=synaptotagmin+calcium+sensor+vesicle+fusion+mechanism&tbm=isch"
+    },
+    {
+      "caption": "Synaptic vesicle cycle showing release, endocytosis, and recycling",
+      "url": "https://www.google.com/search?q=synaptic+vesicle+cycle+endocytosis+clathrin+recycling&tbm=isch"
+    },
+    {
+      "caption": "EPSPs and IPSPs and their integration in neurons",
+      "url": "https://www.google.com/search?q=EPSP+IPSP+postsynaptic+potential+neuronal+integration&tbm=isch"
+    },
+    {
+      "caption": "Shunting inhibition and its effect on membrane potential",
+      "url": "https://www.google.com/search?q=shunting+inhibition+chloride+conductance+membrane+potential&tbm=isch"
+    },
+    {
+      "caption": "Spatial and temporal summation of synaptic potentials",
+      "url": "https://www.google.com/search?q=spatial+temporal+summation+EPSP+integration+neuron&tbm=isch"
+    },
+    {
+      "caption": "Axon initial segment structure and action potential initiation zone",
+      "url": "https://www.google.com/search?q=axon+initial+segment+AIS+sodium+channels+action+potential+initiation&tbm=isch"
+    },
+    {
+      "caption": "Ionotropic vs metabotropic receptor mechanisms",
+      "url": "https://www.google.com/search?q=ionotropic+metabotropic+receptor+comparison+diagram&tbm=isch"
+    },
+    {
+      "caption": "Nicotinic receptor structure as a pentameric ion channel",
+      "url": "https://www.google.com/search?q=nicotinic+receptor+structure+pentamer+ion+channel&tbm=isch"
+    },
+    {
+      "caption": "G-protein coupled receptor signaling and second messenger cascades",
+      "url": "https://www.google.com/search?q=G+protein+coupled+receptor+signal+transduction+cAMP+second+messenger&tbm=isch"
+    },
+    {
+      "caption": "Classification of neurotransmitters showing major categories",
+      "url": "https://www.google.com/search?q=neurotransmitter+types+classification+chart+brain&tbm=isch"
+    },
+    {
+      "caption": "Acetylcholine synthesis and degradation pathway",
+      "url": "https://www.google.com/search?q=acetylcholine+synthesis+choline+acetyltransferase+pathway&tbm=isch"
+    },
+    {
+      "caption": "Glutamate and GABA synthesis showing their metabolic relationship",
+      "url": "https://www.google.com/search?q=glutamate+GABA+synthesis+pathway+glutamic+acid+decarboxylase&tbm=isch"
+    },
+    {
+      "caption": "Dopamine pathways in the brain",
+      "url": "https://www.google.com/search?q=dopamine+pathway+brain+mesolimbic+nigrostriatal+diagram&tbm=isch"
+    },
+    {
+      "caption": "Endocannabinoid retrograde signaling at synapses",
+      "url": "https://www.google.com/search?q=endocannabinoid+retrograde+signaling+CB1+receptor+synapse&tbm=isch"
+    },
+    {
+      "caption": "Neurotransmitter reuptake transporters and their mechanisms",
+      "url": "https://www.google.com/search?q=neurotransmitter+reuptake+transporter+DAT+SERT+mechanism&tbm=isch"
+    },
+    {
+      "caption": "Myasthenia gravis pathophysiology at the neuromuscular junction",
+      "url": "https://www.google.com/search?q=myasthenia+gravis+neuromuscular+junction+antibody+pathophysiology&tbm=isch"
+    }
+  ]
+}

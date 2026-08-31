@@ -1,0 +1,693 @@
+{
+  "course": "PSYCH 275 — Brains, Minds, and Machines",
+  "count": 16,
+  "chapters": [
+    {
+      "id": "chapter0",
+      "file": "chapter0.json",
+      "source": "chapter0.html",
+      "chapter": "0",
+      "title": "What Is a Thought?",
+      "description": "Sparks, symbols, and LLMs; perceptron origins; personhood and the fundamental question of what minds are made of.",
+      "section_count": 15,
+      "toc": [
+        {
+          "number": "I",
+          "title": "The Perceptron's Promise",
+          "duration": "10 min"
+        },
+        {
+          "number": "II",
+          "title": "Lessons from Brain Damage",
+          "duration": "15 min"
+        },
+        {
+          "number": "III",
+          "title": "Machines That Mimic",
+          "duration": "12 min"
+        },
+        {
+          "number": "IV",
+          "title": "The Hard Problems",
+          "duration": "18 min"
+        },
+        {
+          "number": "V",
+          "title": "Alternative Architectures",
+          "duration": "10 min"
+        },
+        {
+          "number": "VI",
+          "title": "Live Demonstrations",
+          "duration": "15 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh0.png"
+    },
+    {
+      "id": "chapter1",
+      "file": "chapter1.json",
+      "source": "chapter1.html",
+      "chapter": "1",
+      "title": "A Short History of Nearly Everything About Minds",
+      "description": "Deep time of nervous systems, hominin cognition, culture/technology co‑evolution, and where this course sits in science and society.",
+      "section_count": 7,
+      "toc": [
+        {
+          "number": "I",
+          "title": "The Cambrian Catalyst",
+          "duration": null
+        },
+        {
+          "number": "II",
+          "title": "Genomic Foundations of Cognitive Diversity",
+          "duration": null
+        },
+        {
+          "number": "III",
+          "title": "Convergent Solutions, Divergent Architectures",
+          "duration": null
+        },
+        {
+          "number": "IV",
+          "title": "Hierarchical Temporal Processing",
+          "duration": null
+        },
+        {
+          "number": "V",
+          "title": "Experimental Demonstrations",
+          "duration": null
+        }
+      ],
+      "summary_image": "GeminiSummaryCh1.png"
+    },
+    {
+      "id": "chapter11",
+      "file": "chapter11.json",
+      "source": "chapter11.html",
+      "chapter": "11",
+      "title": "Learning and Memory: Building a Personal History",
+      "description": "From synaptic plasticity to memory systems; how the brain encodes, consolidates, and retrieves experience across multiple timescales and storage formats.",
+      "section_count": 7,
+      "toc": [
+        {
+          "number": "I",
+          "title": "Motor Learning Systems: Cerebellum and Basal Ganglia",
+          "duration": "12 min"
+        },
+        {
+          "number": "II",
+          "title": "Synaptic Plasticity: The Molecular Basis",
+          "duration": "12 min"
+        },
+        {
+          "number": "III",
+          "title": "Learning Across Scales and Types",
+          "duration": "12 min"
+        },
+        {
+          "number": "IV",
+          "title": "Learning Beyond the Individual: Deep Time and Culture",
+          "duration": "12 min"
+        },
+        {
+          "number": "V",
+          "title": "Memory Systems: Multiple Forms of Storage",
+          "duration": "18 min"
+        },
+        {
+          "number": "VI",
+          "title": "Working Memory: The Workspace of Thought",
+          "duration": "14 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh11.png"
+    },
+    {
+      "id": "chapter12",
+      "file": "chapter12.json",
+      "source": "chapter12.html",
+      "chapter": "12",
+      "title": "Executive Function: The Brain's CEO",
+      "description": "Planning, decision-making, and cognitive control in the frontal lobes; computational algorithms of thought regulation; which functions require consciousness?",
+      "section_count": 10,
+      "toc": [
+        {
+          "number": "I",
+          "title": "Hierarchical Organization: Building Intelligence in Layers",
+          "duration": "8 min"
+        },
+        {
+          "number": "II",
+          "title": "Posterior Association Area: When Perception Breaks",
+          "duration": "10 min"
+        },
+        {
+          "number": "III",
+          "title": "Contralateral Neglect: The Most Dramatic Attention Failure",
+          "duration": "12 min"
+        },
+        {
+          "number": "IV",
+          "title": "Frontal Lobes: The Executive Suite",
+          "duration": "12 min"
+        },
+        {
+          "number": "V",
+          "title": "Core Executive Algorithms",
+          "duration": "15 min"
+        },
+        {
+          "number": "VI",
+          "title": "Decision Making Under Uncertainty",
+          "duration": "10 min"
+        },
+        {
+          "number": "VII",
+          "title": "Hemispheric Lateralization: Two Executives in One Brain",
+          "duration": "8 min"
+        },
+        {
+          "number": "VIII",
+          "title": "The Consciousness Question",
+          "duration": "5 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh12.png"
+    },
+    {
+      "id": "chapter13",
+      "file": "chapter13.json",
+      "source": "chapter13.html",
+      "chapter": "13",
+      "title": "Sleep and Consciousness",
+      "description": "Biological rhythms, sleep stages, theories of consciousness, neural bases of sleep, and the hard problem of subjective experience.",
+      "section_count": 9,
+      "toc": [
+        {
+          "number": "I",
+          "title": "Opening: The Mystery of Lost Time",
+          "duration": "8 min"
+        },
+        {
+          "number": "II",
+          "title": "Biological Clocks and Circadian Rhythms",
+          "duration": "12 min"
+        },
+        {
+          "number": "III",
+          "title": "Sleep Architecture and Stages",
+          "duration": "15 min"
+        },
+        {
+          "number": "IV",
+          "title": "Theories of Consciousness",
+          "duration": "15 min"
+        },
+        {
+          "number": "V",
+          "title": "Functions of Sleep",
+          "duration": "12 min"
+        },
+        {
+          "number": "VI",
+          "title": "Neural Mechanisms of Sleep and Waking",
+          "duration": "10 min"
+        },
+        {
+          "number": "VII",
+          "title": "Sleep Disorders and Clinical Implications",
+          "duration": "8 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh13.png"
+    },
+    {
+      "id": "chapter14",
+      "file": "chapter14.json",
+      "source": "chapter14.html",
+      "chapter": "14",
+      "title": "Psychopharmacology: Drugs, Brain, and Behavior",
+      "description": "How drugs alter neurotransmission; addiction neuroscience; tolerance and sensitization; behavioral addictions; and the chemistry of consciousness.",
+      "section_count": 10,
+      "toc": [
+        {
+          "number": "I",
+          "title": "Opening: The Accidental Discovery That Changed Psychiatry",
+          "duration": "8 min"
+        },
+        {
+          "number": "II",
+          "title": "Principles of Psychopharmacology",
+          "duration": "15 min"
+        },
+        {
+          "number": "III",
+          "title": "Major Classes of Psychoactive Drugs",
+          "duration": "18 min"
+        },
+        {
+          "number": "IV",
+          "title": "Individual Responses: Tolerance, Sensitization, and Context",
+          "duration": "12 min"
+        },
+        {
+          "number": "V",
+          "title": "The Neuroscience of Addiction",
+          "duration": "15 min"
+        },
+        {
+          "number": "VI",
+          "title": "Beyond Substances: Behavioral Addictions",
+          "duration": "8 min"
+        },
+        {
+          "number": "VII",
+          "title": "Neurotoxicity and Harm Reduction",
+          "duration": "4 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh14.png"
+    },
+    {
+      "id": "chapter15",
+      "file": "chapter15.json",
+      "source": "chapter15.html",
+      "chapter": "15",
+      "title": "Synthesis and Future Horizons",
+      "description": "Integrating the course journey from thoughts to consciousness; future of neuroscience, AI, and understanding minds.",
+      "section_count": 9,
+      "toc": [
+        {
+          "number": "I",
+          "title": "The Layered Architecture of Mind",
+          "duration": "15 min"
+        },
+        {
+          "number": "II",
+          "title": "Convergent Insights",
+          "duration": "12 min"
+        },
+        {
+          "number": "III",
+          "title": "Recent Breakthroughs",
+          "duration": "10 min"
+        },
+        {
+          "number": "IV",
+          "title": "Future Horizons",
+          "duration": "20 min"
+        },
+        {
+          "number": "V",
+          "title": "The Humanoid Challenge Revisited",
+          "duration": "8 min"
+        },
+        {
+          "number": "VI",
+          "title": "Course Synthesis and Final Reflection",
+          "duration": "15 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh15.png"
+    },
+    {
+      "id": "chapter2",
+      "file": "chapter2.json",
+      "source": "chapter2.html",
+      "chapter": "2",
+      "title": "Electric Flesh and Fire: The Biophysics of Thought",
+      "description": "Membrane potentials and spikes; resting potential, Nernst and Goldman equations, ionic mechanisms of action potentials, propagation and cable properties.",
+      "section_count": 7,
+      "toc": [
+        {
+          "number": "I",
+          "title": "The Resting Membrane Potential",
+          "duration": "20 min"
+        },
+        {
+          "number": "II",
+          "title": "The Action Potential: Ionic Mechanisms",
+          "duration": "20 min"
+        },
+        {
+          "number": "III",
+          "title": "Propagation of the Action Potential",
+          "duration": "15 min"
+        },
+        {
+          "number": "IV",
+          "title": "Channel Diversity and Clinical Relevtic",
+          "duration": "15 min"
+        },
+        {
+          "number": "V",
+          "title": "Evolutionary Origins",
+          "duration": "10 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh2.png"
+    },
+    {
+      "id": "chapter3",
+      "file": "chapter3.json",
+      "source": "chapter3.html",
+      "chapter": "3",
+      "title": "Chemical Conversations: Synaptic Transmission and Neurotransmitters",
+      "description": "How electrical signals become chemical messages: the neuromuscular junction, vesicle fusion, SNARE proteins, ionotropic and metabotropic receptors, and the diversity of neurotransmitters.",
+      "section_count": 9,
+      "toc": [
+        {
+          "number": "I",
+          "title": "The Neuromuscular Junction: A Model Synapse",
+          "duration": "20 min"
+        },
+        {
+          "number": "II",
+          "title": "Mechanisms of Neurotransmitter Release",
+          "duration": "15 min"
+        },
+        {
+          "number": "III",
+          "title": "Synaptic Transmission in the CNS",
+          "duration": "15 min"
+        },
+        {
+          "number": "IV",
+          "title": "Receptor Types: Fast and Slow",
+          "duration": "15 min"
+        },
+        {
+          "number": "V",
+          "title": "Neurotransmitter Diversity",
+          "duration": "15 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh3.png"
+    },
+    {
+      "id": "chapter4",
+      "file": "chapter4.json",
+      "source": "chapter4.html",
+      "chapter": "4",
+      "title": "Neural Plasticity: How Brains Learn to Learn",
+      "description": "Synaptic strengthening, LTP/LTD, Hebbian learning, and how experience rewires the brain; from Cajal's paradox to spike-timing dependent plasticity.",
+      "section_count": 12,
+      "toc": [
+        {
+          "number": "I",
+          "title": "Cajal's Paradox & Foundation Review",
+          "duration": "20 min"
+        },
+        {
+          "number": "II",
+          "title": "Long-Term Potentiation & Depression",
+          "duration": "15 min"
+        },
+        {
+          "number": "III",
+          "title": "Molecular Machinery of Memory",
+          "duration": "20 min"
+        },
+        {
+          "number": "IV",
+          "title": "Critical Periods & Development",
+          "duration": "10 min"
+        },
+        {
+          "number": "V",
+          "title": "Adult Neurogenesis & Repair",
+          "duration": "8 min"
+        },
+        {
+          "number": "VI",
+          "title": "Learning in Real Networks",
+          "duration": "7 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh4.png"
+    },
+    {
+      "id": "chapter5",
+      "file": "chapter5.json",
+      "source": "chapter5.html",
+      "chapter": "5",
+      "title": "Macroscopic Organization of the Nervous System",
+      "description": "From brainstem to cortex; hierarchical control; CNS/PNS divisions; functional anatomy. The grand architecture of thought.",
+      "section_count": 7,
+      "toc": [
+        {
+          "number": "I",
+          "title": "Opening: Phineas Gage's Revelation",
+          "duration": "12 min"
+        },
+        {
+          "number": "II",
+          "title": "The Grand Division: Central vs Peripheral",
+          "duration": "15 min"
+        },
+        {
+          "number": "III",
+          "title": "Ascending the Neuraxis: From Spine to Cortex",
+          "duration": "20 min"
+        },
+        {
+          "number": "IV",
+          "title": "The Meninges and Ventricular System",
+          "duration": "10 min"
+        },
+        {
+          "number": "V",
+          "title": "Functional Systems and Networks",
+          "duration": "15 min"
+        },
+        {
+          "number": "VI",
+          "title": "Clinical Correlations and Future",
+          "duration": "8 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh5.png"
+    },
+    {
+      "id": "chapter6",
+      "file": "chapter6.json",
+      "source": "chapter6.html",
+      "chapter": "6",
+      "title": "Neuroanatomy: A Deeper Dive",
+      "description": "Detailed neuroanatomy: ventricular system, blood supply, spinal cord organization, embryonic development, brainstem nuclei, cortical architecture, and white matter tracts.",
+      "section_count": 11,
+      "toc": [
+        {
+          "number": "I",
+          "title": "The Ventricular System and CSF Circulation",
+          "duration": "10 min"
+        },
+        {
+          "number": "II",
+          "title": "Cerebral Blood Supply and Drainage",
+          "duration": "12 min"
+        },
+        {
+          "number": "III",
+          "title": "Peripheral Sensory and Motor Systems",
+          "duration": "10 min"
+        },
+        {
+          "number": "IV",
+          "title": "Spinal Cord: Detailed Organization",
+          "duration": "12 min"
+        },
+        {
+          "number": "V",
+          "title": "Embryonic Brain Development",
+          "duration": "8 min"
+        },
+        {
+          "number": "VI",
+          "title": "Brainstem Nuclei and Pathways",
+          "duration": "15 min"
+        },
+        {
+          "number": "VII",
+          "title": "Diencephalon: Thalamic and Hypothalamic Nuclei",
+          "duration": "10 min"
+        },
+        {
+          "number": "VIII",
+          "title": "Basal Ganglia and Deep Structures",
+          "duration": "10 min"
+        },
+        {
+          "number": "IX",
+          "title": "Cortical Architecture",
+          "duration": "15 min"
+        },
+        {
+          "number": "X",
+          "title": "Mapping and Connecting the Cortex",
+          "duration": "12 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh6.png"
+    },
+    {
+      "id": "chapter7",
+      "file": "chapter7.json",
+      "source": "chapter7.html",
+      "chapter": "7",
+      "title": "Sensation and Perception: Touch, Inference, and Reality",
+      "description": "How raw sensation becomes meaningful perception; tactile receptors, proprioception, inference over data, illusions, and embodied cognition.",
+      "section_count": 12,
+      "toc": [
+        {
+          "number": "I",
+          "title": "The Fundamental Problem: Raw Data vs. Meaning",
+          "duration": "15 min"
+        },
+        {
+          "number": "II",
+          "title": "Tactile Sensation: The Engineering of Touch",
+          "duration": "20 min"
+        },
+        {
+          "number": "III",
+          "title": "Proprioception: Knowing Where You Are",
+          "duration": "12 min"
+        },
+        {
+          "number": "IV",
+          "title": "Perception as Inference: Beyond the Data",
+          "duration": "18 min"
+        },
+        {
+          "number": "V",
+          "title": "Embodiment and Culture",
+          "duration": "10 min"
+        },
+        {
+          "number": "VI",
+          "title": "Clinical and Technological Applications",
+          "duration": "5 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh7.png"
+    },
+    {
+      "id": "chapter8",
+      "file": "chapter8.json",
+      "source": "chapter8.html",
+      "chapter": "8",
+      "title": "Vision: The Brain's Beautiful Lie",
+      "description": "From photons to perception; retinal computation; parallel pathways; predictive vision; how your brain invents what you see.",
+      "section_count": 10,
+      "toc": [
+        {
+          "number": "I",
+          "title": "The Upside-Down World",
+          "duration": "15 min"
+        },
+        {
+          "number": "II",
+          "title": "Eye Optics and Anatomy",
+          "duration": "10 min"
+        },
+        {
+          "number": "III",
+          "title": "Retinal Architecture",
+          "duration": "20 min"
+        },
+        {
+          "number": "IV",
+          "title": "From Retina to Cortex",
+          "duration": "15 min"
+        },
+        {
+          "number": "V",
+          "title": "Parallel Processing Streams",
+          "duration": "12 min"
+        },
+        {
+          "number": "VI",
+          "title": "Predictive Vision and Illusions",
+          "duration": "8 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh8.png"
+    },
+    {
+      "id": "chapter9",
+      "file": "chapter9.json",
+      "source": "chapter9.html",
+      "chapter": "9",
+      "title": "Attention and Chemical Senses: Filtering Reality",
+      "description": "Attention mechanisms, auditory processing, olfaction, gustation; revisiting receptive fields, tuning, representation, and engrams across sensory modalities.",
+      "section_count": 8,
+      "toc": [
+        {
+          "number": "I",
+          "title": "Attention: The Spotlight and the Filter",
+          "duration": "20 min"
+        },
+        {
+          "number": "II",
+          "title": "Audition: From Pressure Waves to Perception",
+          "duration": "20 min"
+        },
+        {
+          "number": "III",
+          "title": "Olfaction: Chemistry to Cognition",
+          "duration": "15 min"
+        },
+        {
+          "number": "IV",
+          "title": "Gustation: Five Tastes, Many Meanings",
+          "duration": "10 min"
+        },
+        {
+          "number": "V",
+          "title": "Universal Principles Across Modalities",
+          "duration": "15 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh9.png"
+    },
+    {
+      "id": "chapter10",
+      "file": "chapter10.json",
+      "source": "chapter10.html",
+      "chapter": "10",
+      "title": "Motor Control: From Thought to Action",
+      "description": "Motor units, spinal reflexes, descending pathways, and motor cortex; how the brain transforms intentions into coordinated movement through hierarchical control systems.",
+      "section_count": 8,
+      "toc": [
+        {
+          "number": "I",
+          "title": "Motor Units: The Basic Currency of Movement",
+          "duration": "15 min"
+        },
+        {
+          "number": "II",
+          "title": "Spinal Reflexes: Fast Feedback Loops",
+          "duration": "15 min"
+        },
+        {
+          "number": "III",
+          "title": "Descending Motor Pathways: Brain Commands the Body",
+          "duration": "20 min"
+        },
+        {
+          "number": "IV",
+          "title": "Motor Cortex: Maps, Plans, and Populations",
+          "duration": "20 min"
+        },
+        {
+          "number": "V",
+          "title": "Motor Planning and Hierarchical Control",
+          "duration": "10 min"
+        }
+      ],
+      "summary_image": "GeminiSummaryCh10.png"
+    }
+  ]
+}

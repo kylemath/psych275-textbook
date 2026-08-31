@@ -1,0 +1,1335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brains, Minds, and Machines — Textbook</title>
+    <meta name="description" content="Complete textbook for PSYCH 275: Brain and Behaviour. Navigate through all chapters with integrated section navigation.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Spectral:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #0b0f17;
+        --bg-2: #0f1624;
+        --bg-3: #131a28;
+        --text: #e6edf3;
+        --muted: #9fb0c3;
+        --accent: #7ae1ff;
+        --accent-2: #ffb86b;
+        --accent-dim: rgba(122, 225, 255, 0.15);
+        --glow: rgba(122, 225, 255, 0.35);
+        --border: rgba(122, 225, 255, 0.2);
+        --sidebar-width: 300px;
+        --toc-width: 240px;
+        --header-height: 56px;
+      }
+
+      /* Light mode */
+      [data-theme="light"] {
+        --bg: #f8f9fa;
+        --bg-2: #ffffff;
+        --bg-3: #e9ecef;
+        --text: #1a1a2e;
+        --muted: #5a6677;
+        --accent: #0077b6;
+        --accent-2: #d45d00;
+        --accent-dim: rgba(0, 119, 182, 0.1);
+        --glow: rgba(0, 119, 182, 0.15);
+        --border: rgba(0, 119, 182, 0.2);
+      }
+
+      [data-theme="light"] .title-page .book-cover {
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      body {
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Layout */
+      .app {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      /* Header */
+      .header {
+        height: var(--header-height);
+        background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        gap: 16px;
+        flex-shrink: 0;
+        z-index: 100;
+      }
+
+      .home-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        background: rgba(122, 225, 255, 0.08);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+
+      .home-btn:hover {
+        background: rgba(122, 225, 255, 0.15);
+        border-color: var(--accent);
+        text-decoration: none;
+      }
+
+      .home-btn svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .header-title {
+        font-family: Spectral, Georgia, serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--text);
+        text-shadow: 0 0 20px var(--glow);
+        flex: 1;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .header-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 12px;
+        background: transparent;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        color: var(--muted);
+        font-size: 13px;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+      }
+
+      .header-btn:hover {
+        background: var(--accent-dim);
+        border-color: var(--accent);
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .header-btn span {
+        display: inline;
+      }
+
+      /* Main content area */
+      .main {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+      }
+
+      /* Left Sidebar - Chapter TOC */
+      .sidebar {
+        width: var(--sidebar-width);
+        background: var(--bg-2);
+        border-right: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        overflow: hidden;
+      }
+
+      .sidebar-header {
+        padding: 16px 16px 12px;
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(180deg, rgba(122, 225, 255, 0.05) 0%, transparent 100%);
+      }
+
+      .sidebar-header h2 {
+        margin: 0;
+        font-family: Spectral, Georgia, serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .chapter-list {
+        flex: 1;
+        overflow-y: auto;
+        padding: 8px 0;
+      }
+
+      .chapter-list::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .chapter-list::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .chapter-list::-webkit-scrollbar-thumb {
+        background: rgba(122, 225, 255, 0.2);
+        border-radius: 3px;
+      }
+
+      .chapter-item {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        padding: 12px 16px;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 15px;
+        border-left: 3px solid transparent;
+        transition: all 0.15s ease;
+        cursor: pointer;
+        line-height: 1.4;
+      }
+
+      .chapter-item:hover {
+        background: rgba(122, 225, 255, 0.05);
+        color: var(--text);
+      }
+
+      .chapter-item.active {
+        background: rgba(122, 225, 255, 0.1);
+        border-left-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .chapter-item .chapter-num {
+        flex-shrink: 0;
+        min-width: 24px;
+        font-weight: 700;
+        color: var(--accent);
+        opacity: 0.8;
+      }
+
+      .chapter-item.active .chapter-num {
+        opacity: 1;
+      }
+
+      .chapter-item .chapter-title {
+        font-size: 14px;
+        color: inherit;
+        opacity: 0.9;
+        line-height: 1.35;
+      }
+
+      .chapter-divider {
+        height: 1px;
+        background: var(--border);
+        margin: 8px 16px;
+      }
+
+      /* Center Content */
+      .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background: var(--bg);
+        min-width: 0;
+      }
+
+      .content-frame {
+        flex: 1;
+        border: none;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Title Page (when no chapter is selected) */
+      .title-page {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        text-align: center;
+        background: radial-gradient(ellipse at center, rgba(122, 225, 255, 0.05) 0%, transparent 70%);
+      }
+
+      .title-page h1 {
+        font-family: Spectral, Georgia, serif;
+        font-size: clamp(32px, 5vw, 52px);
+        font-weight: 700;
+        color: var(--text);
+        margin: 0 0 16px;
+        text-shadow: 0 0 30px var(--glow);
+        line-height: 1.2;
+      }
+
+      .title-page .subtitle {
+        font-size: clamp(16px, 2vw, 20px);
+        color: var(--muted);
+        max-width: 600px;
+        margin: 0 0 32px;
+        line-height: 1.6;
+      }
+
+      .title-page .course-code {
+        font-size: 14px;
+        color: var(--accent);
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
+
+      .title-page .start-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 28px;
+        background: linear-gradient(135deg, rgba(122, 225, 255, 0.15) 0%, rgba(122, 225, 255, 0.05) 100%);
+        border: 1px solid var(--accent);
+        border-radius: 8px;
+        color: var(--accent);
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+      }
+
+      .title-page .start-btn:hover {
+        background: rgba(122, 225, 255, 0.2);
+        box-shadow: 0 0 30px var(--glow);
+        transform: translateY(-2px);
+      }
+
+      .title-page .start-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .title-page .book-cover {
+        max-width: 320px;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 60px var(--glow);
+        margin-bottom: 32px;
+        border: 1px solid var(--border);
+      }
+
+      /* Right Sidebar - Section TOC */
+      .section-toc {
+        width: var(--toc-width);
+        background: var(--bg-2);
+        border-left: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        overflow: hidden;
+      }
+
+      .section-toc-header {
+        padding: 16px 14px 12px;
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(180deg, rgba(255, 184, 107, 0.05) 0%, transparent 100%);
+      }
+
+      .section-toc-header h3 {
+        margin: 0;
+        font-family: Spectral, Georgia, serif;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--accent-2);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .section-list {
+        flex: 1;
+        overflow-y: auto;
+        padding: 8px 0;
+      }
+
+      .section-list::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      .section-list::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .section-list::-webkit-scrollbar-thumb {
+        background: rgba(255, 184, 107, 0.2);
+        border-radius: 3px;
+      }
+
+      .section-item {
+        display: block;
+        padding: 8px 14px;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 1.4;
+        border-left: 2px solid transparent;
+        transition: all 0.15s ease;
+        cursor: pointer;
+      }
+
+      .section-item:hover {
+        background: rgba(255, 184, 107, 0.05);
+        color: var(--text);
+      }
+
+      .section-item.active {
+        background: rgba(255, 184, 107, 0.1);
+        border-left-color: var(--accent-2);
+        color: var(--accent-2);
+      }
+
+      .section-item.h3 {
+        padding-left: 26px;
+        font-size: 11px;
+        opacity: 0.85;
+      }
+
+      .section-empty {
+        padding: 20px 14px;
+        color: var(--muted);
+        font-size: 12px;
+        font-style: italic;
+        text-align: center;
+      }
+
+      /* Mobile sidebar toggle */
+      .sidebar-toggle {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--bg-2);
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        cursor: pointer;
+        z-index: 200;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .toc-toggle {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--bg-2);
+        border: 1px solid var(--accent-2);
+        color: var(--accent-2);
+        cursor: pointer;
+        z-index: 200;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        :root {
+          --sidebar-width: 220px;
+          --toc-width: 200px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        :root {
+          --sidebar-width: 280px;
+          --toc-width: 260px;
+        }
+
+        .sidebar {
+          position: fixed;
+          left: 0;
+          top: var(--header-height);
+          bottom: 0;
+          z-index: 150;
+          transform: translateX(-100%);
+          transition: transform 0.3s ease;
+        }
+
+        .sidebar.open {
+          transform: translateX(0);
+        }
+
+        .section-toc {
+          position: fixed;
+          right: 0;
+          top: var(--header-height);
+          bottom: 0;
+          z-index: 150;
+          transform: translateX(100%);
+          transition: transform 0.3s ease;
+        }
+
+        .section-toc.open {
+          transform: translateX(0);
+        }
+
+        .sidebar-toggle,
+        .toc-toggle {
+          display: flex;
+        }
+
+        .header-title {
+          font-size: 16px;
+        }
+
+        .sidebar-overlay,
+        .toc-overlay {
+          display: none;
+          position: fixed;
+          inset: 0;
+          top: var(--header-height);
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 140;
+        }
+
+        .sidebar-overlay.open,
+        .toc-overlay.open {
+          display: block;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-actions {
+          gap: 6px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .header {
+          padding: 0 12px;
+        }
+
+        .home-btn span {
+          display: none;
+        }
+
+        .home-btn {
+          padding: 8px 10px;
+        }
+
+        .header-btn span {
+          display: none;
+        }
+
+        .header-btn {
+          padding: 8px;
+          min-width: auto;
+        }
+
+        .header-actions {
+          gap: 4px;
+        }
+      }
+
+      /* Print styles */
+      @media print {
+        .header, .sidebar, .section-toc, .sidebar-toggle, .toc-toggle {
+          display: none !important;
+        }
+
+        .content {
+          margin: 0;
+          padding: 0;
+        }
+
+        .content-frame {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <!-- Header -->
+      <header class="header">
+        <a href="../index.html" class="home-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span>Course Home</span>
+        </a>
+        <div class="header-title">Brains, Minds, and Machines — Textbook</div>
+        <div class="header-actions">
+          <!-- Print button (only shown when chapter loaded) -->
+          <button class="header-btn" id="printBtn" style="display: none;" onclick="printChapter()" title="Print / Save as PDF">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"/>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+              <rect x="6" y="14" width="12" height="8"/>
+            </svg>
+            <span>Print</span>
+          </button>
+          <!-- Theme toggle -->
+          <button class="header-btn" id="themeToggle" onclick="toggleTheme()" title="Toggle light/dark mode">
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Layout -->
+      <div class="main">
+        <!-- Mobile overlay for sidebar -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Left Sidebar: Chapter List -->
+        <aside class="sidebar" id="sidebar">
+          <div class="sidebar-header">
+            <h2>Chapters</h2>
+          </div>
+          <nav class="chapter-list" id="chapterList">
+            <a class="chapter-item active" data-chapter="title" onclick="loadChapter('title')">
+              <span class="chapter-num">📖</span> Title Page
+            </a>
+            <div class="chapter-divider"></div>
+            <a class="chapter-item" data-chapter="0" onclick="loadChapter(0)">
+              <span class="chapter-num">0.</span>
+              <span class="chapter-title">What Is a Thought?</span>
+            </a>
+            <a class="chapter-item" data-chapter="1" onclick="loadChapter(1)">
+              <span class="chapter-num">1.</span>
+              <span class="chapter-title">A Short History of Nearly Everything About Minds</span>
+            </a>
+            <a class="chapter-item" data-chapter="2" onclick="loadChapter(2)">
+              <span class="chapter-num">2.</span>
+              <span class="chapter-title">Electrical Signaling</span>
+            </a>
+            <a class="chapter-item" data-chapter="3" onclick="loadChapter(3)">
+              <span class="chapter-num">3.</span>
+              <span class="chapter-title">Chemical Signaling</span>
+            </a>
+            <a class="chapter-item" data-chapter="4" onclick="loadChapter(4)">
+              <span class="chapter-num">4.</span>
+              <span class="chapter-title">Neural Plasticity</span>
+            </a>
+            <a class="chapter-item" data-chapter="5" onclick="loadChapter(5)">
+              <span class="chapter-num">5.</span>
+              <span class="chapter-title">Macroscopic Organization</span>
+            </a>
+            <a class="chapter-item" data-chapter="6" onclick="loadChapter(6)">
+              <span class="chapter-num">6.</span>
+              <span class="chapter-title">Neuroanatomy: A Deeper Dive</span>
+            </a>
+            <a class="chapter-item" data-chapter="7" onclick="loadChapter(7)">
+              <span class="chapter-num">7.</span>
+              <span class="chapter-title">Sensation and Perception</span>
+            </a>
+            <a class="chapter-item" data-chapter="8" onclick="loadChapter(8)">
+              <span class="chapter-num">8.</span>
+              <span class="chapter-title">Vision</span>
+            </a>
+            <a class="chapter-item" data-chapter="9" onclick="loadChapter(9)">
+              <span class="chapter-num">9.</span>
+              <span class="chapter-title">Attention and Chemical Senses</span>
+            </a>
+            <a class="chapter-item" data-chapter="10" onclick="loadChapter(10)">
+              <span class="chapter-num">10.</span>
+              <span class="chapter-title">Motor Control</span>
+            </a>
+            <a class="chapter-item" data-chapter="11" onclick="loadChapter(11)">
+              <span class="chapter-num">11.</span>
+              <span class="chapter-title">Learning and Memory</span>
+            </a>
+            <a class="chapter-item" data-chapter="12" onclick="loadChapter(12)">
+              <span class="chapter-num">12.</span>
+              <span class="chapter-title">Association Cortex and Executive Function</span>
+            </a>
+            <a class="chapter-item" data-chapter="13" onclick="loadChapter(13)">
+              <span class="chapter-num">13.</span>
+              <span class="chapter-title">Sleep and Consciousness</span>
+            </a>
+            <a class="chapter-item" data-chapter="14" onclick="loadChapter(14)">
+              <span class="chapter-num">14.</span>
+              <span class="chapter-title">Psychopharmacology</span>
+            </a>
+            <div class="chapter-divider"></div>
+            <a class="chapter-item" data-chapter="15" onclick="loadChapter(15)">
+              <span class="chapter-num">15.</span>
+              <span class="chapter-title">Synthesis and Future Horizons</span>
+            </a>
+          </nav>
+        </aside>
+
+        <!-- Center Content -->
+        <main class="content" id="content">
+          <!-- Title page shown by default -->
+          <div class="title-page" id="titlePage">
+            <img src="cover.png" 
+                 alt="Brains, Minds, and Machines Textbook Cover" 
+                 class="book-cover">
+            <div class="course-code">PSYCH 275 — Winter 2026</div>
+            <h1>Brains, Minds, and Machines</h1>
+            <p class="subtitle">
+              An introduction to brain mechanisms involved in sensation, perception, movement, 
+              motivation, learning, and cognition, as studied in both humans and lower animals.
+            </p>
+            <button class="start-btn" onclick="loadChapter(0)">
+              Begin Reading
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </div>
+          <!-- Iframe for chapter content (hidden initially) -->
+          <iframe class="content-frame" id="contentFrame" style="display: none;"></iframe>
+        </main>
+
+        <!-- Mobile overlay for section TOC -->
+        <div class="toc-overlay" id="tocOverlay"></div>
+
+        <!-- Right Sidebar: Section TOC -->
+        <aside class="section-toc" id="sectionToc">
+          <div class="section-toc-header">
+            <h3>On This Page</h3>
+          </div>
+          <nav class="section-list" id="sectionList">
+            <div class="section-empty">Select a chapter to see its sections</div>
+          </nav>
+        </aside>
+      </div>
+
+      <!-- Mobile toggle buttons -->
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle chapter list">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <button class="toc-toggle" id="tocToggle" aria-label="Toggle section list">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="8" y1="6" x2="21" y2="6"/>
+          <line x1="8" y1="12" x2="21" y2="12"/>
+          <line x1="8" y1="18" x2="21" y2="18"/>
+          <circle cx="4" cy="6" r="1.5" fill="currentColor"/>
+          <circle cx="4" cy="12" r="1.5" fill="currentColor"/>
+          <circle cx="4" cy="18" r="1.5" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+
+    <script>
+      // State
+      let currentChapter = 'title';
+      let sections = [];
+      let activeSection = null;
+
+      // DOM Elements
+      const titlePage = document.getElementById('titlePage');
+      const contentFrame = document.getElementById('contentFrame');
+      const sectionList = document.getElementById('sectionList');
+      const chapterList = document.getElementById('chapterList');
+      const sidebar = document.getElementById('sidebar');
+      const sectionToc = document.getElementById('sectionToc');
+      const sidebarOverlay = document.getElementById('sidebarOverlay');
+      const tocOverlay = document.getElementById('tocOverlay');
+      const sidebarToggle = document.getElementById('sidebarToggle');
+      const tocToggle = document.getElementById('tocToggle');
+
+      // Load a chapter
+      function loadChapter(chapter) {
+        currentChapter = chapter;
+        
+        // Update active state in chapter list
+        document.querySelectorAll('.chapter-item').forEach(item => {
+          item.classList.toggle('active', item.dataset.chapter === String(chapter));
+        });
+
+        // Close mobile sidebars
+        closeSidebars();
+
+        if (chapter === 'title') {
+          titlePage.style.display = 'flex';
+          contentFrame.style.display = 'none';
+          sectionList.innerHTML = '<div class="section-empty">Select a chapter to see its sections</div>';
+          updatePrintButton();
+          return;
+        }
+
+        // Show iframe, hide title page
+        titlePage.style.display = 'none';
+        contentFrame.style.display = 'block';
+        
+        contentFrame.src = `../chapter${chapter}.html`;
+        
+        // Clear sections until loaded
+        sectionList.innerHTML = '<div class="section-empty">Loading sections...</div>';
+        
+        updatePrintButton();
+      }
+
+      // Parse sections from loaded iframe
+      function parseSections() {
+        try {
+          const doc = contentFrame.contentDocument || contentFrame.contentWindow.document;
+          const headings = doc.querySelectorAll('h2, h3');
+          sections = [];
+          
+          headings.forEach((heading, index) => {
+            // Create ID if doesn't exist
+            if (!heading.id) {
+              heading.id = `section-${index}`;
+            }
+            
+            sections.push({
+              id: heading.id,
+              text: heading.textContent.trim(),
+              level: heading.tagName.toLowerCase(),
+              element: heading
+            });
+          });
+
+          renderSections();
+          setupScrollTracking();
+        } catch (e) {
+          console.log('Could not parse sections:', e);
+          sectionList.innerHTML = '<div class="section-empty">Unable to load sections</div>';
+        }
+      }
+
+      // Render sections in the TOC
+      function renderSections() {
+        if (sections.length === 0) {
+          sectionList.innerHTML = '<div class="section-empty">No sections found</div>';
+          return;
+        }
+
+        sectionList.innerHTML = sections.map((section, index) => `
+          <a class="section-item ${section.level}" 
+             data-section="${index}" 
+             onclick="scrollToSection(${index})">
+            ${section.text}
+          </a>
+        `).join('');
+      }
+
+      // Scroll to a section
+      function scrollToSection(index) {
+        const section = sections[index];
+        if (!section) return;
+
+        try {
+          const doc = contentFrame.contentDocument || contentFrame.contentWindow.document;
+          const element = doc.getElementById(section.id);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setActiveSection(index);
+          }
+        } catch (e) {
+          console.log('Could not scroll to section:', e);
+        }
+
+        // Close mobile TOC
+        closeSidebars();
+      }
+
+      // Set active section in TOC
+      function setActiveSection(index) {
+        activeSection = index;
+        document.querySelectorAll('.section-item').forEach((item, i) => {
+          item.classList.toggle('active', i === index);
+        });
+
+        // Scroll the active item into view in the TOC
+        const activeItem = document.querySelector('.section-item.active');
+        if (activeItem) {
+          activeItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }
+
+      // Setup scroll tracking in iframe
+      function setupScrollTracking() {
+        try {
+          const doc = contentFrame.contentDocument || contentFrame.contentWindow.document;
+          const contentWindow = contentFrame.contentWindow;
+
+          contentWindow.addEventListener('scroll', () => {
+            const scrollTop = contentWindow.scrollY || doc.documentElement.scrollTop;
+            const viewportHeight = contentWindow.innerHeight;
+            
+            // Find the section that's most visible
+            let closestSection = 0;
+            let closestDistance = Infinity;
+
+            sections.forEach((section, index) => {
+              const element = doc.getElementById(section.id);
+              if (element) {
+                const rect = element.getBoundingClientRect();
+                const distance = Math.abs(rect.top - 100); // 100px from top threshold
+                
+                if (distance < closestDistance && rect.top < viewportHeight * 0.5) {
+                  closestDistance = distance;
+                  closestSection = index;
+                }
+              }
+            });
+
+            if (closestSection !== activeSection) {
+              setActiveSection(closestSection);
+            }
+          });
+        } catch (e) {
+          console.log('Could not setup scroll tracking:', e);
+        }
+      }
+
+      // iframe load handler
+      contentFrame.addEventListener('load', () => {
+        if (currentChapter !== 'title') {
+          // Small delay to ensure DOM is ready
+          setTimeout(() => {
+            parseSections();
+            // Apply current theme to the loaded chapter
+            applyThemeToIframe(getCurrentTheme());
+            
+            // Scroll to pending section if any
+            if (pendingSection) {
+              setTimeout(() => {
+                scrollToSectionById(pendingSection);
+                pendingSection = null;
+              }, 200);
+            }
+          }, 100);
+        }
+      });
+
+      // Mobile sidebar toggles
+      function closeSidebars() {
+        sidebar.classList.remove('open');
+        sectionToc.classList.remove('open');
+        sidebarOverlay.classList.remove('open');
+        tocOverlay.classList.remove('open');
+      }
+
+      sidebarToggle.addEventListener('click', () => {
+        const isOpen = sidebar.classList.contains('open');
+        closeSidebars();
+        if (!isOpen) {
+          sidebar.classList.add('open');
+          sidebarOverlay.classList.add('open');
+        }
+      });
+
+      tocToggle.addEventListener('click', () => {
+        const isOpen = sectionToc.classList.contains('open');
+        closeSidebars();
+        if (!isOpen) {
+          sectionToc.classList.add('open');
+          tocOverlay.classList.add('open');
+        }
+      });
+
+      sidebarOverlay.addEventListener('click', closeSidebars);
+      tocOverlay.addEventListener('click', closeSidebars);
+
+      // Handle URL hash for deep linking
+      let pendingSection = null;
+      
+      function handleHash() {
+        const hash = window.location.hash.slice(1);
+        if (hash) {
+          // Check for chapter with section: chapter0-thought-questions
+          const matchWithSection = hash.match(/^chapter(\d+)-(.+)$/);
+          if (matchWithSection) {
+            const chapterNum = parseInt(matchWithSection[1]);
+            pendingSection = matchWithSection[2];
+            loadChapter(chapterNum);
+            return;
+          }
+          
+          // Check for chapter only: chapter0
+          const match = hash.match(/^chapter(\d+)$/);
+          if (match) {
+            pendingSection = null;
+            loadChapter(parseInt(match[1]));
+          }
+        }
+      }
+      
+      // Scroll to section after iframe loads
+      function scrollToSectionById(sectionId) {
+        try {
+          const frameDoc = contentFrame.contentDocument || contentFrame.contentWindow.document;
+          const element = frameDoc.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        } catch (e) {
+          console.log('Could not scroll to section:', e);
+        }
+      }
+
+      // Initialize
+      window.addEventListener('hashchange', handleHash);
+      handleHash();
+
+      // Update year in footer if present
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Theme toggle and buttons
+      const printBtn = document.getElementById('printBtn');
+      const themeToggle = document.getElementById('themeToggle');
+      const iconSun = themeToggle.querySelector('.icon-sun');
+      const iconMoon = themeToggle.querySelector('.icon-moon');
+
+      // Light mode CSS to inject into iframe
+      const lightModeCSS = `
+        :root {
+          --bg: #f8f9fa !important;
+          --bg-2: #ffffff !important;
+          --text: #1a1a2e !important;
+          --muted: #4a5568 !important;
+          --accent: #0077b6 !important;
+          --accent-2: #d45d00 !important;
+          --glow: rgba(0, 119, 182, 0.15) !important;
+        }
+        
+        body {
+          background: #f9fafb !important;
+          background-attachment: fixed !important;
+          color: #1a1a2e !important;
+        }
+        
+        html {
+          background: #f9fafb !important;
+        }
+        
+        .stars {
+          display: none !important;
+        }
+        
+        h1, h2, h3 {
+          color: #1a1a2e !important;
+          text-shadow: none !important;
+        }
+        
+        h1 {
+          color: #0d47a1 !important;
+        }
+        
+        h2 {
+          color: #1565c0 !important;
+        }
+        
+        p, li, td, th {
+          color: #2d3748 !important;
+        }
+        
+        p.lead {
+          color: #1a1a2e !important;
+        }
+        
+        a {
+          color: #0077b6 !important;
+        }
+        
+        .brand {
+          color: #4a5568 !important;
+        }
+        
+        .tag {
+          background: rgba(0, 119, 182, 0.1) !important;
+          border-color: rgba(0, 119, 182, 0.3) !important;
+          color: #0077b6 !important;
+        }
+        
+        .stage {
+          background: linear-gradient(90deg, rgba(0, 119, 182, 0.08), transparent) !important;
+          border-left-color: #0077b6 !important;
+          color: #4a5568 !important;
+        }
+        
+        .beat {
+          background: linear-gradient(90deg, transparent, rgba(0, 119, 182, 0.4), transparent) !important;
+          box-shadow: none !important;
+        }
+        
+        .beat::after {
+          background: #0077b6 !important;
+          box-shadow: 0 0 8px rgba(0, 119, 182, 0.3) !important;
+        }
+        
+        .note {
+          color: #718096 !important;
+        }
+        
+        footer {
+          border-top-color: rgba(0, 119, 182, 0.2) !important;
+          color: #718096 !important;
+        }
+        
+        table {
+          border-color: rgba(0, 119, 182, 0.2) !important;
+        }
+        
+        th, td {
+          border-color: rgba(0, 119, 182, 0.15) !important;
+        }
+        
+        tr:nth-child(even) {
+          background: rgba(0, 119, 182, 0.03) !important;
+        }
+        
+        code, pre {
+          background: #e8f4f8 !important;
+          color: #1a1a2e !important;
+        }
+        
+        img {
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        /* Lecture outline box */
+        div[style*="background: rgba(122,225,255"] {
+          background: rgba(0, 119, 182, 0.05) !important;
+          border-color: rgba(0, 119, 182, 0.2) !important;
+        }
+        
+        div[style*="background: rgba(122,225,255"] strong[style*="color: var(--accent)"] {
+          color: #0077b6 !important;
+        }
+      `;
+
+      function applyThemeToIframe(theme) {
+        try {
+          const frameDoc = contentFrame.contentDocument || contentFrame.contentWindow.document;
+          if (!frameDoc) return;
+          
+          // Remove existing light mode styles
+          const existingStyles = frameDoc.getElementById('textbook-light-mode');
+          if (existingStyles) existingStyles.remove();
+          
+          // Add light mode styles if needed
+          if (theme === 'light') {
+            const styleEl = document.createElement('style');
+            styleEl.id = 'textbook-light-mode';
+            styleEl.textContent = lightModeCSS;
+            frameDoc.head.appendChild(styleEl);
+          }
+        } catch (e) {
+          console.log('Could not apply theme to iframe:', e);
+        }
+      }
+
+      function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme === 'dark' ? '' : 'light');
+        localStorage.setItem('textbook-theme', newTheme);
+        updateThemeIcons(newTheme);
+        
+        // Apply theme to iframe
+        applyThemeToIframe(newTheme);
+      }
+
+      function updateThemeIcons(theme) {
+        if (theme === 'light') {
+          iconSun.style.display = 'none';
+          iconMoon.style.display = 'block';
+        } else {
+          iconSun.style.display = 'block';
+          iconMoon.style.display = 'none';
+        }
+      }
+      
+      function getCurrentTheme() {
+        // Check localStorage first, then system preference, default to light
+        const stored = localStorage.getItem('textbook-theme');
+        if (stored) return stored;
+        
+        // Check system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      }
+
+      // Load saved theme or system preference
+      const savedTheme = getCurrentTheme();
+      if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+      updateThemeIcons(savedTheme);
+      
+      // Listen for system theme changes (if user hasn't manually set preference)
+      if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+          // Only auto-switch if user hasn't set a manual preference
+          if (!localStorage.getItem('textbook-theme')) {
+            const newTheme = e.matches ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme === 'light' ? 'light' : '');
+            updateThemeIcons(newTheme);
+            applyThemeToIframe(newTheme);
+          }
+        });
+      }
+
+      // Print chapter function
+      function printChapter() {
+        if (currentChapter === 'title' || !contentFrame.contentWindow) return;
+        
+        try {
+          const frameDoc = contentFrame.contentDocument || contentFrame.contentWindow.document;
+          
+          // Create print-friendly styles
+          const printStyles = document.createElement('style');
+          printStyles.id = 'print-styles';
+          printStyles.textContent = `
+            @media print {
+              * {
+                color: #000 !important;
+                background: #fff !important;
+                box-shadow: none !important;
+                text-shadow: none !important;
+              }
+              
+              body {
+                font-size: 12pt !important;
+                line-height: 1.5 !important;
+                margin: 0 !important;
+                padding: 20px !important;
+              }
+
+              .stars, .beat, header, footer, .tag {
+                display: none !important;
+              }
+
+              .container {
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+              }
+
+              h1, h2, h3 {
+                color: #000 !important;
+                page-break-after: avoid;
+              }
+
+              h1 { font-size: 24pt !important; }
+              h2 { font-size: 18pt !important; margin-top: 24pt !important; }
+              h3 { font-size: 14pt !important; }
+
+              p, li {
+                font-size: 11pt !important;
+                orphans: 3;
+                widows: 3;
+              }
+
+              a {
+                color: #000 !important;
+                text-decoration: underline !important;
+              }
+
+              img {
+                max-width: 100% !important;
+                page-break-inside: avoid;
+              }
+
+              .stage {
+                border-left: 2px solid #000 !important;
+                padding-left: 12px !important;
+                margin: 16px 0 !important;
+                background: transparent !important;
+              }
+
+              @page {
+                margin: 0.75in;
+              }
+            }
+          `;
+          
+          // Add styles to iframe
+          const existingPrintStyles = frameDoc.getElementById('print-styles');
+          if (existingPrintStyles) existingPrintStyles.remove();
+          frameDoc.head.appendChild(printStyles);
+          
+          // Trigger print
+          contentFrame.contentWindow.print();
+          
+        } catch (e) {
+          console.log('Print error:', e);
+          alert('Unable to print. Try opening the chapter directly and using your browser\'s print function.');
+        }
+      }
+
+      // Show/hide print button based on chapter
+      function updatePrintButton() {
+        if (currentChapter !== 'title') {
+          printBtn.style.display = 'inline-flex';
+        } else {
+          printBtn.style.display = 'none';
+        }
+      }
+    </script>
+  </body>
+</html>
+

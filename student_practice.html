@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSYCH 275 - Practice Answer Feedback Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-elevated: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent: #22d3ee;
+            --accent-hover: #67e8f9;
+            --accent-muted: rgba(34, 211, 238, 0.15);
+            --success: #4ade80;
+            --warning: #fbbf24;
+            --error: #f87171;
+            --border: #475569;
+            --radius: 12px;
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Animated background */
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 10% 20%, rgba(34, 211, 238, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 90% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+                linear-gradient(180deg, var(--bg-primary) 0%, #0c1222 100%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent) 0%, #a855f7 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* Info card */
+        .info-card {
+            background: var(--accent-muted);
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 32px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .info-content h3 {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .info-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Form sections */
+        .form-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            margin-bottom: 24px;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-section:focus-within {
+            border-color: var(--accent);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .section-number {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent) 0%, #a855f7 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--bg-primary);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        label {
+            display: block;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.95rem;
+            resize: vertical;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-muted);
+        }
+
+        textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        #questionInput {
+            min-height: 120px;
+        }
+
+        #answerInput {
+            min-height: 200px;
+        }
+
+        /* Generate button */
+        .generate-btn {
+            width: 100%;
+            padding: 18px 32px;
+            background: linear-gradient(135deg, var(--accent) 0%, #a855f7 100%);
+            color: var(--bg-primary);
+            border: none;
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .generate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px -10px rgba(34, 211, 238, 0.5);
+        }
+
+        .generate-btn:active {
+            transform: translateY(0);
+        }
+
+        .generate-btn:disabled {
+            background: var(--bg-elevated);
+            color: var(--text-muted);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Output section */
+        .output-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            margin-top: 32px;
+            display: none;
+        }
+
+        .output-section.visible {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .output-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .output-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .copy-btn {
+            padding: 10px 20px;
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .copy-btn:hover {
+            background: var(--accent);
+            color: var(--bg-primary);
+            border-color: var(--accent);
+        }
+
+        .copy-btn.copied {
+            background: var(--success);
+            border-color: var(--success);
+            color: var(--bg-primary);
+        }
+
+        #promptOutput {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* Instructions card */
+        .instructions-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .instructions-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .instructions-card ol {
+            margin-left: 20px;
+            color: var(--text-secondary);
+        }
+
+        .instructions-card li {
+            margin-bottom: 10px;
+        }
+
+        .instructions-card code {
+            background: var(--bg-elevated);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        /* Mode toggle */
+        .mode-selector {
+            display: flex;
+            gap: 0;
+            background: var(--bg-primary);
+            border-radius: 10px;
+            padding: 4px;
+            margin-bottom: 16px;
+        }
+
+        .mode-btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            background: transparent;
+            color: var(--text-muted);
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .mode-btn:hover {
+            color: var(--text-secondary);
+        }
+
+        .mode-btn.active {
+            background: linear-gradient(135deg, var(--accent) 0%, #a855f7 100%);
+            color: var(--bg-primary);
+        }
+
+        .mode-btn .mode-icon {
+            font-size: 1.2rem;
+        }
+
+        .mode-btn .mode-label {
+            font-size: 0.85rem;
+        }
+
+        .mode-btn .mode-desc {
+            font-size: 0.7rem;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .mode-info {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .mode-info-icon {
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .token-warning {
+            background: rgba(251, 191, 36, 0.15);
+            border-color: rgba(251, 191, 36, 0.3);
+            color: var(--warning);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--bg-elevated);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--border);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .form-section, .output-section {
+                padding: 20px;
+            }
+
+            .info-card {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">🧠</div>
+            </div>
+            <h1>Practice Answer Feedback</h1>
+            <p class="subtitle">PSYCH 275 · Brain and Behaviour</p>
+        </header>
+
+        <div class="info-card">
+            <span class="info-icon">💡</span>
+            <div class="info-content">
+                <h3>How It Works</h3>
+                <p>Paste a practice question and your answer below. This tool generates a grading prompt that you can paste into ChatGPT to receive feedback similar to what you'd get on an actual quiz. No data is sent anywhere — the prompt is generated entirely in your browser.</p>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="section-header">
+                <span class="section-number">1</span>
+                <span class="section-title">Paste the Question</span>
+            </div>
+            <label for="questionInput">Copy a question from a practice test or chapter summary</label>
+            <textarea id="questionInput" placeholder="Example: Explain how simple components combine to create complex systems. Choose a specific example from the lectures and describe how this demonstrates emergence..."></textarea>
+        </div>
+
+        <div class="form-section">
+            <div class="section-header">
+                <span class="section-number">2</span>
+                <span class="section-title">Paste Your Answer</span>
+            </div>
+            <label for="answerInput">Write your response as if you were answering on an exam</label>
+            <textarea id="answerInput" placeholder="Write your complete answer here. Include as much detail as you would on an actual exam response..."></textarea>
+        </div>
+
+        <div class="form-section">
+            <div class="section-header">
+                <span class="section-number">3</span>
+                <span class="section-title">Choose Feedback Mode</span>
+            </div>
+            <div class="mode-selector">
+                <button class="mode-btn active" id="modeQuick" onclick="setMode('quick')">
+                    <span class="mode-icon">⚡</span>
+                    <span class="mode-label">Quick</span>
+                    <span class="mode-desc">~1,500 tokens</span>
+                </button>
+                <button class="mode-btn" id="modeDetailed" onclick="setMode('detailed')">
+                    <span class="mode-icon">📚</span>
+                    <span class="mode-label">Detailed</span>
+                    <span class="mode-desc">~3,500 tokens</span>
+                </button>
+            </div>
+            <div class="mode-info" id="modeInfo">
+                <span class="mode-info-icon">ℹ️</span>
+                <span id="modeDescription">Shorter prompt with essential grading criteria. Works well with free ChatGPT and GPT-4o mini.</span>
+            </div>
+        </div>
+
+        <button class="generate-btn" id="generateBtn" onclick="generatePrompt()">
+            <span>✨</span>
+            Generate Feedback Prompt
+        </button>
+
+        <div class="output-section" id="outputSection">
+            <div class="output-header">
+                <span class="output-title">
+                    <span>📋</span>
+                    Your ChatGPT Prompt
+                </span>
+                <button class="copy-btn" id="copyBtn" onclick="copyPrompt()">
+                    <span id="copyIcon">📄</span>
+                    <span id="copyText">Copy to Clipboard</span>
+                </button>
+            </div>
+            <div id="promptOutput"></div>
+        </div>
+
+        <div class="instructions-card">
+            <h3><span>📖</span> Next Steps</h3>
+            <ol>
+                <li>Click "Copy to Clipboard" to copy the generated prompt</li>
+                <li>Go to <a href="https://chatgpt.com" target="_blank">chatgpt.com</a> (you can use it without an account)</li>
+                <li>For <strong>Quick mode</strong>: <code>GPT-4o mini</code> works great (free tier compatible)</li>
+                <li>For <strong>Detailed mode</strong>: Use <code>GPT-4o</code> or <code>GPT-4</code> for best results (longer prompt)</li>
+                <li>Paste the prompt and press Enter</li>
+                <li>Review the feedback to understand your strengths and areas for improvement</li>
+            </ol>
+        </div>
+
+        <div class="instructions-card" style="margin-top: 16px;">
+            <h3><span>⚡ vs 📚</span> Mode Comparison</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 12px;">
+                <div>
+                    <strong style="color: var(--accent);">Quick Mode (~1,500 tokens)</strong>
+                    <ul style="margin-top: 8px; margin-left: 16px; color: var(--text-secondary);">
+                        <li>Essential grading criteria</li>
+                        <li>Basic scoring calibration</li>
+                        <li>Works with free ChatGPT</li>
+                        <li>~80% fidelity to actual grading</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong style="color: var(--warning);">Detailed Mode (~3,500 tokens)</strong>
+                    <ul style="margin-top: 8px; margin-left: 16px; color: var(--text-secondary);">
+                        <li>Full grading procedure</li>
+                        <li>Detailed score anchors with examples</li>
+                        <li>Score justification section</li>
+                        <li>~95% fidelity to actual grading</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>PSYCH 275 · Brain and Behaviour · University of Alberta</p>
+            <p style="margin-top: 8px;">This tool uses the same grading rubric as your actual quizzes.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Load prompt templates from prompts.json
+        let PROMPT_TEMPLATES = null;
+        let currentMode = 'quick'; // 'quick' or 'detailed'
+        
+        async function loadPromptTemplates() {
+            try {
+                const response = await fetch('prompts.json');
+                PROMPT_TEMPLATES = await response.json();
+                console.log('✅ Prompt templates loaded');
+            } catch (error) {
+                console.error('⚠️ Could not load prompts.json, using built-in templates:', error);
+            }
+        }
+        
+        // Load templates on page load
+        loadPromptTemplates();
+
+        // Mode selector
+        function setMode(mode) {
+            currentMode = mode;
+            
+            // Update button states
+            document.getElementById('modeQuick').classList.toggle('active', mode === 'quick');
+            document.getElementById('modeDetailed').classList.toggle('active', mode === 'detailed');
+            
+            // Update description
+            const modeInfo = document.getElementById('modeInfo');
+            const modeDesc = document.getElementById('modeDescription');
+            
+            if (mode === 'quick') {
+                modeInfo.classList.remove('token-warning');
+                modeDesc.textContent = 'Shorter prompt with essential grading criteria. Works well with free ChatGPT and GPT-4o mini.';
+            } else {
+                modeInfo.classList.add('token-warning');
+                modeDesc.textContent = 'Full instructor-grade prompt with detailed score anchors, grading procedures, and calibration examples. Best results with GPT-4o or GPT-4. May exceed free tier limits.';
+            }
+        }
+
+        // Default rubric categories (generic for practice)
+        const DEFAULT_RUBRIC = {
+            title: "Practice Question Response",
+            categories: [
+                { name: "Content Understanding", maxPoints: 3, description: "Demonstrates understanding of core concepts from lectures/readings" },
+                { name: "Application & Analysis", maxPoints: 3, description: "Applies concepts to answer the question with clear reasoning" },
+                { name: "Examples & Evidence", maxPoints: 2, description: "Provides relevant, specific examples or evidence to support points" },
+                { name: "Clarity & Organization", maxPoints: 1, description: "Answer is clear, well-organized, and easy to follow" },
+                { name: "Depth & Insight", maxPoints: 1, description: "Shows deeper understanding or thoughtful reflection on the topic" }
+            ],
+            maxScore: 10
+        };
+
+        function generatePrompt() {
+            const question = document.getElementById('questionInput').value.trim();
+            const answer = document.getElementById('answerInput').value.trim();
+
+            if (!question || !answer) {
+                alert('Please fill in both the question and your answer.');
+                return;
+            }
+
+            // Build the grading prompt based on mode
+            const prompt = currentMode === 'detailed' 
+                ? buildDetailedPrompt(question, answer)
+                : buildQuickPrompt(question, answer);
+            
+            // Display output
+            document.getElementById('promptOutput').textContent = prompt;
+            document.getElementById('outputSection').classList.add('visible');
+            
+            // Scroll to output
+            document.getElementById('outputSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Quick mode prompt builder (original)
+        function buildQuickPrompt(question, answer) {
+            const rubric = DEFAULT_RUBRIC;
+            const templates = PROMPT_TEMPLATES;
+            
+            let prompt = '';
+            
+            // System role and task
+            if (templates?.systemPrompt?.role) {
+                prompt += `${templates.systemPrompt.role}\n\n`;
+            } else {
+                prompt += `You are an expert academic grading assistant for a Brain and Behaviour psychology course.\n\n`;
+            }
+            
+            prompt += `TASK: Grade the following student practice answer and provide detailed, constructive feedback.\n\n`;
+            
+            // Question and Answer
+            prompt += `═══════════════════════════════════════════════════════════
+QUESTION
+═══════════════════════════════════════════════════════════
+
+${question}
+
+═══════════════════════════════════════════════════════════
+STUDENT ANSWER
+═══════════════════════════════════════════════════════════
+
+${answer}
+
+`;
+            
+            // Rubric
+            prompt += `═══════════════════════════════════════════════════════════
+GRADING RUBRIC (${rubric.maxScore} points total)
+═══════════════════════════════════════════════════════════
+
+`;
+            rubric.categories.forEach(cat => {
+                prompt += `• ${cat.name} (${cat.maxPoints} pt${cat.maxPoints > 1 ? 's' : ''}): ${cat.description}\n`;
+            });
+            
+            // Grading requirements
+            prompt += `
+═══════════════════════════════════════════════════════════
+GRADING REQUIREMENTS
+═══════════════════════════════════════════════════════════
+
+1. Grade using the rubric above
+2. Score ALL categories using 0.5 or 1.0 point increments only
+3. Sum of category scores MUST equal total score
+4. Base ALL feedback on actual student text - NO assumptions
+5. Be constructive and educational in your feedback
+
+`;
+            
+            // Evidence-based feedback guidelines
+            if (templates?.evidenceBasedFeedback) {
+                prompt += `EVIDENCE-BASED FEEDBACK:\n`;
+                templates.evidenceBasedFeedback.guidelines.forEach(guideline => {
+                    prompt += `- ${guideline}\n`;
+                });
+                prompt += `\n`;
+            } else {
+                prompt += `EVIDENCE-BASED FEEDBACK:
+- QUOTE specific phrases: "The student writes '[exact quote]'"
+- State absences: "The answer does not mention [requirement]"
+- Use factual language: "The student states...", "The response includes..."
+- NO assumptions or inferences beyond what is written
+- Be CONCISE but specific (1-2 sentences per category)
+- Focus ONLY on the scientific/conceptual content
+- Provide constructive suggestions for improvement
+
+`;
+            }
+            
+            // Score anchors for calibration
+            if (templates?.scoreAnchors?.anchors) {
+                prompt += `SCORING CALIBRATION:\n`;
+                prompt += `- Full marks: Accurately explains core concepts with specific details and correct terminology\n`;
+                prompt += `- Partial credit (50-75%): Identifies main concept but lacks depth or missing supporting elements\n`;
+                prompt += `- Minimal credit (25-50%): Shows basic recognition but vague or very incomplete\n`;
+                prompt += `- No credit: Missing, fundamentally incorrect, or irrelevant\n\n`;
+            }
+            
+            // Scoring levels
+            prompt += `SCORING LEVELS (0.5 or 1.0 increments only):
+• 1-pt categories: 1.0 (Excellent), 0.5 (Good), 0.0 (Needs Work)
+• 2-pt categories: 2.0, 1.5, 1.0, 0.5, or 0.0
+• 3-pt categories: 3.0, 2.5, 2.0, 1.5, 1.0, 0.5, or 0.0
+
+`;
+
+            // Feedback exclusions
+            prompt += `DO NOT COMMENT ON:
+- Spelling errors or typos
+- Grammar or sentence structure
+- Handwriting quality (this is typed text)
+- Formatting or presentation style
+
+FOCUS ONLY ON:
+- Whether the student correctly identified and explained scientific concepts
+- How well the answer addresses each rubric category
+- Suggestions for improving conceptual understanding
+
+`;
+
+            // Overall comments guidance
+            if (templates?.overallCommentsGuidance) {
+                prompt += `OVERALL COMMENTS FORMAT:\n`;
+                prompt += `- ${templates.overallCommentsGuidance.description}\n`;
+                if (templates.overallCommentsGuidance.requirements) {
+                    templates.overallCommentsGuidance.requirements.forEach(req => {
+                        prompt += `- ${req}\n`;
+                    });
+                }
+                prompt += `\n`;
+            }
+
+            // Output format instructions
+            prompt += `═══════════════════════════════════════════════════════════
+OUTPUT FORMAT
+═══════════════════════════════════════════════════════════
+
+IMPORTANT: First, internally calculate the scores using this JSON structure (but DO NOT include this JSON in your response):
+
+{
+  "rubricScores": {
+`;
+            rubric.categories.forEach((cat, idx) => {
+                const comma = idx < rubric.categories.length - 1 ? ',' : '';
+                prompt += `    "${cat.name}": {"score": X.X, "maxScore": ${cat.maxPoints}, "feedback": "..."}${comma}\n`;
+            });
+            prompt += `  },
+  "totalScore": X.X,
+  "maxTotalScore": ${rubric.maxScore},
+  "gradeLetter": "A/A-/B+/B/B-/C+/C/C-/D/F"
+}
+
+Then, provide your response in the following MARKDOWN format:
+
+---
+
+## 📊 Grade Summary
+
+**Total Score:** X.X / ${rubric.maxScore} (XX%)  
+**Letter Grade:** X
+
+---
+
+## 📋 Rubric Breakdown
+
+`;
+            rubric.categories.forEach(cat => {
+                prompt += `### ${cat.name}
+**Score:** X.X / ${cat.maxPoints}  
+**Feedback:** [Your evidence-based feedback here]
+
+`;
+            });
+
+            prompt += `---
+
+## 💡 Overall Feedback
+
+### Strengths
+- [What the student did well - be specific, quote their text]
+
+### Areas for Improvement  
+- [What concepts need more development - be constructive]
+
+### Suggestions for Next Time
+- [Specific, actionable advice for improving their answer]
+
+---
+
+**Remember:** This is practice feedback to help you prepare. Focus on the conceptual suggestions to strengthen your understanding!
+`;
+
+            return prompt;
+        }
+
+        // Detailed mode prompt builder (full instructor-grade)
+        function buildDetailedPrompt(question, answer) {
+            const rubric = DEFAULT_RUBRIC;
+            const templates = PROMPT_TEMPLATES;
+            
+            let prompt = '';
+            
+            // System role
+            prompt += `You are an expert academic grading assistant for a Brain and Behaviour psychology course.\n\n`;
+            prompt += `TASK: Grade the following student practice answer using the exact grading methodology used for actual course assessments. Provide detailed, calibrated, evidence-based feedback.\n\n`;
+            
+            // Question and Answer
+            prompt += `═══════════════════════════════════════════════════════════
+QUESTION
+═══════════════════════════════════════════════════════════
+
+${question}
+
+═══════════════════════════════════════════════════════════
+STUDENT ANSWER
+═══════════════════════════════════════════════════════════
+
+${answer}
+
+`;
+            
+            // Rubric
+            prompt += `═══════════════════════════════════════════════════════════
+GRADING RUBRIC (${rubric.maxScore} points total)
+═══════════════════════════════════════════════════════════
+
+`;
+            rubric.categories.forEach(cat => {
+                prompt += `• ${cat.name} (${cat.maxPoints} pt${cat.maxPoints > 1 ? 's' : ''}): ${cat.description}\n`;
+            });
+            
+            // Step-by-step grading procedure
+            prompt += `
+═══════════════════════════════════════════════════════════
+STEP-BY-STEP GRADING PROCEDURE (FOLLOW THIS EXACT SEQUENCE)
+═══════════════════════════════════════════════════════════
+
+To ensure consistency, follow these steps in order:
+
+STEP 1: Read the complete student answer carefully. Note exactly what is written.
+STEP 2: Review the scoreAnchors below to calibrate your grading standards.
+STEP 3: For EACH rubric category individually:
+   a) Identify what specific content/concept this category requires
+   b) Find relevant text in the student answer that addresses this requirement
+   c) Compare the student's response to the score anchor examples
+   d) Determine which anchor level (Excellent/Good/Sufficient/Needs Work) best matches
+   e) Assign the corresponding score using 0.5 increments only
+   f) Write evidence-based feedback quoting the student text
+STEP 4: Sum all category scores to get total score.
+STEP 5: Double-check that sum equals your reported total score.
+STEP 6: Write overall comments following the format below (strengths + improvements, NO score mentions).
+
+CONSISTENCY REMINDERS:
+- Grade this answer as if it's the first one you're seeing
+- If you're unsure about a score, re-read the score anchors and pick the level that most closely matches
+- Be decisive: Pick the anchor level that best fits, don't second-guess with arbitrary adjustments
+- Trust the rubric: If the student clearly addresses a requirement, give the points
+
+`;
+
+            // Detailed score anchors with examples
+            prompt += `═══════════════════════════════════════════════════════════
+SCORE CALIBRATION ANCHORS (CRITICAL FOR CONSISTENCY)
+═══════════════════════════════════════════════════════════
+
+Use these examples to calibrate your scoring. Apply these standards consistently.
+
+EXCELLENT / FULL CREDIT (100% of category points):
+- Accurately identifies and explains the core concept(s) required by the rubric
+- Includes specific details, mechanisms, or examples that demonstrate deep understanding
+- Uses correct scientific terminology appropriately (spelling doesn't matter)
+- Addresses all elements explicitly mentioned in the rubric category
+- Shows clear logical connections between concepts
+Example (3pt category): Student explains mechanism with specific details AND provides concrete examples AND shows how concepts connect. SCORE: 3.0/3.0
+Example (1pt category): Student clearly and correctly addresses the requirement with appropriate detail. SCORE: 1.0/1.0
+
+GOOD / PARTIAL CREDIT HIGH (50-75% of category points):
+- Identifies the main concept but lacks some depth or detail
+- Correct but incomplete - missing one or two supporting elements
+- Core understanding is evident but not fully developed
+Example (3pt category): Correctly explains the main concept but missing specific mechanisms or examples. SCORE: 2.0-2.5/3.0
+Example (1pt category): Shows basic understanding but lacks specificity. SCORE: 0.5/1.0
+
+SUFFICIENT / PARTIAL CREDIT LOW (25-50% of category points):
+- Shows basic recognition of topic but vague or very incomplete
+- Missing critical elements or contains significant gaps
+- Answer demonstrates some relevant knowledge but lacks precision
+Example (3pt category): Mentions relevant terms but explanation is superficial or partially incorrect. SCORE: 1.0-1.5/3.0
+
+NEEDS WORK / NO CREDIT (0 points):
+- Missing entirely - rubric requirement not addressed at all
+- Fundamentally incorrect - demonstrates misunderstanding of core concept
+- Irrelevant - discusses unrelated material that doesn't address the rubric
+- Only contains statements like "I'm not sure" without any content attempt
+Example: Student doesn't address this aspect or provides incorrect information. SCORE: 0.0
+
+CALIBRATION INSTRUCTIONS:
+- These anchors provide the REFERENCE STANDARD for all grading decisions
+- When scoring any rubric category, mentally compare the student answer to these anchor examples
+- Be CONSISTENT: Similar quality answers should receive similar scores
+- If an answer clearly matches an anchor level, assign that score confidently
+- Use the FULL score range: Don't cluster all answers in the middle
+
+`;
+
+            // Evidence-based feedback guidelines
+            prompt += `═══════════════════════════════════════════════════════════
+EVIDENCE-BASED FEEDBACK REQUIREMENTS
+═══════════════════════════════════════════════════════════
+
+Your feedback MUST follow these evidence-based principles:
+
+QUOTING REQUIREMENTS:
+- QUOTE specific phrases: "The student writes '[exact quote from their answer]'"
+- State absences: "The answer does not mention [specific requirement]"
+- Use factual language: "The student states...", "The response includes..."
+- NO assumptions or inferences beyond what is written
+- Be CONCISE but specific (1-2 sentences per category)
+
+FOCUS ONLY ON:
+✅ Whether the student correctly identified and explained scientific concepts
+✅ How well the answer addresses each rubric category
+✅ What specific content is present or missing relative to rubric requirements
+✅ Suggestions for improving conceptual understanding or completeness
+✅ Accuracy of scientific terminology usage (not spelling of terms)
+
+NEVER MENTION IN FEEDBACK:
+❌ Spelling errors or typos (e.g., 'nueron' instead of 'neuron')
+❌ Grammar or sentence structure issues
+❌ Formatting, organization, or presentation style
+❌ Handwriting quality (this is typed text)
+
+`;
+
+            // Meta-learning reflections
+            prompt += `META-LEARNING REFLECTIONS (CRITICAL - DO NOT DOCK POINTS):
+If the question includes self-reflection components (e.g., "What did you find difficult?", "What surprised you?"):
+- Students should NEVER be penalized for honest self-assessment
+- When students write "I find X hard" or "I'm unsure about Y", they are CORRECTLY responding to reflection prompts
+- Evaluate reflection responses for ENGAGEMENT and THOUGHTFULNESS only
+- A thoughtful reflection expressing uncertainty deserves full reflection points
+
+`;
+
+            // Scoring levels
+            prompt += `SCORING LEVELS (0.5 or 1.0 increments ONLY):
+• 1-pt categories: 1.0 (Excellent), 0.5 (Good), 0.0 (Needs Work)
+• 2-pt categories: 2.0, 1.5, 1.0, 0.5, or 0.0
+• 3-pt categories: 3.0, 2.5, 2.0, 1.5, 1.0, 0.5, or 0.0
+
+PARTIAL CREDIT OPPORTUNITIES:
+- Pay attention to partial credit - incomplete answers may demonstrate understanding
+- Reward DEPTH over breadth - well-explained single concepts may score higher than superficial coverage
+- When students show understanding through examples but lack technical terms, give credit for demonstrated comprehension
+
+COMMON PITFALLS TO AVOID:
+- CRITICAL: Never mention scores, points, percentages, or grades in overall comments
+- Don't assume missing information is wrong - only state what IS present
+- Don't reward verbose answers lacking substance - focus on content quality, not quantity
+- Don't give full marks for superficial answers - depth and specificity matter
+- When in doubt between score levels: Does the answer demonstrate core competency? If yes, round up
+
+`;
+
+            // Overall comments guidance
+            prompt += `OVERALL COMMENTS FORMAT (CRITICAL FOR CONSISTENCY):
+Provide a brief summary that synthesizes feedback from all rubric categories.
+
+Structure (2-4 sentences maximum):
+- Sentence 1-2: Identify key STRENGTHS - what concepts/elements the student explained well
+- Sentence 3-4: Identify key AREAS FOR IMPROVEMENT - what concepts/elements were missing or need development
+
+REQUIREMENTS:
+- CRITICAL: DO NOT mention the total score, percentage, or grade letter in overall comments
+- DO NOT include phrases like "The student earned X points" or "scored Y/10" or "received Z%"
+- Focus ONLY on conceptual content: what was done well and what could be improved
+- Use the same evidence-based style (quote student text, be specific)
+- Be constructive and educational - help student understand their performance conceptually
+
+GOOD EXAMPLE: "The student demonstrates strong understanding of the evolutionary pressures that shaped brain development, correctly identifying energy constraints as a key factor. However, the answer would be strengthened by providing specific examples of tradeoffs and explaining the mechanisms behind the constraints discussed."
+
+BAD EXAMPLE: "Good answer! The student scored 7/10 points, earning a B. Nice work on most parts."
+
+`;
+
+            // Output format
+            prompt += `═══════════════════════════════════════════════════════════
+OUTPUT FORMAT
+═══════════════════════════════════════════════════════════
+
+IMPORTANT: First, internally calculate the scores using this JSON structure (but DO NOT include this JSON in your response):
+
+{
+  "rubricScores": {
+`;
+            rubric.categories.forEach((cat, idx) => {
+                const comma = idx < rubric.categories.length - 1 ? ',' : '';
+                prompt += `    "${cat.name}": {"score": X.X, "maxScore": ${cat.maxPoints}, "level": "Excellent/Good/Sufficient/Needs Work", "feedback": "Evidence-based with quotes"}${comma}\n`;
+            });
+            prompt += `  },
+  "totalScore": X.X,
+  "maxTotalScore": ${rubric.maxScore},
+  "gradeLetter": "A/A-/B+/B/B-/C+/C/C-/D/F"
+}
+
+Then, provide your response in the following MARKDOWN format:
+
+---
+
+## 📊 Grade Summary
+
+**Total Score:** X.X / ${rubric.maxScore} (XX%)  
+**Letter Grade:** X
+
+---
+
+## 📋 Rubric Breakdown
+
+`;
+            rubric.categories.forEach(cat => {
+                prompt += `### ${cat.name}
+**Score:** X.X / ${cat.maxPoints} — [Level: Excellent/Good/Sufficient/Needs Work]  
+**Feedback:** [Your evidence-based feedback here, quoting student text]
+
+`;
+            });
+
+            prompt += `---
+
+## 💡 Overall Feedback
+
+### Strengths
+- [What the student did well - be specific, quote their text]
+- [Another strength if applicable]
+
+### Areas for Improvement  
+- [What concepts need more development - be constructive and specific]
+- [What was missing that would strengthen the answer]
+
+### Suggestions for Next Time
+- [Specific, actionable advice for improving their answer]
+- [What concepts to review or deepen understanding of]
+
+---
+
+## 🎯 Score Justification
+
+Briefly explain how each score was determined by referencing the score anchors:
+- Content Understanding: [Why this score based on anchors]
+- Application & Analysis: [Why this score based on anchors]
+- Examples & Evidence: [Why this score based on anchors]
+- Clarity & Organization: [Why this score based on anchors]
+- Depth & Insight: [Why this score based on anchors]
+
+---
+
+**Remember:** This is practice feedback using the same grading methodology as your actual quizzes. Focus on the conceptual suggestions to strengthen your understanding!
+`;
+
+            return prompt;
+        }
+
+        function copyPrompt() {
+            const promptText = document.getElementById('promptOutput').textContent;
+            navigator.clipboard.writeText(promptText).then(() => {
+                const copyBtn = document.getElementById('copyBtn');
+                const copyIcon = document.getElementById('copyIcon');
+                const copyText = document.getElementById('copyText');
+                
+                copyBtn.classList.add('copied');
+                copyIcon.textContent = '✓';
+                copyText.textContent = 'Copied!';
+                
+                setTimeout(() => {
+                    copyBtn.classList.remove('copied');
+                    copyIcon.textContent = '📄';
+                    copyText.textContent = 'Copy to Clipboard';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                alert('Failed to copy. Please select the text manually and copy.');
+            });
+        }
+
+        // Enable/disable generate button based on input
+        function updateButtonState() {
+            const question = document.getElementById('questionInput').value.trim();
+            const answer = document.getElementById('answerInput').value.trim();
+            document.getElementById('generateBtn').disabled = !question || !answer;
+        }
+
+        document.getElementById('questionInput').addEventListener('input', updateButtonState);
+        document.getElementById('answerInput').addEventListener('input', updateButtonState);
+        
+        // Initialize button state
+        updateButtonState();
+    </script>
+</body>
+</html>

@@ -1,0 +1,2915 @@
+{
+  "id": "chapter13",
+  "source": "chapter13.html",
+  "chapter": "13",
+  "chapter_number": "12",
+  "title": "Sleep and Consciousness",
+  "page_title": "Chapter 13 — Sleep and Consciousness",
+  "description": "Biological rhythms, sleep stages, theories of consciousness, neural bases of sleep, and the hard problem of subjective experience.",
+  "brand": "Brains, Minds, and Machines — Chapter 13",
+  "subtitle": null,
+  "lead": {
+    "text": "You spend one-third of your life unconscious, paralyzed, and hallucinating. This seems like a terrible evolutionary design—lions could eat you, rivals could steal your resources, precious time could be spent reproducing or gathering food. Yet every animal with a nervous system sleeps or shows sleep-like states, from jellyfish to humans. Today we'll explore why this dangerous, seemingly wasteful state is actually essential for survival, how your brain generates the different states of consciousness from deep sleep to vivid dreams, and what sleep reveals about the deepest mystery in neuroscience: how physical matter generates subjective experience. You'll discover why your body has its own internal clock that runs on a 25-hour day, how your brain washes itself clean during sleep, why dreams are chemically different from waking thoughts, and what happens to consciousness during different sleep stages. We'll examine leading theories of consciousness—from global workspace to integrated information—and see how sleep disorders illuminate the neural basis of awareness itself."
+  },
+  "opening": [
+    {
+      "type": "stage",
+      "text": "Today's journey: From circadian rhythms to the hard problem of consciousness. We'll discover why losing sleep literally damages your brain, and why understanding sleep may be the key to understanding consciousness itself."
+    }
+  ],
+  "table_of_contents": [
+    {
+      "number": "I",
+      "title": "Opening: The Mystery of Lost Time",
+      "duration": "8 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "One-third of life in another state"
+        },
+        {
+          "text": "Sleep deprivation consequences"
+        },
+        {
+          "text": "The question consciousness poses"
+        }
+      ]
+    },
+    {
+      "number": "II",
+      "title": "Biological Clocks and Circadian Rhythms",
+      "duration": "12 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Endogenous timing mechanisms"
+        },
+        {
+          "text": "The suprachiasmatic nucleus as master clock"
+        },
+        {
+          "text": "Zeitgebers and entrainment"
+        },
+        {
+          "text": "Jet lag and shift work consequences"
+        }
+      ]
+    },
+    {
+      "number": "III",
+      "title": "Sleep Architecture and Stages",
+      "duration": "15 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "NREM stages 1-3 and REM sleep"
+        },
+        {
+          "text": "EEG signatures of consciousness states"
+        },
+        {
+          "text": "The 90-minute ultradian cycle"
+        },
+        {
+          "text": "Dreaming and REM sleep characteristics"
+        }
+      ]
+    },
+    {
+      "number": "IV",
+      "title": "Theories of Consciousness",
+      "duration": "15 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "The hard problem of subjective experience"
+        },
+        {
+          "text": "Global Workspace Theory"
+        },
+        {
+          "text": "Integrated Information Theory"
+        },
+        {
+          "text": "Higher-Order Theories"
+        },
+        {
+          "text": "Predictive Processing Framework"
+        }
+      ]
+    },
+    {
+      "number": "V",
+      "title": "Functions of Sleep",
+      "duration": "12 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Energy conservation and restoration"
+        },
+        {
+          "text": "Memory consolidation and replay"
+        },
+        {
+          "text": "Synaptic homeostasis and pruning"
+        },
+        {
+          "text": "Glymphatic clearance of metabolic waste"
+        }
+      ]
+    },
+    {
+      "number": "VI",
+      "title": "Neural Mechanisms of Sleep and Waking",
+      "duration": "10 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Reticular activating system"
+        },
+        {
+          "text": "Sleep-promoting nuclei"
+        },
+        {
+          "text": "REM generation in the pons"
+        },
+        {
+          "text": "Neurotransmitter systems and sleep regulation"
+        }
+      ]
+    },
+    {
+      "number": "VII",
+      "title": "Sleep Disorders and Clinical Implications",
+      "duration": "8 min",
+      "anchor": null,
+      "items": [
+        {
+          "text": "Insomnia, narcolepsy, sleep apnea"
+        },
+        {
+          "text": "REM behavior disorder"
+        },
+        {
+          "text": "Sleep and mental health"
+        }
+      ]
+    }
+  ],
+  "summary_image": {
+    "src": "GeminiSummaryCh13.png",
+    "alt": "Sleep and Consciousness Visual Summary",
+    "viewer": "image-viewer.html?image=GeminiSummaryCh13.png",
+    "role": "summary"
+  },
+  "resources": {
+    "textbook": "./textbook/",
+    "slides_html": "./slides/Chapter13/SleepandConsciousnessSlides.html",
+    "slides_pdf": null,
+    "course_home": "./index.html",
+    "answer_key": "./AnswerKeys.html#chapter13",
+    "related_chapters": [],
+    "next_chapter": {
+      "href": "./chapter14.html",
+      "title": "Psychopharmacology",
+      "note": "Next: Psychopharmacology — How drugs alter neurotransmission and change consciousness, behavior, and disease."
+    },
+    "header_links": [
+      {
+        "text": "📖 Textbook",
+        "href": "./textbook/",
+        "kind": "internal"
+      },
+      {
+        "text": "📊 Slides HTML",
+        "href": "./slides/Chapter13/SleepandConsciousnessSlides.html",
+        "kind": "internal"
+      },
+      {
+        "text": "Course Home",
+        "href": "./index.html",
+        "kind": "internal"
+      }
+    ],
+    "interactives": null
+  },
+  "sections": [
+    {
+      "id": "opening-the-mystery-of-lost-time",
+      "title": "Opening: The Mystery of Lost Time",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Effects of sleep deprivation on brain function and cognitive performance",
+          "url": "https://www.google.com/search?q=sleep+deprivation+effects+brain+cognitive+performance&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "On January 8, 1964, a 17-year-old high school student named Randy Gardner set a world record by staying awake for 264 hours—11 days. Researchers monitored him continuously, documenting the progressive deterioration of his cognitive abilities. After two days, he couldn't focus his eyes properly. After three days, he became moody and uncoordinated. By day four, he was having hallucinations, imagining he was a famous football player. By day seven, his speech was slurred, his memory was fragmented, and he couldn't complete simple tasks. Yet remarkably, he could still play pinball and beat the researchers. When he finally slept, he did so for 14 hours and 40 minutes, then woke up essentially recovered.",
+          "links": [
+            {
+              "text": "Randy Gardner set a world record by staying awake for 264 hours—11 days",
+              "href": "https://en.wikipedia.org/wiki/Randy_Gardner_(record_holder)",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "hallucinations",
+              "href": "https://en.wikipedia.org/wiki/Hallucination",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "memory",
+              "href": "https://en.wikipedia.org/wiki/Memory",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Gardner's experiment—unethical by today's standards and never officially repeated—revealed something profound about sleep: we can temporarily override it, but we cannot eliminate the need for it. The consequences of sleep deprivation aren't subtle. After 24 hours awake, your cognitive performance equals that of someone legally drunk. After 72 hours, you begin experiencing microsleeps—brief periods of unconsciousness lasting 2-3 seconds that occur without warning. Your brain simply shuts down, whether you want it to or not.",
+          "links": [
+            {
+              "text": "sleep deprivation",
+              "href": "https://en.wikipedia.org/wiki/Sleep_deprivation",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "After 24 hours awake, your cognitive performance equals that of someone legally drunk",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1739867/",
+              "kind": "external"
+            },
+            {
+              "text": "microsleeps",
+              "href": "https://en.wikipedia.org/wiki/Microsleep",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The question that haunts neuroscience is why. Why would evolution design organisms to spend one-third of their lives in a vulnerable state? The answer, we now know, is that sleep isn't wasted time—it's maintenance time. Your brain during sleep is performing essential functions that cannot happen during waking: consolidating memories, clearing metabolic waste, rebalancing neurotransmitter systems, and reorganizing neural connections. As we'll see, the sleeping brain is intensely active, just in different ways than the waking brain.",
+          "links": [
+            {
+              "text": "The answer, we now know, is that sleep isn't wasted time—it's maintenance time.",
+              "href": "https://www.nih.gov/news-events/nih-research-matters/how-sleep-clears-brain",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "But sleep raises an even deeper mystery: consciousness itself. During waking, you experience the world as a unified, coherent stream of awareness. During deep sleep, that stream disappears entirely—you exist, but you don't experience existing. During REM sleep, consciousness returns but becomes untethered from reality, generating vivid dreams that feel real while you experience them. How does the brain switch between these states? And what do these transitions reveal about the nature of consciousness?",
+          "links": [
+            {
+              "text": "consciousness",
+              "href": "https://en.wikipedia.org/wiki/Consciousness",
+              "kind": "wikipedia"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a-clock-for-all-seasons-biological-rhythms",
+      "title": "A Clock for All Seasons: Biological Rhythms",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "The Discovery of Endogenous Timing"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Free-running circadian rhythms in isolated subjects showing ~25-hour cycles",
+          "url": "https://www.google.com/search?q=circadian+rhythm+free+running+period+isolated+subjects&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "In 1962, French geologist Michel Siffre descended into a cave in the Alps for two months without any time cues—no watches, no sunlight, no schedules. He was testing whether humans need external cues to maintain daily rhythms. The answer was both yes and no. Siffre continued to sleep and wake on a regular schedule, but his \"day\" gradually lengthened to about 25 hours. His body was running on its own internal clock, demonstrating that humans have an endogenous—internally generated—timing mechanism.",
+          "links": [
+            {
+              "text": "Michel Siffre descended into a cave in the Alps for two months without any time cues—no watches, no sunlight, no schedules",
+              "href": "https://en.wikipedia.org/wiki/Michel_Siffre",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "This internal timing mechanism is called a circadian rhythm, from the Latin \"circa\" (about) and \"dies\" (day). Circadian rhythms are physical, mental, and behavioral changes that follow a roughly 24-hour cycle, responding primarily to light and darkness. These rhythms exist in nearly all living organisms, from single-celled cyanobacteria to humans, suggesting they're fundamental to life itself. The rhythms control not just sleep-wake cycles but body temperature, hormone secretion, blood pressure, reaction time, and even gene expression in every cell of your body.",
+          "links": [
+            {
+              "text": "circadian rhythm",
+              "href": "https://en.wikipedia.org/wiki/Circadian_rhythm",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Circadian rhythms are physical, mental, and behavioral changes that follow a roughly 24-hour cycle, responding primarily to light and darkness.",
+              "href": "https://www.nigms.nih.gov/education/fact-sheets/Pages/circadian-rhythms.aspx",
+              "kind": "external"
+            },
+            {
+              "text": "cyanobacteria",
+              "href": "https://en.wikipedia.org/wiki/Cyanobacteria",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "hormone",
+              "href": "https://en.wikipedia.org/wiki/Hormone",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "gene expression",
+              "href": "https://en.wikipedia.org/wiki/Gene_expression",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The hierarchy of biological rhythms spans multiple timescales. Circannual rhythms operate on yearly cycles—think of seasonal migration in birds or breeding cycles in many mammals. Infradian rhythms are longer than a day but shorter than a year, like the human menstrual cycle. Circadian rhythms are the daily cycles we're most familiar with. Ultradian rhythms repeat multiple times per day, like the 90-minute cycle of sleep stages or the 3-4 hour rhythm of hunger. Each timescale solves different adaptive problems, from anticipating seasons to coordinating cellular metabolism.",
+          "links": [
+            {
+              "text": "Circannual rhythms",
+              "href": "https://en.wikipedia.org/wiki/Circannual_cycle",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Infradian rhythms",
+              "href": "https://en.wikipedia.org/wiki/Infradian_rhythm",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "menstrual cycle",
+              "href": "https://en.wikipedia.org/wiki/Menstrual_cycle",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Ultradian rhythms",
+              "href": "https://en.wikipedia.org/wiki/Ultradian_rhythm",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Suprachiasmatic Nucleus: Master Clock"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Suprachiasmatic nucleus location and circadian pacemaker circuits",
+          "url": "https://www.google.com/search?q=suprachiasmatic+nucleus+SCN+circadian+pacemaker+hypothalamus&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The master circadian pacemaker in mammals resides in a tiny structure called the suprachiasmatic nucleus (SCN)—a pair of structures in the hypothalamus, each about the size of a grain of rice, containing roughly 20,000 neurons. The name means \"above the optic chiasm,\" describing its location just above the point where the optic nerves cross. This anatomical position is no accident—it allows direct input from the retina to reset the clock based on light exposure.",
+          "links": [
+            {
+              "text": "suprachiasmatic nucleus (SCN)",
+              "href": "https://en.wikipedia.org/wiki/Suprachiasmatic_nucleus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "hypothalamus",
+              "href": "https://en.wikipedia.org/wiki/Hypothalamus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "optic chiasm",
+              "href": "https://en.wikipedia.org/wiki/Optic_chiasm",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "retina",
+              "href": "https://en.wikipedia.org/wiki/Retina",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The SCN's pacemaker function was demonstrated through elegant experiments. If you destroy the SCN in a rodent, circadian rhythms disappear completely—the animal sleeps and wakes randomly. If you then transplant an SCN from another animal into the third ventricle, rhythms return, but now matching the donor's genetic period. Even more remarkably, SCN neurons removed from the brain and cultured in a dish continue to fire rhythmically for weeks, each neuron maintaining its own ~24-hour oscillation. The clock is truly endogenous, built into the cells themselves.",
+          "links": [
+            {
+              "text": "If you then transplant an SCN from another animal into the third ventricle, rhythms return",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2892440/",
+              "kind": "external"
+            },
+            {
+              "text": "SCN neurons removed from the brain and cultured in a dish continue to fire rhythmically for weeks",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1828796/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The molecular mechanism of this cellular clock involves a transcriptional-translational feedback loop. Clock genes like Period (Per) and Cryptochrome (Cry) are transcribed during the day, and their protein products accumulate over several hours. When concentrations reach a threshold, these proteins inhibit their own genes' transcription, causing levels to fall overnight. The cycle takes approximately 24 hours to complete. The 2017 Nobel Prize in Physiology or Medicine was awarded to Jeffrey Hall, Michael Rosbash, and Michael Young for discovering the molecular mechanisms controlling circadian rhythms.",
+          "links": [
+            {
+              "text": "Period (Per)",
+              "href": "https://en.wikipedia.org/wiki/Period_circadian_protein",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Cryptochrome (Cry)",
+              "href": "https://en.wikipedia.org/wiki/Cryptochrome",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "discovering the molecular mechanisms controlling circadian rhythms",
+              "href": "https://www.nobelprize.org/prizes/medicine/2017/summary/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Entrainment and Zeitgebers"
+        },
+        {
+          "type": "paragraph",
+          "text": "If our internal clock runs on a 25-hour cycle, why don't we gradually drift out of phase with the day-night cycle? The answer is entrainment—the process by which external cues synchronize internal rhythms to environmental cycles. These external cues are called zeitgebers (German for \"time givers\"), and the most powerful is light.",
+          "links": [
+            {
+              "text": "entrainment",
+              "href": "https://en.wikipedia.org/wiki/Entrainment_(chronobiology)",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "zeitgebers",
+              "href": "https://en.wikipedia.org/wiki/Zeitgeber",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "A specialized class of retinal ganglion cells containing the photopigment melanopsin detects ambient light levels and projects directly to the SCN via the retinohypothalamic tract. These cells don't contribute to conscious vision—they're measuring illumination, not forming images. Bright light in the morning shifts your clock earlier (advancing phase), while light in the evening shifts it later (delaying phase). This is why eastward travel (requiring phase advance) is generally harder than westward travel (requiring phase delay)—our natural tendency to delay makes westward adjustment easier.",
+          "links": [
+            {
+              "text": "A specialized class of retinal ganglion cells",
+              "href": "https://en.wikipedia.org/wiki/Photosensitive_ganglion_cell",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "melanopsin",
+              "href": "https://en.wikipedia.org/wiki/Melanopsin",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "retinohypothalamic tract",
+              "href": "https://en.wikipedia.org/wiki/Retinohypothalamic_tract",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "These cells don't contribute to conscious vision—they're measuring illumination, not forming images.",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3035673/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Jet lag and circadian phase shifts showing east vs west travel effects",
+          "url": "https://www.google.com/search?q=jet+lag+circadian+phase+shift+melatonin+light+exposure&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "Jet Lag and Modern Misalignment"
+        },
+        {
+          "type": "paragraph",
+          "text": "Jet lag occurs when you rapidly cross multiple time zones, creating a mismatch between your internal clock and the external environment. Your SCN is still running on home time while the sun says otherwise. Symptoms include fatigue, difficulty concentrating, mood disturbances, and gastrointestinal problems. Recovery takes roughly one day per time zone crossed, though this varies individually. Flight attendants and pilots who regularly cross time zones show increased rates of cognitive problems and even temporal lobe atrophy, suggesting chronic circadian disruption has cumulative effects.",
+          "links": [
+            {
+              "text": "Jet lag occurs when you rapidly cross multiple time zones",
+              "href": "https://www.mayoclinic.org/diseases-conditions/jet-lag/symptoms-causes/syc-20374027",
+              "kind": "external"
+            },
+            {
+              "text": "Flight attendants and pilots who regularly cross time zones show increased rates of cognitive problems and even temporal lobe atrophy",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1447299/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "But you don't need to fly anywhere to experience circadian misalignment. Shift workers, who represent about 20% of the workforce in industrialized nations, face chronic misalignment between their work schedule and their biological clock. The consequences are severe: increased rates of cardiovascular disease, diabetes, obesity, depression, and certain cancers. The International Agency for Research on Cancer classifies shift work as a probable carcinogen, based largely on the circadian disruption it causes.",
+          "links": [
+            {
+              "text": "Shift workers",
+              "href": "https://en.wikipedia.org/wiki/Shift_work",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "The consequences are severe: increased rates of cardiovascular disease, diabetes, obesity, depression, and certain cancers.",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3222517/",
+              "kind": "external"
+            },
+            {
+              "text": "The International Agency for Research on Cancer classifies shift work as a probable carcinogen",
+              "href": "https://www.iarc.who.int/news-events/iarc-monographs-evaluate-the-carcinogenicity-of-shift-work/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Even in people with regular schedules, modern life creates circadian problems. Artificial light at night suppresses melatonin secretion from the pineal gland, making it harder to fall asleep. Blue wavelengths (emitted strongly by phones and computer screens) are particularly effective at phase-shifting the clock and suppressing melatonin. Social jetlag—the difference between your sleep schedule on work days versus free days—affects most people to some degree and correlates with obesity, depression, and worse academic performance.",
+          "links": [
+            {
+              "text": "Artificial light at night suppresses melatonin secretion from the pineal gland",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3499892/",
+              "kind": "external"
+            },
+            {
+              "text": "Blue wavelengths",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3499892/",
+              "kind": "external"
+            },
+            {
+              "text": "melatonin",
+              "href": "https://en.wikipedia.org/wiki/Melatonin",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Social jetlag",
+              "href": "https://en.wikipedia.org/wiki/Social_jetlag",
+              "kind": "wikipedia"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sleep-architecture-stages-of-consciousness",
+      "title": "Sleep Architecture: Stages of Consciousness",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Measuring Sleep with EEG"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Sleep stage EEG patterns showing characteristic waveforms of each stage",
+          "url": "https://www.google.com/search?q=sleep+stages+EEG+waveforms+NREM+REM+patterns&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "In 1929, German psychiatrist Hans Berger discovered that electrical activity of the human brain could be recorded from electrodes on the scalp—electroencephalography (EEG). This discovery revolutionized sleep research by making it possible to objectively measure consciousness states. The EEG during waking shows desynchronized, low-amplitude, high-frequency activity—lots of neurons firing independently. As you fall asleep, dramatic changes occur in this electrical signature.",
+          "links": [
+            {
+              "text": "Hans Berger discovered that electrical activity of the human brain",
+              "href": "https://en.wikipedia.org/wiki/Hans_Berger",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "electroencephalography (EEG)",
+              "href": "https://en.wikipedia.org/wiki/Electroencephalography",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The transition from waking to sleep, lasting 1-5 minutes. The high-frequency beta waves (13-30 Hz) of alert waking give way to slower alpha waves (8-13 Hz), then theta waves (4-8 Hz). Your eyes may roll slowly, muscle tone decreases, and you may experience hypnic jerks—sudden muscle contractions that sometimes wake you. If awakened, you might insist you weren't actually asleep. This is the lightest sleep stage, occupying only 2-5% of total sleep time.",
+          "lead_title": "NREM Stage 1 (N1)",
+          "links": [
+            {
+              "text": "beta waves",
+              "href": "https://en.wikipedia.org/wiki/Beta_wave",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "alpha waves",
+              "href": "https://en.wikipedia.org/wiki/Alpha_wave",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "theta waves",
+              "href": "https://en.wikipedia.org/wiki/Theta_wave",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "hypnic jerks",
+              "href": "https://en.wikipedia.org/wiki/Hypnic_jerk",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The onset of \"true\" sleep, lasting 10-25 minutes in the first cycle and comprising 45-55% of total sleep. The EEG shows theta waves interrupted by two distinctive features: sleep spindles—brief bursts of 12-14 Hz activity lasting 0.5-2 seconds—and K-complexes—large, sharp waveforms that may help maintain sleep by suppressing arousal to external stimuli. Sleep spindles are thought to play a role in memory consolidation, particularly for procedural skills. Body temperature drops, heart rate slows, and you become increasingly difficult to wake.",
+          "lead_title": "NREM Stage 2 (N2)",
+          "links": [
+            {
+              "text": "sleep spindles",
+              "href": "https://en.wikipedia.org/wiki/Sleep_spindle",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "K-complexes",
+              "href": "https://en.wikipedia.org/wiki/K-complex",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Sleep spindles are thought to play a role in memory consolidation",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3768323/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Deep sleep, also called slow-wave sleep (SWS), characterized by high-amplitude delta waves (0.5-4 Hz). These waves reflect synchronized firing of cortical neurons in a slow oscillation—simultaneously depolarizing and hyperpolarizing. This stage is most prominent in the first half of the night, comprising 15-25% of total sleep. It's during N3 that growth hormone is released, immune function is enhanced, and synaptic homeostasis occurs. Awakening from N3 produces sleep inertia—profound grogginess and confusion that can last 30 minutes. Sleepwalking and night terrors occur during N3 because motor suppression is incomplete while consciousness is offline.",
+          "lead_title": "NREM Stage 3 (N3)",
+          "links": [
+            {
+              "text": "slow-wave sleep (SWS)",
+              "href": "https://en.wikipedia.org/wiki/Slow-wave_sleep",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "growth hormone is released",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC297368/",
+              "kind": "external"
+            },
+            {
+              "text": "sleep inertia",
+              "href": "https://en.wikipedia.org/wiki/Sleep_inertia",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Sleepwalking",
+              "href": "https://en.wikipedia.org/wiki/Sleepwalking",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "night terrors",
+              "href": "https://en.wikipedia.org/wiki/Night_terror",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Sleep hypnogram showing 90-minute cycles across the night",
+          "url": "https://www.google.com/search?q=sleep+cycle+hypnogram+90+minute+ultradian+rhythm&tbm=isch"
+        },
+        {
+          "type": "subheading",
+          "text": "REM Sleep: Dreaming and Paradox"
+        },
+        {
+          "type": "paragraph",
+          "text": "REM (Rapid Eye Movement) sleep was discovered in 1953 by Eugene Aserinsky and Nathaniel Kleitman when they noticed periods during sleep when eyes moved rapidly beneath closed lids. When subjects were awakened during these periods, they almost always reported vivid dreams. REM sleep is paradoxical—the EEG looks similar to waking (desynchronized, low-amplitude, high-frequency activity), yet the person is deeply unconscious and muscle tone is abolished except for the eyes and diaphragm.",
+          "links": [
+            {
+              "text": "REM (Rapid Eye Movement) sleep",
+              "href": "https://en.wikipedia.org/wiki/Rapid_eye_movement_sleep",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The characteristics of REM sleep reveal its unique nature. The EEG shows theta waves with occasional sawtooth waves. The eyes move rapidly in all directions. Complete muscle atonia prevents acting out dreams—this paralysis is actively generated by neurons in the pons that inhibit motor neurons. Autonomic activity becomes unstable: heart rate and blood pressure fluctuate widely, breathing becomes irregular, penile erections or clitoral engorgement occur regardless of dream content. Brain metabolism increases, approaching or exceeding waking levels. Yet awakening threshold is high—you're simultaneously \"awake\" (metabolically) and deeply asleep (behaviorally)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dreams during REM are typically vivid, bizarre, and emotionally intense. The prefrontal cortex—involved in logic and metacognition—shows reduced activity, explaining why dream logic seems reasonable during the dream but absurd upon waking. The amygdala and other limbic structures are highly active, accounting for the emotional intensity. Visual and motor cortices are active despite no actual visual input or motor output—you're hallucinating and imagining movement. The neurotransmitter profile is unique: acetylcholine levels are as high as waking, while serotonin, norepinephrine, and histamine drop to near zero.",
+          "links": [
+            {
+              "text": "Dreams",
+              "href": "https://en.wikipedia.org/wiki/Dream",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "prefrontal cortex",
+              "href": "https://en.wikipedia.org/wiki/Prefrontal_cortex",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "amygdala",
+              "href": "https://en.wikipedia.org/wiki/Amygdala",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "acetylcholine levels are as high as waking, while serotonin, norepinephrine, and histamine drop to near zero",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6760897/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Ultradian Cycle"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sleep progresses through these stages in a predictable cycle lasting approximately 90 minutes. In the first cycle, you descend from N1 to N2 to N3, remain in N3 for perhaps 30-40 minutes, then ascend back through N2 to your first REM period, which might last only 5-10 minutes. As the night progresses, N3 becomes shorter (disappearing entirely in later cycles), while REM becomes longer (up to 30-40 minutes in the final cycle). This explains why you typically remember dreams from just before waking—that's when the longest, most vivid REM periods occur."
+        },
+        {
+          "type": "paragraph",
+          "text": "This 90-minute cycle appears to be a fundamental brain rhythm that continues during waking as the basic rest-activity cycle (BRAC). During the day, you may notice fluctuations in alertness, creativity, and hunger every 90 minutes or so. The cycle reflects underlying oscillations in brain stem neuromodulatory systems that gate consciousness states.",
+          "links": [
+            {
+              "text": "basic rest-activity cycle (BRAC)",
+              "href": "https://en.wikipedia.org/wiki/Basic_rest-activity_cycle",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "During the day, you may notice fluctuations in alertness, creativity, and hunger every 90 minutes or so.",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4650897/",
+              "kind": "external"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "theories-of-consciousness-the-hard-problem",
+      "title": "Theories of Consciousness: The Hard Problem",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "The Hard Problem of Consciousness"
+        },
+        {
+          "type": "note",
+          "kind": "search",
+          "text": "\"hard problem of consciousness David Chalmers\" - explore the philosophical foundations",
+          "url": "https://www.google.com/search?q=hard+problem+consciousness+David+Chalmers+qualia+subjective+experience"
+        },
+        {
+          "type": "paragraph",
+          "text": "Philosopher David Chalmers articulated a crucial distinction in consciousness research. The \"easy problems\" of consciousness involve explaining cognitive functions like attention, memory, and behavioral control. These are \"easy\" not because they're simple (they're not), but because we can imagine neuroscience eventually explaining them through standard reductionist approaches. The hard problem is explaining why and how physical processes in the brain give rise to subjective experience—what philosophers call qualia.",
+          "links": [
+            {
+              "text": "David Chalmers",
+              "href": "https://en.wikipedia.org/wiki/David_Chalmers",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "hard problem",
+              "href": "https://en.wikipedia.org/wiki/Hard_problem_of_consciousness",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "qualia",
+              "href": "https://en.wikipedia.org/wiki/Qualia",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Why does the pattern of neural firing associated with seeing red produce the subjective experience of redness? Why does consciousness exist at all—why aren't we just unconscious automata processing information without experiencing it? Why is there \"something it is like\" to be you? No amount of describing neural mechanisms seems to bridge the explanatory gap between objective brain states and subjective experience. This is the hard problem, and sleep provides a unique window into it because consciousness regularly switches on and off."
+        },
+        {
+          "type": "subheading",
+          "text": "Global Workspace Theory (GWT)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Global Workspace Theory, developed by Bernard Baars and expanded by Stanislas Dehaene, proposes that consciousness arises when information becomes globally available to multiple brain systems. The brain contains many specialized processors (modules) operating unconsciously in parallel. When information wins the competition for access to a global workspace—a network including prefrontal and parietal cortices—it becomes conscious and available to all systems.",
+          "links": [
+            {
+              "text": "Global Workspace Theory",
+              "href": "https://en.wikipedia.org/wiki/Global_workspace_theory",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Global workspace theory diagrams showing network broadcasting",
+          "url": "https://www.google.com/search?q=global+workspace+theory+consciousness+prefrontal+parietal+networks&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Think of consciousness as a theater stage. Most of the brain's work happens backstage in darkness (unconscious processing). Consciousness is the spotlight—what falls under it becomes available to the entire theater (global broadcast). Sleep stages can be understood as different states of the global workspace. During waking, the workspace is active and globally broadcasting. During deep NREM sleep, the workspace is offline—information remains local and unconscious. During REM, the workspace is active again (hence vivid dreams), but disconnected from sensory input and motor output."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evidence for GWT comes from studies of the P3b ERP component, which occurs ~300ms after stimulus onset only when the stimulus reaches consciousness. During this time window, information ignites a widespread network of frontal and parietal areas. During anesthesia or deep sleep, this ignition fails to occur even though early sensory processing continues normally. The global broadcast distinguishes conscious from unconscious information processing.",
+          "links": [
+            {
+              "text": "the P3b ERP component",
+              "href": "https://en.wikipedia.org/wiki/P300_(neuroscience)",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "During this time window, information ignites a widespread network of frontal and parietal areas.",
+              "href": "https://www.science.org/doi/10.1126/science.1144028",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Integrated Information Theory (IIT)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Integrated Information Theory, developed by Giulio Tononi, takes a radically different approach. IIT proposes that consciousness is identical to integrated information, quantified as Φ (phi). A system is conscious to the degree that it integrates information—forming a unified whole that's more than the sum of its parts while maintaining differentiation among parts.",
+          "links": [
+            {
+              "text": "Integrated Information Theory",
+              "href": "https://en.wikipedia.org/wiki/Integrated_information_theory",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Integrated information theory and phi calculation illustrations",
+          "url": "https://www.google.com/search?q=integrated+information+theory+phi+consciousness+Giulio+Tononi&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "IIT makes surprising predictions. A sophisticated AI running on conventional computer architecture would have low Φ despite complex behavior, because computer architectures maximize independent processing. A fly brain, despite being tiny, has significant Φ because of its highly interconnected structure. During deep sleep, cortical Φ decreases dramatically as neurons fall into synchronized firing—they're still active but have lost their independence. During waking and REM, Φ is high—neurons fire in complex, differentiated patterns.",
+          "links": [
+            {
+              "text": "During deep sleep, cortical Φ decreases dramatically",
+              "href": "https://www.pnas.org/doi/10.1073/pnas.1912878116",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "IIT explains why the cerebellum, despite having more neurons than the cerebral cortex, doesn't generate much consciousness. The cerebellum's architecture emphasizes parallel processing with minimal integration. IIT also explains why removing half the cortex (hemispherectomy) doesn't reduce consciousness by half—the remaining hemisphere still forms an integrated whole. Critics argue that calculating Φ for large systems is computationally intractable and that IIT's philosophical commitments (like panpsychism—the view that consciousness is widespread in nature) are problematic.",
+          "links": [
+            {
+              "text": "cerebellum",
+              "href": "https://en.wikipedia.org/wiki/Cerebellum",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "hemispherectomy",
+              "href": "https://en.wikipedia.org/wiki/Hemispherectomy",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "panpsychism",
+              "href": "https://en.wikipedia.org/wiki/Panpsychism",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Higher-Order Theories (HOT)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Higher-Order Theories propose that a mental state is conscious when there's a higher-order representation of that state. You're conscious of seeing red when you have a thought about seeing red. First-order states (like the activation pattern in V4 representing red) are unconscious unless a higher-order state in prefrontal cortex represents them.",
+          "links": [
+            {
+              "text": "Higher-Order Theories",
+              "href": "https://en.wikipedia.org/wiki/Higher-order_theories_of_consciousness",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "V4",
+              "href": "https://en.wikipedia.org/wiki/Visual_cortex#V4",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "HOT elegantly explains several phenomena. Blindsight patients—who have damage to V1 but can guess above chance about visual stimuli they claim not to see—lack the higher-order representation despite intact first-order processing. Dreams are conscious because prefrontal areas generate higher-order representations, even though those representations are unconstrained by sensory input. During deep sleep, higher-order representation ceases, eliminating consciousness even though first-order sensory processing continues.",
+          "links": [
+            {
+              "text": "Blindsight",
+              "href": "https://en.wikipedia.org/wiki/Blindsight",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "V1",
+              "href": "https://en.wikipedia.org/wiki/Visual_cortex#V1",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Critics argue HOT leads to infinite regress (you need a third-order thought to be conscious of the second-order thought, etc.) or strange conclusions (like animals without developed prefrontal cortex lacking consciousness). Nevertheless, HOT captures something important about the role of prefrontal cortex in consciousness and explains why brain states with similar first-order activity can differ in consciousness level."
+        },
+        {
+          "type": "subheading",
+          "text": "Predictive Processing Framework"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Predictive processing framework showing prediction error minimization",
+          "url": "https://www.google.com/search?q=predictive+processing+free+energy+consciousness+Friston&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The predictive processing framework, championed by Karl Friston and Anil Seth, proposes that the brain is fundamentally a prediction machine that minimizes prediction error. What you consciously experience is not raw sensory data but the brain's best guess about the causes of its sensory inputs. Consciousness is controlled hallucination, kept in check by sensory evidence.",
+          "links": [
+            {
+              "text": "The predictive processing framework",
+              "href": "https://www.nature.com/articles/s41583-021-00447-6",
+              "kind": "external"
+            },
+            {
+              "text": "Karl Friston",
+              "href": "https://en.wikipedia.org/wiki/Karl_J._Friston",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Anil Seth",
+              "href": "https://en.wikipedia.org/wiki/Anil_Seth",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "prediction error",
+              "href": "https://en.wikipedia.org/wiki/Prediction_error",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Consciousness is controlled hallucination, kept in check by sensory evidence.",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5838966/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "This framework illuminates sleep phenomena beautifully. During waking, predictions are constrained by sensory input—when predictions err, prediction errors force updates. During REM dreaming, the prediction machinery continues running but without sensory constraints, producing bizarre but internally consistent experiences. The brain predicts walking through walls or flying, and with no sensory evidence to contradict these predictions, they become your reality. During deep NREM sleep, the prediction machinery itself is offline, eliminating both predictions and consciousness."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anesthesia works (in this view) by disrupting the hierarchical prediction loops that generate conscious experience. Different anesthetics target different levels of the hierarchy, but all prevent the reciprocal exchange of predictions and prediction errors that constitutes consciousness. The framework also explains how attention works—precision-weighting prediction errors, determining which aspects of sensory input get emphasized in consciousness.",
+          "links": [
+            {
+              "text": "Anesthesia",
+              "href": "https://en.wikipedia.org/wiki/Anesthesia",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Different anesthetics target different levels of the hierarchy",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3652440/",
+              "kind": "external"
+            },
+            {
+              "text": "attention",
+              "href": "https://en.wikipedia.org/wiki/Attention",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "stage",
+          "text": "These theories aren't mutually exclusive. GWT describes the neural architecture supporting consciousness. IIT proposes what consciousness is (integrated information). HOT explains what makes a state conscious (higher-order representation). Predictive processing describes how the brain generates conscious content. Together, they converge on key insights: consciousness requires integration across specialized systems, representation of information at multiple levels, and dynamic feedback loops. Sleep and anesthesia disrupt these requirements in measurable ways."
+        }
+      ]
+    },
+    {
+      "id": "what-does-sleep-accomplish",
+      "title": "What Does Sleep Accomplish?",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Energy Conservation and Restoration"
+        },
+        {
+          "type": "paragraph",
+          "text": "The simplest theory of sleep function is that it conserves energy. Metabolic rate drops about 15% during sleep, particularly during NREM stages. Body temperature decreases by 1-2°C, further reducing energy expenditure. In an evolutionary context where calories were hard to come by, spending 8 hours in reduced metabolism could make the difference between survival and starvation. This is especially true for small animals with high metabolic rates—shrews and bats sleep 15-20 hours daily.",
+          "links": [
+            {
+              "text": "Metabolic rate drops about 15% during sleep",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4651462/",
+              "kind": "external"
+            },
+            {
+              "text": "Body temperature decreases by 1-2°C",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2174740/",
+              "kind": "external"
+            },
+            {
+              "text": "shrews and bats sleep 15-20 hours daily",
+              "href": "https://en.wikipedia.org/wiki/Sleep_in_animals",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "But energy conservation can't be the whole story. The energy saved during 8 hours of sleep is only about 110 calories—the equivalent of one slice of bread. You could get the same benefit by sitting quietly. Moreover, the brain during REM sleep uses as much energy as during waking. And most puzzling: if energy conservation were the goal, why not just rest quietly? Why the elaborate neural choreography of sleep stages?"
+        },
+        {
+          "type": "subheading",
+          "text": "Memory Consolidation and Neural Replay"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Memory consolidation during sleep showing hippocampal replay",
+          "url": "https://www.google.com/search?q=sleep+memory+consolidation+hippocampal+replay+sharp+wave+ripples&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sleep's role in memory consolidation is now well-established. During NREM sleep, hippocampal neurons replay the day's experiences in compressed time. Place cells that fired as a rat explored a maze fire again during sleep in the same sequence, but accelerated 20-fold. These replay events occur during sharp-wave ripples—brief, high-frequency oscillations that propagate from hippocampus to cortex, transferring information for long-term storage.",
+          "links": [
+            {
+              "text": "During NREM sleep, hippocampal neurons replay the day's experiences in compressed time",
+              "href": "https://www.science.org/doi/10.1126/science.1063852",
+              "kind": "external"
+            },
+            {
+              "text": "Place cells",
+              "href": "https://en.wikipedia.org/wiki/Place_cell",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "sharp-wave ripples",
+              "href": "https://en.wikipedia.org/wiki/Sharp_waves_and_ripples",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Different sleep stages consolidate different types of memory. NREM sleep preferentially consolidates declarative memories—facts and events that depend on hippocampus. Sleep spindles during N2 correlate with overnight improvement in declarative memory tasks. REM sleep consolidates procedural memories—skills and habits that depend on motor cortex, cerebellum, and basal ganglia. Learning a new motor skill increases REM duration that night, and REM deprivation impairs motor skill consolidation.",
+          "links": [
+            {
+              "text": "declarative memories",
+              "href": "https://en.wikipedia.org/wiki/Declarative_memory",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Sleep spindles during N2 correlate with overnight improvement in declarative memory tasks.",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3768323/",
+              "kind": "external"
+            },
+            {
+              "text": "procedural memories",
+              "href": "https://en.wikipedia.org/wiki/Procedural_memory",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "basal ganglia",
+              "href": "https://en.wikipedia.org/wiki/Basal_ganglia",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Learning a new motor skill increases REM duration that night",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2930851/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Sleep doesn't just strengthen memories—it reorganizes them. Weak, irrelevant associations are pruned while important connections are strengthened. Sleep extracts the gist of experiences, forming abstractions and integrating new information with existing knowledge. This is why sleep enhances insight and creativity. The famous examples abound: Mendeleev dreaming the periodic table, Loewi dreaming the experiment that proved chemical neurotransmission, Paul McCartney dreaming \"Yesterday.\" Sleep provides a mental space for unguided exploration of associations.",
+          "links": [
+            {
+              "text": "Mendeleev dreaming the periodic table",
+              "href": "https://en.wikipedia.org/wiki/Dmitri_Mendeleev#Periodic_table",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Loewi dreaming the experiment that proved chemical neurotransmission",
+              "href": "https://en.wikipedia.org/wiki/Otto_Loewi#Vagusstoff_experiment",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "\"Yesterday.\"",
+              "href": "https://en.wikipedia.org/wiki/Yesterday_(Beatles_song)#Composition",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Synaptic Homeostasis: The Price of Wakefulness"
+        },
+        {
+          "type": "paragraph",
+          "text": "The synaptic homeostasis hypothesis, proposed by Giulio Tononi and Chiara Cirelli, argues that waking strengthens synapses through learning while sleep renormalizes synaptic strength. During waking, most experiences drive long-term potentiation—synapses get stronger and larger. If this continued unchecked, neurons would saturate, losing their ability to encode new information. Energy demands would skyrocket (stronger synapses require more resources). And signal-to-noise ratios would degrade as everything becomes equally emphasized.",
+          "links": [
+            {
+              "text": "The synaptic homeostasis hypothesis",
+              "href": "https://www.science.org/doi/10.1126/science.1241224",
+              "kind": "external"
+            },
+            {
+              "text": "Giulio Tononi",
+              "href": "https://en.wikipedia.org/wiki/Giulio_Tononi",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "long-term potentiation",
+              "href": "https://en.wikipedia.org/wiki/Long-term_potentiation",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Synaptic downscaling during sleep showing spine size reduction",
+          "url": "https://www.google.com/search?q=synaptic+downscaling+sleep+dendritic+spine+size+reduction&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sleep solves this through synaptic downscaling—a global reduction in synaptic strength. Two-photon imaging studies show that dendritic spines shrink during sleep, with the weakest spines disappearing entirely. About 20% of spines are eliminated each night, preferentially those that are small and weak. Strong, important connections survive and become proportionally even more prominent. The result is a system reset to baseline, ready to learn again. This explains why sleep deprivation progressively impairs learning—your synapses are saturated.",
+          "links": [
+            {
+              "text": "Two-photon imaging studies show that dendritic spines shrink during sleep",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5313010/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The molecular mechanisms involve the slow oscillations of deep NREM sleep. During the down-state (when neurons hyperpolarize together), reduced neural activity triggers homeostatic mechanisms that weaken synapses. Genes involved in synaptic downscaling are upregulated during sleep. If you prevent these oscillations (through optogenetic or pharmacological means), the beneficial effects of sleep on learning disappear.",
+          "links": [
+            {
+              "text": "slow oscillations",
+              "href": "https://en.wikipedia.org/wiki/Slow-wave_sleep#Slow_oscillation",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "hyperpolarize",
+              "href": "https://en.wikipedia.org/wiki/Hyperpolarization_(biology)",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Genes involved in synaptic downscaling are upregulated during sleep.",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4651462/",
+              "kind": "external"
+            },
+            {
+              "text": "optogenetic",
+              "href": "https://en.wikipedia.org/wiki/Optogenetics",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Glymphatic System: Cleaning the Brain"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Glymphatic system showing cerebrospinal fluid flow and waste clearance",
+          "url": "https://www.google.com/search?q=glymphatic+system+sleep+brain+waste+clearance+CSF&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "One of the most exciting recent discoveries is the glymphatic system—a brain-wide waste clearance system that operates primarily during sleep. Unlike other organs, the brain lacks a traditional lymphatic system. Instead, cerebrospinal fluid (CSF) flows through spaces around blood vessels (paravascular spaces), flushing interstitial fluid and dissolved waste products out of the brain.",
+          "links": [
+            {
+              "text": "glymphatic system",
+              "href": "https://www.nih.gov/news-events/nih-research-matters/how-sleep-clears-brain",
+              "kind": "external"
+            },
+            {
+              "text": "lymphatic system",
+              "href": "https://en.wikipedia.org/wiki/Lymphatic_system",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "cerebrospinal fluid (CSF)",
+              "href": "https://en.wikipedia.org/wiki/Cerebrospinal_fluid",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "During sleep, particularly deep NREM sleep, glymphatic flow increases dramatically—about 60% more than during waking. This increase occurs because neurons physically shrink during sleep, expanding the extracellular space and allowing faster fluid flow. The waste products being cleared include amyloid-beta and tau proteins—the same proteins that accumulate in Alzheimer's disease. Chronic sleep deprivation leads to accumulation of these toxic proteins, potentially explaining why poor sleep is a major risk factor for neurodegenerative diseases.",
+          "links": [
+            {
+              "text": "glymphatic flow increases dramatically—about 60% more than during waking",
+              "href": "https://www.science.org/doi/10.1126/science.1241224",
+              "kind": "external"
+            },
+            {
+              "text": "amyloid-beta",
+              "href": "https://en.wikipedia.org/wiki/Amyloid_beta",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "tau proteins",
+              "href": "https://en.wikipedia.org/wiki/Tau_protein",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Alzheimer's disease",
+              "href": "https://en.wikipedia.org/wiki/Alzheimer%27s_disease",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Chronic sleep deprivation leads to accumulation of these toxic proteins",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6281147/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The glymphatic system also clears metabolic waste products like lactate and adenosine that accumulate during waking. Adenosine buildup is thought to drive sleep pressure—the longer you're awake, the more adenosine accumulates, increasing sleep drive. Caffeine works by blocking adenosine receptors, preventing this signal. But blocking the signal doesn't prevent the accumulation—the adenosine is still there, and the need for clearance remains.",
+          "links": [
+            {
+              "text": "adenosine",
+              "href": "https://en.wikipedia.org/wiki/Adenosine",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Adenosine buildup is thought to drive sleep pressure",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3433285/",
+              "kind": "external"
+            },
+            {
+              "text": "Caffeine",
+              "href": "https://en.wikipedia.org/wiki/Caffeine",
+              "kind": "wikipedia"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neural-bases-of-sleep-and-waking",
+      "title": "Neural Bases of Sleep and Waking",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "The Reticular Activating System: The Wake Switch"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Reticular activating system anatomy and arousal pathways",
+          "url": "https://www.google.com/search?q=reticular+activating+system+RAS+brainstem+arousal+consciousness&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The reticular activating system (RAS) is a network of neurons running through the core of the brainstem, from the medulla through the pons to the midbrain. Electrical stimulation of the RAS instantly wakes a sleeping animal and produces desynchronized, high-frequency EEG activity. Lesions to the RAS produce coma—a state of unresponsive unconsciousness. The RAS is the fundamental waking system, the neural switch between consciousness and unconsciousness.",
+          "links": [
+            {
+              "text": "The reticular activating system (RAS)",
+              "href": "https://en.wikipedia.org/wiki/Reticular_formation",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "medulla",
+              "href": "https://en.wikipedia.org/wiki/Medulla_oblongata",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "pons",
+              "href": "https://en.wikipedia.org/wiki/Pons",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "midbrain",
+              "href": "https://en.wikipedia.org/wiki/Midbrain",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "coma",
+              "href": "https://en.wikipedia.org/wiki/Coma",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The RAS doesn't work alone. It activates two main pathways to cortex. The basal forebrain contains cholinergic neurons that release acetylcholine broadly across cortex, producing fast, desynchronized EEG activity—the hallmark of alertness. The thalamus relays the activating signals to specific cortical areas while also generating its own rhythmic activity that shapes consciousness states. These systems use multiple neurotransmitters: acetylcholine for attention, norepinephrine for vigilance, histamine for alertness, and orexin (hypocretin) for waking stability.",
+          "links": [
+            {
+              "text": "basal forebrain",
+              "href": "https://en.wikipedia.org/wiki/Basal_forebrain",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "acetylcholine",
+              "href": "https://en.wikipedia.org/wiki/Acetylcholine",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "thalamus",
+              "href": "https://en.wikipedia.org/wiki/Thalamus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "norepinephrine",
+              "href": "https://en.wikipedia.org/wiki/Norepinephrine",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "histamine",
+              "href": "https://en.wikipedia.org/wiki/Histamine",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Sleep-Promoting Systems: The Sleep Switch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sleep isn't just the absence of waking—it's an actively generated state. The key sleep-promoting region is the ventrolateral preoptic nucleus (VLPO) in the hypothalamus. VLPO neurons release GABA and galanin onto the waking-promoting systems, inhibiting them. Activity in VLPO increases at sleep onset and remains high during sleep. Lesions to VLPO produce severe insomnia.",
+          "links": [
+            {
+              "text": "ventrolateral preoptic nucleus (VLPO)",
+              "href": "https://en.wikipedia.org/wiki/Ventrolateral_preoptic_nucleus",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Sleep-wake flip-flop switch diagram showing mutual inhibition",
+          "url": "https://www.google.com/search?q=sleep+wake+flip+flop+switch+VLPO+orexin+neurons&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "The waking and sleeping systems mutually inhibit each other, creating a flip-flop switch. When waking systems are active, they inhibit VLPO, stabilizing waking. When VLPO is active, it inhibits waking systems, stabilizing sleep. This mutual inhibition creates two stable states (awake or asleep) with rapid transitions between them. What prevents unwanted switches? Orexin neurons in the lateral hypothalamus act as a stabilizer, reinforcing whichever state is active. Loss of orexin neurons causes narcolepsy—a disorder characterized by sudden, uncontrolled sleep attacks because the flip-flop switch becomes unstable.",
+          "links": [
+            {
+              "text": "Orexin neurons",
+              "href": "https://en.wikipedia.org/wiki/Orexin",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "lateral hypothalamus",
+              "href": "https://en.wikipedia.org/wiki/Lateral_hypothalamus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Loss of orexin neurons causes narcolepsy",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3026477/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "REM Sleep Generation: The Brainstem REM Switch"
+        },
+        {
+          "type": "paragraph",
+          "text": "REM sleep generation involves distinct mechanisms in the pons. The pedunculopontine tegmental (PPT) and laterodorsal tegmental (LDT) nuclei contain cholinergic neurons that trigger REM sleep. These neurons project to the medial pontine reticular formation (MPRF), which orchestrates REM's distinctive features.",
+          "links": [
+            {
+              "text": "pedunculopontine tegmental (PPT)",
+              "href": "https://en.wikipedia.org/wiki/Pedunculopontine_nucleus",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "laterodorsal tegmental (LDT)",
+              "href": "https://en.wikipedia.org/wiki/Laterodorsal_tegmental_nucleus",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Different components of REM are controlled by different circuits. Muscle atonia is actively generated by neurons in the ventral medulla that inhibit spinal motor neurons via glycine release. Rapid eye movements are driven by pontine saccade generators that remain active while other motor systems are paralyzed. PGO waves—pontine-geniculate-occipital waves—are distinctive electrical signals that propagate from pons through thalamus to occipital cortex during REM, possibly driving the visual imagery of dreams.",
+          "links": [
+            {
+              "text": "glycine",
+              "href": "https://en.wikipedia.org/wiki/Glycine",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "saccade",
+              "href": "https://en.wikipedia.org/wiki/Saccade",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "PGO waves",
+              "href": "https://en.wikipedia.org/wiki/PGO_waves",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The neurotransmitter profile during REM is unique and important. Acetylcholine levels are high, enabling cortical activation. But serotonin and norepinephrine levels drop to near zero. This aminergic silence may be essential for allowing the bizarre, emotionally-charged content of dreams—these neurotransmitters normally constrain thought to be logical and contextually appropriate. Their absence during REM releases thought from waking constraints.",
+          "links": [
+            {
+              "text": "Acetylcholine levels are high, enabling cortical activation. But serotonin and norepinephrine levels drop to near zero.",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6760897/",
+              "kind": "external"
+            },
+            {
+              "text": "aminergic",
+              "href": "https://en.wikipedia.org/wiki/Serotonin",
+              "kind": "wikipedia"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sleep-disorders-when-sleep-systems-fail",
+      "title": "Sleep Disorders: When Sleep Systems Fail",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Insomnia: The Epidemic of Sleeplessness"
+        },
+        {
+          "type": "paragraph",
+          "text": "Insomnia—difficulty falling asleep, staying asleep, or waking too early—affects about 30% of adults. While everyone has occasional sleepless nights, chronic insomnia involves sleep difficulties at least three nights per week for three months or more. The causes are varied: anxiety, depression, chronic pain, medications, caffeine, irregular schedules, and poor sleep hygiene. But insomnia often becomes self-perpetuating through conditioning—the bed becomes associated with frustrated wakefulness rather than sleep.",
+          "links": [
+            {
+              "text": "Insomnia",
+              "href": "https://www.mayoclinic.org/diseases-conditions/insomnia/symptoms-causes/syc-20355167",
+              "kind": "external"
+            },
+            {
+              "text": "chronic insomnia",
+              "href": "https://en.wikipedia.org/wiki/Insomnia",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "sleep hygiene",
+              "href": "https://en.wikipedia.org/wiki/Sleep_hygiene",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "is a particularly insidious form. Many sleeping pills (benzodiazepines, \"Z-drugs\" like zolpidem) work by enhancing GABA transmission, producing sedation but not natural sleep. They reduce deep NREM sleep and REM sleep, eliminating sleep's restorative benefits. Tolerance develops rapidly, requiring higher doses. Withdrawal produces rebound insomnia worse than the original problem, trapping users in dependency.",
+          "lead_title": "Drug dependency insomnia",
+          "links": [
+            {
+              "text": "benzodiazepines",
+              "href": "https://en.wikipedia.org/wiki/Benzodiazepine",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "\"Z-drugs\"",
+              "href": "https://en.wikipedia.org/wiki/Nonbenzodiazepine",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "zolpidem",
+              "href": "https://en.wikipedia.org/wiki/Zolpidem",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "GABA",
+              "href": "https://en.wikipedia.org/wiki/Gamma-Aminobutyric_acid",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cognitive behavioral therapy for insomnia (CBT-I) is now considered first-line treatment, more effective long-term than medication. CBT-I involves sleep restriction (limiting time in bed to actual sleep time), stimulus control (using bed only for sleep), and cognitive restructuring (addressing anxiety about sleep). It treats the underlying behavioral patterns rather than just suppressing symptoms.",
+          "links": [
+            {
+              "text": "Cognitive behavioral therapy for insomnia (CBT-I)",
+              "href": "https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy_for_insomnia",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "more effective long-term than medication",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4400203/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Narcolepsy: When the Wake Switch Fails"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Narcolepsy pathophysiology showing orexin neuron loss",
+          "url": "https://www.google.com/search?q=narcolepsy+orexin+hypocretin+deficiency+symptoms&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Narcolepsy involves sudden, irresistible sleep attacks during the day, often triggered by strong emotions. The core problem in narcolepsy type 1 is loss of orexin (hypocretin) neurons—those cells that stabilize the sleep-wake flip-flop switch. Without orexin, the switch becomes unstable, allowing sudden transitions into sleep regardless of circumstance. The most dramatic symptom is cataplexy—sudden loss of muscle tone triggered by strong emotions like laughter or surprise. Essentially, the motor atonia of REM sleep intrudes into waking.",
+          "links": [
+            {
+              "text": "Narcolepsy",
+              "href": "https://en.wikipedia.org/wiki/Narcolepsy",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "cataplexy",
+              "href": "https://en.wikipedia.org/wiki/Cataplexy",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Other symptoms include sleep paralysis—awakening but unable to move because REM atonia persists into waking—and hypnagogic hallucinations—dream-like imagery while falling asleep or waking. These symptoms represent inappropriate mixing of sleep and wake states. The cause of orexin neuron loss appears to be autoimmune in many cases, though the trigger remains unclear. Treatment involves stimulants to promote waking and medications like sodium oxybate to consolidate sleep at night.",
+          "links": [
+            {
+              "text": "sleep paralysis",
+              "href": "https://en.wikipedia.org/wiki/Sleep_paralysis",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "hypnagogic hallucinations",
+              "href": "https://en.wikipedia.org/wiki/Hypnagogia",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "The cause of orexin neuron loss appears to be autoimmune in many cases",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3883596/",
+              "kind": "external"
+            },
+            {
+              "text": "sodium oxybate",
+              "href": "https://en.wikipedia.org/wiki/Sodium_oxybate",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Sleep Apnea: Suffocating in Sleep"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sleep apnea involves repeated cessation of breathing during sleep. In obstructive sleep apnea (OSA), the most common form, the upper airway collapses during sleep, blocking airflow. Oxygen levels drop, carbon dioxide builds up, and the brain partially awakens to restore breathing. This can happen hundreds of times per night without the person fully awakening or remembering. The fragmented sleep leads to daytime sleepiness, cognitive impairment, and increased risk of hypertension, heart attack, and stroke.",
+          "links": [
+            {
+              "text": "Sleep apnea",
+              "href": "https://www.mayoclinic.org/diseases-conditions/sleep-apnea/symptoms-causes/syc-20377631",
+              "kind": "external"
+            },
+            {
+              "text": "obstructive sleep apnea",
+              "href": "https://en.wikipedia.org/wiki/Obstructive_sleep_apnea",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Oxygen levels drop, carbon dioxide builds up, and the brain partially awakens to restore breathing.",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3021364/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Risk factors include obesity (fat deposits narrow airways), large tongue or tonsils, small jaw, and sleeping on the back. The gold standard treatment is CPAP (continuous positive airway pressure)—a mask that delivers pressurized air to keep airways open. While effective, compliance is poor because the mask is uncomfortable. Alternative treatments include oral appliances, weight loss, positional therapy, and in severe cases, surgery.",
+          "links": [
+            {
+              "text": "obesity (fat deposits narrow airways)",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3021364/",
+              "kind": "external"
+            },
+            {
+              "text": "CPAP (continuous positive airway pressure)",
+              "href": "https://en.wikipedia.org/wiki/Continuous_positive_airway_pressure",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "REM Behavior Disorder: Acting Out Dreams"
+        },
+        {
+          "type": "paragraph",
+          "text": "REM sleep behavior disorder (RBD) occurs when the motor atonia of REM sleep fails. Instead of being paralyzed during dreams, patients physically act them out. They may punch, kick, leap from bed, or perform complex behaviors, all while deeply asleep. This is dangerous—patients can injure themselves or bed partners. RBD is more common in older men and is often an early sign of Parkinson's disease or other synucleinopathies, appearing years or decades before motor symptoms.",
+          "links": [
+            {
+              "text": "REM sleep behavior disorder (RBD)",
+              "href": "https://en.wikipedia.org/wiki/Rapid_eye_movement_sleep_behavior_disorder",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "RBD is more common in older men and is often an early sign of Parkinson's disease or other synucleinopathies",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3181696/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The pathology involves degeneration of brainstem circuits that generate REM atonia. Treatment with clonazepam (a benzodiazepine) or melatonin can reduce episodes by suppressing REM sleep. But the disorder's real significance is as a warning sign—about 80-90% of RBD patients eventually develop Parkinson's or related disorders. RBD provides a window for potential early intervention before irreversible brain damage occurs.",
+          "links": [
+            {
+              "text": "clonazepam",
+              "href": "https://en.wikipedia.org/wiki/Clonazepam",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "melatonin",
+              "href": "https://en.wikipedia.org/wiki/Melatonin",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "about 80-90% of RBD patients eventually develop Parkinson's or related disorders",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3181696/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "stage",
+          "text": "Consider Marcus, a composite patient who developed RBD in his 50s. Initially, his wife noticed him twitching and mumbling during sleep. Then came the night he dreamed of fighting an intruder and punched his wife while asleep, giving her a black eye. Sleep study confirmed RBD. Fifteen years later, Marcus developed Parkinson's disease. His RBD was the canary in the coal mine, signaling neurodegeneration long before the obvious symptoms appeared. Understanding these sleep disorders isn't just about treating insomnia—it's about early diagnosis and prevention of devastating neurological conditions."
+        }
+      ]
+    },
+    {
+      "id": "what-sleep-tells-us-about-consciousness",
+      "title": "What Sleep Tells Us About Consciousness",
+      "level": 2,
+      "kind": "reading",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Consciousness as a Graded Phenomenon"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sleep reveals that consciousness isn't binary (on/off) but graded. During N1, you're barely conscious—aware of some sensations, capable of rudimentary thought, but not fully aware. During N3, consciousness seems almost entirely absent—awakening produces confusion about where and when you are. Yet brain activity continues; it's not like being dead or under general anesthesia. Some minimal processing continues—you can still respond to your name or your baby crying while ignoring other sounds."
+        },
+        {
+          "type": "paragraph",
+          "text": "During REM sleep, consciousness returns but becomes unconstrained by reality. You experience vivid, bizarre scenarios as real. This dissociation—awareness without reality testing, experience without executive control—reveals that these functions can be separated. Consciousness doesn't require sensory input (dreams demonstrate this) or motor output (you're paralyzed during REM) or logical reasoning (dream logic is absurd). What's essential is the network dynamics that generate integrated, differentiated information."
+        },
+        {
+          "type": "subheading",
+          "text": "The Neural Correlates of Consciousness"
+        },
+        {
+          "type": "note",
+          "kind": "view_images",
+          "text": "Neural correlates of consciousness showing critical brain networks",
+          "url": "https://www.google.com/search?q=neural+correlates+consciousness+NCC+fMRI+brain+networks&tbm=isch"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sleep studies have identified the neural correlates of consciousness (NCC)—the minimal set of neural events sufficient for conscious experience. Key findings: The cortex is necessary—remove it and consciousness disappears. But not all cortex is equally important—posterior cortical areas (\"posterior hot zone\") show strongest correlates of conscious content. Thalamocortical loops are essential—disrupting thalamus eliminates consciousness even with intact cortex. Brainstem arousal systems enable consciousness but don't generate content.",
+          "links": [
+            {
+              "text": "neural correlates of consciousness (NCC)",
+              "href": "https://en.wikipedia.org/wiki/Neural_correlates_of_consciousness",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "posterior cortical areas (\"posterior hot zone\") show strongest correlates of conscious content",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5688394/",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The EEG signature of consciousness involves high-frequency, desynchronized activity and the ability to show complex responses to perturbation. Measuring the brain's response to transcranial magnetic stimulation (TMS) distinguishes consciousness states: during waking, TMS produces complex, long-lasting responses that propagate widely. During deep sleep or anesthesia, responses are simple and local—the brain can't sustain complex activity patterns.",
+          "links": [
+            {
+              "text": "Measuring the brain's response to transcranial magnetic stimulation (TMS)",
+              "href": "https://en.wikipedia.org/wiki/Transcranial_magnetic_stimulation",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "during waking, TMS produces complex, long-lasting responses that propagate widely",
+              "href": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001281",
+              "kind": "external"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Implications for AI and Machine Consciousness"
+        },
+        {
+          "type": "paragraph",
+          "text": "Understanding biological consciousness informs debates about machine consciousness. Current AI systems, no matter how sophisticated their behavior, likely lack consciousness because they lack the right architecture. They don't have recurrent loops generating predictions and prediction errors. They don't have global workspace enabling information integration. They don't have the right kind of causal structure—they're feedforward, not recurrent. They may simulate consciousness without experiencing anything.",
+          "links": [
+            {
+              "text": "machine consciousness",
+              "href": "https://en.wikipedia.org/wiki/Artificial_consciousness",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "But this could change. If consciousness depends on integrated information and global broadcast, we could engineer systems with these properties. The question is whether we should—and how we'd know if we succeeded. The problem of other minds (how do I know you're conscious?) becomes acute with artificial systems. We can't just ask them; a philosophical zombie (a system that acts conscious but isn't) would answer identically to a truly conscious system.",
+          "links": [
+            {
+              "text": "problem of other minds",
+              "href": "https://en.wikipedia.org/wiki/Problem_of_other_minds",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "philosophical zombie",
+              "href": "https://en.wikipedia.org/wiki/Philosophical_zombie",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "The Philosophical Implications"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sleep raises profound questions about personal identity and the self. Every night, your consciousness switches off for hours. Are you the same person who wakes up? What constitutes continuity of self across gaps in consciousness? If your memories were implanted and your brain replaced gradually (Ship of Theseus style), when would you stop being you?",
+          "links": [
+            {
+              "text": "personal identity",
+              "href": "https://en.wikipedia.org/wiki/Personal_identity",
+              "kind": "wikipedia"
+            },
+            {
+              "text": "Ship of Theseus",
+              "href": "https://en.wikipedia.org/wiki/Ship_of_Theseus",
+              "kind": "wikipedia"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Sleep also challenges our intuitions about the importance of consciousness. We typically assume consciousness is essential for complex behavior, yet sleep demonstrates sophisticated neural processing without awareness. Your brain solves problems, consolidates memories, and regulates physiology while you're unconscious. This suggests consciousness might be less central to cognition than we imagine—perhaps it's a particular trick evolution discovered for flexible, rapid learning in novel environments, not the foundation of all mental life.",
+          "links": [
+            {
+              "text": "Your brain solves problems, consolidates memories, and regulates physiology while you're unconscious.",
+              "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2814941/",
+              "kind": "external"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thought-questions",
+      "title": "Thought Questions for Discussion",
+      "level": 2,
+      "kind": "thought_questions",
+      "blocks": [
+        {
+          "type": "stage",
+          "text": "Three questions to spark discussion before your next class:"
+        },
+        {
+          "type": "paragraph",
+          "text": "If consciousness is graded rather than binary, how should we measure levels of consciousness? Different theories (GWT, IIT, HOT) give different answers. What experiments could distinguish between them? How would you test whether an AI system is conscious? What would convince you that a patient in a vegetative state retains awareness?",
+          "lead_title": "The Consciousness Measurement Problem"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sleep serves multiple functions (memory consolidation, waste clearance, synaptic homeostasis, energy conservation), yet these could potentially be achieved without complete unconsciousness. Why does adaptive pressure favor unconsciousness rather than quiet wakefulness? Is consciousness itself metabolically expensive? What does this tell us about the nature of consciousness?",
+          "lead_title": "The Sleep Function Paradox"
+        },
+        {
+          "type": "paragraph",
+          "text": "During REM sleep, your brain generates experiences as vivid as waking but completely untethered from reality. How do you know you're not dreaming right now? What makes waking experience feel more \"real\" than dreams? If we could generate dream-like experiences indistinguishable from reality, what would that mean for concepts of truth and experience?",
+          "lead_title": "The Dream Reality Problem"
+        },
+        {
+          "type": "subheading",
+          "text": "Practice Questions:"
+        },
+        {
+          "type": "paragraph",
+          "text": "• The suprachiasmatic nucleus is located in the _______ and receives direct input from _______ ganglion cells containing melanopsin."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Sleep spindles and K-complexes are characteristic of NREM stage _______. Delta waves (0.5-4 Hz) characterize stage _______."
+        },
+        {
+          "type": "paragraph",
+          "text": "• REM sleep is characterized by _______ in the EEG, complete _______ except for eyes and diaphragm, and _______ which are distinctive pontine-geniculate-occipital signals."
+        },
+        {
+          "type": "paragraph",
+          "text": "• According to Global Workspace Theory, consciousness arises when information becomes _______ to multiple brain systems."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Integrated Information Theory quantifies consciousness as Φ (phi), which measures how much a system _______ information."
+        },
+        {
+          "type": "paragraph",
+          "text": "• The glymphatic system clears metabolic waste primarily during _______ sleep, with CSF flow increasing approximately _______% compared to waking."
+        },
+        {
+          "type": "paragraph",
+          "text": "• Narcolepsy type 1 is caused by loss of _______ neurons in the lateral hypothalamus, destabilizing the sleep-wake _______."
+        },
+        {
+          "type": "paragraph",
+          "text": "• REM behavior disorder involves failure of motor _______ during REM sleep and often precedes _______ disease by years."
+        }
+      ]
+    }
+  ],
+  "thought_questions": [
+    {
+      "type": "question",
+      "title": "The Consciousness Measurement Problem",
+      "text": "If consciousness is graded rather than binary, how should we measure levels of consciousness? Different theories (GWT, IIT, HOT) give different answers. What experiments could distinguish between them? How would you test whether an AI system is conscious? What would convince you that a patient in a vegetative state retains awareness?"
+    },
+    {
+      "type": "question",
+      "title": "The Sleep Function Paradox",
+      "text": "Sleep serves multiple functions (memory consolidation, waste clearance, synaptic homeostasis, energy conservation), yet these could potentially be achieved without complete unconsciousness. Why does adaptive pressure favor unconsciousness rather than quiet wakefulness? Is consciousness itself metabolically expensive? What does this tell us about the nature of consciousness?"
+    },
+    {
+      "type": "question",
+      "title": "The Dream Reality Problem",
+      "text": "During REM sleep, your brain generates experiences as vivid as waking but completely untethered from reality. How do you know you're not dreaming right now? What makes waking experience feel more \"real\" than dreams? If we could generate dream-like experiences indistinguishable from reality, what would that mean for concepts of truth and experience?"
+    }
+  ],
+  "practice_questions": {
+    "fill_in_the_blanks": [
+      "The suprachiasmatic nucleus is located in the _______ and receives direct input from _______ ganglion cells containing melanopsin.",
+      "Sleep spindles and K-complexes are characteristic of NREM stage _______. Delta waves (0.5-4 Hz) characterize stage _______.",
+      "REM sleep is characterized by _______ in the EEG, complete _______ except for eyes and diaphragm, and _______ which are distinctive pontine-geniculate-occipital signals.",
+      "According to Global Workspace Theory, consciousness arises when information becomes _______ to multiple brain systems.",
+      "Integrated Information Theory quantifies consciousness as Φ (phi), which measures how much a system _______ information.",
+      "The glymphatic system clears metabolic waste primarily during _______ sleep, with CSF flow increasing approximately _______% compared to waking.",
+      "Narcolepsy type 1 is caused by loss of _______ neurons in the lateral hypothalamus, destabilizing the sleep-wake _______.",
+      "REM behavior disorder involves failure of motor _______ during REM sleep and often precedes _______ disease by years."
+    ]
+  },
+  "closing": [
+    {
+      "type": "note",
+      "kind": "preview",
+      "text": "Psychopharmacology and drug actions on neurotransmitter systems",
+      "url": "https://www.google.com/search?q=psychopharmacology+neurotransmitter+systems+drug+mechanisms&tbm=isch"
+    }
+  ],
+  "links": [
+    {
+      "text": "Psychopharmacology and drug actions on neurotransmitter systems",
+      "href": "https://www.google.com/search?q=psychopharmacology+neurotransmitter+systems+drug+mechanisms&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Effects of sleep deprivation on brain function and cognitive performance",
+      "href": "https://www.google.com/search?q=sleep+deprivation+effects+brain+cognitive+performance&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Randy Gardner set a world record by staying awake for 264 hours—11 days",
+      "href": "https://en.wikipedia.org/wiki/Randy_Gardner_(record_holder)",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "hallucinations",
+      "href": "https://en.wikipedia.org/wiki/Hallucination",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "memory",
+      "href": "https://en.wikipedia.org/wiki/Memory",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "sleep deprivation",
+      "href": "https://en.wikipedia.org/wiki/Sleep_deprivation",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "After 24 hours awake, your cognitive performance equals that of someone legally drunk",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1739867/",
+      "kind": "external"
+    },
+    {
+      "text": "microsleeps",
+      "href": "https://en.wikipedia.org/wiki/Microsleep",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "The answer, we now know, is that sleep isn't wasted time—it's maintenance time.",
+      "href": "https://www.nih.gov/news-events/nih-research-matters/how-sleep-clears-brain",
+      "kind": "external"
+    },
+    {
+      "text": "consciousness",
+      "href": "https://en.wikipedia.org/wiki/Consciousness",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Free-running circadian rhythms in isolated subjects showing ~25-hour cycles",
+      "href": "https://www.google.com/search?q=circadian+rhythm+free+running+period+isolated+subjects&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Michel Siffre descended into a cave in the Alps for two months without any time cues—no watches, no sunlight, no schedules",
+      "href": "https://en.wikipedia.org/wiki/Michel_Siffre",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "circadian rhythm",
+      "href": "https://en.wikipedia.org/wiki/Circadian_rhythm",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Circadian rhythms are physical, mental, and behavioral changes that follow a roughly 24-hour cycle, responding primarily to light and darkness.",
+      "href": "https://www.nigms.nih.gov/education/fact-sheets/Pages/circadian-rhythms.aspx",
+      "kind": "external"
+    },
+    {
+      "text": "cyanobacteria",
+      "href": "https://en.wikipedia.org/wiki/Cyanobacteria",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "hormone",
+      "href": "https://en.wikipedia.org/wiki/Hormone",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "gene expression",
+      "href": "https://en.wikipedia.org/wiki/Gene_expression",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Circannual rhythms",
+      "href": "https://en.wikipedia.org/wiki/Circannual_cycle",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Infradian rhythms",
+      "href": "https://en.wikipedia.org/wiki/Infradian_rhythm",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "menstrual cycle",
+      "href": "https://en.wikipedia.org/wiki/Menstrual_cycle",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Ultradian rhythms",
+      "href": "https://en.wikipedia.org/wiki/Ultradian_rhythm",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Suprachiasmatic nucleus location and circadian pacemaker circuits",
+      "href": "https://www.google.com/search?q=suprachiasmatic+nucleus+SCN+circadian+pacemaker+hypothalamus&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "suprachiasmatic nucleus (SCN)",
+      "href": "https://en.wikipedia.org/wiki/Suprachiasmatic_nucleus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "hypothalamus",
+      "href": "https://en.wikipedia.org/wiki/Hypothalamus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "optic chiasm",
+      "href": "https://en.wikipedia.org/wiki/Optic_chiasm",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "retina",
+      "href": "https://en.wikipedia.org/wiki/Retina",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "If you then transplant an SCN from another animal into the third ventricle, rhythms return",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2892440/",
+      "kind": "external"
+    },
+    {
+      "text": "SCN neurons removed from the brain and cultured in a dish continue to fire rhythmically for weeks",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1828796/",
+      "kind": "external"
+    },
+    {
+      "text": "Period (Per)",
+      "href": "https://en.wikipedia.org/wiki/Period_circadian_protein",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Cryptochrome (Cry)",
+      "href": "https://en.wikipedia.org/wiki/Cryptochrome",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "discovering the molecular mechanisms controlling circadian rhythms",
+      "href": "https://www.nobelprize.org/prizes/medicine/2017/summary/",
+      "kind": "external"
+    },
+    {
+      "text": "entrainment",
+      "href": "https://en.wikipedia.org/wiki/Entrainment_(chronobiology)",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "zeitgebers",
+      "href": "https://en.wikipedia.org/wiki/Zeitgeber",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "A specialized class of retinal ganglion cells",
+      "href": "https://en.wikipedia.org/wiki/Photosensitive_ganglion_cell",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "melanopsin",
+      "href": "https://en.wikipedia.org/wiki/Melanopsin",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "retinohypothalamic tract",
+      "href": "https://en.wikipedia.org/wiki/Retinohypothalamic_tract",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "These cells don't contribute to conscious vision—they're measuring illumination, not forming images.",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3035673/",
+      "kind": "external"
+    },
+    {
+      "text": "Jet lag and circadian phase shifts showing east vs west travel effects",
+      "href": "https://www.google.com/search?q=jet+lag+circadian+phase+shift+melatonin+light+exposure&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Jet lag occurs when you rapidly cross multiple time zones",
+      "href": "https://www.mayoclinic.org/diseases-conditions/jet-lag/symptoms-causes/syc-20374027",
+      "kind": "external"
+    },
+    {
+      "text": "Flight attendants and pilots who regularly cross time zones show increased rates of cognitive problems and even temporal lobe atrophy",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1447299/",
+      "kind": "external"
+    },
+    {
+      "text": "Shift workers",
+      "href": "https://en.wikipedia.org/wiki/Shift_work",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "The consequences are severe: increased rates of cardiovascular disease, diabetes, obesity, depression, and certain cancers.",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3222517/",
+      "kind": "external"
+    },
+    {
+      "text": "The International Agency for Research on Cancer classifies shift work as a probable carcinogen",
+      "href": "https://www.iarc.who.int/news-events/iarc-monographs-evaluate-the-carcinogenicity-of-shift-work/",
+      "kind": "external"
+    },
+    {
+      "text": "Artificial light at night suppresses melatonin secretion from the pineal gland",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3499892/",
+      "kind": "external"
+    },
+    {
+      "text": "Blue wavelengths",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3499892/",
+      "kind": "external"
+    },
+    {
+      "text": "melatonin",
+      "href": "https://en.wikipedia.org/wiki/Melatonin",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Social jetlag",
+      "href": "https://en.wikipedia.org/wiki/Social_jetlag",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Sleep stage EEG patterns showing characteristic waveforms of each stage",
+      "href": "https://www.google.com/search?q=sleep+stages+EEG+waveforms+NREM+REM+patterns&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Hans Berger discovered that electrical activity of the human brain",
+      "href": "https://en.wikipedia.org/wiki/Hans_Berger",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "electroencephalography (EEG)",
+      "href": "https://en.wikipedia.org/wiki/Electroencephalography",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "beta waves",
+      "href": "https://en.wikipedia.org/wiki/Beta_wave",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "alpha waves",
+      "href": "https://en.wikipedia.org/wiki/Alpha_wave",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "theta waves",
+      "href": "https://en.wikipedia.org/wiki/Theta_wave",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "hypnic jerks",
+      "href": "https://en.wikipedia.org/wiki/Hypnic_jerk",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "sleep spindles",
+      "href": "https://en.wikipedia.org/wiki/Sleep_spindle",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "K-complexes",
+      "href": "https://en.wikipedia.org/wiki/K-complex",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Sleep spindles are thought to play a role in memory consolidation",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3768323/",
+      "kind": "external"
+    },
+    {
+      "text": "slow-wave sleep (SWS)",
+      "href": "https://en.wikipedia.org/wiki/Slow-wave_sleep",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "growth hormone is released",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC297368/",
+      "kind": "external"
+    },
+    {
+      "text": "sleep inertia",
+      "href": "https://en.wikipedia.org/wiki/Sleep_inertia",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Sleepwalking",
+      "href": "https://en.wikipedia.org/wiki/Sleepwalking",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "night terrors",
+      "href": "https://en.wikipedia.org/wiki/Night_terror",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Sleep hypnogram showing 90-minute cycles across the night",
+      "href": "https://www.google.com/search?q=sleep+cycle+hypnogram+90+minute+ultradian+rhythm&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "REM (Rapid Eye Movement) sleep",
+      "href": "https://en.wikipedia.org/wiki/Rapid_eye_movement_sleep",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Dreams",
+      "href": "https://en.wikipedia.org/wiki/Dream",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "prefrontal cortex",
+      "href": "https://en.wikipedia.org/wiki/Prefrontal_cortex",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "amygdala",
+      "href": "https://en.wikipedia.org/wiki/Amygdala",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "acetylcholine levels are as high as waking, while serotonin, norepinephrine, and histamine drop to near zero",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6760897/",
+      "kind": "external"
+    },
+    {
+      "text": "basic rest-activity cycle (BRAC)",
+      "href": "https://en.wikipedia.org/wiki/Basic_rest-activity_cycle",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "During the day, you may notice fluctuations in alertness, creativity, and hunger every 90 minutes or so.",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4650897/",
+      "kind": "external"
+    },
+    {
+      "text": "\"hard problem of consciousness David Chalmers\" - explore the philosophical foundations",
+      "href": "https://www.google.com/search?q=hard+problem+consciousness+David+Chalmers+qualia+subjective+experience",
+      "kind": "image_search"
+    },
+    {
+      "text": "David Chalmers",
+      "href": "https://en.wikipedia.org/wiki/David_Chalmers",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "hard problem",
+      "href": "https://en.wikipedia.org/wiki/Hard_problem_of_consciousness",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "qualia",
+      "href": "https://en.wikipedia.org/wiki/Qualia",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Global Workspace Theory",
+      "href": "https://en.wikipedia.org/wiki/Global_workspace_theory",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Global workspace theory diagrams showing network broadcasting",
+      "href": "https://www.google.com/search?q=global+workspace+theory+consciousness+prefrontal+parietal+networks&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "the P3b ERP component",
+      "href": "https://en.wikipedia.org/wiki/P300_(neuroscience)",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "During this time window, information ignites a widespread network of frontal and parietal areas.",
+      "href": "https://www.science.org/doi/10.1126/science.1144028",
+      "kind": "external"
+    },
+    {
+      "text": "Integrated Information Theory",
+      "href": "https://en.wikipedia.org/wiki/Integrated_information_theory",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Integrated information theory and phi calculation illustrations",
+      "href": "https://www.google.com/search?q=integrated+information+theory+phi+consciousness+Giulio+Tononi&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "During deep sleep, cortical Φ decreases dramatically",
+      "href": "https://www.pnas.org/doi/10.1073/pnas.1912878116",
+      "kind": "external"
+    },
+    {
+      "text": "cerebellum",
+      "href": "https://en.wikipedia.org/wiki/Cerebellum",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "hemispherectomy",
+      "href": "https://en.wikipedia.org/wiki/Hemispherectomy",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "panpsychism",
+      "href": "https://en.wikipedia.org/wiki/Panpsychism",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Higher-Order Theories",
+      "href": "https://en.wikipedia.org/wiki/Higher-order_theories_of_consciousness",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "V4",
+      "href": "https://en.wikipedia.org/wiki/Visual_cortex#V4",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Blindsight",
+      "href": "https://en.wikipedia.org/wiki/Blindsight",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "V1",
+      "href": "https://en.wikipedia.org/wiki/Visual_cortex#V1",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Predictive processing framework showing prediction error minimization",
+      "href": "https://www.google.com/search?q=predictive+processing+free+energy+consciousness+Friston&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "The predictive processing framework",
+      "href": "https://www.nature.com/articles/s41583-021-00447-6",
+      "kind": "external"
+    },
+    {
+      "text": "Karl Friston",
+      "href": "https://en.wikipedia.org/wiki/Karl_J._Friston",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Anil Seth",
+      "href": "https://en.wikipedia.org/wiki/Anil_Seth",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "prediction error",
+      "href": "https://en.wikipedia.org/wiki/Prediction_error",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Consciousness is controlled hallucination, kept in check by sensory evidence.",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5838966/",
+      "kind": "external"
+    },
+    {
+      "text": "Anesthesia",
+      "href": "https://en.wikipedia.org/wiki/Anesthesia",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Different anesthetics target different levels of the hierarchy",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3652440/",
+      "kind": "external"
+    },
+    {
+      "text": "attention",
+      "href": "https://en.wikipedia.org/wiki/Attention",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Metabolic rate drops about 15% during sleep",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4651462/",
+      "kind": "external"
+    },
+    {
+      "text": "Body temperature decreases by 1-2°C",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2174740/",
+      "kind": "external"
+    },
+    {
+      "text": "shrews and bats sleep 15-20 hours daily",
+      "href": "https://en.wikipedia.org/wiki/Sleep_in_animals",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Memory consolidation during sleep showing hippocampal replay",
+      "href": "https://www.google.com/search?q=sleep+memory+consolidation+hippocampal+replay+sharp+wave+ripples&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "During NREM sleep, hippocampal neurons replay the day's experiences in compressed time",
+      "href": "https://www.science.org/doi/10.1126/science.1063852",
+      "kind": "external"
+    },
+    {
+      "text": "Place cells",
+      "href": "https://en.wikipedia.org/wiki/Place_cell",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "sharp-wave ripples",
+      "href": "https://en.wikipedia.org/wiki/Sharp_waves_and_ripples",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "declarative memories",
+      "href": "https://en.wikipedia.org/wiki/Declarative_memory",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Sleep spindles during N2 correlate with overnight improvement in declarative memory tasks.",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3768323/",
+      "kind": "external"
+    },
+    {
+      "text": "procedural memories",
+      "href": "https://en.wikipedia.org/wiki/Procedural_memory",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "basal ganglia",
+      "href": "https://en.wikipedia.org/wiki/Basal_ganglia",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Learning a new motor skill increases REM duration that night",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2930851/",
+      "kind": "external"
+    },
+    {
+      "text": "Mendeleev dreaming the periodic table",
+      "href": "https://en.wikipedia.org/wiki/Dmitri_Mendeleev#Periodic_table",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Loewi dreaming the experiment that proved chemical neurotransmission",
+      "href": "https://en.wikipedia.org/wiki/Otto_Loewi#Vagusstoff_experiment",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "\"Yesterday.\"",
+      "href": "https://en.wikipedia.org/wiki/Yesterday_(Beatles_song)#Composition",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "The synaptic homeostasis hypothesis",
+      "href": "https://www.science.org/doi/10.1126/science.1241224",
+      "kind": "external"
+    },
+    {
+      "text": "Giulio Tononi",
+      "href": "https://en.wikipedia.org/wiki/Giulio_Tononi",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "long-term potentiation",
+      "href": "https://en.wikipedia.org/wiki/Long-term_potentiation",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Synaptic downscaling during sleep showing spine size reduction",
+      "href": "https://www.google.com/search?q=synaptic+downscaling+sleep+dendritic+spine+size+reduction&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Two-photon imaging studies show that dendritic spines shrink during sleep",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5313010/",
+      "kind": "external"
+    },
+    {
+      "text": "slow oscillations",
+      "href": "https://en.wikipedia.org/wiki/Slow-wave_sleep#Slow_oscillation",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "hyperpolarize",
+      "href": "https://en.wikipedia.org/wiki/Hyperpolarization_(biology)",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Genes involved in synaptic downscaling are upregulated during sleep.",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4651462/",
+      "kind": "external"
+    },
+    {
+      "text": "optogenetic",
+      "href": "https://en.wikipedia.org/wiki/Optogenetics",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Glymphatic system showing cerebrospinal fluid flow and waste clearance",
+      "href": "https://www.google.com/search?q=glymphatic+system+sleep+brain+waste+clearance+CSF&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "glymphatic system",
+      "href": "https://www.nih.gov/news-events/nih-research-matters/how-sleep-clears-brain",
+      "kind": "external"
+    },
+    {
+      "text": "lymphatic system",
+      "href": "https://en.wikipedia.org/wiki/Lymphatic_system",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "cerebrospinal fluid (CSF)",
+      "href": "https://en.wikipedia.org/wiki/Cerebrospinal_fluid",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "glymphatic flow increases dramatically—about 60% more than during waking",
+      "href": "https://www.science.org/doi/10.1126/science.1241224",
+      "kind": "external"
+    },
+    {
+      "text": "amyloid-beta",
+      "href": "https://en.wikipedia.org/wiki/Amyloid_beta",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "tau proteins",
+      "href": "https://en.wikipedia.org/wiki/Tau_protein",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Alzheimer's disease",
+      "href": "https://en.wikipedia.org/wiki/Alzheimer%27s_disease",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Chronic sleep deprivation leads to accumulation of these toxic proteins",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6281147/",
+      "kind": "external"
+    },
+    {
+      "text": "adenosine",
+      "href": "https://en.wikipedia.org/wiki/Adenosine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Adenosine buildup is thought to drive sleep pressure",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3433285/",
+      "kind": "external"
+    },
+    {
+      "text": "Caffeine",
+      "href": "https://en.wikipedia.org/wiki/Caffeine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Reticular activating system anatomy and arousal pathways",
+      "href": "https://www.google.com/search?q=reticular+activating+system+RAS+brainstem+arousal+consciousness&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "The reticular activating system (RAS)",
+      "href": "https://en.wikipedia.org/wiki/Reticular_formation",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "medulla",
+      "href": "https://en.wikipedia.org/wiki/Medulla_oblongata",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "pons",
+      "href": "https://en.wikipedia.org/wiki/Pons",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "midbrain",
+      "href": "https://en.wikipedia.org/wiki/Midbrain",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "coma",
+      "href": "https://en.wikipedia.org/wiki/Coma",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "basal forebrain",
+      "href": "https://en.wikipedia.org/wiki/Basal_forebrain",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "acetylcholine",
+      "href": "https://en.wikipedia.org/wiki/Acetylcholine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "thalamus",
+      "href": "https://en.wikipedia.org/wiki/Thalamus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "norepinephrine",
+      "href": "https://en.wikipedia.org/wiki/Norepinephrine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "histamine",
+      "href": "https://en.wikipedia.org/wiki/Histamine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "ventrolateral preoptic nucleus (VLPO)",
+      "href": "https://en.wikipedia.org/wiki/Ventrolateral_preoptic_nucleus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Sleep-wake flip-flop switch diagram showing mutual inhibition",
+      "href": "https://www.google.com/search?q=sleep+wake+flip+flop+switch+VLPO+orexin+neurons&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Orexin neurons",
+      "href": "https://en.wikipedia.org/wiki/Orexin",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "lateral hypothalamus",
+      "href": "https://en.wikipedia.org/wiki/Lateral_hypothalamus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Loss of orexin neurons causes narcolepsy",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3026477/",
+      "kind": "external"
+    },
+    {
+      "text": "pedunculopontine tegmental (PPT)",
+      "href": "https://en.wikipedia.org/wiki/Pedunculopontine_nucleus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "laterodorsal tegmental (LDT)",
+      "href": "https://en.wikipedia.org/wiki/Laterodorsal_tegmental_nucleus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "glycine",
+      "href": "https://en.wikipedia.org/wiki/Glycine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "saccade",
+      "href": "https://en.wikipedia.org/wiki/Saccade",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "PGO waves",
+      "href": "https://en.wikipedia.org/wiki/PGO_waves",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Acetylcholine levels are high, enabling cortical activation. But serotonin and norepinephrine levels drop to near zero.",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6760897/",
+      "kind": "external"
+    },
+    {
+      "text": "aminergic",
+      "href": "https://en.wikipedia.org/wiki/Serotonin",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Insomnia",
+      "href": "https://www.mayoclinic.org/diseases-conditions/insomnia/symptoms-causes/syc-20355167",
+      "kind": "external"
+    },
+    {
+      "text": "chronic insomnia",
+      "href": "https://en.wikipedia.org/wiki/Insomnia",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "sleep hygiene",
+      "href": "https://en.wikipedia.org/wiki/Sleep_hygiene",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "benzodiazepines",
+      "href": "https://en.wikipedia.org/wiki/Benzodiazepine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "\"Z-drugs\"",
+      "href": "https://en.wikipedia.org/wiki/Nonbenzodiazepine",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "zolpidem",
+      "href": "https://en.wikipedia.org/wiki/Zolpidem",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "GABA",
+      "href": "https://en.wikipedia.org/wiki/Gamma-Aminobutyric_acid",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Cognitive behavioral therapy for insomnia (CBT-I)",
+      "href": "https://en.wikipedia.org/wiki/Cognitive_behavioral_therapy_for_insomnia",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "more effective long-term than medication",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4400203/",
+      "kind": "external"
+    },
+    {
+      "text": "Narcolepsy pathophysiology showing orexin neuron loss",
+      "href": "https://www.google.com/search?q=narcolepsy+orexin+hypocretin+deficiency+symptoms&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "Narcolepsy",
+      "href": "https://en.wikipedia.org/wiki/Narcolepsy",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "cataplexy",
+      "href": "https://en.wikipedia.org/wiki/Cataplexy",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "sleep paralysis",
+      "href": "https://en.wikipedia.org/wiki/Sleep_paralysis",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "hypnagogic hallucinations",
+      "href": "https://en.wikipedia.org/wiki/Hypnagogia",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "The cause of orexin neuron loss appears to be autoimmune in many cases",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3883596/",
+      "kind": "external"
+    },
+    {
+      "text": "sodium oxybate",
+      "href": "https://en.wikipedia.org/wiki/Sodium_oxybate",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Sleep apnea",
+      "href": "https://www.mayoclinic.org/diseases-conditions/sleep-apnea/symptoms-causes/syc-20377631",
+      "kind": "external"
+    },
+    {
+      "text": "obstructive sleep apnea",
+      "href": "https://en.wikipedia.org/wiki/Obstructive_sleep_apnea",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Oxygen levels drop, carbon dioxide builds up, and the brain partially awakens to restore breathing.",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3021364/",
+      "kind": "external"
+    },
+    {
+      "text": "obesity (fat deposits narrow airways)",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3021364/",
+      "kind": "external"
+    },
+    {
+      "text": "CPAP (continuous positive airway pressure)",
+      "href": "https://en.wikipedia.org/wiki/Continuous_positive_airway_pressure",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "REM sleep behavior disorder (RBD)",
+      "href": "https://en.wikipedia.org/wiki/Rapid_eye_movement_sleep_behavior_disorder",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "RBD is more common in older men and is often an early sign of Parkinson's disease or other synucleinopathies",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3181696/",
+      "kind": "external"
+    },
+    {
+      "text": "clonazepam",
+      "href": "https://en.wikipedia.org/wiki/Clonazepam",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "about 80-90% of RBD patients eventually develop Parkinson's or related disorders",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3181696/",
+      "kind": "external"
+    },
+    {
+      "text": "Neural correlates of consciousness showing critical brain networks",
+      "href": "https://www.google.com/search?q=neural+correlates+consciousness+NCC+fMRI+brain+networks&tbm=isch",
+      "kind": "image_search"
+    },
+    {
+      "text": "neural correlates of consciousness (NCC)",
+      "href": "https://en.wikipedia.org/wiki/Neural_correlates_of_consciousness",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "posterior cortical areas (\"posterior hot zone\") show strongest correlates of conscious content",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5688394/",
+      "kind": "external"
+    },
+    {
+      "text": "Measuring the brain's response to transcranial magnetic stimulation (TMS)",
+      "href": "https://en.wikipedia.org/wiki/Transcranial_magnetic_stimulation",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "during waking, TMS produces complex, long-lasting responses that propagate widely",
+      "href": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001281",
+      "kind": "external"
+    },
+    {
+      "text": "machine consciousness",
+      "href": "https://en.wikipedia.org/wiki/Artificial_consciousness",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "problem of other minds",
+      "href": "https://en.wikipedia.org/wiki/Problem_of_other_minds",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "philosophical zombie",
+      "href": "https://en.wikipedia.org/wiki/Philosophical_zombie",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "personal identity",
+      "href": "https://en.wikipedia.org/wiki/Personal_identity",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Ship of Theseus",
+      "href": "https://en.wikipedia.org/wiki/Ship_of_Theseus",
+      "kind": "wikipedia"
+    },
+    {
+      "text": "Your brain solves problems, consolidates memories, and regulates physiology while you're unconscious.",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2814941/",
+      "kind": "external"
+    }
+  ],
+  "images": [
+    {
+      "src": "GeminiSummaryCh13.png",
+      "alt": "Sleep and Consciousness Visual Summary",
+      "viewer": "image-viewer.html?image=GeminiSummaryCh13.png",
+      "role": "summary"
+    }
+  ],
+  "image_searches": [
+    {
+      "caption": "Effects of sleep deprivation on brain function and cognitive performance",
+      "url": "https://www.google.com/search?q=sleep+deprivation+effects+brain+cognitive+performance&tbm=isch"
+    },
+    {
+      "caption": "Free-running circadian rhythms in isolated subjects showing ~25-hour cycles",
+      "url": "https://www.google.com/search?q=circadian+rhythm+free+running+period+isolated+subjects&tbm=isch"
+    },
+    {
+      "caption": "Suprachiasmatic nucleus location and circadian pacemaker circuits",
+      "url": "https://www.google.com/search?q=suprachiasmatic+nucleus+SCN+circadian+pacemaker+hypothalamus&tbm=isch"
+    },
+    {
+      "caption": "Jet lag and circadian phase shifts showing east vs west travel effects",
+      "url": "https://www.google.com/search?q=jet+lag+circadian+phase+shift+melatonin+light+exposure&tbm=isch"
+    },
+    {
+      "caption": "Sleep stage EEG patterns showing characteristic waveforms of each stage",
+      "url": "https://www.google.com/search?q=sleep+stages+EEG+waveforms+NREM+REM+patterns&tbm=isch"
+    },
+    {
+      "caption": "Sleep hypnogram showing 90-minute cycles across the night",
+      "url": "https://www.google.com/search?q=sleep+cycle+hypnogram+90+minute+ultradian+rhythm&tbm=isch"
+    },
+    {
+      "caption": "Global workspace theory diagrams showing network broadcasting",
+      "url": "https://www.google.com/search?q=global+workspace+theory+consciousness+prefrontal+parietal+networks&tbm=isch"
+    },
+    {
+      "caption": "Integrated information theory and phi calculation illustrations",
+      "url": "https://www.google.com/search?q=integrated+information+theory+phi+consciousness+Giulio+Tononi&tbm=isch"
+    },
+    {
+      "caption": "Predictive processing framework showing prediction error minimization",
+      "url": "https://www.google.com/search?q=predictive+processing+free+energy+consciousness+Friston&tbm=isch"
+    },
+    {
+      "caption": "Memory consolidation during sleep showing hippocampal replay",
+      "url": "https://www.google.com/search?q=sleep+memory+consolidation+hippocampal+replay+sharp+wave+ripples&tbm=isch"
+    },
+    {
+      "caption": "Synaptic downscaling during sleep showing spine size reduction",
+      "url": "https://www.google.com/search?q=synaptic+downscaling+sleep+dendritic+spine+size+reduction&tbm=isch"
+    },
+    {
+      "caption": "Glymphatic system showing cerebrospinal fluid flow and waste clearance",
+      "url": "https://www.google.com/search?q=glymphatic+system+sleep+brain+waste+clearance+CSF&tbm=isch"
+    },
+    {
+      "caption": "Reticular activating system anatomy and arousal pathways",
+      "url": "https://www.google.com/search?q=reticular+activating+system+RAS+brainstem+arousal+consciousness&tbm=isch"
+    },
+    {
+      "caption": "Sleep-wake flip-flop switch diagram showing mutual inhibition",
+      "url": "https://www.google.com/search?q=sleep+wake+flip+flop+switch+VLPO+orexin+neurons&tbm=isch"
+    },
+    {
+      "caption": "Narcolepsy pathophysiology showing orexin neuron loss",
+      "url": "https://www.google.com/search?q=narcolepsy+orexin+hypocretin+deficiency+symptoms&tbm=isch"
+    },
+    {
+      "caption": "Neural correlates of consciousness showing critical brain networks",
+      "url": "https://www.google.com/search?q=neural+correlates+consciousness+NCC+fMRI+brain+networks&tbm=isch"
+    }
+  ]
+}
